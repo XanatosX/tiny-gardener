@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ccdf2urs5um31"]
+
+[ext_resource type="PackedScene" uid="uid://81amgnr1yjh4" path="res://assets/objects/kitchen_counter/kitchen_counter.gltf" id="1_acgrf"]
+[ext_resource type="Material" uid="uid://bkharad7du0uf" path="res://assets/materials/gray_metal.tres" id="2_rbkyg"]
+
+[node name="blockbench_export" unique_id=745678450 instance=ExtResource("1_acgrf")]
+
+[node name="handle" parent="body/handles" parent_id_path=PackedInt32Array(1238259526) index="0" unique_id=600629820]
+material_override = ExtResource("2_rbkyg")
+
+[node name="handle2" parent="body/handles" parent_id_path=PackedInt32Array(1238259526) index="1" unique_id=905548905]
+material_override = ExtResource("2_rbkyg")

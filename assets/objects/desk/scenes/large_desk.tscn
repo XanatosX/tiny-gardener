@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://di70prv3onnf2"]
+
+[ext_resource type="PackedScene" uid="uid://d0ptludcs66nb" path="res://assets/objects/desk/desk.gltf" id="1_chd5q"]
+
+[node name="LargeDesk" type="Node3D" unique_id=105718745]
+
+[node name="blockbench_export" parent="." unique_id=130417866 instance=ExtResource("1_chd5q")]
+
+[node name="leg2" parent="blockbench_export/table2" parent_id_path=PackedInt32Array(130417866, 1368728082) index="2" unique_id=558459081]
+visible = false
+
+[node name="leg3" parent="blockbench_export/table2" parent_id_path=PackedInt32Array(130417866, 1368728082) index="3" unique_id=1865231663]
+visible = false
+
+[node name="blockbench_export2" parent="." unique_id=1699024308 instance=ExtResource("1_chd5q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.25)
+
+[node name="leg1" parent="blockbench_export2/table2" parent_id_path=PackedInt32Array(1699024308, 1368728082) index="1" unique_id=1447484370]
+visible = false
+
+[node name="leg4" parent="blockbench_export2/table2" parent_id_path=PackedInt32Array(1699024308, 1368728082) index="4" unique_id=1731792152]
+visible = false
+
+[editable path="blockbench_export"]
+[editable path="blockbench_export2"]

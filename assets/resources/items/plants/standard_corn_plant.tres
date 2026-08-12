@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://mdg6cle4gacg"]
+
+[ext_resource type="Resource" uid="uid://bn7ei43f0pbpg" path="res://assets/resources/translations/plants/corn_description.tres" id="1_7hvy2"]
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_8yqv2"]
+[ext_resource type="Resource" uid="uid://v66ufqtl7rup" path="res://assets/resources/translations/plants/corn_name.tres" id="2_lxggf"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_pqiyb"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="2_x3vit"]
+[ext_resource type="Texture2D" uid="uid://xb46smqbvrwq" path="res://assets/atlas/corn_item.tres" id="3_shglf"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="3_wapld"]
+[ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entites/shared/custom_resources/plant/plant_drop_configuration.gd" id="4_8yqv2"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_m2fx1"]
+[ext_resource type="Resource" uid="uid://cicnk40vhb7s0" path="res://assets/resources/items/yield_configurations/corn_drop_configuration.tres" id="5_x3vit"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_pxasa"]
+[ext_resource type="Curve" uid="uid://ciyqrjxkjtt8g" path="res://assets/resources/quality_curves/default_quality_curve.tres" id="6_wapld"]
+[ext_resource type="Script" uid="uid://bsevesu0cw5ru" path="res://entites/shared/custom_resources/plant/plant_resource.gd" id="7_ljutb"]
+[ext_resource type="Texture2D" uid="uid://btcjy5ijlkscm" path="res://assets/atlas/corn_plant.tres" id="8_sija2"]
+[ext_resource type="Resource" uid="uid://bg7gwqe86iw7h" path="res://assets/resources/items/yield_configurations/ladybug_drop_configuration.tres" id="9_x3vit"]
+
+[resource]
+script = ExtResource("7_ljutb")
+type = 1
+texture = ExtResource("8_sija2")
+plant_yield = Array[ExtResource("4_8yqv2")]([ExtResource("5_x3vit"), ExtResource("9_x3vit")])
+quality_curve = ExtResource("6_wapld")
+grow_stages = 6
+growth_points_per_stage = 15.0
+initial_plant_health = 50.0
+growing_water_requirement = 0.75
+growing_nutrition_requirement = 0.25
+sustainable_nutrition_requirement = 0.1
+display_name = ExtResource("2_lxggf")
+description = ExtResource("1_7hvy2")
+icon = ExtResource("3_shglf")
+quality = 2
+can_sell = false
+price = 5.0
+metadata/_custom_type_script = "uid://bsevesu0cw5ru"

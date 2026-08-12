@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterInformation" format=3 uid="uid://bne7vnslm8mea"]
+
+[ext_resource type="Resource" uid="uid://w7w5gnd55vmc" path="res://assets/resources/translations/characters/mother_character_backstory.tres" id="1_u7bee"]
+[ext_resource type="Script" uid="uid://c8astjtqb76rv" path="res://entites/shared/custom_resources/situations/character_description.gd" id="1_w5f3i"]
+[ext_resource type="Texture2D" uid="uid://ctl8cremu7l7n" path="res://assets/atlas/rose_item.tres" id="2_mug0d"]
+[ext_resource type="Resource" uid="uid://bc6navsjirrkh" path="res://assets/resources/translations/characters/mother_character_name.tres" id="3_mug0d"]
+[ext_resource type="Script" uid="uid://cprt8cxu3h3an" path="res://entites/shared/custom_resources/voice/voice.gd" id="5_mug0d"]
+[ext_resource type="Resource" uid="uid://unnv1ua2ob7x" path="res://assets/resources/voices/default_female.tres" id="6_2rnul"]
+
+[resource]
+script = ExtResource("1_w5f3i")
+display_icons = Dictionary[int, Texture]({
+0: ExtResource("2_mug0d")
+})
+voices = Dictionary[int, ExtResource("5_mug0d")]({
+0: ExtResource("6_2rnul")
+})
+display_name = ExtResource("3_mug0d")
+backstory = ExtResource("1_u7bee")
+metadata/_custom_type_script = "uid://c8astjtqb76rv"

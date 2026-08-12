@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="PlantDrop" format=3 uid="uid://dfhd00emdt46c"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_6htu1"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="2_kua07"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_viu6p"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="3_o7brh"]
+[ext_resource type="Script" uid="uid://kqg1s7cii32o" path="res://entites/shared/custom_resources/plant/plant_drop.gd" id="4_chngl"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_gg1lj"]
+[ext_resource type="Resource" uid="uid://l7vobiynsvl4" path="res://assets/resources/translations/drops/ladybug_drop_description.tres" id="4_o7brh"]
+[ext_resource type="Resource" uid="uid://yb7hd8r6uugg" path="res://assets/resources/translations/drops/ladybug_drop_name.tres" id="5_chngl"]
+[ext_resource type="Texture2D" uid="uid://hunuecan0j4w" path="res://assets/atlas/ladybug_icon.tres" id="6_chngl"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_k2hfl"]
+
+[resource]
+script = ExtResource("4_chngl")
+display_name = ExtResource("5_chngl")
+description = ExtResource("4_o7brh")
+icon = ExtResource("6_chngl")
+can_buy = false
+price = 5.0
+metadata/_custom_type_script = "uid://kqg1s7cii32o"

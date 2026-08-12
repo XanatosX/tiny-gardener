@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bsn832bctv7eu"]
+
+[ext_resource type="PackedScene" uid="uid://bafinj1vx0ps0" path="res://assets/objects/nightstand/nightstand.gltf" id="1_1axcm"]
+[ext_resource type="Material" uid="uid://bkharad7du0uf" path="res://assets/materials/gray_metal.tres" id="2_a437c"]
+
+[node name="Nightstand" type="Node3D" unique_id=339742703]
+
+[node name="blockbench_export" parent="." unique_id=1168489069 instance=ExtResource("1_1axcm")]
+
+[node name="handle" parent="blockbench_export/opener" parent_id_path=PackedInt32Array(1168489069, 1427164522) index="0" unique_id=1735088097]
+material_override = ExtResource("2_a437c")
+
+[node name="handle2" parent="blockbench_export/opener" parent_id_path=PackedInt32Array(1168489069, 1427164522) index="1" unique_id=711856960]
+material_override = ExtResource("2_a437c")
+
+[editable path="blockbench_export"]

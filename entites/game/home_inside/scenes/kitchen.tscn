@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dxijk61rta836"]
+
+[ext_resource type="PackedScene" uid="uid://bdfkacbfu24eq" path="res://assets/objects/dishwasher/dishwasher.gltf" id="1_7auhc"]
+[ext_resource type="PackedScene" uid="uid://cnu0h2vv5777m" path="res://assets/objects/kitchen_plate/kitchen_plate.gltf" id="2_gcv1c"]
+[ext_resource type="PackedScene" uid="uid://ccdf2urs5um31" path="res://assets/objects/kitchen_counter/scenes/kitchen_counter.tscn" id="3_yuvff"]
+[ext_resource type="PackedScene" uid="uid://dubgkdsmyxwmf" path="res://assets/objects/kitchen_heater/kitchen_heater.gltf" id="4_yuvff"]
+[ext_resource type="PackedScene" uid="uid://c7bwg1yqjheqd" path="res://assets/objects/sink_on_work_plate/sink_on_work_plate.gltf" id="5_eivnw"]
+[ext_resource type="PackedScene" uid="uid://cci6kaqinero6" path="res://assets/objects/kitchen_counter/scenes/kitchen_counter_open_top.tscn" id="6_fha77"]
+[ext_resource type="Script" uid="uid://dkpt3k8dkvmj3" path="res://entites/shared/object_interaction/object_interaction.gd" id="7_k7ete"]
+[ext_resource type="Script" uid="uid://dgo34mflxca2j" path="res://entites/shared/object_interaction/action.gd" id="8_wd4ly"]
+[ext_resource type="Resource" uid="uid://cn4mft05wtmhs" path="res://assets/resources/actions/fill_can_action.tres" id="9_bqu8k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8rpam"]
+size = Vector3(0.34649658, 1, 0.67163086)
+
+[node name="Kitchen" type="Node3D" unique_id=1780664609]
+
+[node name="Plates" type="Node3D" parent="." unique_id=1997799824]
+
+[node name="Plate1" parent="Plates" unique_id=669142740 instance=ExtResource("2_gcv1c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1875, 0)
+
+[node name="Plate2" parent="Plates" unique_id=215671491 instance=ExtResource("2_gcv1c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20629999, 0.1875, 0)
+
+[node name="Plate3" parent="Plates" unique_id=1393008521 instance=ExtResource("2_gcv1c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20629999, 0.1875, 0)
+
+[node name="Plate4" parent="Plates" unique_id=1457963347 instance=ExtResource("2_gcv1c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41259998, 0.1875, 0)
+
+[node name="Dishwasher" parent="." unique_id=1576004755 instance=ExtResource("1_7auhc")]
+
+[node name="Part1" parent="." unique_id=745678450 instance=ExtResource("3_yuvff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2063, 0, 0.012500003)
+
+[node name="Part2" parent="." unique_id=268540393 instance=ExtResource("3_yuvff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2063, 0, 0)
+
+[node name="Part3" parent="." unique_id=250929973 instance=ExtResource("3_yuvff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41259998, 0, 0.012500003)
+
+[node name="Part4OpenTop" parent="." unique_id=1298483670 instance=ExtResource("6_fha77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6189, 0, 0.012500003)
+
+[node name="Heater" parent="." unique_id=294176529 instance=ExtResource("4_yuvff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21620837, 0.19306108, 0.000894472)
+
+[node name="Sink" parent="." unique_id=1501195089 instance=ExtResource("5_eivnw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6189, 0.125, 0)
+
+[node name="ObjectInteraction" type="Node" parent="." unique_id=1262240315 node_paths=PackedStringArray("controlled_entity", "interaction_area")]
+script = ExtResource("7_k7ete")
+controlled_entity = NodePath("..")
+interaction_area = NodePath("../Area3D")
+actions = Array[ExtResource("8_wd4ly")]([ExtResource("9_bqu8k")])
+metadata/_custom_type_script = "uid://dkpt3k8dkvmj3"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1897667517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6588977, 0, 0.31010324)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1321176856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041229248, 0, -0.4407959)
+shape = SubResource("BoxShape3D_8rpam")

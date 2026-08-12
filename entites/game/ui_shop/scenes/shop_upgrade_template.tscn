@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dx8e5csvcgmcy"]
+
+[ext_resource type="Script" uid="uid://dyfi4lq6bccw8" path="res://entites/game/ui_shop/scripts/shop_entry_template.gd" id="1_auyjc"]
+[ext_resource type="Texture2D" uid="uid://xb46smqbvrwq" path="res://assets/atlas/corn_item.tres" id="1_ayvfb"]
+[ext_resource type="Texture2D" uid="uid://dq33eu2ghwx0m" path="res://assets/atlas/coin_icon.tres" id="3_arrph"]
+
+[node name="ShopUpgradeTemplate" type="PanelContainer" unique_id=1486262418]
+custom_minimum_size = Vector2(0, 64)
+custom_maximum_size = Vector2(-1, 64)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 64.0
+grow_horizontal = 2
+script = ExtResource("1_auyjc")
+metadata/_custom_type_script = "uid://dyfi4lq6bccw8"
+
+[node name="Trigger" type="Button" parent="." unique_id=381321058]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Trigger" unique_id=722476685]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UpgradeIcon" type="TextureRect" parent="Trigger/HBoxContainer" unique_id=1618680581]
+custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("1_ayvfb")
+
+[node name="UpgradeName" type="Label" parent="Trigger/HBoxContainer" unique_id=272084139]
+layout_mode = 2
+text = "UPGRADE_NAME"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Trigger/HBoxContainer" unique_id=1387871762]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Trigger/HBoxContainer/VBoxContainer" unique_id=1370182017]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("3_arrph")
+
+[node name="Price" type="Label" parent="Trigger/HBoxContainer/VBoxContainer" unique_id=1681777045]
+layout_mode = 2
+
+[connection signal="name_changed" from="." to="Trigger/HBoxContainer/UpgradeName" method="set_text"]
+[connection signal="price_changed" from="." to="Trigger/HBoxContainer/VBoxContainer/Price" method="set_text"]
+[connection signal="texture_changed" from="." to="Trigger/HBoxContainer/UpgradeIcon" method="set_texture"]

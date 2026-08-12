@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Situation" format=3 uid="uid://br4www5wo4pr2"]
+
+[ext_resource type="Script" uid="uid://cf0kw8sdb3t6h" path="res://entites/shared/custom_resources/situations/situation.gd" id="1_l0q0p"]
+[ext_resource type="Resource" uid="uid://ij14rx80sfbc" path="res://assets/resources/situations/intro_situation.tres" id="2_jn24a"]
+[ext_resource type="Script" uid="uid://b2r5o8g18wx6g" path="res://entites/shared/custom_resources/situation_step/situation_step.gd" id="2_n2xrm"]
+[ext_resource type="Script" uid="uid://bhjycglythlp8" path="res://entites/shared/custom_resources/situation_step/toggle_player_step.gd" id="4_wv0m8"]
+[ext_resource type="Resource" uid="uid://bae24gujembw8" path="res://assets/resources/dialogs/missing_water_can/missing_water_can.tres" id="5_k3c67"]
+[ext_resource type="Script" uid="uid://wljs35rlfnc8" path="res://entites/shared/custom_resources/situation_step/show_dialog_step.gd" id="6_g6ebd"]
+
+[sub_resource type="Resource" id="Resource_jn24a"]
+script = ExtResource("4_wv0m8")
+disable_player = true
+metadata/_custom_type_script = "uid://bhjycglythlp8"
+
+[sub_resource type="Resource" id="Resource_wv0m8"]
+script = ExtResource("6_g6ebd")
+dialog = ExtResource("5_k3c67")
+metadata/_custom_type_script = "uid://wljs35rlfnc8"
+
+[sub_resource type="Resource" id="Resource_3adbj"]
+script = ExtResource("4_wv0m8")
+metadata/_custom_type_script = "uid://bhjycglythlp8"
+
+[resource]
+script = ExtResource("1_l0q0p")
+requirements = Array[ExtResource("1_l0q0p")]([ExtResource("2_jn24a")])
+situation_steps = Array[ExtResource("2_n2xrm")]([SubResource("Resource_jn24a"), SubResource("Resource_wv0m8"), SubResource("Resource_3adbj")])
+metadata/_custom_type_script = "uid://cf0kw8sdb3t6h"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cswt5jtfknkh"]
+
+[ext_resource type="PackedScene" uid="uid://bshvbibympddg" path="res://assets/objects/room_devider/room_devider.gltf" id="1_d2s8d"]
+
+[node name="HighDevider" type="Node3D" unique_id=1831754385]
+
+[node name="blockbench_export" parent="." unique_id=1455479035 instance=ExtResource("1_d2s8d")]
+
+[node name="blockbench_export2" parent="." unique_id=569553816 instance=ExtResource("1_d2s8d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)

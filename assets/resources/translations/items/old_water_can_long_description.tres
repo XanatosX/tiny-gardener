@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://btq26j6thixxo"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_g8mcu"]
+
+[resource]
+script = ExtResource("1_g8mcu")
+key = "OLD_WATER_CAN_LONG_DESCRIPTION"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

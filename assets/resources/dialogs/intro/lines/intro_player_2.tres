@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpokenMessage" format=3 uid="uid://b0d5rsijjpbeq"]
+
+[ext_resource type="Resource" uid="uid://b16hblkoijiuj" path="res://assets/resources/characters/player_character.tres" id="1_4ru4e"]
+[ext_resource type="Resource" uid="uid://csyby6t05gsh8" path="res://assets/resources/translations/dialogs/intro/intro_player_2.tres" id="2_4ru4e"]
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entites/shared/custom_resources/situations/spoken_message.gd" id="3_m657i"]
+
+[resource]
+script = ExtResource("3_m657i")
+character = ExtResource("1_4ru4e")
+message = ExtResource("2_4ru4e")
+metadata/_custom_type_script = "uid://clje66ucp3w4q"

@@ -1,0 +1,1 @@
+class_name SituationObject extends Node3D

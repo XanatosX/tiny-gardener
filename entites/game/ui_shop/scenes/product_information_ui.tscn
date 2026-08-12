@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://dofrtp3cvws3a"]
+
+[ext_resource type="Script" uid="uid://bp5mpj1n37ote" path="res://entites/game/ui_shop/scripts/product_information_ui.gd" id="1_b0mlx"]
+[ext_resource type="Texture2D" uid="uid://dq33eu2ghwx0m" path="res://assets/atlas/coin_icon.tres" id="1_q0guu"]
+[ext_resource type="Texture2D" uid="uid://ctl8cremu7l7n" path="res://assets/atlas/rose_item.tres" id="1_uj04u"]
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="2_b0mlx"]
+[ext_resource type="Resource" uid="uid://cy4hunuvwje0t" path="res://assets/resources/translations/buy.tres" id="2_spah8"]
+[ext_resource type="Resource" uid="uid://mxcmhsyrijle" path="res://assets/resources/translations/sell.tres" id="3_3eiof"]
+
+[node name="ProductInformationUi" type="MarginContainer" unique_id=1305727026]
+offset_right = 242.0
+offset_bottom = 406.0
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_b0mlx")
+buy_text = ExtResource("2_spah8")
+sell_text = ExtResource("3_3eiof")
+metadata/_custom_type_script = "uid://bp5mpj1n37ote"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=650810291]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="VBoxContainer" type="MarginContainer" parent="VBoxContainer" unique_id=2088505071]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/VBoxContainer" unique_id=486298659]
+custom_minimum_size = Vector2(128, 128)
+custom_maximum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_uj04u")
+
+[node name="Quality" type="TextureRect" parent="VBoxContainer/VBoxContainer" unique_id=1564325369]
+custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture = ExtResource("2_b0mlx")
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=46545002]
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -16)
+text = "PRODUCT_NAME"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=426042389]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LessButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=669202366]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "-"
+
+[node name="Amount" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=15479576]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "1"
+alignment = 1
+
+[node name="MoreButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1842330584]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1654558195]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_vertical = 2
+bbcode_enabled = true
+text = "PRODUCT_DESCRIPTION_TEXT"
+fit_content = true
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=646517127]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer" unique_id=89388731]
+layout_mode = 2
+
+[node name="Price" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer" unique_id=1926508941]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MoneyIcon" type="TextureRect" parent="VBoxContainer/MarginContainer/VBoxContainer/Price" unique_id=1702834557]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("1_q0guu")
+
+[node name="TotalPrice" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer/Price" unique_id=2001532852]
+layout_mode = 2
+text = "TOTAL_PRICE"
+
+[node name="ActionButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer" unique_id=923147452]
+layout_mode = 2
+text = "BUY/SELL"
+
+[connection signal="amount_changed" from="." to="VBoxContainer/HBoxContainer/Amount" method="set_text"]
+[connection signal="buy_sell_changed" from="." to="VBoxContainer/MarginContainer/VBoxContainer/ActionButton" method="set_text"]
+[connection signal="description_changed" from="." to="VBoxContainer/RichTextLabel" method="parse_bbcode"]
+[connection signal="icon_changed" from="." to="VBoxContainer/VBoxContainer/Icon" method="set_texture"]
+[connection signal="name_changed" from="." to="VBoxContainer/Label" method="set_text"]
+[connection signal="price_changed" from="." to="VBoxContainer/MarginContainer/VBoxContainer/Price/TotalPrice" method="set_text"]
+[connection signal="quality_changed" from="." to="VBoxContainer/VBoxContainer/Quality" method="set_texture"]
+[connection signal="quality_text_changed" from="." to="VBoxContainer/VBoxContainer/Quality" method="set_tooltip_text"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/LessButton" to="." method="decrease_amount"]
+[connection signal="text_submitted" from="VBoxContainer/HBoxContainer/Amount" to="." method="amount_was_changed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/MoreButton" to="." method="increase_amount"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/ActionButton" to="." method="button_clicked"]

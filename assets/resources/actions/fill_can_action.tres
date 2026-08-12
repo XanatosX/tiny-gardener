@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FillWaterCanAction" format=3 uid="uid://cn4mft05wtmhs"]
+
+[ext_resource type="Resource" uid="uid://dax2hor2pynnm" path="res://assets/resources/translations/actions/fill_water_can_description.tres" id="1_dnjsc"]
+[ext_resource type="Resource" uid="uid://be14s6ajor5tl" path="res://assets/resources/translations/actions/fill_water_can_name.tres" id="2_6ekyg"]
+[ext_resource type="Texture2D" uid="uid://bfm0qd2hmhrmf" path="res://assets/atlas/fill_water_can_icon.tres" id="3_nl8i4"]
+[ext_resource type="Script" uid="uid://bsglicgxl2npr" path="res://entites/shared/object_interaction/actions/fill_water_can_action.gd" id="4_e3ww3"]
+
+[resource]
+script = ExtResource("4_e3ww3")
+action_name = ExtResource("2_6ekyg")
+action_description = ExtResource("1_dnjsc")
+icon = ExtResource("3_nl8i4")
+metadata/_custom_type_script = "uid://bsglicgxl2npr"

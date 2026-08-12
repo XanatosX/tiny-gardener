@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="HandbookBasicText" format=3 uid="uid://d2hn4uke2gys8"]
+
+[ext_resource type="Script" uid="uid://bc0gqca4fgqti" path="res://entites/shared/custom_resources/handbook/text_types/handbook_basic_text.gd" id="1_xnpsp"]
+[ext_resource type="Resource" uid="uid://dljvrbfuc3q54" path="res://assets/resources/translations/handbook/water_handbook_text.tres" id="2_1a3m6"]
+
+[resource]
+script = ExtResource("1_xnpsp")
+translation = ExtResource("2_1a3m6")
+centered = true
+metadata/_custom_type_script = "uid://bc0gqca4fgqti"

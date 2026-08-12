@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="UpgradeItem" format=3 uid="uid://c0tmxnn2msk8p"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_lp0pv"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_84pq6"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="3_w67dj"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_y61wf"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="5_871bm"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_b46ss"]
+[ext_resource type="Resource" uid="uid://kgi4vcpjgsky" path="res://assets/resources/translations/initial_pot_amount_description.tres" id="7_84pq6"]
+[ext_resource type="Resource" uid="uid://dqdgr3yul40jd" path="res://assets/resources/translations/initial_pot_amount_name.tres" id="8_84pq6"]
+[ext_resource type="Texture2D" uid="uid://ctl8cremu7l7n" path="res://assets/atlas/rose_item.tres" id="9_klcco"]
+[ext_resource type="Script" uid="uid://dw8uv3t0dtref" path="res://entites/shared/custom_resources/item/upgrade_item.gd" id="10_4r4r8"]
+[ext_resource type="Script" uid="uid://bskh2rbl5p38q" path="res://entites/shared/custom_resources/upgrades/upgrade_requirements.gd" id="10_84pq6"]
+[ext_resource type="Script" uid="uid://xquftf5j0j35" path="res://entites/shared/custom_resources/upgrades/unlock_pot.gd" id="11_b53ya"]
+
+[sub_resource type="Resource" id="Resource_co47p"]
+script = ExtResource("11_b53ya")
+metadata/_custom_type_script = "uid://xquftf5j0j35"
+
+[resource]
+script = ExtResource("10_4r4r8")
+upgrade_action = SubResource("Resource_co47p")
+has_max_amount = true
+display_name = ExtResource("8_84pq6")
+description = ExtResource("7_84pq6")
+icon = ExtResource("9_klcco")
+metadata/_custom_type_script = "uid://dw8uv3t0dtref"

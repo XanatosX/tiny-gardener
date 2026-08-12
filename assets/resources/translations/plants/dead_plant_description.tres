@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://bleb5d2a1dfaa"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_ihppl"]
+
+[resource]
+script = ExtResource("1_ihppl")
+key = "DEAD_PLANT_DESCRIPTION"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

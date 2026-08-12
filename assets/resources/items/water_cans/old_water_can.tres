@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="WaterCan" format=3 uid="uid://c0xbiw0gabivw"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_26shf"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_oxu3c"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="3_rsygd"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_cpqhj"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="5_4jxqe"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_lnunh"]
+[ext_resource type="Resource" uid="uid://007pagu1uogi" path="res://assets/resources/translations/items/old_water_can_description.tres" id="7_t0vcp"]
+[ext_resource type="Resource" uid="uid://2d6crfyennq" path="res://assets/resources/translations/items/old_water_can_name.tres" id="8_kxkwq"]
+[ext_resource type="Texture2D" uid="uid://xqkguo8obiwp" path="res://assets/atlas/old_water_can_icon.tres" id="9_7smlm"]
+[ext_resource type="Resource" uid="uid://btq26j6thixxo" path="res://assets/resources/translations/items/old_water_can_long_description.tres" id="10_oxu3c"]
+[ext_resource type="Script" uid="uid://dn6u8rtywo1m1" path="res://entites/shared/custom_resources/item/water_can.gd" id="10_tdoty"]
+
+[resource]
+script = ExtResource("10_tdoty")
+max_storable_water = 100.0
+display_name = ExtResource("8_kxkwq")
+description = ExtResource("7_t0vcp")
+long_description = ExtResource("10_oxu3c")
+icon = ExtResource("9_7smlm")
+quality = 1
+can_buy = false
+can_sell = false
+metadata/_custom_type_script = "uid://dn6u8rtywo1m1"

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bloqip31qc2q2"]
+
+[ext_resource type="PackedScene" uid="uid://btv45jvvsv7m7" path="res://assets/objects/fence/fence.gltf" id="1_t0dq5"]
+
+[node name="FenceCorner" type="Node3D" unique_id=787026543]
+
+[node name="fence1" parent="." unique_id=1162734577 instance=ExtResource("1_t0dq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0)
+
+[node name="fence2" parent="." unique_id=1634979750 instance=ExtResource("1_t0dq5")]
+transform = Transform3D(0.01745232, 0, -0.9998477, 0, 1, 0, 0.9998477, 0, 0.01745232, 0.022, 0, 0.188)

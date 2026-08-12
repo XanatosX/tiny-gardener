@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://b0r7fi7xtr277"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_q1y1j"]
+
+[resource]
+script = ExtResource("1_q1y1j")
+key = "TELEPORT_TO_FARM_ACTION_NAME"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

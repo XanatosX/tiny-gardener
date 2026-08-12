@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HandbookBasicText" format=3 uid="uid://brqkydn5xum3g"]
+
+[ext_resource type="Script" uid="uid://bc0gqca4fgqti" path="res://entites/shared/custom_resources/handbook/text_types/handbook_basic_text.gd" id="1_4heqo"]
+[ext_resource type="Resource" uid="uid://b7xxcxv1wwqva" path="res://assets/resources/translations/handbook/keep_plants_alive_explain_icons.tres" id="2_u5oyh"]
+
+[resource]
+script = ExtResource("1_4heqo")
+translation = ExtResource("2_u5oyh")
+metadata/_custom_type_script = "uid://bc0gqca4fgqti"

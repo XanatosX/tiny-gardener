@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://bi4a2kn725xm2"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_b277m"]
+
+[resource]
+script = ExtResource("1_b277m")
+key = "ROSE_DROP_NAME"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

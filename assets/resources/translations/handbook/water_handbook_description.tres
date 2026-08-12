@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://c83dhjaw3wtlk"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_orwbv"]
+
+[resource]
+script = ExtResource("1_orwbv")
+key = "WATER_HANDBOOK_DESCRIPTION"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

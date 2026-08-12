@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://66giwiaydakx"]
+
+[ext_resource type="Texture2D" uid="uid://b8x7fh2wiu7l5" path="res://assets/textures/plants.png" id="1_2qnrw"]
+[ext_resource type="Script" uid="uid://w3s52os8jnvu" path="res://entites/game/ui_item_display/scripts/ui_item_display_template.gd" id="1_q3frq"]
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="2_4luka"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rpam"]
+atlas = ExtResource("1_2qnrw")
+region = Rect2(0, 32, 16, 16)
+
+[node name="UiItemDisplayTemplate" type="MarginContainer" unique_id=341463208]
+custom_minimum_size = Vector2(450, 0)
+offset_right = 450.0
+offset_bottom = 74.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_q3frq")
+display_time = 7.0
+metadata/_custom_type_script = "uid://w3s52os8jnvu"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1529397740]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=540139319]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1365657791]
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=10344089]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Name" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=213532757]
+layout_mode = 2
+text = "ITEM NAME"
+vertical_alignment = 1
+
+[node name="Amount" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=601352895]
+layout_mode = 2
+text = "200"
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1490399143]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = SubResource("AtlasTexture_8rpam")
+
+[node name="Quality" type="TextureRect" parent="PanelContainer/MarginContainer" unique_id=808251826]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+texture = ExtResource("2_4luka")
+
+[connection signal="update_amount" from="." to="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Amount" method="set_text"]
+[connection signal="update_description" from="." to="PanelContainer/MarginContainer/HBoxContainer/TextureRect" method="set_tooltip_text"]
+[connection signal="update_name" from="." to="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Name" method="set_text"]
+[connection signal="update_quality" from="." to="PanelContainer/MarginContainer/Quality" method="set_texture"]
+[connection signal="update_texture" from="." to="PanelContainer/MarginContainer/HBoxContainer/TextureRect" method="set_texture"]

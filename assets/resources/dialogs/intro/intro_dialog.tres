@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Dialog" format=3 uid="uid://2iikrcmsowe1"]
+
+[ext_resource type="Script" uid="uid://n5nufi2bfu5d" path="res://entites/shared/custom_resources/dialog/dialog.gd" id="1_yuapk"]
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entites/shared/custom_resources/situations/spoken_message.gd" id="2_pnf58"]
+[ext_resource type="Resource" uid="uid://cq7fx2hkjdxs4" path="res://assets/resources/dialogs/intro/lines/intro_player_1.tres" id="3_ws0eu"]
+[ext_resource type="Resource" uid="uid://5jhnay6qctik" path="res://assets/resources/dialogs/intro/lines/intro_mum_1.tres" id="4_dpapo"]
+[ext_resource type="Resource" uid="uid://b0d5rsijjpbeq" path="res://assets/resources/dialogs/intro/lines/intro_player_2.tres" id="5_gxtgh"]
+[ext_resource type="Resource" uid="uid://b28whcfk6bgp2" path="res://assets/resources/dialogs/intro/lines/intro_mum_2.tres" id="6_1l8t8"]
+[ext_resource type="Resource" uid="uid://cyt1xbddbmxpq" path="res://assets/resources/dialogs/intro/lines/intro_player_3.tres" id="7_syw8u"]
+[ext_resource type="Resource" uid="uid://b5h56odeche6w" path="res://assets/resources/dialogs/intro/lines/intro_mum_3.tres" id="8_lyi6r"]
+[ext_resource type="Resource" uid="uid://bi2rnu04skb6l" path="res://assets/resources/dialogs/intro/lines/intro_player_4.tres" id="9_x76v5"]
+[ext_resource type="Resource" uid="uid://6s3u6d3je6lq" path="res://assets/resources/dialogs/intro/lines/intro_player_5.tres" id="10_dpapo"]
+
+[resource]
+script = ExtResource("1_yuapk")
+spoken_messages = Array[ExtResource("2_pnf58")]([ExtResource("3_ws0eu"), ExtResource("4_dpapo"), ExtResource("5_gxtgh"), ExtResource("6_1l8t8"), ExtResource("7_syw8u"), ExtResource("8_lyi6r"), ExtResource("9_x76v5"), ExtResource("10_dpapo")])
+metadata/_custom_type_script = "uid://n5nufi2bfu5d"

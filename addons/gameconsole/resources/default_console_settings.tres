@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ConsoleSettings" format=3 uid="uid://dnbbicywvdhfk"]
+
+[ext_resource type="Script" uid="uid://chnqb31g64ty1" path="res://addons/gameconsole/console/resources/console_settings.gd" id="1_5y6sn"]
+[ext_resource type="Resource" uid="uid://pehtjqi6kvd8" path="res://addons/gameconsole/resources/default_autocomplete_service.tres" id="1_h051m"]
+
+[resource]
+script = ExtResource("1_5y6sn")
+autocomplete_argument_color_even = Color(1, 0.647059, 0, 1)
+autocomplete_argument_color_odd = Color(1, 0.270588, 0, 1)

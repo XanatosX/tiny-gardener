@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://c1rxep2gddy5d"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_ckeu7"]
+
+[resource]
+script = ExtResource("1_ckeu7")
+key = "MOTHER_INTRO_MESSAGE_3"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

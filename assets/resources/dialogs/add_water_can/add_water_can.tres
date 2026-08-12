@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" format=3 uid="uid://vxm0pt2c55dg"]
+
+[ext_resource type="Script" uid="uid://n5nufi2bfu5d" path="res://entites/shared/custom_resources/dialog/dialog.gd" id="1_2ei0w"]
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entites/shared/custom_resources/situations/spoken_message.gd" id="2_bnnde"]
+[ext_resource type="Resource" uid="uid://rok8cbauacd6" path="res://assets/resources/dialogs/add_water_can/lines/add_water_can_player_1.tres" id="3_ju36g"]
+
+[resource]
+script = ExtResource("1_2ei0w")
+spoken_messages = Array[ExtResource("2_bnnde")]([ExtResource("3_ju36g")])
+metadata/_custom_type_script = "uid://n5nufi2bfu5d"

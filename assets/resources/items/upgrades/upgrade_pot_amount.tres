@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="UpgradeItem" format=3 uid="uid://b4iabn2nyr5on"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_mev76"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_mmgeu"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="3_wv3el"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_k6oi8"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="5_ilv87"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_0vbr1"]
+[ext_resource type="Script" uid="uid://dw8uv3t0dtref" path="res://entites/shared/custom_resources/item/upgrade_item.gd" id="7_jdb0f"]
+[ext_resource type="Resource" uid="uid://u6vqiksmp8ch" path="res://assets/resources/translations/upgrade_pot_amount_description.tres" id="7_wv3el"]
+[ext_resource type="Resource" uid="uid://bx2ykomuilun" path="res://assets/resources/translations/upgrade_pot_amount_name.tres" id="8_k6oi8"]
+[ext_resource type="Texture2D" uid="uid://ctl8cremu7l7n" path="res://assets/atlas/rose_item.tres" id="9_k6oi8"]
+[ext_resource type="Script" uid="uid://bskh2rbl5p38q" path="res://entites/shared/custom_resources/upgrades/upgrade_requirements.gd" id="10_jdb0f"]
+[ext_resource type="Resource" uid="uid://c0tmxnn2msk8p" path="res://assets/resources/items/upgrades/initial_pot_upgrade.tres" id="11_862aq"]
+[ext_resource type="Script" uid="uid://xquftf5j0j35" path="res://entites/shared/custom_resources/upgrades/unlock_pot.gd" id="11_ilv87"]
+
+[sub_resource type="Resource" id="Resource_ued1p"]
+script = ExtResource("10_jdb0f")
+upgrade = ExtResource("11_862aq")
+amount = 1
+metadata/_custom_type_script = "uid://bskh2rbl5p38q"
+
+[sub_resource type="Resource" id="Resource_co47p"]
+script = ExtResource("11_ilv87")
+metadata/_custom_type_script = "uid://xquftf5j0j35"
+
+[resource]
+script = ExtResource("7_jdb0f")
+requirements = Array[ExtResource("10_jdb0f")]([SubResource("Resource_ued1p")])
+upgrade_action = SubResource("Resource_co47p")
+price_modifier_per_level = 1.2
+has_max_amount = true
+maximal_buyable_amount = 249
+display_name = ExtResource("8_k6oi8")
+description = ExtResource("7_wv3el")
+icon = ExtResource("9_k6oi8")
+price = 20.0
+metadata/_custom_type_script = "uid://dw8uv3t0dtref"

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://bd12qoepdrexr"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_v0ilb"]
+
+[resource]
+script = ExtResource("1_v0ilb")
+key = "PLAYER_MISSING_WATER_CAN_1"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

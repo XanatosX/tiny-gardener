@@ -1,0 +1,561 @@
+# LANGUAGE translation for tiny-gardener for the following files:
+# res://entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+# res://assets/resources/translations/corn_description.tres
+# res://assets/resources/translations/corn_drop_description.tres
+# res://assets/resources/translations/corn_drop_name.tres
+# res://assets/resources/translations/corn_name.tres
+# res://assets/resources/translations/dead_plant_description.tres
+# res://assets/resources/translations/dead_plant_name.tres
+# res://assets/resources/translations/fertilizer_description.tres
+# res://assets/resources/translations/fertilizer_name.tres
+# res://assets/resources/translations/fertilize_action_description.tres
+# res://assets/resources/translations/fertilize_action_name.tres
+# res://assets/resources/translations/harvest_action_description.tres
+# res://assets/resources/translations/harvest_action_name.tres
+# res://assets/resources/translations/ladybug_drop_description.tres
+# res://assets/resources/translations/ladybug_drop_name.tres
+# res://assets/resources/translations/missing_plant.tres
+# res://assets/resources/translations/plant_action_description.tres
+# res://assets/resources/translations/plant_action_name.tres
+# res://assets/resources/translations/rose_drop_description.tres
+# res://assets/resources/translations/rose_drop_name.tres
+# res://assets/resources/translations/rose_plant_description.tres
+# res://assets/resources/translations/rose_plant_name.tres
+# res://assets/resources/translations/water_action_description.tres
+# res://assets/resources/translations/water_action_name.tres
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tiny-gardener\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Xanatos\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "PLANT_DATA"
+msgstr "Plant Data"
+
+#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "NAME"
+msgstr "Name:"
+
+#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "PLANT NAME"
+msgstr "Plant Name"
+
+#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "WATER_STATUS_DESCRIPTION"
+msgstr "The watering state of the pot"
+
+#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "NUTRITION_STATUS_DESCRIPTION"
+msgstr "The nutrition state of the pot"
+
+#: entites/game/ui_game/scenes/game_ui.tscn
+msgid "MONEY_DESCRIPTION"
+msgstr "This is your current money, you will need it to buy new stuff"
+
+#: entites/game/ui_game/scenes/game_ui.tscn
+msgid "0.00"
+msgstr ""
+
+#: entites/game/ui_shop/scenes/shop_ui.tscn
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+msgid "X"
+msgstr "X"
+
+#: entites/game/ui_shop/scenes/shop_ui.tscn
+msgid "SHOP"
+msgstr "Shop"
+
+#: entites/game/ui_shop/scenes/shop_ui.tscn
+msgid "BuyPage"
+msgstr "Buy"
+
+#: entites/game/ui_shop/scenes/shop_ui.tscn
+msgid "SellPage"
+msgstr "Sel"
+
+#: entites/game/ui_shop/scenes/shop_ui.tscn
+msgid "Upgrades"
+msgstr ""
+
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+#: assets/resources/translations/handbook/movement.tres
+msgid "MOVEMENT"
+msgstr "Movement"
+
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+msgid "CAMERA"
+msgstr "Camera"
+
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+msgid "INTERACTION"
+msgstr "Interact"
+
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+msgid "SELECT"
+msgstr "Select"
+
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+#: assets/resources/translations/or.tres
+msgid "OR"
+msgstr "Or"
+
+#: assets/resources/translations/handbook/basic_movement.tres
+msgid "BASIC_MOVEMENT"
+msgstr "Basic Movement"
+
+msgid "tiny-gardener"
+msgstr ""
+
+#: assets/resources/translations/buy.tres
+#: assets/resources/translations/shop_buy_tab.tres
+msgid "BUY"
+msgstr "Buy"
+
+#: assets/resources/translations/door_farm.tres
+msgid "DOOR_FARM_NAME"
+msgstr "Farm"
+
+#: assets/resources/translations/door_house.tres
+msgid "DOOR_HOUSE_NAME"
+msgstr "House"
+
+#: assets/resources/translations/initial_pot_amount_description.tres
+msgid "INITIAL_POT_AMOUNT_DESCRIPTION"
+msgstr ""
+"Unlock the first plant pot for your farm, this allows you to start planting."
+
+#: assets/resources/translations/initial_pot_amount_name.tres
+msgid "INITIAL_POT_AMOUNT_NAME"
+msgstr "Unlock first plant pot"
+
+#: assets/resources/translations/missing_plant.tres
+msgid "NO_PLANT_EXISTING"
+msgstr "No plant present"
+
+#: assets/resources/translations/poor_quality_name.tres
+msgid "POOR_QUALITY_NAME"
+msgstr "Poor"
+
+#: assets/resources/translations/premium_quality_name.tres
+msgid "PREMIUM_QUALITY_NAME"
+msgstr "Premium"
+
+#: assets/resources/translations/sell.tres
+#: assets/resources/translations/shop_sell_tab.tres
+msgid "SELL"
+msgstr "Sell"
+
+#: assets/resources/translations/shop_upgrade_tab.tres
+#: assets/resources/translations/handbook/upgrades_group.tres
+msgid "UPGRADES"
+msgstr "Upgrades"
+
+#: assets/resources/translations/standard_quality_name.tres
+msgid "STANDARD_QUALITY_NAME"
+msgstr "Standard"
+
+#: assets/resources/translations/teleport_to_farm.tres
+msgid "TELEPORT_TO_FARM_ACTION_NAME"
+msgstr "Go to %s"
+
+#: assets/resources/translations/teleport_to_farm_description.tres
+msgid "TELEPORT_TO_FARM_ACTION_DESCRIPTION"
+msgstr "Go to %s from your current location"
+
+#: assets/resources/translations/upgrade_pot_amount_description.tres
+msgid "UPGRADE_POT_AMOUNT_DESCRIPTION"
+msgstr ""
+"Unlock an additional plant pot for your farm, this allows you to plant more "
+"at the same time"
+
+#: assets/resources/translations/upgrade_pot_amount_name.tres
+msgid "UPGRADE_POT_AMOUNT_NAME"
+msgstr "Unlock additional plant pot"
+
+#. TRANSLATORS: Requires a %s placeholder to work correctly
+#: assets/resources/translations/version_string.tres
+msgid "VERSION"
+msgstr "Version: %s"
+
+#: assets/resources/translations/actions/fertilize_action_description.tres
+msgid "FERTILIZE_ACTION_DESCRIPTION"
+msgstr ""
+"Fertilize the ground to speed up the plant growth or stop them from dying"
+
+#: assets/resources/translations/actions/fertilize_action_name.tres
+msgid "FERTILIZE_ACTION_NAME"
+msgstr "Fertilize"
+
+#: assets/resources/translations/actions/fill_water_can_description.tres
+msgid "FILL_WATER_CAN_ACTION_DESCRIPTION"
+msgstr "Fill up your watering can"
+
+#: assets/resources/translations/actions/fill_water_can_name.tres
+msgid "FILL_WATER_CAN_ACTION_NAME"
+msgstr "Fill Watering Can"
+
+#: assets/resources/translations/actions/harvest_action_description.tres
+msgid "HARVEST_ACTION_DESCRIPTION"
+msgstr "Harvest the plant to get the yield, this depends on the plant itself"
+
+#: assets/resources/translations/actions/harvest_action_name.tres
+msgid "HARVEST_ACTION_NAME"
+msgstr "Harvest"
+
+#: assets/resources/translations/actions/plant_action_description.tres
+msgid "PLANT_ACTION_DESCRIPTION"
+msgstr "Plant a new plant inside of that pot, choose wisely"
+
+#: assets/resources/translations/actions/plant_action_name.tres
+msgid "PLANT_ACTION_NAME"
+msgstr "Plant"
+
+#: assets/resources/translations/actions/shop_trigger_action.tres
+msgid "SHOP_TRIGGER_ACTION_NAME"
+msgstr "Shop"
+
+#: assets/resources/translations/actions/shop_trigger_action_description.tres
+msgid "SHOP_TRIGGER_ACTION_DESCRIPTION"
+msgstr "Open the shop to sell some plants"
+
+#: assets/resources/translations/actions/water_action_description.tres
+msgid "WATER_ACTION_DESCRIPTION"
+msgstr "Water the plants otherwise they will die"
+
+#: assets/resources/translations/actions/water_action_name.tres
+msgid "WATER_ACTION_NAME"
+msgstr "Watering"
+
+#: assets/resources/translations/characters/mother_character_backstory.tres
+msgid "MOTHER_BACKSTORY"
+msgstr ""
+
+#: assets/resources/translations/characters/mother_character_name.tres
+msgid "MOTHER_NAME"
+msgstr "Mum"
+
+#: assets/resources/translations/characters/player_backstory.tres
+msgid "PLAYER_BACKSTORY"
+msgstr ""
+
+#: assets/resources/translations/characters/player_name.tres
+msgid "PLAYER_NAME"
+msgstr "Player"
+
+#: assets/resources/translations/dialogs/add_water_can/add_water_can_player_1.tres
+msgid "ADD_WATER_CAN_PLAYER_1"
+msgstr ""
+"Ohh nice, I was right there is my old water can. I can put that to good use. "
+"Hmm seems to be empty, I should fill it up first"
+
+#: assets/resources/translations/dialogs/explain_plant_pot/player_explain_plant_pot_1.tres
+msgid "PLAYER_EXPLAIN_PLANT_POT_1"
+msgstr ""
+"[i]I should plant some crops here, and then make sure the plant is happy. "
+"This might be difficult.[/i]"
+
+#: assets/resources/translations/dialogs/explain_plant_pot/player_explain_plant_pot_2.tres
+msgid "PLAYER_EXPLAIN_PLANT_POT_2"
+msgstr ""
+"[i]I need to monitor the nutrient and water levels. If either runs out, the "
+"plants will wither. Harvesting too late will deplete the soil's resources[/i]"
+
+#: assets/resources/translations/dialogs/intro/intro_player_1.tres
+msgid "PLAYER_INTRO_MESSAGE_1"
+msgstr ""
+"[wave amp=50.0 freq=5.0 connected=1]Yawning[/wave] Hey Mum, may I ask you "
+"for an advice?"
+
+#: assets/resources/translations/dialogs/intro/intro_player_2.tres
+msgid "PLAYER_INTRO_MESSAGE_2"
+msgstr ""
+"I do want to buy something expensive and I do not know how I could pay for "
+"it."
+
+#: assets/resources/translations/dialogs/intro/intro_player_3.tres
+msgid "PLAYER_INTRO_MESSAGE_3"
+msgstr ""
+"I want to make a tour around the world and need to get a large amount of "
+"money for that."
+
+#: assets/resources/translations/dialogs/intro/intro_player_4.tres
+msgid "PLAYER_INTRO_MESSAGE_4"
+msgstr "That might work, I will try that, thank you"
+
+#: assets/resources/translations/dialogs/intro/intro_player_5.tres
+msgid "PLAYER_INTRO_MESSAGE_5"
+msgstr ""
+"I should go to my notebook on my desk and buy a plant pot, fertilizer and "
+"something to plant"
+
+#: assets/resources/translations/dialogs/intro/mother_intro_message_1.tres
+msgid "MOTHER_INTRO_MESSAGE_1"
+msgstr "Sure Honey, what's on your mind?"
+
+#: assets/resources/translations/dialogs/intro/mother_intro_message_2.tres
+msgid "MOTHER_INTRO_MESSAGE_2"
+msgstr "Oh, okay, what do you want to buy?"
+
+#: assets/resources/translations/dialogs/intro/mother_intro_message_3.tres
+msgid "MOTHER_INTRO_MESSAGE_3"
+msgstr ""
+"Why not make the money yourself? You do have a large backyard and you are "
+"gifted with a green thumb - plant a few plants, and sell them!"
+
+#: assets/resources/translations/dialogs/missing_water_can/player_missing_water_can_1.tres
+msgid "PLAYER_MISSING_WATER_CAN_1"
+msgstr ""
+"Alright, I bought a plant pot, now I should find my old water can. It might "
+"be on the well outside"
+
+#: assets/resources/translations/dialogs/should_buy_pot/should_buy_pot_message_1.tres
+msgid "PLAYER_SHOULD_BUY_POT_FIRST"
+msgstr ""
+"[i]I should buy a pot first. I might find one on the internet by using my "
+"Notebook. Without a pot planting will be difficult[/i]"
+
+#: assets/resources/translations/drops/corn_drop_description.tres
+msgid "CORN_DROP_DESCRIPTION"
+msgstr ""
+"This is something produced by a corn plant, you can use it to make popcorn, "
+"or sell it to buy new corn plants"
+
+#: assets/resources/translations/drops/corn_drop_name.tres
+msgid "CORN_DROP_NAME"
+msgstr "Corn"
+
+#: assets/resources/translations/drops/ladybug_drop_description.tres
+msgid "LADYBUG_DROP_DESCRIPTION"
+msgstr ""
+"Well it's a lady bug, with some dots on it. I think you should sell it, "
+"maybe there is someone buying them."
+
+#: assets/resources/translations/drops/ladybug_drop_name.tres
+msgid "LADYBUG_DROP_NAME"
+msgstr "Ladybug"
+
+#: assets/resources/translations/drops/rose_drop_description.tres
+msgid "ROSE_DROP_DESCRIPTION"
+msgstr ""
+"A rose, what a wonderful flower, isn't it?\vNow sell it, you need the money"
+
+#: assets/resources/translations/drops/rose_drop_name.tres
+msgid "ROSE_DROP_NAME"
+msgstr "Rose"
+
+#: assets/resources/translations/handbook/basic_movement_description.tres
+msgid "BASIC_MOVEMENT_DESCRIPTION"
+msgstr "Explains how to move around in the game"
+
+#: assets/resources/translations/handbook/basic_movement_entry.tres
+msgid "BASIC_MOVEMENT_ENTRY"
+msgstr ""
+"Basic key binds to move around, use the camera or interact with the game "
+"world"
+
+#: assets/resources/translations/handbook/basic_plant_explanation.tres
+msgid "BASIC_PLANT_EXPLANATION"
+msgstr ""
+"A plant requires [url={\"entry\":\"Water\"}]water[/url] and [url={\"entry\":"
+"\"Fertilizer\"}]fertilizer[/url] to grow. If any of those resources is fully "
+"depleted, the plant will die slowly.\n"
+"If the health drops to 0 the plant is dead and can't be harvested anymore. "
+"To prevent this keep your plant watered.\n"
+"If a plant is fully grown the fertilizer and water requirement changes, most "
+"plants require less resources, some might require more to sustain the fully "
+"grown state.\n"
+"\n"
+"Above each plant there are status indicators if any resource is missing, "
+"check out for them. If they start to blink they are close to run out of that "
+"resource, act quick now. They look like this."
+
+#: assets/resources/translations/handbook/drops_group.tres
+msgid "DROPS_GROUP"
+msgstr "Drops"
+
+#: assets/resources/translations/handbook/fertilizer.tres
+msgid "FERTILIZER"
+msgstr "Fertilizer"
+
+#: assets/resources/translations/handbook/fertilizer_group.tres
+msgid "FERTILIZER_GROUP"
+msgstr "Fertilizer"
+
+#: assets/resources/translations/handbook/fertilizer_handbook_description.tres
+msgid "FERTILIZER_HANDBOOK_DESCRIPTION"
+msgstr "What is fertilizer used for?"
+
+#: assets/resources/translations/handbook/fertilizer_handbook_text.tres
+msgid "FERTILIZER_HANDBOOK_TEXT"
+msgstr ""
+"Fertilizer ist needed by a plant to [url={\"entry\":\"KeepPlantAlive\"}]keep "
+"it alive[/url]. Plants will user fertilizer tog row and die if not enough is "
+"available.\n"
+"Keep your plant pots always filled with fertilizer.\n"
+"\n"
+"[b]tip:[/b] If more than fertilizer is added to an pot, the plant might grow "
+"faster!"
+
+#: assets/resources/translations/handbook/game_mechanics.tres
+msgid "GAME_MECHANICS"
+msgstr "Game Mechanics"
+
+#: assets/resources/translations/handbook/handbook.tres
+msgid "HANDBOOK"
+msgstr "Handbook"
+
+#: assets/resources/translations/handbook/handbook_basic_camera_entry.tres
+msgid "BASIC_CAMERA_HANDBOOK_ENTRY"
+msgstr ""
+"[b]Camera[/b][/center]\n"
+"[i]Move the camera in 90 degree steps to one direction[/i]"
+
+#: assets/resources/translations/handbook/handbook_basic_interaction_entry.tres
+msgid "BASIC_INTERACTION_HANDBOOK_ENTRY"
+msgstr ""
+"[b]Interaction[/b][/center]\n"
+"[i]Press interaction to perform a action from within the hotbar[/i]"
+
+#: assets/resources/translations/handbook/handbook_basic_movement_entry.tres
+msgid "BASIC_MOVEMENT_HANDBOOK_ENTRY"
+msgstr ""
+"[b]Movement[/b]\n"
+"[i]Use those buttons to move your character around[/i]"
+
+#: assets/resources/translations/handbook/handbook_basic_selection_entry.tres
+msgid "BASIC_SELECTION_HANDBOOK_ENTRY"
+msgstr ""
+"[b]Selection[/b][/center]\n"
+"[i]Select action from the hotbar[/i]"
+
+#: assets/resources/translations/handbook/item_group.tres
+msgid "ITEMS"
+msgstr "Items"
+
+#: assets/resources/translations/handbook/keep_plants_alive.tres
+msgid "KEEP_PLANTS_ALIVE"
+msgstr "Keep Plants Alive"
+
+#: assets/resources/translations/handbook/keep_plants_alive_description.tres
+msgid "KEEP_PLANTS_ALIVE_DESCRIPTION"
+msgstr "Explanation how to keep your plants alive"
+
+#: assets/resources/translations/handbook/keep_plants_alive_explain_icons.tres
+msgid "BASIC_PLANT_ICON_EXPLANATION"
+msgstr ""
+"The water icon tells you that your plant is thirsty, go and give it some "
+"water\n"
+"The fertilize icon will tell you that you need to add more fertilizer to "
+"your plant\n"
+"The hearth icon tells you that the plant is about to die, fix the other two "
+"icons to prevent this, you can also harvest the plant if it is already fully "
+"grown."
+
+#: assets/resources/translations/handbook/plants_groups.tres
+msgid "PLANTS_GROUP"
+msgstr "Plants"
+
+#: assets/resources/translations/handbook/quality_entry.tres
+msgid "QUALITY_ENTRY"
+msgstr "Item Quality"
+
+#: assets/resources/translations/handbook/quality_entry_description.tres
+msgid "QUALITY_DESCRIPTION_ENTRY"
+msgstr "What is item quality? What does it do?"
+
+#: assets/resources/translations/handbook/quality_entry_text.tres
+msgid "QUALITY_HANDBOOK_TEXT"
+msgstr ""
+"Most items do have a quality level, this defines if a plant has more yield "
+"or requires less water. Also the chance to get higher quality drops is "
+"increased. A high quality drop will give you more money as a poor one.\n"
+"Also high quality fertilizer will provide more fertilizer as one with less "
+"quality.\n"
+"\n"
+"The quality levels are Poor, Standard and Premium, check then out below"
+
+#: assets/resources/translations/handbook/water.tres
+msgid "WATER"
+msgstr "Water"
+
+#: assets/resources/translations/handbook/water_handbook_description.tres
+msgid "WATER_HANDBOOK_DESCRIPTION"
+msgstr "Plant really do need water?"
+
+#: assets/resources/translations/handbook/water_handbook_text.tres
+msgid "WATER_HANDBOOK_TEXT"
+msgstr ""
+"Water ist needed to [url={\"entry\":\"KeepPlantAlive\"}]keep your plants "
+"alive[/url]. Plants will user water all the time and die if not enough is "
+"available.\n"
+"To water your plants you will need a water can, the [url={\"entry\":"
+"\"OLD_WATER_CAN_NAME_POOR\"}]old water can[/url] is the first one you get. "
+"You should fill them up at the well.\n"
+"Keep your plant pots always filled with water."
+
+#: assets/resources/translations/items/fertilizer_description.tres
+msgid "FERTILIZER_DESCRIPTION"
+msgstr ""
+"Use this to fertilize the ground, allowing you to continue growing plants"
+
+#: assets/resources/translations/items/fertilizer_name.tres
+msgid "FERTILIZER_NAME"
+msgstr "Fertilizer"
+
+#: assets/resources/translations/items/old_water_can_description.tres
+msgid "OLD_WATER_CAN_DESCRIPTION"
+msgstr "That's my old rusty water can, should be fine to start with"
+
+#: assets/resources/translations/items/old_water_can_long_description.tres
+msgid "OLD_WATER_CAN_LONG_DESCRIPTION"
+msgstr ""
+"I got this water can gifted as a child, I kept it for years now. It's in a "
+"really bad shape, but still holds water without leaking.\vI can use this to "
+"[url={\"entry\":\"Water\"}]water[/url] my plants."
+
+#: assets/resources/translations/items/old_water_can_name.tres
+msgid "OLD_WATER_CAN_NAME"
+msgstr "Old Water Can"
+
+#: assets/resources/translations/plants/corn_description.tres
+msgid "CORN_PLANT_DESCRIPTION"
+msgstr ""
+"This is a corn plant, put it into one of the pots to grow it, this plant "
+"does drop some corn if fully grown\n"
+"Do not forget to water the plant and keep it fertilized"
+
+#: assets/resources/translations/plants/corn_name.tres
+msgid "CORN_PLANT_NAME"
+msgstr "Corn plant"
+
+#: assets/resources/translations/plants/dead_plant_description.tres
+msgid "DEAD_PLANT_DESCRIPTION"
+msgstr ""
+"This plant is dead, either there wasn't enough nutrition or water available "
+"to keep it alive"
+
+#: assets/resources/translations/plants/dead_plant_name.tres
+msgid "DEAD_PLANT_NAME"
+msgstr "Dead Plant"
+
+#: assets/resources/translations/plants/rose_plant_description.tres
+msgid "ROSE_PLANT_DESCRIPTION"
+msgstr ""
+"A rose plant, it does take a while to grow that plant, but the yield is "
+"worth the trouble. At least that's what I heared"
+
+#: assets/resources/translations/plants/rose_plant_name.tres
+msgid "ROSE_PLANT_NAME"
+msgstr "Rose flower"

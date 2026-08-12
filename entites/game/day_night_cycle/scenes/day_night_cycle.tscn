@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dotb7c5u5v75w"]
+
+[ext_resource type="Script" uid="uid://c7ii5b1qdd584" path="res://entites/game/day_night_cycle/scripts/day_night_cycle.gd" id="1_2bawn"]
+[ext_resource type="Script" uid="uid://5gvxmh4kqg0l" path="res://entites/game/day_night_cycle/scripts/sun.gd" id="2_ai8pp"]
+
+[sub_resource type="Gradient" id="Gradient_tv2n6"]
+colors = PackedColorArray(0, 0, 0.5529412, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_27u0r"]
+gradient = SubResource("Gradient_tv2n6")
+fill_from = Vector2(1, 0.51282054)
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_upa85"]
+night_sky = SubResource("GradientTexture2D_27u0r")
+
+[sub_resource type="Sky" id="Sky_sv1e6"]
+sky_material = SubResource("PhysicalSkyMaterial_upa85")
+
+[sub_resource type="Environment" id="Environment_2bawn"]
+background_mode = 2
+sky = SubResource("Sky_sv1e6")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 1.86
+tonemap_mode = 4
+ssr_enabled = true
+ssao_enabled = true
+glow_enabled = true
+
+[node name="DayNightCycle" type="Node3D" unique_id=849121875]
+script = ExtResource("1_2bawn")
+percentage_offset = 0.25
+metadata/_custom_type_script = "uid://c7ii5b1qdd584"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=410061453]
+environment = SubResource("Environment_2bawn")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1313513947]
+unique_name_in_owner = true
+transform = Transform3D(0.99999994, 0, 0, 0, 1.192488e-08, 1.0000001, 0, -0.99999994, 1.1924882e-08, 0, 0, 0)
+script = ExtResource("2_ai8pp")
+metadata/_custom_type_script = "uid://5gvxmh4kqg0l"

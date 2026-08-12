@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://cwvnoi657lge2"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_goikj"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_jg5aq"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="3_1b8qq"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_q7xb7"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="5_0yokt"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_jn84x"]
+[ext_resource type="Resource" uid="uid://bn7ei43f0pbpg" path="res://assets/resources/translations/plants/corn_description.tres" id="7_gu2k8"]
+[ext_resource type="Resource" uid="uid://v66ufqtl7rup" path="res://assets/resources/translations/plants/corn_name.tres" id="8_k1tpu"]
+[ext_resource type="Texture2D" uid="uid://xb46smqbvrwq" path="res://assets/atlas/corn_item.tres" id="9_5jsia"]
+[ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entites/shared/custom_resources/plant/plant_drop_configuration.gd" id="10_jjwn1"]
+[ext_resource type="Resource" uid="uid://cicnk40vhb7s0" path="res://assets/resources/items/yield_configurations/corn_drop_configuration.tres" id="11_nwh05"]
+[ext_resource type="Resource" uid="uid://bg7gwqe86iw7h" path="res://assets/resources/items/yield_configurations/ladybug_drop_configuration.tres" id="12_i6acw"]
+[ext_resource type="Curve" uid="uid://ciyqrjxkjtt8g" path="res://assets/resources/quality_curves/default_quality_curve.tres" id="13_0upxo"]
+[ext_resource type="Script" uid="uid://bsevesu0cw5ru" path="res://entites/shared/custom_resources/plant/plant_resource.gd" id="14_sx5ni"]
+[ext_resource type="Texture2D" uid="uid://btcjy5ijlkscm" path="res://assets/atlas/corn_plant.tres" id="15_qdpr3"]
+
+[resource]
+script = ExtResource("14_sx5ni")
+type = 1
+texture = ExtResource("15_qdpr3")
+plant_yield = Array[ExtResource("10_jjwn1")]([ExtResource("11_nwh05"), ExtResource("12_i6acw")])
+quality_curve = ExtResource("13_0upxo")
+grow_stages = 6
+growth_points_per_stage = 13.0
+initial_plant_health = 75.0
+growing_water_requirement = 0.65
+growing_nutrition_requirement = 0.2
+sustainable_water_requirement = 0.1
+sustainable_nutrition_requirement = 0.05
+display_name = ExtResource("8_k1tpu")
+description = ExtResource("7_gu2k8")
+icon = ExtResource("9_5jsia")
+quality = 3
+can_sell = false
+price = 10.0
+metadata/_custom_type_script = "uid://bsevesu0cw5ru"

@@ -1,0 +1,314 @@
+[gd_scene format=3 uid="uid://k0r0iddgkv82"]
+
+[ext_resource type="PackedScene" uid="uid://bvgk42kjrxv5b" path="res://assets/objects/chair/table.gltf" id="1_3jylh"]
+[ext_resource type="PackedScene" uid="uid://iq5g0xppypj4" path="res://entites/game/shop_trigger/scenes/shop_trigger.tscn" id="1_ssx82"]
+[ext_resource type="PackedScene" uid="uid://d332r5anhh7q3" path="res://entites/teleport_door/scenes/teleport_door.tscn" id="2_rvyij"]
+[ext_resource type="PackedScene" uid="uid://bsn832bctv7eu" path="res://assets/objects/nightstand/scenes/nightstand.tscn" id="3_4key6"]
+[ext_resource type="PackedScene" uid="uid://ctoifvq747g4y" path="res://assets/objects/bed/bed.gltf" id="3_gkfgb"]
+[ext_resource type="PackedScene" uid="uid://cswt5jtfknkh" path="res://assets/objects/room_devider/scenes/high_devider.tscn" id="4_s671j"]
+[ext_resource type="Script" uid="uid://koykwrgjwx1i" path="res://entites/shared/special_objects/nodes/day_time_controlled_omni_light.gd" id="6_bifp6"]
+[ext_resource type="Resource" uid="uid://qd15q45qhxpn" path="res://assets/resources/translations/door_farm.tres" id="7_fqa7a"]
+[ext_resource type="Resource" uid="uid://b066oswljguvn" path="res://assets/resources/translations/door_house.tres" id="8_eoy26"]
+[ext_resource type="Texture2D" uid="uid://bvyt3hvfhxvcn" path="res://assets/atlas/farm_icon.tres" id="9_eoy26"]
+[ext_resource type="PackedScene" uid="uid://di70prv3onnf2" path="res://assets/objects/desk/scenes/large_desk.tscn" id="10_kfafr"]
+[ext_resource type="PackedScene" uid="uid://bfqql00v26xjj" path="res://assets/objects/plate/plate.gltf" id="11_kfafr"]
+[ext_resource type="PackedScene" uid="uid://cc0v2qp0gqmxj" path="res://entites/game/situation_trigger/scenes/area_situation_trigger.tscn" id="13_wtwwe"]
+[ext_resource type="Resource" uid="uid://ij14rx80sfbc" path="res://assets/resources/situations/intro_situation.tres" id="14_hjc8v"]
+[ext_resource type="Resource" uid="uid://b8t003enx7vgn" path="res://assets/resources/situations/missing_plant_pot_situation.tres" id="15_hjc8v"]
+[ext_resource type="Resource" uid="uid://c0tmxnn2msk8p" path="res://assets/resources/items/upgrades/initial_pot_upgrade.tres" id="16_07rb5"]
+[ext_resource type="Script" uid="uid://btx3f3hgnwkrg" path="res://entites/game/situation_trigger/scripts/validation/situation_has_item_validation.gd" id="17_ieibp"]
+[ext_resource type="Resource" uid="uid://c0xbiw0gabivw" path="res://assets/resources/items/water_cans/old_water_can.tres" id="18_ieibp"]
+[ext_resource type="Resource" uid="uid://br4www5wo4pr2" path="res://assets/resources/situations/shop_missing_water_can.tres" id="18_jh1e6"]
+[ext_resource type="Script" uid="uid://cbljygcqcts88" path="res://entites/game/situation_trigger/scripts/validation/multi_step_validation.gd" id="19_cd680"]
+[ext_resource type="Script" uid="uid://1kthfg4vkhb8" path="res://entites/game/situation_trigger/scripts/situation_validation.gd" id="20_jg6ut"]
+[ext_resource type="Script" uid="uid://rw5rypltirio" path="res://entites/game/situation_trigger/scripts/inventory_updated_trigger.gd" id="22_ayj7f"]
+[ext_resource type="Script" uid="uid://c4gn5psacn0d3" path="res://entites/shared/custom_resources/waypoints/waypoint.gd" id="22_jg6ut"]
+[ext_resource type="PackedScene" uid="uid://dxijk61rta836" path="res://entites/game/home_inside/scenes/kitchen.tscn" id="23_tmvc2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8rpam"]
+size = Vector3(0.2, 0.4, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8rpam"]
+size = Vector3(0.2, 0.4, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gkfgb"]
+size = Vector3(0.2, 0.4, 4.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c5ng2"]
+size = Vector3(0.2, 0.4, 4.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4key6"]
+size = Vector3(0.2, 0.4, 1.9)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8rpam"]
+size = Vector2(4, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crh21"]
+size = Vector3(4, 0.2, 3)
+
+[sub_resource type="Resource" id="Resource_qqe5y"]
+script = ExtResource("17_ieibp")
+item = ExtResource("16_07rb5")
+invert = true
+metadata/_custom_type_script = "uid://btx3f3hgnwkrg"
+
+[sub_resource type="Resource" id="Resource_3fjc0"]
+script = ExtResource("17_ieibp")
+item = ExtResource("18_ieibp")
+invert = true
+metadata/_custom_type_script = "uid://btx3f3hgnwkrg"
+
+[sub_resource type="Resource" id="Resource_q2j5l"]
+script = ExtResource("17_ieibp")
+item = ExtResource("16_07rb5")
+metadata/_custom_type_script = "uid://btx3f3hgnwkrg"
+
+[sub_resource type="Resource" id="Resource_c5ng2"]
+script = ExtResource("19_cd680")
+validators = Array[ExtResource("20_jg6ut")]([SubResource("Resource_3fjc0"), SubResource("Resource_q2j5l")])
+metadata/_custom_type_script = "uid://cbljygcqcts88"
+
+[node name="HomeInside" type="Node3D" unique_id=1571608070]
+
+[node name="Interior" type="Node3D" parent="." unique_id=652396015]
+
+[node name="DinningTable" type="Node3D" parent="Interior" unique_id=108015678]
+
+[node name="Chair" parent="Interior/DinningTable" unique_id=1681418550 instance=ExtResource("1_3jylh")]
+transform = Transform3D(0.66019267, 0, -0.75109637, 0, 1, 0, 0.75109637, 0, 0.66019267, 0.819, 0, -0.385)
+
+[node name="Chair2" parent="Interior/DinningTable" unique_id=1340696317 instance=ExtResource("1_3jylh")]
+transform = Transform3D(0.5174597, 0, -0.8557077, 0, 1, 0, 0.8557077, 0, 0.5174597, 0.937, 0, -0.211)
+
+[node name="Chair3" parent="Interior/DinningTable" unique_id=907836905 instance=ExtResource("1_3jylh")]
+transform = Transform3D(-0.3279373, 0, 0.9446996, 0, 1, 0, -0.9446996, 0, -0.3279373, 0.4644882, 0, -0.09126295)
+
+[node name="Chair4" parent="Interior/DinningTable" unique_id=927405312 instance=ExtResource("1_3jylh")]
+transform = Transform3D(-0.60756695, 0, 0.7942684, 0, 1, 0, -0.7942684, 0, -0.60756695, 0.618, 0, 0.095)
+
+[node name="Plate1" parent="Interior/DinningTable" unique_id=64872643 instance=ExtResource("11_kfafr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.93031836, 0.15398379, -0.13819005)
+
+[node name="Plate2" parent="Interior/DinningTable" unique_id=51912512 instance=ExtResource("11_kfafr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7701764, 0.15598038, -0.17202766)
+
+[node name="Bed" parent="Interior" unique_id=1183934106 instance=ExtResource("3_gkfgb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.2709298, 0, 1.1027161)
+
+[node name="NightstandLeft" parent="Interior/Bed" unique_id=1734416395 instance=ExtResource("3_4key6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.51963353, 0, -0.30011034)
+
+[node name="NightstandRight" parent="Interior/Bed" unique_id=339742703 instance=ExtResource("3_4key6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.53605485, 0, -0.30011034)
+
+[node name="HighDevider" parent="Interior/Bed" unique_id=1831754385 instance=ExtResource("4_s671j")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.0349907, -2.9802322e-08, -0.33359742)
+
+[node name="HighDevider2" parent="Interior/Bed" unique_id=1114625750 instance=ExtResource("4_s671j")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.0349907, -2.9802322e-08, -0.071097374)
+
+[node name="HighDevider3" parent="Interior/Bed" unique_id=1270491408 instance=ExtResource("4_s671j")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.0349907, -2.9802322e-08, 0.19140261)
+
+[node name="HighDevider4" parent="Interior/Bed" unique_id=1359853906 instance=ExtResource("4_s671j")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.0349907, -2.9802322e-08, 0.4539026)
+
+[node name="HighDevider5" parent="Interior/Bed" unique_id=1566199341 instance=ExtResource("4_s671j")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.0349907, -2.9802322e-08, 0.71640265)
+
+[node name="HighDevider6" parent="Interior/Bed" unique_id=1127748674 instance=ExtResource("4_s671j")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.0349907, -2.9802322e-08, 0.9789026)
+
+[node name="HighDevider7" parent="Interior/Bed" unique_id=1826772806 instance=ExtResource("4_s671j")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.7724907, -2.9802322e-08, 1.1164026)
+
+[node name="HighDevider8" parent="Interior/Bed" unique_id=1377153812 instance=ExtResource("4_s671j")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.5099907, -2.9802322e-08, 1.1164026)
+
+[node name="HighDevider9" parent="Interior/Bed" unique_id=1688649827 instance=ExtResource("4_s671j")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.24749076, -2.9802322e-08, 1.1164026)
+
+[node name="Lights" type="Node3D" parent="Interior" unique_id=626440706]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Interior/Lights" unique_id=1738002493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7003322, 0.5749348, -0.13400269)
+light_color = Color(0.702874, 0.55627537, 0.13905394, 1)
+light_energy = 1.814
+shadow_enabled = true
+omni_range = 2.8819711
+script = ExtResource("6_bifp6")
+active_day_times = 12
+metadata/_custom_type_script = "uid://koykwrgjwx1i"
+
+[node name="NightLight" type="OmniLight3D" parent="Interior/Lights" unique_id=223571010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73530865, 0.2581227, 1.386248)
+light_color = Color(0.702874, 0.55627537, 0.13905394, 1)
+light_energy = 0.322
+shadow_enabled = true
+omni_range = 0.53010595
+script = ExtResource("6_bifp6")
+active_day_times = 12
+metadata/_custom_type_script = "uid://koykwrgjwx1i"
+
+[node name="Light" type="Node3D" parent="." unique_id=1922628520]
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="Light" unique_id=1918438854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019058228, 0.44034958, 0.048545837)
+update_mode = 1
+size = Vector3(6.773041, 5.010254, 6.0036774)
+interior = true
+enable_shadows = true
+
+[node name="Wall" type="Node3D" parent="." unique_id=2115258262]
+
+[node name="Wall1" type="MeshInstance3D" parent="Wall" unique_id=1715881532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0.2, 0)
+mesh = SubResource("BoxMesh_8rpam")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall/Wall1" unique_id=728158231]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/Wall1/StaticBody3D" unique_id=1251342198]
+shape = SubResource("BoxShape3D_8rpam")
+
+[node name="Wall3" type="MeshInstance3D" parent="Wall" unique_id=524736744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 0.2, 0)
+mesh = SubResource("BoxMesh_8rpam")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Wall/Wall3" unique_id=328116955]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/Wall3/StaticBody3D2" unique_id=763233873]
+shape = SubResource("BoxShape3D_8rpam")
+
+[node name="Wall2" type="MeshInstance3D" parent="Wall" unique_id=2035909899]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0.2, 1.6)
+mesh = SubResource("BoxMesh_gkfgb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall/Wall2" unique_id=691518231]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/Wall2/StaticBody3D" unique_id=801939602]
+shape = SubResource("BoxShape3D_c5ng2")
+
+[node name="Wall4" type="MeshInstance3D" parent="Wall" unique_id=2072475251]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.240564, 0.2, -1.6)
+mesh = SubResource("BoxMesh_4key6")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Wall/Wall4" unique_id=932600942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.241)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/Wall4/StaticBody3D2" unique_id=1475424956]
+shape = SubResource("BoxShape3D_c5ng2")
+
+[node name="Wall5" type="MeshInstance3D" parent="Wall" unique_id=1647886821]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.2499999, 0.2, -1.6)
+mesh = SubResource("BoxMesh_4key6")
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1675062478]
+mesh = SubResource("PlaneMesh_8rpam")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor" unique_id=1319111981]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" unique_id=1637070244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+shape = SubResource("BoxShape3D_crh21")
+
+[node name="ShopTrigger" parent="." unique_id=1987431433 instance=ExtResource("1_ssx82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1860477, 0, 0.6276175)
+
+[node name="TeleportDoor" parent="." unique_id=1607386139 instance=ExtResource("2_rvyij")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -1.6006664)
+location = 1
+target = 2
+target_name = ExtResource("7_fqa7a")
+location_name = ExtResource("8_eoy26")
+go_to_icon_overwrite = ExtResource("9_eoy26")
+
+[node name="LargeDesk" parent="." unique_id=105718745 instance=ExtResource("10_kfafr")]
+transform = Transform3D(0.8018024, 0, 0.59758925, 0, 1, 0, -0.59758925, 0, 0.8018024, 0.585, 0, -0.304)
+
+[node name="Situations" type="Node3D" parent="." unique_id=1212445654]
+
+[node name="IntroAreaEnterSituationTrigger" parent="Situations" unique_id=2123274811 node_paths=PackedStringArray("situation_objects") instance=ExtResource("13_wtwwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2435396, 0, 0.7586342)
+situation = ExtResource("14_hjc8v")
+situation_objects = [NodePath("../../Waypoints/Intro/Intro1"), NodePath("../../Waypoints/Intro/Intro2"), NodePath("../../Waypoints/Intro/Intro3"), NodePath("../../Waypoints/Intro/Intro4"), NodePath("../../Waypoints/Intro/Intro5")]
+
+[node name="MissingPotAreaEnterSituationTrigger" parent="Situations" unique_id=1590479858 node_paths=PackedStringArray("situation_objects") instance=ExtResource("13_wtwwe")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.04032111, 0.5053448, -2.0015764)
+situation = ExtResource("15_hjc8v")
+situation_objects = [NodePath("../../Waypoints/BuyPot/BuyPot1"), NodePath("../../Waypoints/BuyPot/BuyPot2"), NodePath("../../Waypoints/BuyPot/BuyPot3"), NodePath("../../Waypoints/BuyPot/BuyPot4")]
+validation = SubResource("Resource_qqe5y")
+
+[node name="MissingWaterCanAreaEnterSituationTrigger" parent="Situations" unique_id=927411764 instance=ExtResource("13_wtwwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2425432, 0, -1.295092)
+situation = ExtResource("18_jh1e6")
+validation = SubResource("Resource_c5ng2")
+
+[node name="InventoryUpdatedTrigger" type="Node" parent="Situations/MissingWaterCanAreaEnterSituationTrigger" unique_id=67216998]
+script = ExtResource("22_ayj7f")
+specific_watched_item = ExtResource("16_07rb5")
+metadata/_custom_type_script = "uid://rw5rypltirio"
+
+[node name="Waypoints" type="Node3D" parent="." unique_id=1688371215]
+
+[node name="Intro" type="Node3D" parent="Waypoints" unique_id=483096996]
+
+[node name="Intro1" type="Node3D" parent="Waypoints/Intro" unique_id=836128514]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.678897, 0, 0.2968989)
+script = ExtResource("22_jg6ut")
+name_of_waypoint_set = "intro_before_call"
+metadata/_custom_type_script = "uid://c4gn5psacn0d3"
+
+[node name="Intro2" type="Node3D" parent="Waypoints/Intro" unique_id=1113164458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7069614, 0, 0.30079615)
+script = ExtResource("22_jg6ut")
+name_of_waypoint_set = "intro_before_call"
+metadata/_custom_type_script = "uid://c4gn5psacn0d3"
+
+[node name="Intro3" type="Node3D" parent="Waypoints/Intro" unique_id=1366826895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6693257, 0, -0.45403826)
+script = ExtResource("22_jg6ut")
+name_of_waypoint_set = "intro_before_call"
+metadata/_custom_type_script = "uid://c4gn5psacn0d3"
+
+[node name="Intro4" type="Node3D" parent="Waypoints/Intro" unique_id=1806013199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.598699, 0, -0.68379724)
+script = ExtResource("22_jg6ut")
+name_of_waypoint_set = "intro_move_notebook"
+metadata/_custom_type_script = "uid://c4gn5psacn0d3"
+
+[node name="Intro5" type="Node3D" parent="Waypoints/Intro" unique_id=1510574748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.598699, 0, 1.0564177)
+script = ExtResource("22_jg6ut")
+name_of_waypoint_set = "intro_move_notebook"
+metadata/_custom_type_script = "uid://c4gn5psacn0d3"
+
+[node name="BuyPot" type="Node3D" parent="Waypoints" unique_id=496989926]
+
+[node name="BuyPot1" type="Node3D" parent="Waypoints/BuyPot" unique_id=1722914242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.22317)
+script = ExtResource("22_jg6ut")
+name_of_waypoint_set = "buy_pot_waypoint"
+metadata/_custom_type_script = "uid://c4gn5psacn0d3"
+
+[node name="BuyPot2" type="Node3D" parent="Waypoints/BuyPot" unique_id=576218802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.86095124)
+script = ExtResource("22_jg6ut")
+name_of_waypoint_set = "buy_pot_waypoint"
+metadata/_custom_type_script = "uid://c4gn5psacn0d3"
+
+[node name="BuyPot3" type="Node3D" parent="Waypoints/BuyPot" unique_id=367895638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5713792, 0, -0.89398396)
+script = ExtResource("22_jg6ut")
+name_of_waypoint_set = "buy_pot_waypoint"
+metadata/_custom_type_script = "uid://c4gn5psacn0d3"
+
+[node name="BuyPot4" type="Node3D" parent="Waypoints/BuyPot" unique_id=1677309729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5713792, 0, 1.0588291)
+script = ExtResource("22_jg6ut")
+name_of_waypoint_set = "buy_pot_waypoint"
+metadata/_custom_type_script = "uid://c4gn5psacn0d3"
+
+[node name="Kitchen" parent="." unique_id=1780664609 instance=ExtResource("23_tmvc2")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.7, 0, -1.3)
+
+[connection signal="trigger" from="Situations/MissingWaterCanAreaEnterSituationTrigger/InventoryUpdatedTrigger" to="Situations/MissingWaterCanAreaEnterSituationTrigger" method="trigger_situation"]

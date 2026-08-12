@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="PlantDrop" format=3 uid="uid://b3nrylrs65l6w"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_1ydhp"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_iaem2"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="2_t63m0"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="3_7axg1"]
+[ext_resource type="Resource" uid="uid://de758kfwwvv5q" path="res://assets/resources/translations/drops/rose_drop_description.tres" id="4_7axg1"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_l8dr5"]
+[ext_resource type="Script" uid="uid://kqg1s7cii32o" path="res://entites/shared/custom_resources/plant/plant_drop.gd" id="4_wny3r"]
+[ext_resource type="Resource" uid="uid://bi4a2kn725xm2" path="res://assets/resources/translations/drops/rose_drop_name.tres" id="5_wny3r"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_3fp3r"]
+[ext_resource type="Texture2D" uid="uid://ctl8cremu7l7n" path="res://assets/atlas/rose_item.tres" id="6_wny3r"]
+
+[resource]
+script = ExtResource("4_wny3r")
+display_name = ExtResource("5_wny3r")
+description = ExtResource("4_7axg1")
+icon = ExtResource("6_wny3r")
+can_buy = false
+price = 12.0
+metadata/_custom_type_script = "uid://kqg1s7cii32o"

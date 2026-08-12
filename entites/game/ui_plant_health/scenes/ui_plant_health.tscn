@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://bsyoqcxl8wjqm"]
+
+[ext_resource type="PackedScene" uid="uid://cmcsu5ndq1g6i" path="res://entites/game/ui_plant_health/scenes/data_progress.tscn" id="1_6dsmq"]
+[ext_resource type="Script" uid="uid://dm7o3dftydnxr" path="res://entites/game/ui_plant_health/scripts/ui_plant_health.gd" id="1_0880d"]
+[ext_resource type="Resource" uid="uid://54q23q72qwiu" path="res://assets/resources/translations/missing_plant.tres" id="2_go10l"]
+[ext_resource type="Texture2D" uid="uid://bg2ubgonp2gq2" path="res://assets/atlas/water_icon.tres" id="4_esdcw"]
+[ext_resource type="Texture2D" uid="uid://cw07gr7nk1h8l" path="res://assets/atlas/nutrition_icon.tres" id="5_esdcw"]
+
+[node name="UiPlantHealth" type="Control" unique_id=1799959266]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 300.0
+offset_bottom = 500.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_0880d")
+no_plant_name = ExtResource("2_go10l")
+metadata/_custom_type_script = "uid://dm7o3dftydnxr"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1913062029]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1918657428]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1483161955]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=762695682]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1129393481]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="PlantData" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1189246945]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "PLANT_DATA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=171270686]
+layout_mode = 2
+columns = 2
+
+[node name="Name" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1284172145]
+layout_mode = 2
+text = "NAME"
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1596415388]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "PLANT NAME"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=293342428]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_bottom = 15
+
+[node name="Stats" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2" unique_id=1510474947]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Water" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/Stats" unique_id=1609115959 instance=ExtResource("1_6dsmq")]
+layout_mode = 2
+tooltip_text = "WATER_STATUS_DESCRIPTION"
+texture = ExtResource("4_esdcw")
+
+[node name="Nutrition" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/Stats" unique_id=613287553 instance=ExtResource("1_6dsmq")]
+layout_mode = 2
+tooltip_text = "NUTRITION_STATUS_DESCRIPTION"
+texture = ExtResource("5_esdcw")
+
+[connection signal="update_max_nutrition" from="." to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/Stats/Nutrition" method="change_max_value"]
+[connection signal="update_max_water" from="." to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/Stats/Water" method="change_max_value"]
+[connection signal="update_nutrition" from="." to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/Stats/Nutrition" method="change_value"]
+[connection signal="update_plant_name" from="." to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/GridContainer/Label" method="set_text"]
+[connection signal="update_water" from="." to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer2/Stats/Water" method="change_value"]

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dtux8ewqhs2ct"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8rpam"]
+size = Vector3(0.2, 0.5, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7anbj"]
+size = Vector3(0.2, 0.6, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_crh21"]
+size = Vector3(0.05, 0.5, 0.4)
+
+[node name="Door" type="Node3D" unique_id=1998837348]
+
+[node name="DoorFrame1" type="MeshInstance3D" parent="." unique_id=1294871919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.25)
+mesh = SubResource("BoxMesh_8rpam")
+
+[node name="DoorFrame2" type="MeshInstance3D" parent="." unique_id=53662180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -0.25)
+mesh = SubResource("BoxMesh_8rpam")
+
+[node name="DoorFrame3" type="MeshInstance3D" parent="." unique_id=1182595579]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.55, 2.9802322e-08)
+mesh = SubResource("BoxMesh_7anbj")
+
+[node name="Door" type="MeshInstance3D" parent="." unique_id=288786206]
+transform = Transform3D(0.999997, -0.0019525627, 0.0014731277, 0.001954764, 0.99999696, -0.0014921355, -0.0014702055, 0.0014950149, 0.9999978, 0, 0.25, 0)
+mesh = SubResource("BoxMesh_crh21")

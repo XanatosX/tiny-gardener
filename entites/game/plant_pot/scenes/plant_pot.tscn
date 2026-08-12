@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://d200fnos8du"]
+
+[ext_resource type="Script" uid="uid://dgfm2ekta4c28" path="res://entites/game/plant_pot/scripts/pot_visuals.gd" id="1_632bu"]
+[ext_resource type="PackedScene" uid="uid://d3cjbkemeyh6v" path="res://assets/objects/flower_pot/flower_pot.gltf" id="1_bmjx6"]
+[ext_resource type="Script" uid="uid://ihiwby7xa171" path="res://entites/game/plant_pot/scripts/pot.gd" id="2_gg0d1"]
+[ext_resource type="Script" uid="uid://cfa0u35jbiot0" path="res://entites/game/plant_pot/scripts/warnings_symbols.gd" id="4_0lq5y"]
+[ext_resource type="Script" uid="uid://ccy5i5jbx0c1o" path="res://entites/game/plant_pot/scripts/plant_sprite.gd" id="4_mvb64"]
+[ext_resource type="Texture2D" uid="uid://cw07gr7nk1h8l" path="res://assets/atlas/nutrition_icon.tres" id="5_0lq5y"]
+[ext_resource type="Texture2D" uid="uid://bg2ubgonp2gq2" path="res://assets/atlas/water_icon.tres" id="5_ut6q3"]
+[ext_resource type="Script" uid="uid://dkpt3k8dkvmj3" path="res://entites/shared/object_interaction/object_interaction.gd" id="6_mvb64"]
+[ext_resource type="Script" uid="uid://bljiw324g4gpj" path="res://entites/game/plant_pot/scripts/warning_symbol.gd" id="6_ut6q3"]
+[ext_resource type="Script" uid="uid://dgo34mflxca2j" path="res://entites/shared/object_interaction/action.gd" id="7_sy487"]
+[ext_resource type="Script" uid="uid://dco53prjt62an" path="res://entites/shared/object_interaction/actions/plant_action.gd" id="8_tdhmy"]
+[ext_resource type="Texture2D" uid="uid://is2kjfao5nd8" path="res://assets/atlas/health_icon.tres" id="9_e02nr"]
+[ext_resource type="Script" uid="uid://cpag2625lhhp5" path="res://entites/shared/object_interaction/actions/water_action.gd" id="9_geovo"]
+[ext_resource type="Script" uid="uid://7ctpuhk0st3l" path="res://entites/shared/object_interaction/actions/harvest_action.gd" id="9_tdhmy"]
+[ext_resource type="Resource" uid="uid://d364ajt6a3gru" path="res://assets/resources/translations/actions/plant_action_description.tres" id="12_qag27"]
+[ext_resource type="Script" uid="uid://bxx1evkpbdyou" path="res://entites/game/ui_hotbar/scripts/action_generators/plant_action_generator.gd" id="13_d0j22"]
+[ext_resource type="Resource" uid="uid://wmc3tgmp4xa2" path="res://assets/resources/translations/actions/plant_action_name.tres" id="13_qw61u"]
+[ext_resource type="Texture2D" uid="uid://0bkyfxdm577g" path="res://assets/atlas/planting_icon.tres" id="14_d0j22"]
+[ext_resource type="Script" uid="uid://d3xtnhtnhq6pt" path="res://entites/shared/object_interaction/actions/fertilize_action.gd" id="15_o74nh"]
+[ext_resource type="Resource" uid="uid://4uf23m8ipu6b" path="res://assets/resources/translations/actions/harvest_action_description.tres" id="17_kmxfc"]
+[ext_resource type="Resource" uid="uid://dpi76t7pmk8j6" path="res://assets/resources/translations/actions/harvest_action_name.tres" id="18_ip7gp"]
+[ext_resource type="Texture2D" uid="uid://8b21ucdoj8ct" path="res://assets/atlas/havest_action.tres" id="19_hg8wt"]
+[ext_resource type="Resource" uid="uid://1qm0v3wm6mww" path="res://assets/resources/translations/actions/water_action_description.tres" id="21_hr4yk"]
+[ext_resource type="Texture2D" uid="uid://juflmcuu8ha6" path="res://assets/atlas/water_action.tres" id="21_ip7gp"]
+[ext_resource type="Resource" uid="uid://bkxn3jl1mt6ew" path="res://assets/resources/translations/actions/water_action_name.tres" id="22_sgkxs"]
+[ext_resource type="Resource" uid="uid://uftkeb1p5aki" path="res://assets/resources/translations/actions/fertilize_action_description.tres" id="25_r4erq"]
+[ext_resource type="Script" uid="uid://buib21gtueln4" path="res://entites/game/ui_hotbar/scripts/action_generators/fertilizer_action_generator.gd" id="26_jpq42"]
+[ext_resource type="Resource" uid="uid://jnk3r4cu05el" path="res://assets/resources/translations/actions/fertilize_action_name.tres" id="26_s4igk"]
+[ext_resource type="Texture2D" uid="uid://bs6vacc4q11bs" path="res://assets/atlas/fertilize_action.tres" id="27_jpq42"]
+
+[sub_resource type="Resource" id="Resource_8rpam"]
+script = ExtResource("2_gg0d1")
+water_level = 100.0
+nutrition = 50.0
+metadata/_custom_type_script = "uid://ihiwby7xa171"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crh21"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="Resource" id="Resource_oyctv"]
+script = ExtResource("13_d0j22")
+metadata/_custom_type_script = "uid://bxx1evkpbdyou"
+
+[sub_resource type="Resource" id="Resource_gg0d1"]
+script = ExtResource("8_tdhmy")
+action_name = ExtResource("13_qw61u")
+action_description = ExtResource("12_qag27")
+icon = ExtResource("14_d0j22")
+action_generator = SubResource("Resource_oyctv")
+metadata/_custom_type_script = "uid://dco53prjt62an"
+
+[sub_resource type="Resource" id="Resource_geovo"]
+script = ExtResource("9_tdhmy")
+action_name = ExtResource("18_ip7gp")
+action_description = ExtResource("17_kmxfc")
+icon = ExtResource("19_hg8wt")
+metadata/_custom_type_script = "uid://7ctpuhk0st3l"
+
+[sub_resource type="Resource" id="Resource_gae46"]
+script = ExtResource("9_geovo")
+action_name = ExtResource("22_sgkxs")
+action_description = ExtResource("21_hr4yk")
+icon = ExtResource("21_ip7gp")
+metadata/_custom_type_script = "uid://cpag2625lhhp5"
+
+[sub_resource type="Resource" id="Resource_vy6cn"]
+script = ExtResource("26_jpq42")
+metadata/_custom_type_script = "uid://buib21gtueln4"
+
+[sub_resource type="Resource" id="Resource_crh21"]
+script = ExtResource("15_o74nh")
+action_name = ExtResource("26_s4igk")
+action_description = ExtResource("25_r4erq")
+icon = ExtResource("27_jpq42")
+action_generator = SubResource("Resource_vy6cn")
+metadata/_custom_type_script = "uid://d3xtnhtnhq6pt"
+
+[node name="PlantPot" type="Node3D" unique_id=1227555336]
+script = ExtResource("1_632bu")
+pot = SubResource("Resource_8rpam")
+metadata/_custom_type_script = "uid://dgfm2ekta4c28"
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1578421983]
+
+[node name="Pot" parent="Node3D" unique_id=1950681193 instance=ExtResource("1_bmjx6")]
+
+[node name="PlantSpawnNode" type="Node3D" parent="Node3D" unique_id=1035510863]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0.19835639, 0)
+
+[node name="PlantSprite" type="Sprite3D" parent="Node3D/PlantSpawnNode" unique_id=1890022377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08233641, 0)
+gi_mode = 2
+billboard = 2
+texture_filter = 0
+script = ExtResource("4_mvb64")
+metadata/_custom_type_script = "uid://ccy5i5jbx0c1o"
+
+[node name="WarningSymbols" type="Node3D" parent="Node3D" unique_id=1451193125 node_paths=PackedStringArray("pot_visuals")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9465332, 0)
+script = ExtResource("4_0lq5y")
+pot_visuals = NodePath("../..")
+metadata/_custom_type_script = "uid://cfa0u35jbiot0"
+
+[node name="WaterSymbol" type="Sprite3D" parent="Node3D/WarningSymbols" unique_id=1060823749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19226074, 0)
+texture_filter = 0
+texture = ExtResource("5_ut6q3")
+script = ExtResource("6_ut6q3")
+metadata/_custom_type_script = "uid://bljiw324g4gpj"
+
+[node name="NutritionSymbol" type="Sprite3D" parent="Node3D/WarningSymbols" unique_id=230066929]
+texture_filter = 0
+texture = ExtResource("5_0lq5y")
+script = ExtResource("6_ut6q3")
+metadata/_custom_type_script = "uid://bljiw324g4gpj"
+
+[node name="Health" type="Sprite3D" parent="Node3D/WarningSymbols" unique_id=1439259695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.177, 0)
+texture_filter = 0
+texture = ExtResource("9_e02nr")
+script = ExtResource("6_ut6q3")
+metadata/_custom_type_script = "uid://bljiw324g4gpj"
+
+[node name="InteractionArea" type="Area3D" parent="." unique_id=729188876]
+unique_name_in_owner = true
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea" unique_id=1325988596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_crh21")
+
+[node name="ObjectInteraction" type="Node" parent="." unique_id=1541138278 node_paths=PackedStringArray("controlled_entity", "interaction_area")]
+script = ExtResource("6_mvb64")
+controlled_entity = NodePath("..")
+interaction_area = NodePath("../InteractionArea")
+actions = Array[ExtResource("7_sy487")]([SubResource("Resource_gg0d1"), SubResource("Resource_geovo"), SubResource("Resource_gae46"), SubResource("Resource_crh21")])
+metadata/_custom_type_script = "uid://dkpt3k8dkvmj3"
+
+[connection signal="active_state_changed" from="." to="InteractionArea" method="set_monitoring"]
+[connection signal="active_state_changed" from="." to="InteractionArea" method="set_monitorable"]
+[connection signal="plant_deleted" from="." to="Node3D/PlantSpawnNode/PlantSprite" method="clean"]
+[connection signal="plant_died" from="." to="Node3D/PlantSpawnNode/PlantSprite" method="plant_died"]
+[connection signal="set_data" from="." to="Node3D/PlantSpawnNode/PlantSprite" method="set_data"]
+[connection signal="set_visual_stage" from="." to="Node3D/PlantSpawnNode/PlantSprite" method="set_grow_stage"]
+[connection signal="health_state_changed" from="Node3D/WarningSymbols" to="Node3D/WarningSymbols/Health" method="set_severity"]
+[connection signal="nutrition_state_changed" from="Node3D/WarningSymbols" to="Node3D/WarningSymbols/NutritionSymbol" method="set_severity"]
+[connection signal="water_state_changed" from="Node3D/WarningSymbols" to="Node3D/WarningSymbols/WaterSymbol" method="set_severity"]

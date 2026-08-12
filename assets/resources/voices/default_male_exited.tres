@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Voice" format=3 uid="uid://bg04xrfkyl7p1"]
+
+[ext_resource type="Script" uid="uid://cprt8cxu3h3an" path="res://entites/shared/custom_resources/voice/voice.gd" id="1_spleo"]
+[ext_resource type="AudioStream" uid="uid://die8t0en4hyfq" path="res://assets/audio/effects/voices/male_default_voice.ogg" id="2_00q77"]
+
+[resource]
+script = ExtResource("1_spleo")
+voice_frequency = 12
+voice_audio = ExtResource("2_00q77")
+min_pitch = 1.0
+max_pitch = 1.35
+min_db = -1.1000000000000014
+max_db = 2.5
+metadata/_custom_type_script = "uid://cprt8cxu3h3an"

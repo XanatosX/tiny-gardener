@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://cjima86eutrvh"]
+
+[ext_resource type="Script" uid="uid://dpyvv5m8bos23" path="res://entites/shared/custom_resources/item/item.gd" id="1_6e2ou"]
+[ext_resource type="Script" uid="uid://cedt3gqhboeaj" path="res://entites/shared/custom_resources/save/game_data.gd" id="2_sa5wi"]
+
+[resource]
+script = ExtResource("2_sa5wi")
+money = 250.0
+metadata/_custom_type_script = "uid://cedt3gqhboeaj"

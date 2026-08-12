@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ddgs7bpk482r3"]
+
+[ext_resource type="Shader" uid="uid://bdfc8ef3xd41u" path="res://assets/shaders/sprite_material_partial.gdshader" id="1_br37r"]
+[ext_resource type="Texture2D" uid="uid://dc1aqaj2r3byy" path="res://assets/textures/flower_pot_0.png" id="2_adogt"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_br37r")
+shader_parameter/sprite_texture = ExtResource("2_adogt")
+shader_parameter/percentage = 0.0

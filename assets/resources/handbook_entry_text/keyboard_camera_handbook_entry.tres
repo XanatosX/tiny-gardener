@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ImageTableText" format=3 uid="uid://bgjrfywluflb"]
+
+[ext_resource type="Script" uid="uid://b3ffhlckbatm8" path="res://entites/shared/custom_resources/handbook/text_types/help_resources/cell_data.gd" id="1_k0irc"]
+[ext_resource type="Texture2D" uid="uid://bvlsl7soolk00" path="res://assets/atlas/input/keyboard/camera_left.tres" id="2_y4da8"]
+[ext_resource type="Texture2D" uid="uid://bufeovogsrrif" path="res://assets/atlas/input/keyboard/camera_right.tres" id="3_cji41"]
+[ext_resource type="Script" uid="uid://c1ddhu7kp1r78" path="res://entites/shared/custom_resources/handbook/text_types/image_table_text.gd" id="4_gytqo"]
+
+[sub_resource type="Resource" id="Resource_mg4t5"]
+script = ExtResource("1_k0irc")
+images = Array[Texture2D]([ExtResource("2_y4da8"), ExtResource("3_cji41")])
+metadata/_custom_type_script = "uid://b3ffhlckbatm8"
+
+[resource]
+script = ExtResource("4_gytqo")
+columns = 2
+center = true
+rows = Array[ExtResource("1_k0irc")]([SubResource("Resource_mg4t5")])
+metadata/_custom_type_script = "uid://c1ddhu7kp1r78"

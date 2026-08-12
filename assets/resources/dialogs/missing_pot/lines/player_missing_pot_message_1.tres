@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SpokenMessage" format=3 uid="uid://khav6s3ohvtd"]
+
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entites/shared/custom_resources/situations/spoken_message.gd" id="1_bragg"]
+[ext_resource type="Resource" uid="uid://b16hblkoijiuj" path="res://assets/resources/characters/player_character.tres" id="1_unb3f"]
+[ext_resource type="Resource" uid="uid://cqmsl7jpbrpvw" path="res://assets/resources/translations/dialogs/should_buy_pot/should_buy_pot_message_1.tres" id="2_unb3f"]
+
+[resource]
+script = ExtResource("1_bragg")
+character = ExtResource("1_unb3f")
+message_mood = 5
+message = ExtResource("2_unb3f")
+metadata/_custom_type_script = "uid://clje66ucp3w4q"

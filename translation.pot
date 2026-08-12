@@ -1,0 +1,446 @@
+# LANGUAGE translation for tiny-gardener for the following files:
+# res://entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+# res://entites/game/ui_game/scenes/game_ui.tscn
+# res://entites/game/ui_shop/scenes/shop_ui.tscn
+# res://entites/game/ui_controls_help/scenes/ui_control_help.tscn
+# res://assets/resources/translations/handbook/basic_movement.tres
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tiny-gardener\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "PLANT_DATA"
+msgstr ""
+
+#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "NAME"
+msgstr ""
+
+#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "PLANT NAME"
+msgstr ""
+
+#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "WATER_STATUS_DESCRIPTION"
+msgstr ""
+
+#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "NUTRITION_STATUS_DESCRIPTION"
+msgstr ""
+
+#: entites/game/ui_game/scenes/game_ui.tscn
+msgid "MONEY_DESCRIPTION"
+msgstr ""
+
+#: entites/game/ui_game/scenes/game_ui.tscn
+msgid "0.00"
+msgstr ""
+
+#: entites/game/ui_shop/scenes/shop_ui.tscn
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+msgid "X"
+msgstr ""
+
+#: entites/game/ui_shop/scenes/shop_ui.tscn
+msgid "SHOP"
+msgstr ""
+
+#: entites/game/ui_shop/scenes/shop_ui.tscn
+msgid "BuyPage"
+msgstr ""
+
+#: entites/game/ui_shop/scenes/shop_ui.tscn
+msgid "SellPage"
+msgstr ""
+
+#: entites/game/ui_shop/scenes/shop_ui.tscn
+msgid "Upgrades"
+msgstr ""
+
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+#: assets/resources/translations/handbook/movement.tres
+msgid "MOVEMENT"
+msgstr ""
+
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+msgid "CAMERA"
+msgstr ""
+
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+msgid "INTERACTION"
+msgstr ""
+
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+msgid "SELECT"
+msgstr ""
+
+#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+#: assets/resources/translations/or.tres
+msgid "OR"
+msgstr ""
+
+#: assets/resources/translations/handbook/basic_movement.tres
+msgid "BASIC_MOVEMENT"
+msgstr ""
+
+msgid "tiny-gardener"
+msgstr ""
+
+#: assets/resources/translations/buy.tres
+#: assets/resources/translations/shop_buy_tab.tres
+msgid "BUY"
+msgstr ""
+
+#: assets/resources/translations/door_farm.tres
+msgid "DOOR_FARM_NAME"
+msgstr ""
+
+#: assets/resources/translations/door_house.tres
+msgid "DOOR_HOUSE_NAME"
+msgstr ""
+
+#: assets/resources/translations/initial_pot_amount_description.tres
+msgid "INITIAL_POT_AMOUNT_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/initial_pot_amount_name.tres
+msgid "INITIAL_POT_AMOUNT_NAME"
+msgstr ""
+
+#: assets/resources/translations/missing_plant.tres
+msgid "NO_PLANT_EXISTING"
+msgstr ""
+
+#: assets/resources/translations/poor_quality_name.tres
+msgid "POOR_QUALITY_NAME"
+msgstr ""
+
+#: assets/resources/translations/premium_quality_name.tres
+msgid "PREMIUM_QUALITY_NAME"
+msgstr ""
+
+#: assets/resources/translations/sell.tres
+#: assets/resources/translations/shop_sell_tab.tres
+msgid "SELL"
+msgstr ""
+
+#: assets/resources/translations/shop_upgrade_tab.tres
+#: assets/resources/translations/handbook/upgrades_group.tres
+msgid "UPGRADES"
+msgstr ""
+
+#: assets/resources/translations/standard_quality_name.tres
+msgid "STANDARD_QUALITY_NAME"
+msgstr ""
+
+#: assets/resources/translations/teleport_to_farm.tres
+msgid "TELEPORT_TO_FARM_ACTION_NAME"
+msgstr ""
+
+#: assets/resources/translations/teleport_to_farm_description.tres
+msgid "TELEPORT_TO_FARM_ACTION_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/upgrade_pot_amount_description.tres
+msgid "UPGRADE_POT_AMOUNT_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/upgrade_pot_amount_name.tres
+msgid "UPGRADE_POT_AMOUNT_NAME"
+msgstr ""
+
+#. TRANSLATORS: Requires a %s placeholder to work correctly
+#: assets/resources/translations/version_string.tres
+msgid "VERSION"
+msgstr ""
+
+#: assets/resources/translations/actions/fertilize_action_description.tres
+msgid "FERTILIZE_ACTION_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/actions/fertilize_action_name.tres
+msgid "FERTILIZE_ACTION_NAME"
+msgstr ""
+
+#: assets/resources/translations/actions/fill_water_can_description.tres
+msgid "FILL_WATER_CAN_ACTION_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/actions/fill_water_can_name.tres
+msgid "FILL_WATER_CAN_ACTION_NAME"
+msgstr ""
+
+#: assets/resources/translations/actions/harvest_action_description.tres
+msgid "HARVEST_ACTION_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/actions/harvest_action_name.tres
+msgid "HARVEST_ACTION_NAME"
+msgstr ""
+
+#: assets/resources/translations/actions/plant_action_description.tres
+msgid "PLANT_ACTION_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/actions/plant_action_name.tres
+msgid "PLANT_ACTION_NAME"
+msgstr ""
+
+#: assets/resources/translations/actions/shop_trigger_action.tres
+msgid "SHOP_TRIGGER_ACTION_NAME"
+msgstr ""
+
+#: assets/resources/translations/actions/shop_trigger_action_description.tres
+msgid "SHOP_TRIGGER_ACTION_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/actions/water_action_description.tres
+msgid "WATER_ACTION_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/actions/water_action_name.tres
+msgid "WATER_ACTION_NAME"
+msgstr ""
+
+#: assets/resources/translations/characters/mother_character_backstory.tres
+msgid "MOTHER_BACKSTORY"
+msgstr ""
+
+#: assets/resources/translations/characters/mother_character_name.tres
+msgid "MOTHER_NAME"
+msgstr ""
+
+#: assets/resources/translations/characters/player_backstory.tres
+msgid "PLAYER_BACKSTORY"
+msgstr ""
+
+#: assets/resources/translations/characters/player_name.tres
+msgid "PLAYER_NAME"
+msgstr ""
+
+#: assets/resources/translations/dialogs/add_water_can/add_water_can_player_1.tres
+msgid "ADD_WATER_CAN_PLAYER_1"
+msgstr ""
+
+#: assets/resources/translations/dialogs/explain_plant_pot/player_explain_plant_pot_1.tres
+msgid "PLAYER_EXPLAIN_PLANT_POT_1"
+msgstr ""
+
+#: assets/resources/translations/dialogs/explain_plant_pot/player_explain_plant_pot_2.tres
+msgid "PLAYER_EXPLAIN_PLANT_POT_2"
+msgstr ""
+
+#: assets/resources/translations/dialogs/intro/intro_player_1.tres
+msgid "PLAYER_INTRO_MESSAGE_1"
+msgstr ""
+
+#: assets/resources/translations/dialogs/intro/intro_player_2.tres
+msgid "PLAYER_INTRO_MESSAGE_2"
+msgstr ""
+
+#: assets/resources/translations/dialogs/intro/intro_player_3.tres
+msgid "PLAYER_INTRO_MESSAGE_3"
+msgstr ""
+
+#: assets/resources/translations/dialogs/intro/intro_player_4.tres
+msgid "PLAYER_INTRO_MESSAGE_4"
+msgstr ""
+
+#: assets/resources/translations/dialogs/intro/intro_player_5.tres
+msgid "PLAYER_INTRO_MESSAGE_5"
+msgstr ""
+
+#: assets/resources/translations/dialogs/intro/mother_intro_message_1.tres
+msgid "MOTHER_INTRO_MESSAGE_1"
+msgstr ""
+
+#: assets/resources/translations/dialogs/intro/mother_intro_message_2.tres
+msgid "MOTHER_INTRO_MESSAGE_2"
+msgstr ""
+
+#: assets/resources/translations/dialogs/intro/mother_intro_message_3.tres
+msgid "MOTHER_INTRO_MESSAGE_3"
+msgstr ""
+
+#: assets/resources/translations/dialogs/missing_water_can/player_missing_water_can_1.tres
+msgid "PLAYER_MISSING_WATER_CAN_1"
+msgstr ""
+
+#: assets/resources/translations/dialogs/should_buy_pot/should_buy_pot_message_1.tres
+msgid "PLAYER_SHOULD_BUY_POT_FIRST"
+msgstr ""
+
+#: assets/resources/translations/drops/corn_drop_description.tres
+msgid "CORN_DROP_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/drops/corn_drop_name.tres
+msgid "CORN_DROP_NAME"
+msgstr ""
+
+#: assets/resources/translations/drops/ladybug_drop_description.tres
+msgid "LADYBUG_DROP_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/drops/ladybug_drop_name.tres
+msgid "LADYBUG_DROP_NAME"
+msgstr ""
+
+#: assets/resources/translations/drops/rose_drop_description.tres
+msgid "ROSE_DROP_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/drops/rose_drop_name.tres
+msgid "ROSE_DROP_NAME"
+msgstr ""
+
+#: assets/resources/translations/handbook/basic_movement_description.tres
+msgid "BASIC_MOVEMENT_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/handbook/basic_movement_entry.tres
+msgid "BASIC_MOVEMENT_ENTRY"
+msgstr ""
+
+#: assets/resources/translations/handbook/basic_plant_explanation.tres
+msgid "BASIC_PLANT_EXPLANATION"
+msgstr ""
+
+#: assets/resources/translations/handbook/drops_group.tres
+msgid "DROPS_GROUP"
+msgstr ""
+
+#: assets/resources/translations/handbook/fertilizer.tres
+msgid "FERTILIZER"
+msgstr ""
+
+#: assets/resources/translations/handbook/fertilizer_group.tres
+msgid "FERTILIZER_GROUP"
+msgstr ""
+
+#: assets/resources/translations/handbook/fertilizer_handbook_description.tres
+msgid "FERTILIZER_HANDBOOK_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/handbook/fertilizer_handbook_text.tres
+msgid "FERTILIZER_HANDBOOK_TEXT"
+msgstr ""
+
+#: assets/resources/translations/handbook/game_mechanics.tres
+msgid "GAME_MECHANICS"
+msgstr ""
+
+#: assets/resources/translations/handbook/handbook.tres
+msgid "HANDBOOK"
+msgstr ""
+
+#: assets/resources/translations/handbook/handbook_basic_camera_entry.tres
+msgid "BASIC_CAMERA_HANDBOOK_ENTRY"
+msgstr ""
+
+#: assets/resources/translations/handbook/handbook_basic_interaction_entry.tres
+msgid "BASIC_INTERACTION_HANDBOOK_ENTRY"
+msgstr ""
+
+#: assets/resources/translations/handbook/handbook_basic_movement_entry.tres
+msgid "BASIC_MOVEMENT_HANDBOOK_ENTRY"
+msgstr ""
+
+#: assets/resources/translations/handbook/handbook_basic_selection_entry.tres
+msgid "BASIC_SELECTION_HANDBOOK_ENTRY"
+msgstr ""
+
+#: assets/resources/translations/handbook/item_group.tres
+msgid "ITEMS"
+msgstr ""
+
+#: assets/resources/translations/handbook/keep_plants_alive.tres
+msgid "KEEP_PLANTS_ALIVE"
+msgstr ""
+
+#: assets/resources/translations/handbook/keep_plants_alive_description.tres
+msgid "KEEP_PLANTS_ALIVE_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/handbook/keep_plants_alive_explain_icons.tres
+msgid "BASIC_PLANT_ICON_EXPLANATION"
+msgstr ""
+
+#: assets/resources/translations/handbook/plants_groups.tres
+msgid "PLANTS_GROUP"
+msgstr ""
+
+#: assets/resources/translations/handbook/quality_entry.tres
+msgid "QUALITY_ENTRY"
+msgstr ""
+
+#: assets/resources/translations/handbook/quality_entry_description.tres
+msgid "QUALITY_DESCRIPTION_ENTRY"
+msgstr ""
+
+#: assets/resources/translations/handbook/quality_entry_text.tres
+msgid "QUALITY_HANDBOOK_TEXT"
+msgstr ""
+
+#: assets/resources/translations/handbook/water.tres
+msgid "WATER"
+msgstr ""
+
+#: assets/resources/translations/handbook/water_handbook_description.tres
+msgid "WATER_HANDBOOK_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/handbook/water_handbook_text.tres
+msgid "WATER_HANDBOOK_TEXT"
+msgstr ""
+
+#: assets/resources/translations/items/fertilizer_description.tres
+msgid "FERTILIZER_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/items/fertilizer_name.tres
+msgid "FERTILIZER_NAME"
+msgstr ""
+
+#: assets/resources/translations/items/old_water_can_description.tres
+msgid "OLD_WATER_CAN_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/items/old_water_can_long_description.tres
+msgid "OLD_WATER_CAN_LONG_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/items/old_water_can_name.tres
+msgid "OLD_WATER_CAN_NAME"
+msgstr ""
+
+#: assets/resources/translations/plants/corn_description.tres
+msgid "CORN_PLANT_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/plants/corn_name.tres
+msgid "CORN_PLANT_NAME"
+msgstr ""
+
+#: assets/resources/translations/plants/dead_plant_description.tres
+msgid "DEAD_PLANT_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/plants/dead_plant_name.tres
+msgid "DEAD_PLANT_NAME"
+msgstr ""
+
+#: assets/resources/translations/plants/rose_plant_description.tres
+msgid "ROSE_PLANT_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/plants/rose_plant_name.tres
+msgid "ROSE_PLANT_NAME"
+msgstr ""

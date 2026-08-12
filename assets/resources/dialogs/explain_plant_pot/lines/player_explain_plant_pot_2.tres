@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SpokenMessage" format=3 uid="uid://cn6dbo5pell1u"]
+
+[ext_resource type="Resource" uid="uid://b16hblkoijiuj" path="res://assets/resources/characters/player_character.tres" id="1_i78g0"]
+[ext_resource type="Resource" uid="uid://cf8w4a40xqt4u" path="res://assets/resources/translations/dialogs/explain_plant_pot/player_explain_plant_pot_2.tres" id="1_mlfkj"]
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entites/shared/custom_resources/situations/spoken_message.gd" id="2_i78g0"]
+
+[resource]
+script = ExtResource("2_i78g0")
+character = ExtResource("1_i78g0")
+message_mood = 5
+message = ExtResource("1_mlfkj")
+metadata/_custom_type_script = "uid://clje66ucp3w4q"

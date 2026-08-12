@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantDropConfiguration" format=3 uid="uid://cicnk40vhb7s0"]
+
+[ext_resource type="Resource" uid="uid://cogiiu2wh52ne" path="res://assets/resources/items/plant_drops/corn_drop.tres" id="1_oon21"]
+[ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entites/shared/custom_resources/plant/plant_drop_configuration.gd" id="2_pj28j"]
+
+[resource]
+script = ExtResource("2_pj28j")
+plant_drop = ExtResource("1_oon21")
+max_yield = 10
+metadata/_custom_type_script = "uid://fhnh47biatwh"

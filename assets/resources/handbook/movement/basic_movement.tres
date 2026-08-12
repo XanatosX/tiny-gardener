@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="TextHandbookEntry" format=3 uid="uid://8f6huw8q7i8l"]
+
+[ext_resource type="Resource" uid="uid://dw5hjrgyhkves" path="res://assets/resources/translations/handbook/basic_movement.tres" id="1_bk5os"]
+[ext_resource type="Resource" uid="uid://ddeyq782xkx6d" path="res://assets/resources/translations/handbook/basic_movement_description.tres" id="1_e0xwq"]
+[ext_resource type="Script" uid="uid://dtab4ex7bechl" path="res://entites/shared/custom_resources/handbook/text_handbook_entry.gd" id="1_l3ibo"]
+[ext_resource type="Script" uid="uid://b6hgi2m53g1k6" path="res://entites/shared/custom_resources/handbook/text_types/handbook_text_type.gd" id="2_8n2pd"]
+[ext_resource type="PackedScene" uid="uid://dmnhjrcyx0dga" path="res://entites/game/ui_handbook/scenes/ui_handbook_text.tscn" id="2_indey"]
+[ext_resource type="Resource" uid="uid://ddu2np56fcpng" path="res://assets/resources/handbook_entry_text/basic_movement_entry_handbook_entry.tres" id="4_0cnsb"]
+[ext_resource type="Resource" uid="uid://46bc8v1gkcm6" path="res://assets/resources/handbook_entry_text/basic_movement_handbook_entry.tres" id="5_e0xwq"]
+[ext_resource type="Resource" uid="uid://c8pyybtxdewld" path="res://assets/resources/handbook_entry_text/keyboard_movement_keys_handbook_entry.tres" id="6_0cnsb"]
+[ext_resource type="Resource" uid="uid://bgjrfywluflb" path="res://assets/resources/handbook_entry_text/keyboard_camera_handbook_entry.tres" id="8_0tutw"]
+[ext_resource type="Resource" uid="uid://drxpljsfsh605" path="res://assets/resources/handbook_entry_text/keyboard_interaction_handbook_entry.tres" id="10_a1gfu"]
+[ext_resource type="Resource" uid="uid://bupn7btn66tvq" path="res://assets/resources/handbook_entry_text/mouse_wheel_handbook_entry.tres" id="12_mg4t5"]
+[ext_resource type="Resource" uid="uid://q7jrys1yi5j6" path="res://assets/resources/handbook_entry_text/camera_movement_handbook_entry.tres" id="12_rifme"]
+[ext_resource type="Resource" uid="uid://w4ercvkh46fx" path="res://assets/resources/handbook_entry_text/keyboard_selection_handbook_entry.tres" id="14_yjt5x"]
+[ext_resource type="Texture2D" uid="uid://c0tbb8km33sgp" path="res://assets/atlas/move_icon.tres" id="15_0tutw"]
+[ext_resource type="Resource" uid="uid://cf6jbmtc2r8rd" path="res://assets/resources/handbook_entry_text/interaction_handbook_entry.tres" id="15_73xfx"]
+[ext_resource type="Resource" uid="uid://pijfbl8u0nmm" path="res://assets/resources/handbook_identifier/basic_movement_identifier.tres" id="16_0tutw"]
+[ext_resource type="Resource" uid="uid://761fj5ownomd" path="res://assets/resources/handbook_entry_text/basic_selection_handbook_entry.tres" id="17_x66yf"]
+[ext_resource type="Resource" uid="uid://o73l4o8h77e6" path="res://assets/resources/handbook_entry_text/or_handbook_entry.tres" id="19_wofq1"]
+
+[resource]
+script = ExtResource("1_l3ibo")
+handbook_parts = Array[ExtResource("2_8n2pd")]([ExtResource("4_0cnsb"), ExtResource("5_e0xwq"), ExtResource("6_0cnsb"), ExtResource("12_rifme"), ExtResource("8_0tutw"), ExtResource("15_73xfx"), ExtResource("10_a1gfu"), ExtResource("17_x66yf"), ExtResource("12_mg4t5"), ExtResource("19_wofq1"), ExtResource("14_yjt5x")])
+identifier = ExtResource("16_0tutw")
+icon = ExtResource("15_0tutw")
+display_name = ExtResource("1_bk5os")
+description = ExtResource("1_e0xwq")
+scene_template = ExtResource("2_indey")
+metadata/_custom_type_script = "uid://dtab4ex7bechl"

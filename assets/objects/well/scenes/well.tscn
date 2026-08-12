@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cn1lp2skygk21"]
+
+[ext_resource type="PackedScene" uid="uid://bjqflsrdvaxag" path="res://assets/objects/well/well.gltf" id="1_i5kxg"]
+[ext_resource type="Shader" uid="uid://dtlxfe3a6xtqv" path="res://assets/shaders/well_water_shader.gdshader" id="2_atwqn"]
+[ext_resource type="Script" uid="uid://dkpt3k8dkvmj3" path="res://entites/shared/object_interaction/object_interaction.gd" id="3_pr0bo"]
+[ext_resource type="Script" uid="uid://dgo34mflxca2j" path="res://entites/shared/object_interaction/action.gd" id="4_obfdp"]
+[ext_resource type="Resource" uid="uid://cn4mft05wtmhs" path="res://assets/resources/actions/fill_can_action.tres" id="5_pr0bo"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_atwqn"]
+noise_type = 2
+seed = 38
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_atwqn"]
+noise = SubResource("FastNoiseLite_atwqn")
+seamless = true
+as_normal_map = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6s6vq"]
+noise = SubResource("FastNoiseLite_atwqn")
+seamless = true
+as_normal_map = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ibwm6"]
+render_priority = 0
+shader = ExtResource("2_atwqn")
+shader_parameter/primary_color = Color(0.32156864, 0.87058824, 0.9843137, 0.9764706)
+shader_parameter/roughness = 0.2
+shader_parameter/normalmap_a = SubResource("NoiseTexture2D_atwqn")
+shader_parameter/normalmap_b = SubResource("NoiseTexture2D_6s6vq")
+shader_parameter/normalmap_a_strength = 0.3
+shader_parameter/normalmap_b_strength = 0.4
+shader_parameter/movement_direction = Vector2(0.1, 0.1)
+shader_parameter/movement_stength = 0.055
+shader_parameter/uv_scale = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8rpam"]
+
+[node name="Well" type="Node3D" unique_id=1081629262]
+
+[node name="blockbench_export" parent="." unique_id=778097213 instance=ExtResource("1_i5kxg")]
+
+[node name="water_mesh" parent="blockbench_export/water" parent_id_path=PackedInt32Array(778097213, 1124675374) index="0" unique_id=1236136528]
+surface_material_override/0 = SubResource("ShaderMaterial_ibwm6")
+
+[node name="ObjectInteraction" type="Node" parent="." unique_id=357188330 node_paths=PackedStringArray("controlled_entity", "interaction_area")]
+script = ExtResource("3_pr0bo")
+controlled_entity = NodePath("..")
+interaction_area = NodePath("../Area3D")
+actions = Array[ExtResource("4_obfdp")]([ExtResource("5_pr0bo")])
+metadata/_custom_type_script = "uid://dkpt3k8dkvmj3"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1688544055]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=357572852]
+shape = SubResource("BoxShape3D_8rpam")
+
+[editable path="blockbench_export"]

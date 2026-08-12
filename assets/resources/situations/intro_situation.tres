@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="Situation" format=3 uid="uid://ij14rx80sfbc"]
+
+[ext_resource type="Script" uid="uid://bxrkdwitjtqvg" path="res://entites/shared/custom_resources/situation_step/move_waypoints_step.gd" id="4_6hf5v"]
+[ext_resource type="Script" uid="uid://dsw520b6o1p1k" path="res://entites/shared/custom_resources/situation_step/wait_around.gd" id="4_kemlj"]
+[ext_resource type="Resource" uid="uid://pijfbl8u0nmm" path="res://assets/resources/handbook_identifier/basic_movement_identifier.tres" id="8_7fclo"]
+[ext_resource type="Script" uid="uid://f1w74xqxt3n3" path="res://entites/shared/custom_resources/situation_step/show_handbook_entry_step.gd" id="9_ejtdg"]
+[ext_resource type="Script" uid="uid://cf0kw8sdb3t6h" path="res://entites/shared/custom_resources/situations/situation.gd" id="9_p6bas"]
+[ext_resource type="Script" uid="uid://b2r5o8g18wx6g" path="res://entites/shared/custom_resources/situation_step/situation_step.gd" id="10_pbqfr"]
+[ext_resource type="Script" uid="uid://bhjycglythlp8" path="res://entites/shared/custom_resources/situation_step/toggle_player_step.gd" id="11_ensn4"]
+[ext_resource type="Resource" uid="uid://2iikrcmsowe1" path="res://assets/resources/dialogs/intro/intro_dialog.tres" id="12_b61wx"]
+[ext_resource type="Script" uid="uid://wljs35rlfnc8" path="res://entites/shared/custom_resources/situation_step/show_dialog_step.gd" id="13_5g1h8"]
+
+[sub_resource type="Resource" id="Resource_8rpam"]
+script = ExtResource("11_ensn4")
+disable_player = true
+metadata/_custom_type_script = "uid://bhjycglythlp8"
+
+[sub_resource type="Resource" id="Resource_d8rej"]
+script = ExtResource("4_kemlj")
+wait_time_seconds = 1.0
+metadata/_custom_type_script = "uid://dsw520b6o1p1k"
+
+[sub_resource type="Resource" id="Resource_2bonu"]
+script = ExtResource("4_6hf5v")
+waypoint_set_name = "intro_before_call"
+metadata/_custom_type_script = "uid://bxrkdwitjtqvg"
+
+[sub_resource type="Resource" id="Resource_js1os"]
+script = ExtResource("13_5g1h8")
+dialog = ExtResource("12_b61wx")
+metadata/_custom_type_script = "uid://wljs35rlfnc8"
+
+[sub_resource type="Resource" id="Resource_3fjc0"]
+script = ExtResource("4_kemlj")
+wait_time_seconds = 0.5
+metadata/_custom_type_script = "uid://dsw520b6o1p1k"
+
+[sub_resource type="Resource" id="Resource_jg6ut"]
+script = ExtResource("4_6hf5v")
+waypoint_set_name = "intro_move_notebook"
+metadata/_custom_type_script = "uid://bxrkdwitjtqvg"
+
+[sub_resource type="Resource" id="Resource_xsexf"]
+script = ExtResource("11_ensn4")
+metadata/_custom_type_script = "uid://bhjycglythlp8"
+
+[sub_resource type="Resource" id="Resource_7fclo"]
+script = ExtResource("9_ejtdg")
+entry_identifier = ExtResource("8_7fclo")
+metadata/_custom_type_script = "uid://f1w74xqxt3n3"
+
+[resource]
+script = ExtResource("9_p6bas")
+situation_steps = Array[ExtResource("10_pbqfr")]([SubResource("Resource_8rpam"), SubResource("Resource_d8rej"), SubResource("Resource_2bonu"), SubResource("Resource_js1os"), SubResource("Resource_3fjc0"), SubResource("Resource_jg6ut"), SubResource("Resource_xsexf"), SubResource("Resource_7fclo")])
+metadata/_custom_type_script = "uid://cf0kw8sdb3t6h"

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://1fx8d6i8sy50"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_5te6c"]
+
+[resource]
+script = ExtResource("1_5te6c")
+key = "PLANTS_GROUP"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

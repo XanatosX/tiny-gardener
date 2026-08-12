@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="HandbookBasicText" format=3 uid="uid://danpwtg1nl8dn"]
+
+[ext_resource type="Script" uid="uid://bc0gqca4fgqti" path="res://entites/shared/custom_resources/handbook/text_types/handbook_basic_text.gd" id="1_g2xn8"]
+[ext_resource type="Resource" uid="uid://kc1kgkghuh3q" path="res://assets/resources/translations/handbook/basic_plant_explanation.tres" id="2_xh4ff"]
+
+[resource]
+script = ExtResource("1_g2xn8")
+translation = ExtResource("2_xh4ff")
+centered = true
+metadata/_custom_type_script = "uid://bc0gqca4fgqti"

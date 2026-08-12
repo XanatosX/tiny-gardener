@@ -1,0 +1,26 @@
+[gd_resource type="AnimationNodeStateMachine" format=3 uid="uid://cab8rrxn5idq2"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_74wtk"]
+animation = &"close"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3ch61"]
+animation = &"open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_87d2p"]
+advance_mode = 2
+advance_expression = "open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_auhy6"]
+advance_mode = 2
+advance_expression = "not open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_p2mi6"]
+advance_mode = 2
+advance_expression = "open"
+
+[resource]
+states/close/node = SubResource("AnimationNodeAnimation_74wtk")
+states/close/position = Vector2(558, 171)
+states/open/node = SubResource("AnimationNodeAnimation_3ch61")
+states/open/position = Vector2(558, 50)
+transitions = ["Start", "open", SubResource("AnimationNodeStateMachineTransition_87d2p"), "open", "close", SubResource("AnimationNodeStateMachineTransition_auhy6"), "close", "open", SubResource("AnimationNodeStateMachineTransition_p2mi6")]

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Fertilizer" format=3 uid="uid://dygkxxmf5moyf"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_jff0j"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_bhiia"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="2_mpvcf"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="3_liaf3"]
+[ext_resource type="Resource" uid="uid://bemf3eiqnatfw" path="res://assets/resources/translations/items/fertilizer_description.tres" id="4_bhiia"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_rswoe"]
+[ext_resource type="Resource" uid="uid://dxtva1dhfmq15" path="res://assets/resources/translations/items/fertilizer_name.tres" id="5_rswoe"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_8i2p4"]
+[ext_resource type="Script" uid="uid://bkgirfsc6ehsl" path="res://entites/shared/custom_resources/item/fertilizer.gd" id="7_b3cb2"]
+[ext_resource type="Texture2D" uid="uid://d2dufwqc0056g" path="res://assets/atlas/fertilizer_icon.tres" id="9_b3cb2"]
+
+[resource]
+script = ExtResource("7_b3cb2")
+amount = 30.0
+display_name = ExtResource("5_rswoe")
+description = ExtResource("4_bhiia")
+icon = ExtResource("9_b3cb2")
+quality = 2
+can_sell = false
+price = 5.0
+metadata/_custom_type_script = "uid://bkgirfsc6ehsl"

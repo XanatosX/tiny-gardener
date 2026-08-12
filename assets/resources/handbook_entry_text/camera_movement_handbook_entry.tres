@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="HandbookBasicText" format=3 uid="uid://q7jrys1yi5j6"]
+
+[ext_resource type="Script" uid="uid://bc0gqca4fgqti" path="res://entites/shared/custom_resources/handbook/text_types/handbook_basic_text.gd" id="1_mdsrf"]
+[ext_resource type="Resource" uid="uid://cwpxkbammbb5u" path="res://assets/resources/translations/handbook/handbook_basic_camera_entry.tres" id="2_27kw1"]
+
+[resource]
+script = ExtResource("1_mdsrf")
+translation = ExtResource("2_27kw1")
+centered = true
+metadata/_custom_type_script = "uid://bc0gqca4fgqti"

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://mxcmhsyrijle"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_esvda"]
+
+[resource]
+script = ExtResource("1_esvda")
+key = "SELL"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

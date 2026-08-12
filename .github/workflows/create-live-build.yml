@@ -1,0 +1,125 @@
+name: Live build
+
+on:
+  release:
+    types: [released]
+
+env:
+  REF_CHECKOUT_BRANCH: main
+  RELEASE_ARTIFACT_FOLDER: artifacts
+  GODOT_VERSION: 4.7
+  PROJECT_PATH: .
+  DEBUG: false
+
+jobs:
+  build:
+    name: Build Tiny Gardener
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        platform:
+        #- name: linux
+        #  preset: linux
+        #  os: linux
+        #  file: tiny_gardener
+        #- name: windows
+        #  preset: windows
+        #  os: windows
+        #  file: tiny_gardener.exe        
+        - name: web
+          preset: Web
+          os: web
+          file: index.html
+    container:
+      image: barichello/godot-ci:4.7
+    steps:
+      - uses: actions/checkout@v3
+        with:
+           lfs: true
+      - name: Setup
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates/
+          mkdir -v -p ~/.config/
+          mv /root/.config/godot ~/.config/godot
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+      - name: Build ${{ matrix.platform.name }}
+        run: |
+          mkdir -v -p build/${{ matrix.platform.os }}
+          EXPORT_DIR="$(readlink -f build)"
+          cd $PROJECT_PATH
+          godot --headless --verbose --export-release ${{ matrix.platform.preset }} "$EXPORT_DIR/${{ matrix.platform.os }}/${{ matrix.platform.file }}"
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Tiny-Gardener_${{ GITHUB.REF_NAME  }}-${{ matrix.platform.name }}
+          path: build/${{ matrix.platform.os }}
+  upload-release:
+    name: Upload Artifacts to GitHub Release
+    runs-on: ubuntu-latest
+    needs: ["build"]
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        platform:
+        #- name: linux
+        #- name: windows
+        - name: web
+    steps:      
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ env.REF_CHECKOUT_BRANCH }}
+          lfs: false
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with: 
+          name: Tiny-Gardener_${{ GITHUB.REF_NAME  }}-${{ matrix.platform.name }}
+          path: ${{ env.RELEASE_ARTIFACT_FOLDER }}
+      - name: Display artifacts folder content
+        if: ${{ env.DEBUG == 'true' }}
+        run: ls -la $RELEASE_ARTIFACT_FOLDER
+      - name: Zip Build Files
+        run: |
+          cd ./$RELEASE_ARTIFACT_FOLDER/
+          zip -r Tiny-Gardener_${{GITHUB.REF_NAME  }}-${{ matrix.platform.name }}.zip ./*
+      - name: Display artifacts folder content
+        if: ${{ env.DEBUG == 'true' }}
+        run: ls -la $RELEASE_ARTIFACT_FOLDER
+      - name: Upload artifact
+        if: ${{ env.DEBUG == 'false' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload ${{ GITHUB.REF_NAME }} ${{ env.RELEASE_ARTIFACT_FOLDER }}/*.zip
+  upload-itch:
+    name: Upload to itch
+    runs-on: ubuntu-latest
+    needs: ["build"]
+    strategy:
+      matrix:
+        platform:
+        #- name: linux
+        #  channel: linux
+        #- name: windows
+        #  channel: windows
+        - name: web
+          channel: web-build
+    steps:  
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ env.REF_CHECKOUT_BRANCH }}
+          lfs: false
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with: 
+          name: Tiny-Gardener_${{ GITHUB.REF_NAME  }}-${{ matrix.platform.name }}
+          path: ${{ env.RELEASE_ARTIFACT_FOLDER }}/Tiny-Gardener_${{ GITHUB.REF_NAME  }}-${{ matrix.platform.name }}
+      - uses: yeslayla/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: ${{ matrix.platform.channel }}
+          ITCH_GAME: tiny-gardener
+          ITCH_USER: xanatos
+          VERSION: ${{ github.ref_name }}
+          PACKAGE: ${{ env.RELEASE_ARTIFACT_FOLDER }}/Tiny-Gardener_${{ GITHUB.REF_NAME  }}-${{ matrix.platform.name }}/
+    

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="SpokenMessage" format=3 uid="uid://bi2rnu04skb6l"]
 
-[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entites/shared/custom_resources/situations/spoken_message.gd" id="1_6vp05"]
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entities/shared/custom_resources/situations/spoken_message.gd" id="1_6vp05"]
 [ext_resource type="Resource" uid="uid://bi47qn0eta30n" path="res://assets/resources/translations/dialogs/intro/intro_player_4.tres" id="1_g5xh5"]
 [ext_resource type="Resource" uid="uid://b16hblkoijiuj" path="res://assets/resources/characters/player_character.tres" id="1_vk3xl"]
 

@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bjqflsrdvaxag" path="res://assets/objects/well/well.gltf" id="1_i5kxg"]
 [ext_resource type="Shader" uid="uid://dtlxfe3a6xtqv" path="res://assets/shaders/well_water_shader.gdshader" id="2_atwqn"]
-[ext_resource type="Script" uid="uid://dkpt3k8dkvmj3" path="res://entites/shared/object_interaction/object_interaction.gd" id="3_pr0bo"]
-[ext_resource type="Script" uid="uid://dgo34mflxca2j" path="res://entites/shared/object_interaction/action.gd" id="4_obfdp"]
+[ext_resource type="Script" uid="uid://dkpt3k8dkvmj3" path="res://entities/shared/object_interaction/object_interaction.gd" id="3_pr0bo"]
+[ext_resource type="Script" uid="uid://dgo34mflxca2j" path="res://entities/shared/object_interaction/action.gd" id="4_obfdp"]
 [ext_resource type="Resource" uid="uid://cn4mft05wtmhs" path="res://assets/resources/actions/fill_can_action.tres" id="5_pr0bo"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_atwqn"]

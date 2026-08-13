@@ -2,12 +2,12 @@
 
 [ext_resource type="Resource" uid="uid://c83dhjaw3wtlk" path="res://assets/resources/translations/handbook/water_handbook_description.tres" id="1_n5x5y"]
 [ext_resource type="Resource" uid="uid://chrek87cctaxs" path="res://assets/resources/translations/handbook/water.tres" id="2_5eu6y"]
-[ext_resource type="Script" uid="uid://b6hgi2m53g1k6" path="res://entites/shared/custom_resources/handbook/text_types/handbook_text_type.gd" id="3_6jyxm"]
+[ext_resource type="Script" uid="uid://b6hgi2m53g1k6" path="res://entities/shared/custom_resources/handbook/text_types/handbook_text_type.gd" id="3_6jyxm"]
 [ext_resource type="Resource" uid="uid://d2hn4uke2gys8" path="res://assets/resources/handbook_entry_text/water_entry.tres" id="4_1eq1c"]
 [ext_resource type="Texture2D" uid="uid://bg2ubgonp2gq2" path="res://assets/atlas/water_icon.tres" id="5_trrkc"]
 [ext_resource type="Resource" uid="uid://32renbllb3eo" path="res://assets/resources/handbook_identifier/water_identifier.tres" id="6_cb2cl"]
-[ext_resource type="PackedScene" uid="uid://dmnhjrcyx0dga" path="res://entites/game/ui_handbook/scenes/ui_handbook_text.tscn" id="7_7kap8"]
-[ext_resource type="Script" uid="uid://dtab4ex7bechl" path="res://entites/shared/custom_resources/handbook/text_handbook_entry.gd" id="8_5q8rg"]
+[ext_resource type="PackedScene" uid="uid://dmnhjrcyx0dga" path="res://entities/game/ui_handbook/scenes/ui_handbook_text.tscn" id="7_7kap8"]
+[ext_resource type="Script" uid="uid://dtab4ex7bechl" path="res://entities/shared/custom_resources/handbook/text_handbook_entry.gd" id="8_5q8rg"]
 
 [resource]
 script = ExtResource("8_5q8rg")

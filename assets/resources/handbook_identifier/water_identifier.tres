@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="HandbookEntryIdentifier" format=3 uid="uid://32renbllb3eo"]
 
-[ext_resource type="Script" uid="uid://bcy6272pdeang" path="res://entites/shared/custom_resources/handbook/handbook_entry_identifier.gd" id="1_q6t6x"]
+[ext_resource type="Script" uid="uid://bcy6272pdeang" path="res://entities/shared/custom_resources/handbook/handbook_entry_identifier.gd" id="1_q6t6x"]
 
 [resource]
 script = ExtResource("1_q6t6x")

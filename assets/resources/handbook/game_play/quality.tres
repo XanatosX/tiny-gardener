@@ -1,17 +1,17 @@
 [gd_resource type="Resource" script_class="TextHandbookEntry" format=3 uid="uid://csuydc4f6t01o"]
 
 [ext_resource type="Resource" uid="uid://deieum165emgw" path="res://assets/resources/translations/handbook/quality_entry_description.tres" id="1_40jj8"]
-[ext_resource type="Script" uid="uid://b6hgi2m53g1k6" path="res://entites/shared/custom_resources/handbook/text_types/handbook_text_type.gd" id="1_m1xwd"]
+[ext_resource type="Script" uid="uid://b6hgi2m53g1k6" path="res://entities/shared/custom_resources/handbook/text_types/handbook_text_type.gd" id="1_m1xwd"]
 [ext_resource type="Resource" uid="uid://comcvl3e2jno" path="res://assets/resources/handbook_identifier/quality.tres" id="2_0hduj"]
-[ext_resource type="Script" uid="uid://dtab4ex7bechl" path="res://entites/shared/custom_resources/handbook/text_handbook_entry.gd" id="2_cogpi"]
+[ext_resource type="Script" uid="uid://dtab4ex7bechl" path="res://entities/shared/custom_resources/handbook/text_handbook_entry.gd" id="2_cogpi"]
 [ext_resource type="Resource" uid="uid://c4sd7ub76px20" path="res://assets/resources/translations/handbook/quality_entry.tres" id="2_ss3ja"]
 [ext_resource type="Resource" uid="uid://dgyylck1iwpeo" path="res://assets/resources/handbook_entry_text/quality_handbook_text.tres" id="4_8fg7w"]
 [ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="4_8r6qi"]
-[ext_resource type="Script" uid="uid://b3ffhlckbatm8" path="res://entites/shared/custom_resources/handbook/text_types/help_resources/cell_data.gd" id="5_rewpa"]
+[ext_resource type="Script" uid="uid://b3ffhlckbatm8" path="res://entities/shared/custom_resources/handbook/text_types/help_resources/cell_data.gd" id="5_rewpa"]
 [ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="6_s4pe5"]
-[ext_resource type="PackedScene" uid="uid://dmnhjrcyx0dga" path="res://entites/game/ui_handbook/scenes/ui_handbook_text.tscn" id="6_uqoky"]
+[ext_resource type="PackedScene" uid="uid://dmnhjrcyx0dga" path="res://entities/game/ui_handbook/scenes/ui_handbook_text.tscn" id="6_uqoky"]
 [ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="8_2h3bv"]
-[ext_resource type="Script" uid="uid://c1ddhu7kp1r78" path="res://entites/shared/custom_resources/handbook/text_types/image_table_text.gd" id="9_0sfp0"]
+[ext_resource type="Script" uid="uid://c1ddhu7kp1r78" path="res://entities/shared/custom_resources/handbook/text_types/image_table_text.gd" id="9_0sfp0"]
 
 [sub_resource type="Resource" id="Resource_d2dh5"]
 script = ExtResource("5_rewpa")

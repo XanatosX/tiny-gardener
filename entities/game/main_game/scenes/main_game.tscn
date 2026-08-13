@@ -1,0 +1,779 @@
+[gd_scene format=3 uid="uid://d17tvhhp1oyco"]
+
+[ext_resource type="Script" uid="uid://d2pm2qx07ew5b" path="res://entities/game/systems/scripts/systems.gd" id="1_bqrir"]
+[ext_resource type="PackedScene" uid="uid://d200fnos8du" path="res://entities/game/plant_pot/scenes/plant_pot.tscn" id="2_hpenl"]
+[ext_resource type="Script" uid="uid://dfiwemnvyw2oq" path="res://entities/game/systems/scripts/tick_system.gd" id="2_sld4w"]
+[ext_resource type="Script" uid="uid://dpyvv5m8bos23" path="res://entities/shared/custom_resources/item/item.gd" id="3_27u0r"]
+[ext_resource type="Script" uid="uid://bekomcxkybnnr" path="res://entities/game/systems/scripts/nutrition_restore_system.gd" id="4_4oopq"]
+[ext_resource type="Resource" uid="uid://mdg6cle4gacg" path="res://assets/resources/items/plants/standard_corn_plant.tres" id="4_akm2i"]
+[ext_resource type="Resource" uid="uid://jqik2o4fejuk" path="res://assets/resources/items/plants/poor_corn_plant.tres" id="5_akm2i"]
+[ext_resource type="Script" uid="uid://b54dtaxxrmjp3" path="res://entities/game/pot_spawner/scripts/pot_spawner.gd" id="5_hsd30"]
+[ext_resource type="Script" uid="uid://b5f3xyxvy2kx2" path="res://entities/game/systems/scripts/growth_system.gd" id="5_qawir"]
+[ext_resource type="Script" uid="uid://cisalj8psjl0n" path="res://entities/game/systems/scripts/interaction_system.gd" id="6_5qppn"]
+[ext_resource type="Resource" uid="uid://dn5dkrcjdbabj" path="res://assets/resources/items/plants/poor_rose_plant.tres" id="6_upa85"]
+[ext_resource type="PackedScene" uid="uid://o2giqms6a3k4" path="res://entities/game/player/scenes/player.tscn" id="7_4oopq"]
+[ext_resource type="PackedScene" uid="uid://coc2oftrmdr1i" path="res://entities/game/ui_game/scenes/game_ui.tscn" id="7_6no8q"]
+[ext_resource type="Resource" uid="uid://cp5vnlbu5a84l" path="res://assets/resources/items/fertilizer/poor_fertilizer.tres" id="7_ow5mg"]
+[ext_resource type="Resource" uid="uid://dygkxxmf5moyf" path="res://assets/resources/items/fertilizer/standard_fertilizer.tres" id="8_ow5mg"]
+[ext_resource type="Script" uid="uid://b8sb483ekv5ki" path="res://entities/game/systems/scripts/game_data_system.gd" id="9_3ivkw"]
+[ext_resource type="PackedScene" uid="uid://dotb7c5u5v75w" path="res://entities/game/day_night_cycle/scenes/day_night_cycle.tscn" id="10_2y08c"]
+[ext_resource type="Texture2D" uid="uid://brrc1k2riwc5v" path="res://assets/textures/tileset.png" id="10_me13u"]
+[ext_resource type="PackedScene" uid="uid://bloqip31qc2q2" path="res://assets/objects/fence_corner/fence_corner.tscn" id="10_sv1e6"]
+[ext_resource type="PackedScene" uid="uid://btv45jvvsv7m7" path="res://assets/objects/fence/fence.gltf" id="11_me13u"]
+[ext_resource type="Script" uid="uid://cf42xx3h83347" path="res://entities/game/systems/scripts/teleport_system.gd" id="13_ognp4"]
+[ext_resource type="Script" uid="uid://dmt1n02jb0l8y" path="res://entities/game/systems/scripts/save_game_system.gd" id="15_o2wdg"]
+[ext_resource type="Resource" uid="uid://cjima86eutrvh" path="res://assets/resources/game_data/initial_save.tres" id="16_15ye6"]
+[ext_resource type="Script" uid="uid://cmvgl4aykqqgr" path="res://entities/game/systems/scripts/game_ready_system.gd" id="17_b4qme"]
+[ext_resource type="Script" uid="uid://b7l1k1mh2341l" path="res://entities/game/systems/scripts/day_night_system.gd" id="20_m01cm"]
+[ext_resource type="PackedScene" uid="uid://d332r5anhh7q3" path="res://entities/teleport_door/scenes/teleport_door.tscn" id="21_04il6"]
+[ext_resource type="PackedScene" uid="uid://k0r0iddgkv82" path="res://entities/game/home_inside/scenes/home_inside.tscn" id="21_7fim8"]
+[ext_resource type="PackedScene" uid="uid://bkkgwm7okxsmx" path="res://entities/game/ui_shop/scenes/shop_ui.tscn" id="21_b0wxu"]
+[ext_resource type="Script" uid="uid://f44ryj70dh4l" path="res://entities/game/systems/scripts/situation_manager.gd" id="21_s3rff"]
+[ext_resource type="Script" uid="uid://b2m0riohmnsed" path="res://entities/game/systems/scripts/dialog_system.gd" id="23_oo75s"]
+[ext_resource type="Script" uid="uid://d4frpaer68gh1" path="res://entities/game/systems/scripts/handbook_system.gd" id="23_p0u3h"]
+[ext_resource type="Resource" uid="uid://qd15q45qhxpn" path="res://assets/resources/translations/door_farm.tres" id="23_tt2c0"]
+[ext_resource type="Resource" uid="uid://b066oswljguvn" path="res://assets/resources/translations/door_house.tres" id="24_o2wdg"]
+[ext_resource type="PackedScene" uid="uid://6q34li27de3v" path="res://entities/game/teleport_transition_ui/scene/teleport_transition_ui.tscn" id="25_04il6"]
+[ext_resource type="Script" uid="uid://x3v0qf3nnr33" path="res://entities/game/systems/scripts/upgrade_system.gd" id="26_ued1p"]
+[ext_resource type="Texture2D" uid="uid://rt7cy5pojcua" path="res://assets/atlas/house_icon.tres" id="28_s3rff"]
+[ext_resource type="PackedScene" uid="uid://cc0v2qp0gqmxj" path="res://entities/game/situation_trigger/scenes/area_situation_trigger.tscn" id="33_t6gop"]
+[ext_resource type="Resource" uid="uid://npim2ekidbye" path="res://assets/resources/situations/explain_plant_pot.tres" id="34_6o3hq"]
+[ext_resource type="PackedScene" uid="uid://dax5l65muilsb" path="res://entities/game/ui_speak_bubble/scenes/ui_speak_bubble.tscn" id="35_m01cm"]
+[ext_resource type="Resource" uid="uid://4rb5u6rjk7ld" path="res://assets/resources/situations/add_water_can_situation.tres" id="37_lfjt5"]
+[ext_resource type="PackedScene" uid="uid://cn1lp2skygk21" path="res://assets/objects/well/scenes/well.tscn" id="38_fseqt"]
+[ext_resource type="Resource" uid="uid://c0tmxnn2msk8p" path="res://assets/resources/items/upgrades/initial_pot_upgrade.tres" id="38_rx2cq"]
+[ext_resource type="Script" uid="uid://btx3f3hgnwkrg" path="res://entities/game/situation_trigger/scripts/validation/situation_has_item_validation.gd" id="39_ww47l"]
+[ext_resource type="PackedScene" uid="uid://bat42k2pv6cja" path="res://entities/game/ui_handbook/scenes/ui_handbook.tscn" id="40_fseqt"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8rpam"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rpam"]
+albedo_texture = ExtResource("10_me13u")
+uv1_scale = Vector3(150, 150, 150)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8rpam"]
+size = Vector3(25, 1, 25)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_eao4u"]
+
+[sub_resource type="MeshLibrary" id="MeshLibrary_8rpam"]
+item/0/name = "Grass"
+item/0/mesh = SubResource("PlaneMesh_eao4u")
+item/0/mesh_transform = Transform3D(0.1, 0, 0, 0, 0.01, 0, 0, 0, 0.1, 0, 0, 0)
+item/0/mesh_cast_shadow = 1
+item/0/shapes = []
+item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/navigation_layers = 1
+item/0/preview = ExtResource("10_me13u")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_crh21"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crh21"]
+size = Vector3(3.3475342, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8rpam"]
+size = Vector3(3.3604126, 1.4423828, 2.4594727)
+
+[sub_resource type="PrismMesh" id="PrismMesh_crh21"]
+
+[sub_resource type="Resource" id="Resource_kkwdg"]
+script = ExtResource("39_ww47l")
+item = ExtResource("38_rx2cq")
+metadata/_custom_type_script = "uid://btx3f3hgnwkrg"
+
+[node name="MainGame" type="Node3D" unique_id=226479066]
+
+[node name="Systems" type="Node" parent="." unique_id=1418285697]
+unique_name_in_owner = true
+script = ExtResource("1_bqrir")
+metadata/_custom_type_script = "uid://d2pm2qx07ew5b"
+
+[node name="PotManagerSystem" type="Node" parent="Systems" unique_id=754686630 node_paths=PackedStringArray("target_node")]
+script = ExtResource("5_hsd30")
+rows = 25
+columns = 10
+separation_in_meter = 0.6
+pot_template = ExtResource("2_hpenl")
+target_node = NodePath("../../PixellatedLevelContainer/SubViewport/World/Pots")
+metadata/_custom_type_script = "uid://b54dtaxxrmjp3"
+
+[node name="GameDataSystem" type="Node" parent="Systems" unique_id=401557549]
+script = ExtResource("9_3ivkw")
+debug_seeds = Array[ExtResource("3_27u0r")]([ExtResource("4_akm2i"), ExtResource("5_akm2i"), ExtResource("6_upa85"), ExtResource("7_ow5mg"), ExtResource("8_ow5mg")])
+metadata/_custom_type_script = "uid://b8sb483ekv5ki"
+
+[node name="GrowthSystem" type="Node" parent="Systems" unique_id=2092721398]
+script = ExtResource("5_qawir")
+metadata/_custom_type_script = "uid://b5f3xyxvy2kx2"
+
+[node name="NutritionRestoreSystem" type="Node" parent="Systems" unique_id=1116106025]
+script = ExtResource("4_4oopq")
+metadata/_custom_type_script = "uid://bekomcxkybnnr"
+
+[node name="TickSystem" type="Node" parent="Systems" unique_id=224564421]
+script = ExtResource("2_sld4w")
+metadata/_custom_type_script = "uid://dfiwemnvyw2oq"
+
+[node name="InteractionSystem" type="Node" parent="Systems" unique_id=538054635 node_paths=PackedStringArray("tracked_player")]
+script = ExtResource("6_5qppn")
+tracked_player = NodePath("../../PixellatedLevelContainer/SubViewport/World/Player")
+metadata/_custom_type_script = "uid://cisalj8psjl0n"
+
+[node name="UpgradeSystem" type="Node" parent="Systems" unique_id=1030169090]
+script = ExtResource("26_ued1p")
+metadata/_custom_type_script = "uid://x3v0qf3nnr33"
+
+[node name="TeleportSystem" type="Node" parent="Systems" unique_id=1877635044 node_paths=PackedStringArray("transition_ui")]
+script = ExtResource("13_ognp4")
+transition_ui = NodePath("../../Menus/TeleportTransitionUi")
+metadata/_custom_type_script = "uid://cf42xx3h83347"
+
+[node name="SaveGameSystem" type="Node" parent="Systems" unique_id=1050991123 node_paths=PackedStringArray("player")]
+script = ExtResource("15_o2wdg")
+initial_game_state = ExtResource("16_15ye6")
+player = NodePath("../../PixellatedLevelContainer/SubViewport/World/Player")
+metadata/_custom_type_script = "uid://dmt1n02jb0l8y"
+
+[node name="GameReadySystem" type="Node" parent="Systems" unique_id=1972097800]
+script = ExtResource("17_b4qme")
+metadata/_custom_type_script = "uid://cmvgl4aykqqgr"
+
+[node name="DayNightCycleSystem" type="Node" parent="Systems" unique_id=1991849973]
+script = ExtResource("20_m01cm")
+time_start = 2
+day_length_ticks = 3600
+metadata/_custom_type_script = "uid://b7l1k1mh2341l"
+
+[node name="SituationManager" type="Node" parent="Systems" unique_id=2130288565]
+script = ExtResource("21_s3rff")
+metadata/_custom_type_script = "uid://f44ryj70dh4l"
+
+[node name="DialogSystem" type="Node" parent="Systems" unique_id=1052731040 node_paths=PackedStringArray("dialog_ui")]
+script = ExtResource("23_oo75s")
+dialog_ui = NodePath("../../Menus/UiSpeakBubble")
+metadata/_custom_type_script = "uid://b2m0riohmnsed"
+
+[node name="HandbookSystem" type="Node" parent="Systems" unique_id=438046250]
+script = ExtResource("23_p0u3h")
+metadata/_custom_type_script = "uid://d4frpaer68gh1"
+
+[node name="PixellatedLevelContainer" type="SubViewportContainer" parent="." unique_id=1989513399]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 3
+
+[node name="SubViewport" type="SubViewport" parent="PixellatedLevelContainer" unique_id=390459755]
+handle_input_locally = false
+audio_listener_enable_3d = true
+size = Vector2i(640, 360)
+render_target_update_mode = 4
+
+[node name="World" type="Node3D" parent="PixellatedLevelContainer/SubViewport" unique_id=1783107041]
+
+[node name="DayNightCycle" parent="PixellatedLevelContainer/SubViewport/World" unique_id=1791543567 instance=ExtResource("10_2y08c")]
+
+[node name="Pots" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World" unique_id=565528529]
+
+[node name="Player" parent="PixellatedLevelContainer/SubViewport/World" unique_id=1430768931 instance=ExtResource("7_4oopq")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.675, 0, -201.069)
+
+[node name="Floor" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World" unique_id=1189270183]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PixellatedLevelContainer/SubViewport/World/Floor" unique_id=1993229054]
+transform = Transform3D(-10, 0, -8.742278e-07, 0, 1, 0, 8.742278e-07, 0, -10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_8rpam")
+surface_material_override/0 = SubResource("StandardMaterial3D_8rpam")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PixellatedLevelContainer/SubViewport/World/Floor" unique_id=1991844958]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/StaticBody3D" unique_id=1192575772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_8rpam")
+
+[node name="GridMap" type="GridMap" parent="PixellatedLevelContainer/SubViewport/World/Floor" unique_id=1994172378]
+visible = false
+mesh_library = SubResource("MeshLibrary_8rpam")
+physics_material = SubResource("PhysicsMaterial_crh21")
+cell_size = Vector3(0.2, 0.01, 0.2)
+data = {
+"cells": PackedInt32Array(1, 65532, 0, 0, 65532, 0, 65535, 65532, 0, 65535, 65499, 786432)
+}
+
+[node name="Fence" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World" unique_id=953113070]
+
+[node name="Top" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Fence" unique_id=1305091902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.187)
+
+[node name="FenceCorner2" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=787026543 instance=ExtResource("10_sv1e6")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60463, 0, 0.0060224533)
+
+[node name="blockbench_export" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1358302736 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.009813, 0, 0)
+
+[node name="blockbench_export2" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=43303476 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6348133, 0, 0)
+
+[node name="blockbench_export3" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1336577883 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2598133, 0, 0)
+
+[node name="blockbench_export4" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=836420342 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.884713, 0, 0)
+
+[node name="blockbench_export5" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=322179406 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.509713, 0, 0)
+
+[node name="blockbench_export6" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=209487369 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.134713, 0, 0)
+
+[node name="blockbench_export7" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1248004401 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.759613, 0, 0)
+
+[node name="blockbench_export8" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1843131670 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.384613, 0, 0)
+
+[node name="blockbench_export9" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1267205263 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.009613, 0, 0)
+
+[node name="blockbench_export10" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=227281893 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6345134, 0, 0)
+
+[node name="blockbench_export11" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=700074605 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2595134, 0, 0)
+
+[node name="blockbench_export12" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1927257019 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8845134, 0, 0)
+
+[node name="blockbench_export13" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1203192370 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5094132, 0, 0)
+
+[node name="blockbench_export14" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1362140063 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1344132, 0, 0)
+
+[node name="blockbench_export15" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=2060133180 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7594132, 0, 0)
+
+[node name="blockbench_export16" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1402864002 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3843136, 0, 0)
+
+[node name="blockbench_export17" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1774753668 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0093136, 0, 0)
+
+[node name="blockbench_export18" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=744180361 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6343136, 0, 0)
+
+[node name="blockbench_export19" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1651114617 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2592134, 0, 0)
+
+[node name="blockbench_export20" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1077697054 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88421345, 0, 0)
+
+[node name="blockbench_export21" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1339365689 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50921345, 0, 0)
+
+[node name="blockbench_export22" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1592235873 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13411331, 0, 0)
+
+[node name="blockbench_export23" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1082200913 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24088669, 0, 0)
+
+[node name="blockbench_export24" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1151089168 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6158867, 0, 0)
+
+[node name="blockbench_export25" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=219521710 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99098665, 0, 0)
+
+[node name="blockbench_export26" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1413191885 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3659866, 0, 0)
+
+[node name="blockbench_export27" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1612689062 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7409866, 0, 0)
+
+[node name="blockbench_export28" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=213713812 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1160867, 0, 0)
+
+[node name="blockbench_export29" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=785528781 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4910867, 0, 0)
+
+[node name="blockbench_export30" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=747676782 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8660867, 0, 0)
+
+[node name="blockbench_export31" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=543358167 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2411869, 0, 0)
+
+[node name="blockbench_export32" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=265939873 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6161869, 0, 0)
+
+[node name="blockbench_export33" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1263827095 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9911869, 0, 0)
+
+[node name="blockbench_export34" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=534977225 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3662868, 0, 0)
+
+[node name="blockbench_export35" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1963710443 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7412868, 0, 0)
+
+[node name="blockbench_export36" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1421919762 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1162868, 0, 0)
+
+[node name="blockbench_export37" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=832545117 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.491387, 0, 0)
+
+[node name="blockbench_export38" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1179729363 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.866387, 0, 0)
+
+[node name="blockbench_export39" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=113884526 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.241387, 0, 0)
+
+[node name="blockbench_export40" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1853726275 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6164865, 0, 0)
+
+[node name="blockbench_export41" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1460702680 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9914865, 0, 0)
+
+[node name="blockbench_export42" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1618809894 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3664865, 0, 0)
+
+[node name="blockbench_export43" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=433386919 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7415867, 0, 0)
+
+[node name="blockbench_export44" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1410932733 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.116587, 0, 0)
+
+[node name="blockbench_export45" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=524340622 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.491587, 0, 0)
+
+[node name="blockbench_export46" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=1260117358 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.866687, 0, 0)
+
+[node name="blockbench_export47" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=698148149 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.241687, 0, 0)
+
+[node name="FenceCorner" parent="PixellatedLevelContainer/SubViewport/World/Fence/Top" unique_id=815995782 instance=ExtResource("10_sv1e6")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.598, 0, 0.031)
+
+[node name="Left" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Fence" unique_id=1344001251]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.605, 0, 0.421)
+
+[node name="blockbench_export63" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=184815783 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3843136, 0, 0)
+
+[node name="blockbench_export64" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1875979781 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0093136, 0, 0)
+
+[node name="blockbench_export65" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=126047160 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6343136, 0, 0)
+
+[node name="blockbench_export66" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=299159422 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2592134, 0, 0)
+
+[node name="blockbench_export67" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=601157907 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88421345, 0, 0)
+
+[node name="blockbench_export68" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=787526184 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50921345, 0, 0)
+
+[node name="blockbench_export69" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=835138210 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13411331, 0, 0)
+
+[node name="blockbench_export70" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1495476210 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24088669, 0, 0)
+
+[node name="blockbench_export71" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=124276194 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6158867, 0, 0)
+
+[node name="blockbench_export72" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=102186721 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99098665, 0, 0)
+
+[node name="blockbench_export73" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1840932558 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3659866, 0, 0)
+
+[node name="blockbench_export74" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=155307842 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7409866, 0, 0)
+
+[node name="blockbench_export75" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=2078623078 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1160867, 0, 0)
+
+[node name="blockbench_export76" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1260106 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4910867, 0, 0)
+
+[node name="blockbench_export77" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1562582883 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8660867, 0, 0)
+
+[node name="blockbench_export78" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=595392377 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2411869, 0, 0)
+
+[node name="blockbench_export79" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1146100092 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6161869, 0, 0)
+
+[node name="blockbench_export80" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=15441534 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9911869, 0, 0)
+
+[node name="blockbench_export81" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1861884950 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3662868, 0, 0)
+
+[node name="blockbench_export82" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=848330883 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7412868, 0, 0)
+
+[node name="blockbench_export83" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1293198527 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1162868, 0, 0)
+
+[node name="blockbench_export84" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=551109296 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.491387, 0, 0)
+
+[node name="blockbench_export85" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=804644183 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.866387, 0, 0)
+
+[node name="blockbench_export86" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1321148092 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.241387, 0, 0)
+
+[node name="blockbench_export87" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1715203514 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6164865, 0, 0)
+
+[node name="blockbench_export88" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1409216374 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9914865, 0, 0)
+
+[node name="blockbench_export89" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=253503931 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3664865, 0, 0)
+
+[node name="blockbench_export90" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1270649839 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7415867, 0, 0)
+
+[node name="blockbench_export91" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1495217068 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.116587, 0, 0)
+
+[node name="blockbench_export92" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1863607428 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.491587, 0, 0)
+
+[node name="blockbench_export93" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=67224800 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.866687, 0, 0)
+
+[node name="blockbench_export94" parent="PixellatedLevelContainer/SubViewport/World/Fence/Left" unique_id=1636918678 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.241687, 0, 0)
+
+[node name="Right" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Fence" unique_id=153378020]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.019, 0, -0.353)
+
+[node name="blockbench_export95" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1901668394 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 8.430923)
+
+[node name="blockbench_export96" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1058577982 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 8.055923)
+
+[node name="blockbench_export97" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=534425090 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 7.680924)
+
+[node name="blockbench_export98" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=591803928 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 7.305824)
+
+[node name="blockbench_export99" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1551825438 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 6.930824)
+
+[node name="blockbench_export100" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1845566562 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 6.555824)
+
+[node name="blockbench_export101" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=489876451 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 6.1807237)
+
+[node name="blockbench_export102" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=7951033 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 5.8057237)
+
+[node name="blockbench_export103" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=400122891 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 5.4307237)
+
+[node name="blockbench_export104" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1808896724 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 5.055624)
+
+[node name="blockbench_export105" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1335966761 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 4.680624)
+
+[node name="blockbench_export106" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=229943542 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 4.305624)
+
+[node name="blockbench_export107" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1096167484 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 3.9305239)
+
+[node name="blockbench_export108" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1421512861 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 3.5555239)
+
+[node name="blockbench_export109" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1475399133 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 3.1805239)
+
+[node name="blockbench_export110" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=231439951 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 2.8054242)
+
+[node name="blockbench_export111" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=146127358 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 2.4304242)
+
+[node name="blockbench_export112" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1618969617 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 2.0554242)
+
+[node name="blockbench_export113" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1381346401 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 1.6803241)
+
+[node name="blockbench_export114" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1933364705 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 1.3053241)
+
+[node name="blockbench_export115" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1520323893 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 0.9303241)
+
+[node name="blockbench_export116" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=555676988 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 0.55522394)
+
+[node name="blockbench_export117" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1989204195 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, 0.18022394)
+
+[node name="blockbench_export118" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=530639504 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, -0.19477606)
+
+[node name="blockbench_export119" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=888042249 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, -0.569876)
+
+[node name="blockbench_export120" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=82945775 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, -0.94487596)
+
+[node name="blockbench_export121" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1194313950 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, -1.319876)
+
+[node name="blockbench_export122" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=1235300755 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, -1.6949761)
+
+[node name="blockbench_export123" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=919359132 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, -2.069976)
+
+[node name="blockbench_export124" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=190489853 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, -2.444976)
+
+[node name="blockbench_export125" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=741585636 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, -2.8200762)
+
+[node name="blockbench_export126" parent="PixellatedLevelContainer/SubViewport/World/Fence/Right" unique_id=2075766196 instance=ExtResource("11_me13u")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60473, 0, -3.1950762)
+
+[node name="Bottom" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Fence" unique_id=1683255457]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.019, 0, -0.353)
+
+[node name="FenceCorner3" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=216052421 instance=ExtResource("10_sv1e6")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8.60463, 0, 9.006022)
+
+[node name="blockbench_export48" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1103613665 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.009813, 0, 9)
+
+[node name="blockbench_export49" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1209276062 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6348133, 0, 9)
+
+[node name="blockbench_export50" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1883700123 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2598133, 0, 9)
+
+[node name="blockbench_export51" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=636126181 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.884713, 0, 9)
+
+[node name="blockbench_export52" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=626318331 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.509713, 0, 9)
+
+[node name="blockbench_export53" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1056173551 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.134713, 0, 9)
+
+[node name="blockbench_export54" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1540879372 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.759613, 0, 9)
+
+[node name="blockbench_export55" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1948721239 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.384613, 0, 9)
+
+[node name="blockbench_export56" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1540163656 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.009613, 0, 9)
+
+[node name="blockbench_export57" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=244434297 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6345134, 0, 9)
+
+[node name="blockbench_export58" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=163673121 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2595134, 0, 9)
+
+[node name="blockbench_export59" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1881282203 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8845134, 0, 9)
+
+[node name="blockbench_export60" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1909866569 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5094132, 0, 9)
+
+[node name="blockbench_export61" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1824863909 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1344132, 0, 9)
+
+[node name="blockbench_export62" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1803407017 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7594132, 0, 9)
+
+[node name="blockbench_export63" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1375101809 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3843136, 0, 9)
+
+[node name="blockbench_export64" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1040537119 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0093136, 0, 9)
+
+[node name="blockbench_export65" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1198274766 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6343136, 0, 9)
+
+[node name="blockbench_export66" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=14324888 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2592134, 0, 9)
+
+[node name="blockbench_export67" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1662005133 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88421345, 0, 9)
+
+[node name="blockbench_export77" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=817129152 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8660867, 0, 9)
+
+[node name="blockbench_export78" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=807954703 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2411869, 0, 9)
+
+[node name="blockbench_export79" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=2018196738 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6161869, 0, 9)
+
+[node name="blockbench_export80" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1240290116 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9911869, 0, 9)
+
+[node name="blockbench_export81" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1502773839 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3662868, 0, 9)
+
+[node name="blockbench_export82" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=225270854 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7412868, 0, 9)
+
+[node name="blockbench_export83" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1149788203 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1162868, 0, 9)
+
+[node name="blockbench_export84" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=973354567 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.491387, 0, 9)
+
+[node name="blockbench_export85" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1357064552 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.866387, 0, 9)
+
+[node name="blockbench_export86" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1114148650 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.241387, 0, 9)
+
+[node name="blockbench_export87" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=220395327 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6164865, 0, 9)
+
+[node name="blockbench_export88" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=493918712 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9914865, 0, 9)
+
+[node name="blockbench_export89" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=649645843 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3664865, 0, 9)
+
+[node name="blockbench_export90" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1410715157 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7415867, 0, 9)
+
+[node name="blockbench_export91" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=820415552 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.116587, 0, 9)
+
+[node name="blockbench_export92" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1817960422 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.491587, 0, 9)
+
+[node name="blockbench_export93" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=863087073 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.866687, 0, 9)
+
+[node name="blockbench_export94" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1881688127 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.241687, 0, 9)
+
+[node name="FenceCorner4" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=755535276 instance=ExtResource("10_sv1e6")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.598, 0, 9.031)
+
+[node name="House" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World" unique_id=174299827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.523195)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PixellatedLevelContainer/SubViewport/World/House" unique_id=808564110]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PixellatedLevelContainer/SubViewport/World/House/StaticBody3D" unique_id=174078614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.159729, 0, 0.011296272)
+shape = SubResource("BoxShape3D_crh21")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PixellatedLevelContainer/SubViewport/World/House" unique_id=2020609279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14981079, 0.2211914, -0.7297363)
+mesh = SubResource("BoxMesh_8rpam")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PixellatedLevelContainer/SubViewport/World/House" unique_id=1998689350]
+transform = Transform3D(3.9289484, 0, 0, 0, 1.0524048, 0, 0, 0, 2.7732756, 0, 1.442, -0.578)
+mesh = SubResource("PrismMesh_crh21")
+
+[node name="TeleportDoor" parent="PixellatedLevelContainer/SubViewport/World/House" unique_id=1735594085 instance=ExtResource("21_04il6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0.5673847)
+location = 2
+target = 1
+target_name = ExtResource("24_o2wdg")
+location_name = ExtResource("23_tt2c0")
+go_to_icon_overwrite = ExtResource("28_s3rff")
+
+[node name="HomeInside" parent="PixellatedLevelContainer/SubViewport/World" unique_id=1571608070 instance=ExtResource("21_7fim8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -200)
+
+[node name="Situations" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World" unique_id=1920223847]
+
+[node name="PotAreaEnterSituationTrigger" parent="PixellatedLevelContainer/SubViewport/World/Situations" unique_id=2123274811 instance=ExtResource("33_t6gop")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0.318, -3)
+situation = ExtResource("34_6o3hq")
+validation = SubResource("Resource_kkwdg")
+
+[node name="WaterCanAreaEnterSituationTrigger" parent="PixellatedLevelContainer/SubViewport/World/Situations" unique_id=700321876 instance=ExtResource("33_t6gop")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1130767, 0.3936246, -8.436729)
+situation = ExtResource("37_lfjt5")
+
+[node name="Well" parent="PixellatedLevelContainer/SubViewport/World" unique_id=1081629262 instance=ExtResource("38_fseqt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1131024, 0, -8.377876)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1754586139]
+
+[node name="GameUi" parent="UI" unique_id=1335951536 instance=ExtResource("7_6no8q")]
+
+[node name="Menus" type="CanvasLayer" parent="." unique_id=616214661]
+
+[node name="ShopUi" parent="Menus" unique_id=331912074 instance=ExtResource("21_b0wxu")]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UiHandbook" parent="Menus" unique_id=420934734 instance=ExtResource("40_fseqt")]
+
+[node name="UiSpeakBubble" parent="Menus" unique_id=617009652 instance=ExtResource("35_m01cm")]
+
+[node name="TeleportTransitionUi" parent="Menus" unique_id=338172450 instance=ExtResource("25_04il6")]
+visible = false
+
+[node name="Debug" type="CanvasLayer" parent="." unique_id=31093797]
+
+[node name="GameReadySystem" type="Node" parent="." unique_id=316189514]
+script = ExtResource("17_b4qme")
+metadata/_custom_type_script = "uid://cmvgl4aykqqgr"
+
+[connection signal="pots_initialized" from="Systems/PotManagerSystem" to="Systems/GameReadySystem" method="pots_spawned"]
+[connection signal="item_amount_changed" from="Systems/GameDataSystem" to="UI/GameUi" method="show_item"]
+[connection signal="money_changed" from="Systems/GameDataSystem" to="UI/GameUi" method="update_money"]
+[connection signal="money_delta_change" from="Systems/GameDataSystem" to="UI/GameUi" method="money_delta_change"]
+[connection signal="hide_pot_information_ui" from="Systems/InteractionSystem" to="UI/GameUi" method="hide_pot_data"]
+[connection signal="show_pot_information_ui" from="Systems/InteractionSystem" to="UI/GameUi" method="show_pot_data"]
+[connection signal="update_actions" from="Systems/InteractionSystem" to="UI/GameUi" method="actions_update"]
+[connection signal="game_loaded" from="Systems/SaveGameSystem" to="Systems/PotManagerSystem" method="game_loaded"]
+[connection signal="game_loaded" from="Systems/SaveGameSystem" to="Systems/GameDataSystem" method="game_loaded"]
+[connection signal="game_loaded" from="Systems/SaveGameSystem" to="Systems/DayNightCycleSystem" method="game_loaded"]
+[connection signal="game_loaded" from="Systems/SaveGameSystem" to="Systems/SituationManager" method="game_loaded"]
+[connection signal="game_loaded" from="Systems/SaveGameSystem" to="PixellatedLevelContainer/SubViewport/World/Player" method="game_loaded"]
+[connection signal="game_saved" from="Systems/SaveGameSystem" to="UI/GameUi" method="game_has_saved"]
+[connection signal="game_saving" from="Systems/SaveGameSystem" to="Systems/DayNightCycleSystem" method="game_saving"]
+[connection signal="game_saving" from="Systems/SaveGameSystem" to="Systems/SituationManager" method="game_save"]
+[connection signal="saving_started" from="Systems/SaveGameSystem" to="UI/GameUi" method="game_is_saving"]
+[connection signal="game_ready" from="Systems/GameReadySystem" to="Systems/SaveGameSystem" method="load_game"]
+[connection signal="day_percentage" from="Systems/DayNightCycleSystem" to="PixellatedLevelContainer/SubViewport/World/DayNightCycle" method="percentage_update"]
+[connection signal="dialog_ended" from="Systems/DialogSystem" to="UI/GameUi" method="dialog_ended"]
+[connection signal="dialog_started" from="Systems/DialogSystem" to="UI/GameUi" method="dialog_started"]
+[connection signal="dialog_started" from="Systems/DialogSystem" to="Menus/ShopUi" method="silent_close"]
+[connection signal="open_handbook_page" from="Systems/HandbookSystem" to="Menus/UiHandbook" method="open_specific_handbook_entry"]
+[connection signal="triggered" from="PixellatedLevelContainer/SubViewport/World/HomeInside/ShopTrigger" to="Menus/ShopUi" method="animate_in"]
+[connection signal="trigger_action" from="UI/GameUi" to="Systems/InteractionSystem" method="trigger_interaction"]
+[connection signal="close_ui" from="Menus/ShopUi" to="PixellatedLevelContainer/SubViewport/World/Player" method="enable_movement"]
+[connection signal="show_ui" from="Menus/ShopUi" to="PixellatedLevelContainer/SubViewport/World/Player" method="disable_movement"]
+[connection signal="dialog_started" from="Menus/UiSpeakBubble" to="PixellatedLevelContainer/SubViewport/World/Player" method="disable_movement"]
+
+[editable path="PixellatedLevelContainer/SubViewport/World/HomeInside"]

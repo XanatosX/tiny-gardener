@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dax5l65muilsb"]
+
+[ext_resource type="Script" uid="uid://baictj1u3wqq8" path="res://entities/game/ui_speak_bubble/scripts/ui_speak_bubble.gd" id="1_nerx6"]
+[ext_resource type="Resource" uid="uid://ij14rx80sfbc" path="res://assets/resources/situations/intro_situation.tres" id="2_2626j"]
+[ext_resource type="Texture2D" uid="uid://co5e4fuo66w6b" path="res://assets/atlas/next_dialog_icon.tres" id="2_jkpad"]
+[ext_resource type="Script" uid="uid://co43o2rawaspf" path="res://entities/game/ui_speak_bubble/scripts/text_display.gd" id="3_ree4k"]
+[ext_resource type="Resource" uid="uid://d3r1v0lw4jno5" path="res://assets/resources/voices/default_male.tres" id="4_xsexf"]
+[ext_resource type="InputEventAction" uid="uid://cib787rcrmrmf" path="res://assets/button_shortcuts/interact.tres" id="5_ooyem"]
+[ext_resource type="Script" uid="uid://nfsqvogd4ygq" path="res://entities/game/ui_speak_bubble/scripts/next_text_button.gd" id="5_umk0k"]
+
+[sub_resource type="Shortcut" id="Shortcut_tmvc2"]
+events = [ExtResource("5_ooyem")]
+
+[node name="UiSpeakBubble" type="PanelContainer" unique_id=1742584054]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -376.5
+offset_top = -165.0
+offset_right = 376.5
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 170)
+script = ExtResource("1_nerx6")
+debug_situation = ExtResource("2_2626j")
+metadata/_custom_type_script = "uid://baictj1u3wqq8"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=845653515]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1196457319]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Icon" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1560797269]
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/Icon" unique_id=584588549]
+custom_minimum_size = Vector2(128, 128)
+custom_maximum_size = Vector2(128, 128)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="MarginContainer/HBoxContainer/Icon" unique_id=726331493]
+layout_mode = 2
+text = "NAME"
+horizontal_alignment = 1
+
+[node name="Text" type="RichTextLabel" parent="MarginContainer/HBoxContainer" unique_id=861797160]
+custom_minimum_size = Vector2(600, 0)
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "SOME_EXAMPLE_TEXT"
+autowrap_mode = 2
+vertical_alignment = 1
+script = ExtResource("3_ree4k")
+time_per_char = 0.02
+max_text_length = 250
+fallback_voice = ExtResource("4_xsexf")
+metadata/_custom_type_script = "uid://co43o2rawaspf"
+
+[node name="NextButton" type="TextureButton" parent="MarginContainer/HBoxContainer/Text" unique_id=774537702]
+custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+offset_transform_enabled = true
+shortcut = SubResource("Shortcut_tmvc2")
+texture_normal = ExtResource("2_jkpad")
+texture_disabled = ExtResource("2_jkpad")
+stretch_mode = 5
+script = ExtResource("5_umk0k")
+metadata/_custom_type_script = "uid://nfsqvogd4ygq"
+
+[connection signal="clear_message" from="." to="MarginContainer/HBoxContainer/Text" method="clear_message"]
+[connection signal="update_character_name" from="." to="MarginContainer/HBoxContainer/Icon/Name" method="set_text"]
+[connection signal="update_icon" from="." to="MarginContainer/HBoxContainer/Icon/Image" method="set_texture"]
+[connection signal="update_message" from="." to="MarginContainer/HBoxContainer/Text" method="set_spoken_message"]
+[connection signal="animation_done" from="MarginContainer/HBoxContainer/Text" to="MarginContainer/HBoxContainer/Text/NextButton" method="display_button"]
+[connection signal="display_new_text" from="MarginContainer/HBoxContainer/Text" to="MarginContainer/HBoxContainer/Text/NextButton" method="hide_button"]
+[connection signal="no_more_text" from="MarginContainer/HBoxContainer/Text" to="." method="display_next_message"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Text/NextButton" to="MarginContainer/HBoxContainer/Text" method="show_next_text"]

@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="Situation" format=3 uid="uid://4rb5u6rjk7ld"]
 
-[ext_resource type="Script" uid="uid://cf0kw8sdb3t6h" path="res://entites/shared/custom_resources/situations/situation.gd" id="1_7u7dg"]
+[ext_resource type="Script" uid="uid://cf0kw8sdb3t6h" path="res://entities/shared/custom_resources/situations/situation.gd" id="1_7u7dg"]
 [ext_resource type="Resource" uid="uid://ij14rx80sfbc" path="res://assets/resources/situations/intro_situation.tres" id="2_afou2"]
-[ext_resource type="Script" uid="uid://b2r5o8g18wx6g" path="res://entites/shared/custom_resources/situation_step/situation_step.gd" id="3_fxrj8"]
-[ext_resource type="Script" uid="uid://bhjycglythlp8" path="res://entites/shared/custom_resources/situation_step/toggle_player_step.gd" id="4_7cq4u"]
+[ext_resource type="Script" uid="uid://b2r5o8g18wx6g" path="res://entities/shared/custom_resources/situation_step/situation_step.gd" id="3_fxrj8"]
+[ext_resource type="Script" uid="uid://bhjycglythlp8" path="res://entities/shared/custom_resources/situation_step/toggle_player_step.gd" id="4_7cq4u"]
 [ext_resource type="Resource" uid="uid://vxm0pt2c55dg" path="res://assets/resources/dialogs/add_water_can/add_water_can.tres" id="5_61oim"]
-[ext_resource type="Script" uid="uid://wljs35rlfnc8" path="res://entites/shared/custom_resources/situation_step/show_dialog_step.gd" id="6_ex4et"]
-[ext_resource type="Script" uid="uid://dpyvv5m8bos23" path="res://entites/shared/custom_resources/item/item.gd" id="7_q4e1l"]
+[ext_resource type="Script" uid="uid://wljs35rlfnc8" path="res://entities/shared/custom_resources/situation_step/show_dialog_step.gd" id="6_ex4et"]
+[ext_resource type="Script" uid="uid://dpyvv5m8bos23" path="res://entities/shared/custom_resources/item/item.gd" id="7_q4e1l"]
 [ext_resource type="Resource" uid="uid://c0xbiw0gabivw" path="res://assets/resources/items/water_cans/old_water_can.tres" id="8_mu20t"]
-[ext_resource type="Script" uid="uid://bjdrfykb1y1df" path="res://entites/shared/custom_resources/situation_step/add_item_step.gd" id="9_y3wfs"]
+[ext_resource type="Script" uid="uid://bjdrfykb1y1df" path="res://entities/shared/custom_resources/situation_step/add_item_step.gd" id="9_y3wfs"]
 
 [sub_resource type="Resource" id="Resource_p0u3h"]
 script = ExtResource("4_7cq4u")

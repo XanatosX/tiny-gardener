@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bat42k2pv6cja"]
+
+[ext_resource type="Script" uid="uid://b6u7hfrnrjuxw" path="res://entities/game/ui_handbook/scripts/handbook_entries.gd" id="1_15jmf"]
+[ext_resource type="Script" uid="uid://dmdtw3kn5ap7q" path="res://entities/game/ui_handbook/scripts/handbook.gd" id="1_lpl6t"]
+[ext_resource type="Script" uid="uid://c6ud20j1ifcr" path="res://entities/game/ui_handbook/scripts/dynamic_entry_provider/dynamic_handbook_entry.gd" id="2_fjis5"]
+[ext_resource type="Shortcut" uid="uid://ovus7gnb525j" path="res://assets/button_shortcuts/close_shortkey.tres" id="2_i0umm"]
+[ext_resource type="Resource" uid="uid://cgty7bqxn8fkr" path="res://assets/resources/translations/handbook/handbook.tres" id="2_pbgr7"]
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="2_r6tv0"]
+[ext_resource type="Resource" uid="uid://4yy4h6becgpk" path="res://assets/resources/translations/handbook/movement.tres" id="3_lavt0"]
+[ext_resource type="Resource" uid="uid://0dx1e2on2pkj" path="res://assets/resources/translations/handbook/upgrades_group.tres" id="4_l6xx0"]
+[ext_resource type="Script" uid="uid://b6w8pkrcgpghe" path="res://entities/game/ui_handbook/scripts/dynamic_entry_provider/dynamic_item_handbook_provider.gd" id="4_lpl6t"]
+[ext_resource type="PackedScene" uid="uid://c7pofbfclwxcd" path="res://entities/game/ui_handbook/scenes/ui_handbook_item.tscn" id="5_i0umm"]
+[ext_resource type="Resource" uid="uid://b1faiqir2v35i" path="res://assets/resources/translations/handbook/item_group.tres" id="5_l6xx0"]
+[ext_resource type="Resource" uid="uid://cngxlkofvribd" path="res://assets/resources/translations/handbook/game_mechanics.tres" id="10_1dn17"]
+[ext_resource type="Resource" uid="uid://bwnga3w2yn7w4" path="res://assets/resources/translations/handbook/fertilizer_group.tres" id="12_rnxse"]
+[ext_resource type="Resource" uid="uid://dmq75lvwgg67w" path="res://assets/resources/translations/handbook/drops_group.tres" id="13_22llt"]
+[ext_resource type="Resource" uid="uid://1fx8d6i8sy50" path="res://assets/resources/translations/handbook/plants_groups.tres" id="14_wbobc"]
+[ext_resource type="Texture2D" uid="uid://c0tbb8km33sgp" path="res://assets/atlas/move_icon.tres" id="16_fkcc1"]
+[ext_resource type="Texture2D" uid="uid://0bkyfxdm577g" path="res://assets/atlas/planting_icon.tres" id="17_cgicq"]
+[ext_resource type="Texture2D" uid="uid://d2dufwqc0056g" path="res://assets/atlas/fertilizer_icon.tres" id="18_kdse6"]
+
+[sub_resource type="Resource" id="Resource_bsf2r"]
+script = ExtResource("4_lpl6t")
+scene_template = ExtResource("5_i0umm")
+metadata/_custom_type_script = "uid://b6w8pkrcgpghe"
+
+[node name="UiHandbook" type="MarginContainer" unique_id=420934734]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+script = ExtResource("1_lpl6t")
+metadata/_custom_type_script = "uid://dmdtw3kn5ap7q"
+
+[node name="MarginContainer" type="PanelContainer" parent="." unique_id=604271330]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=275766854]
+layout_mode = 2
+
+[node name="Close" type="Button" parent="MarginContainer/Content" unique_id=2014650940]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+shortcut = ExtResource("2_i0umm")
+text = "X"
+
+[node name="Split" type="HBoxContainer" parent="MarginContainer/Content" unique_id=1569751107]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HandbookEntries" type="Tree" parent="MarginContainer/Content/Split" unique_id=2069725701]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+column_titles_visible = true
+scroll_horizontal_enabled = false
+scroll_vertical_enabled = false
+script = ExtResource("1_15jmf")
+dynamic_entry_provider = Array[ExtResource("2_fjis5")]([SubResource("Resource_bsf2r")])
+handbook_translation = ExtResource("2_pbgr7")
+translations = Dictionary[int, ExtResource("2_r6tv0")]({
+0: ExtResource("3_lavt0"),
+1: ExtResource("10_1dn17"),
+2: ExtResource("5_l6xx0"),
+3: ExtResource("12_rnxse"),
+4: ExtResource("13_22llt"),
+5: ExtResource("14_wbobc"),
+6: ExtResource("4_l6xx0")
+})
+group_icons = Dictionary[int, Texture2D]({
+0: ExtResource("16_fkcc1"),
+3: ExtResource("18_kdse6"),
+5: ExtResource("17_cgicq")
+})
+metadata/_custom_type_script = "uid://b6u7hfrnrjuxw"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Content/Split" unique_id=927261916]
+layout_mode = 2
+
+[node name="Target" type="MarginContainer" parent="MarginContainer/Content/Split" unique_id=148038663]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="open_entry" from="." to="MarginContainer/Content/Split/HandbookEntries" method="select_specific_entry_by_key"]
+[connection signal="pressed" from="MarginContainer/Content/Close" to="." method="hide"]

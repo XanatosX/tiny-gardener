@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c7r2yjdkr748a"]
+
+[ext_resource type="Script" uid="uid://csbqjjv4fyf8g" path="res://entities/game/ui_hotbar/scripts/ui_hotbar.gd" id="1_2sn7k"]
+
+[node name="UiHotbar" type="Control" unique_id=459944699 node_paths=PackedStringArray("actions_node", "simple_action_template", "dynamic_action_template")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_2sn7k")
+actions_node = NodePath("MarginContainer/PanelContainer/MarginContainer/Actions")
+simple_action_template = NodePath("MarginContainer/PanelContainer/MarginContainer/Actions/ActionPlaceholder")
+dynamic_action_template = NodePath("MarginContainer/PanelContainer/MarginContainer/Actions/DynamicPlantAction")
+metadata/_custom_type_script = "uid://csbqjjv4fyf8g"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1697988738]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -64.0
+offset_right = 66.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 35
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=303169156]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer" unique_id=1875427741]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Actions" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer" unique_id=442118053]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="ActionPlaceholder" parent="MarginContainer/PanelContainer/MarginContainer/Actions" unique_id=947915426 instance_placeholder="res://entities/game/ui_hotbar/scenes/action_template.tscn"]
+layout_mode = 2
+
+[node name="DynamicPlantAction" parent="MarginContainer/PanelContainer/MarginContainer/Actions" unique_id=1632773265 instance_placeholder="res://entities/game/ui_hotbar/scenes/dynamic_action.tscn"]
+layout_mode = 2

@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://b16hblkoijiuj" path="res://assets/resources/characters/player_character.tres" id="1_c5vrm"]
 [ext_resource type="Resource" uid="uid://msq3fievfe4j" path="res://assets/resources/translations/dialogs/explain_plant_pot/player_explain_plant_pot_1.tres" id="2_2rykp"]
-[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entites/shared/custom_resources/situations/spoken_message.gd" id="3_gkeds"]
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entities/shared/custom_resources/situations/spoken_message.gd" id="3_gkeds"]
 
 [resource]
 script = ExtResource("3_gkeds")

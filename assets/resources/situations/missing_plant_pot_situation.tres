@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Situation" format=3 uid="uid://b8t003enx7vgn"]
 
-[ext_resource type="Script" uid="uid://cf0kw8sdb3t6h" path="res://entites/shared/custom_resources/situations/situation.gd" id="1_knrh3"]
-[ext_resource type="Script" uid="uid://b2r5o8g18wx6g" path="res://entites/shared/custom_resources/situation_step/situation_step.gd" id="2_3tymc"]
+[ext_resource type="Script" uid="uid://cf0kw8sdb3t6h" path="res://entities/shared/custom_resources/situations/situation.gd" id="1_knrh3"]
+[ext_resource type="Script" uid="uid://b2r5o8g18wx6g" path="res://entities/shared/custom_resources/situation_step/situation_step.gd" id="2_3tymc"]
 [ext_resource type="Resource" uid="uid://ij14rx80sfbc" path="res://assets/resources/situations/intro_situation.tres" id="2_qqe5y"]
-[ext_resource type="Script" uid="uid://bhjycglythlp8" path="res://entites/shared/custom_resources/situation_step/toggle_player_step.gd" id="3_3tymc"]
+[ext_resource type="Script" uid="uid://bhjycglythlp8" path="res://entities/shared/custom_resources/situation_step/toggle_player_step.gd" id="3_3tymc"]
 [ext_resource type="Resource" uid="uid://d0s46ixv2orgd" path="res://assets/resources/dialogs/missing_pot/should_buy_pot_dialog.tres" id="5_edyek"]
-[ext_resource type="Script" uid="uid://wljs35rlfnc8" path="res://entites/shared/custom_resources/situation_step/show_dialog_step.gd" id="6_8sinn"]
-[ext_resource type="Script" uid="uid://bxrkdwitjtqvg" path="res://entites/shared/custom_resources/situation_step/move_waypoints_step.gd" id="7_8sinn"]
+[ext_resource type="Script" uid="uid://wljs35rlfnc8" path="res://entities/shared/custom_resources/situation_step/show_dialog_step.gd" id="6_8sinn"]
+[ext_resource type="Script" uid="uid://bxrkdwitjtqvg" path="res://entities/shared/custom_resources/situation_step/move_waypoints_step.gd" id="7_8sinn"]
 
 [sub_resource type="Resource" id="Resource_qqe5y"]
 script = ExtResource("3_3tymc")

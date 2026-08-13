@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="HandbookBasicText" format=3 uid="uid://761fj5ownomd"]
 
-[ext_resource type="Script" uid="uid://bc0gqca4fgqti" path="res://entites/shared/custom_resources/handbook/text_types/handbook_basic_text.gd" id="1_i3ocs"]
+[ext_resource type="Script" uid="uid://bc0gqca4fgqti" path="res://entities/shared/custom_resources/handbook/text_types/handbook_basic_text.gd" id="1_i3ocs"]
 [ext_resource type="Resource" uid="uid://kfg7qrfygube" path="res://assets/resources/translations/handbook/handbook_basic_selection_entry.tres" id="2_m6mx2"]
 
 [resource]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PlantDropConfiguration" format=3 uid="uid://btkfp8y54ygyn"]
 
 [ext_resource type="Resource" uid="uid://b3nrylrs65l6w" path="res://assets/resources/items/plant_drops/rose_drop.tres" id="1_44r6i"]
-[ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entites/shared/custom_resources/plant/plant_drop_configuration.gd" id="1_j64v6"]
+[ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entities/shared/custom_resources/plant/plant_drop_configuration.gd" id="1_j64v6"]
 
 [resource]
 script = ExtResource("1_j64v6")

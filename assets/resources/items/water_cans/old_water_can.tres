@@ -10,7 +10,7 @@
 [ext_resource type="Resource" uid="uid://2d6crfyennq" path="res://assets/resources/translations/items/old_water_can_name.tres" id="8_kxkwq"]
 [ext_resource type="Texture2D" uid="uid://xqkguo8obiwp" path="res://assets/atlas/old_water_can_icon.tres" id="9_7smlm"]
 [ext_resource type="Resource" uid="uid://btq26j6thixxo" path="res://assets/resources/translations/items/old_water_can_long_description.tres" id="10_oxu3c"]
-[ext_resource type="Script" uid="uid://dn6u8rtywo1m1" path="res://entites/shared/custom_resources/item/water_can.gd" id="10_tdoty"]
+[ext_resource type="Script" uid="uid://dn6u8rtywo1m1" path="res://entities/shared/custom_resources/item/water_can.gd" id="10_tdoty"]
 
 [resource]
 script = ExtResource("10_tdoty")

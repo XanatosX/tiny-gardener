@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://o2giqms6a3k4"]
+
+[ext_resource type="Script" uid="uid://0vajnty1qsi4" path="res://entities/game/player/script/player_controller.gd" id="1_4xtdw"]
+[ext_resource type="Texture2D" uid="uid://dwqxysg443pig" path="res://assets/textures/farmer.png" id="2_65c4w"]
+[ext_resource type="Script" uid="uid://dqarlxcn5em3h" path="res://entities/game/camera/scripts/moveable_camera.gd" id="3_65c4w"]
+[ext_resource type="Script" uid="uid://d14kb8oyclh0m" path="res://entities/shared/special_objects/camera_facing_sprite.gd" id="3_wvloa"]
+[ext_resource type="AudioStream" uid="uid://3vani0rvsqw5" path="res://assets/audio/effects/kenney_nl/footstep09.ogg" id="4_b2jui"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8rpam"]
+size = Vector3(0.15, 0.25, 0.15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg0d1"]
+atlas = ExtResource("2_65c4w")
+
+[sub_resource type="Animation" id="Animation_wvloa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VisualAnchor/Sprite3D:rotation:z")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_65c4w"]
+resource_name = "idle"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VisualAnchor/Sprite3D:rotation:z")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 10, 15, 20),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.162, 0.0, -0.162, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_b2jui"]
+resource_name = "walk"
+loop_mode = 1
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"l_step",
+"time": 0.25
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"r_step",
+"time": 0.75
+}]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VisualAnchor/Sprite3D:rotation:z")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.262, 0.0, -0.262, 0.0]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Audio/step_sfx")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_b2jui")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_b2jui")
+}],
+"times": PackedFloat32Array(0.25, 0.75)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wvloa"]
+_data = {
+&"RESET": SubResource("Animation_wvloa"),
+&"idle": SubResource("Animation_65c4w"),
+&"walk": SubResource("Animation_b2jui")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wvloa"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b2jui"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b2jui"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vl0wi"]
+advance_mode = 2
+advance_expression = "velocity.x != 0 or velocity.z != 0"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wvloa"]
+advance_mode = 2
+advance_expression = "velocity.x == 0 and velocity.z == 0"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8rpam"]
+states/Start/position = Vector2(75, 135)
+states/idle/node = SubResource("AnimationNodeAnimation_wvloa")
+states/idle/position = Vector2(366, 74)
+states/walk/node = SubResource("AnimationNodeAnimation_b2jui")
+states/walk/position = Vector2(366, 190)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_b2jui"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_vl0wi"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_wvloa")]
+
+[node name="Player" type="CharacterBody3D" unique_id=1490817954]
+script = ExtResource("1_4xtdw")
+metadata/_custom_type_script = "uid://0vajnty1qsi4"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1719161733]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+shape = SubResource("BoxShape3D_8rpam")
+
+[node name="VisualAnchor" type="Node3D" parent="." unique_id=1335392571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="VisualAnchor" unique_id=1993767164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+texture_filter = 0
+texture = SubResource("AtlasTexture_gg0d1")
+script = ExtResource("3_wvloa")
+face_y = true
+metadata/_custom_type_script = "uid://d14kb8oyclh0m"
+
+[node name="Animation" type="Node" parent="." unique_id=819306179]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation" unique_id=16222797]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_wvloa")
+
+[node name="AnimationTree" type="AnimationTree" parent="Animation" unique_id=501545498]
+root_node = NodePath("../..")
+tree_root = SubResource("AnimationNodeStateMachine_8rpam")
+advance_expression_base_node = NodePath("../..")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=504232675]
+unique_name_in_owner = true
+
+[node name="CameraStick" type="Node3D" parent="CameraPivot" unique_id=763818205]
+transform = Transform3D(1, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 2, 2.022368)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/CameraStick" unique_id=1941352163]
+current = true
+script = ExtResource("3_65c4w")
+metadata/_custom_type_script = "uid://dqarlxcn5em3h"
+
+[node name="Audio" type="Node3D" parent="." unique_id=1838888266]
+
+[node name="step_sfx" type="AudioStreamPlayer3D" parent="Audio" unique_id=445531590]
+bus = &"sfx"
+
+[connection signal="movement_state_changed" from="." to="CameraPivot/CameraStick/Camera3D" method="movement_state_changed"]

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="ImageTableText" format=3 uid="uid://c8pyybtxdewld"]
 
-[ext_resource type="Script" uid="uid://b3ffhlckbatm8" path="res://entites/shared/custom_resources/handbook/text_types/help_resources/cell_data.gd" id="1_y1w86"]
+[ext_resource type="Script" uid="uid://b3ffhlckbatm8" path="res://entities/shared/custom_resources/handbook/text_types/help_resources/cell_data.gd" id="1_y1w86"]
 [ext_resource type="Texture2D" uid="uid://cbxs5mp5ypuom" path="res://assets/atlas/input/keyboard/forward.tres" id="2_eopcc"]
 [ext_resource type="Texture2D" uid="uid://c8evqsvkt036h" path="res://assets/atlas/input/keyboard/left.tres" id="3_2ipc6"]
 [ext_resource type="Texture2D" uid="uid://c3trim1lvffx0" path="res://assets/atlas/input/keyboard/backward.tres" id="4_6ehvn"]
 [ext_resource type="Texture2D" uid="uid://d3ld12dn76rtk" path="res://assets/atlas/input/keyboard/right.tres" id="5_snw1n"]
-[ext_resource type="Script" uid="uid://c1ddhu7kp1r78" path="res://entites/shared/custom_resources/handbook/text_types/image_table_text.gd" id="6_tb0bb"]
+[ext_resource type="Script" uid="uid://c1ddhu7kp1r78" path="res://entities/shared/custom_resources/handbook/text_types/image_table_text.gd" id="6_tb0bb"]
 
 [sub_resource type="Resource" id="Resource_wl0eh"]
 script = ExtResource("1_y1w86")

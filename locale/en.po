@@ -497,7 +497,7 @@ msgstr "Plant really do need water?"
 #: assets/resources/translations/handbook/water_handbook_text.tres
 msgid "WATER_HANDBOOK_TEXT"
 msgstr ""
-"Water ist needed to [url={\"entry\":\"KeepPlantAlive\"}]keep your plants "
+"Water is needed to [url={\"entry\":\"KeepPlantAlive\"}]keep your plants "
 "alive[/url]. Plants will user water all the time and die if not enough is "
 "available.\n"
 "To water your plants you will need a water can, the [url={\"entry\":"

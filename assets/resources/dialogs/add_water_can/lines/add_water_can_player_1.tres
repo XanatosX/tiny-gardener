@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://b16hblkoijiuj" path="res://assets/resources/characters/player_character.tres" id="1_n8bl3"]
 [ext_resource type="Resource" uid="uid://bn22ovwttbhlq" path="res://assets/resources/translations/dialogs/add_water_can/add_water_can_player_1.tres" id="2_0mtyp"]
-[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entites/shared/custom_resources/situations/spoken_message.gd" id="3_v0t5l"]
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entities/shared/custom_resources/situations/spoken_message.gd" id="3_v0t5l"]
 
 [resource]
 script = ExtResource("3_v0t5l")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://bmcbyycf5j32" path="res://assets/resources/translations/drops/corn_drop_description.tres" id="1_4vknn"]
 [ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_voaou"]
-[ext_resource type="Script" uid="uid://kqg1s7cii32o" path="res://entites/shared/custom_resources/plant/plant_drop.gd" id="2_4vknn"]
+[ext_resource type="Script" uid="uid://kqg1s7cii32o" path="res://entities/shared/custom_resources/plant/plant_drop.gd" id="2_4vknn"]
 [ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_23qd6"]
 [ext_resource type="Resource" uid="uid://c5s5mrmh5vs08" path="res://assets/resources/translations/drops/corn_drop_name.tres" id="2_70xjc"]
 [ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="2_vd3bm"]

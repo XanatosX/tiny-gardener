@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://6q34li27de3v"]
+
+[ext_resource type="Script" uid="uid://cyn7wkhil70rb" path="res://entities/game/teleport_transition_ui/scripts/teleport_transition_ui.gd" id="1_r7wb2"]
+
+[node name="TeleportTransitionUi" type="ColorRect" unique_id=338172450]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_r7wb2")
+metadata/_custom_type_script = "uid://cyn7wkhil70rb"

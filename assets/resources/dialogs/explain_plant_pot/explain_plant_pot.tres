@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Dialog" format=3 uid="uid://bx5aa4rejufiw"]
 
-[ext_resource type="Script" uid="uid://n5nufi2bfu5d" path="res://entites/shared/custom_resources/dialog/dialog.gd" id="1_8ueqm"]
-[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entites/shared/custom_resources/situations/spoken_message.gd" id="2_mrg4m"]
+[ext_resource type="Script" uid="uid://n5nufi2bfu5d" path="res://entities/shared/custom_resources/dialog/dialog.gd" id="1_8ueqm"]
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entities/shared/custom_resources/situations/spoken_message.gd" id="2_mrg4m"]
 [ext_resource type="Resource" uid="uid://b3ttxdcv52pot" path="res://assets/resources/dialogs/explain_plant_pot/lines/player_explain_plant_pot_1.tres" id="3_cyd64"]
 [ext_resource type="Resource" uid="uid://cn6dbo5pell1u" path="res://assets/resources/dialogs/explain_plant_pot/lines/player_explain_plant_pot_2.tres" id="4_hu1tv"]
 

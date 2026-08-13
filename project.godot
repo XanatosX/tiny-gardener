@@ -38,9 +38,10 @@ gdscript/warnings/inferred_declaration=1
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
+window/vsync/vsync_mode=2
 
 [editor_plugins]
 
@@ -51,7 +52,7 @@ enabled=PackedStringArray("res://addons/gameconsole/plugin.cfg", "res://addons/r
 folder_colors={
 "res://assets/": "blue",
 "res://assets/resources/handbook/": "pink",
-"res://entites/": "orange"
+"res://entities/": "orange"
 }
 
 [input]
@@ -118,7 +119,7 @@ help={
 [internationalization]
 
 locale/translations=PackedStringArray("res://locale/en.po")
-locale/translations_pot_files=PackedStringArray("res://entites/game/ui_plant_health/scenes/ui_plant_health.tscn", "res://entites/game/ui_game/scenes/game_ui.tscn", "res://entites/game/ui_shop/scenes/shop_ui.tscn", "res://entites/game/ui_controls_help/scenes/ui_control_help.tscn", "res://assets/resources/translations/handbook/basic_movement.tres")
+locale/translations_pot_files=PackedStringArray("res://assets/resources/translations/handbook/basic_movement.tres", "res://entities/game/ui_controls_help/scenes/ui_control_help.tscn", "res://entities/game/ui_game/scenes/game_ui.tscn", "res://entities/game/ui_plant_health/scenes/ui_plant_health.tscn", "res://entities/game/ui_shop/scenes/shop_ui.tscn")
 
 [physics]
 

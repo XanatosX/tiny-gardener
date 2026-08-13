@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bkkgwm7okxsmx"]
+
+[ext_resource type="PackedScene" uid="uid://d1p34goi12gks" path="res://entities/game/ui_shop/scenes/shop_page_ui.tscn" id="1_bsa3r"]
+[ext_resource type="Script" uid="uid://60xqcwchbvhd" path="res://entities/game/ui_shop/scripts/shop_ui.gd" id="1_fmqln"]
+[ext_resource type="PackedScene" uid="uid://dofrtp3cvws3a" path="res://entities/game/ui_shop/scenes/product_information_ui.tscn" id="2_1oqwr"]
+[ext_resource type="Shortcut" uid="uid://ovus7gnb525j" path="res://assets/button_shortcuts/close_shortkey.tres" id="2_kygrh"]
+[ext_resource type="Script" uid="uid://dcjipn22p53fj" path="res://entities/game/ui_shop/scripts/shop_tab_group.gd" id="3_dmeos"]
+[ext_resource type="PackedScene" uid="uid://en45j4cukh52" path="res://entities/game/ui_shop/scenes/shop_upgrades_ui.tscn" id="4_k81lr"]
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="4_vpq06"]
+[ext_resource type="Resource" uid="uid://giwqejrecxdw" path="res://assets/resources/translations/shop_buy_tab.tres" id="5_nojsx"]
+[ext_resource type="Resource" uid="uid://c4sqcvhhaqgb8" path="res://assets/resources/translations/shop_sell_tab.tres" id="6_ryb3i"]
+[ext_resource type="Resource" uid="uid://e2gwsn56ww4v" path="res://assets/resources/translations/shop_upgrade_tab.tres" id="7_oj6xn"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_fmqln"]
+color = Color(0.5449743, 0.54497427, 0.54497427, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 12
+vertical = true
+
+[node name="ShopUi" type="MarginContainer" unique_id=2027191428]
+offset_right = 1938.0
+offset_bottom = 1080.0
+offset_transform_enabled = true
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+script = ExtResource("1_fmqln")
+metadata/_custom_type_script = "uid://60xqcwchbvhd"
+
+[node name="ShopUiContainer" type="PanelContainer" parent="." unique_id=331912074]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ShopUiContainer" unique_id=1211820350]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ShopUiContainer/MarginContainer" unique_id=693319398]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ShopUiContainer/MarginContainer/VBoxContainer" unique_id=325548056]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 8
+offset_transform_enabled = true
+shortcut = ExtResource("2_kygrh")
+text = "X"
+
+[node name="Label" type="Label" parent="ShopUiContainer/MarginContainer/VBoxContainer" unique_id=1185555588]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "SHOP"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ShopUiContainer/MarginContainer/VBoxContainer" unique_id=1802089705]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ShopTab" type="TabContainer" parent="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=384343404]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tab_alignment = 1
+current_tab = 0
+tab_0/title = "BUY"
+tab_1/title = "SELL"
+tab_2/title = "UPGRADES"
+script = ExtResource("3_dmeos")
+tab_translations = Array[ExtResource("4_vpq06")]([ExtResource("5_nojsx"), ExtResource("6_ryb3i"), ExtResource("7_oj6xn")])
+metadata/_custom_type_script = "uid://dcjipn22p53fj"
+
+[node name="BuyPage" parent="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab" unique_id=1727743877 instance=ExtResource("1_bsa3r")]
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "BUY"
+
+[node name="SellPage" parent="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab" unique_id=218599787 instance=ExtResource("1_bsa3r")]
+visible = false
+layout_mode = 2
+is_buy_page = false
+metadata/_tab_index = 1
+metadata/_tab_name = "SELL"
+
+[node name="Upgrades" parent="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab" unique_id=1871361218 instance=ExtResource("4_k81lr")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+metadata/_tab_name = "UPGRADES"
+
+[node name="VSeparator" type="VSeparator" parent="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1559537097]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxLine_fmqln")
+
+[node name="ProductInformationUi" parent="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=329732133 instance=ExtResource("2_1oqwr")]
+custom_minimum_size = Vector2(300, 0)
+custom_maximum_size = Vector2(300, -1)
+layout_mode = 2
+
+[connection signal="show_ui" from="." to="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab/SellPage" method="rebuild"]
+[connection signal="pressed" from="ShopUiContainer/MarginContainer/VBoxContainer/Button" to="." method="animate_out"]
+[connection signal="tab_changed" from="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab" to="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab/Upgrades" method="selection_changed"]
+[connection signal="item_was_clicked" from="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab/BuyPage" to="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ProductInformationUi" method="item_changed"]
+[connection signal="item_was_clicked" from="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab/SellPage" to="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ProductInformationUi" method="item_changed"]
+[connection signal="item_was_clicked" from="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab/Upgrades" to="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ProductInformationUi" method="item_changed"]
+[connection signal="item_amount_changed" from="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ProductInformationUi" to="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab/SellPage" method="rebuild"]
+[connection signal="item_amount_changed" from="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ProductInformationUi" to="ShopUiContainer/MarginContainer/VBoxContainer/HBoxContainer2/ShopTab/Upgrades" method="rebuild"]

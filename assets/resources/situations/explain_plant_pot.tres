@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Situation" format=3 uid="uid://npim2ekidbye"]
 
-[ext_resource type="Script" uid="uid://cf0kw8sdb3t6h" path="res://entites/shared/custom_resources/situations/situation.gd" id="1_6kslv"]
+[ext_resource type="Script" uid="uid://cf0kw8sdb3t6h" path="res://entities/shared/custom_resources/situations/situation.gd" id="1_6kslv"]
 [ext_resource type="Resource" uid="uid://ij14rx80sfbc" path="res://assets/resources/situations/intro_situation.tres" id="2_4winu"]
-[ext_resource type="Script" uid="uid://b2r5o8g18wx6g" path="res://entites/shared/custom_resources/situation_step/situation_step.gd" id="3_lyx1o"]
-[ext_resource type="Script" uid="uid://bhjycglythlp8" path="res://entites/shared/custom_resources/situation_step/toggle_player_step.gd" id="4_7oa0h"]
+[ext_resource type="Script" uid="uid://b2r5o8g18wx6g" path="res://entities/shared/custom_resources/situation_step/situation_step.gd" id="3_lyx1o"]
+[ext_resource type="Script" uid="uid://bhjycglythlp8" path="res://entities/shared/custom_resources/situation_step/toggle_player_step.gd" id="4_7oa0h"]
 [ext_resource type="Resource" uid="uid://bx5aa4rejufiw" path="res://assets/resources/dialogs/explain_plant_pot/explain_plant_pot.tres" id="5_lyx1o"]
-[ext_resource type="Script" uid="uid://wljs35rlfnc8" path="res://entites/shared/custom_resources/situation_step/show_dialog_step.gd" id="6_7oa0h"]
+[ext_resource type="Script" uid="uid://wljs35rlfnc8" path="res://entities/shared/custom_resources/situation_step/show_dialog_step.gd" id="6_7oa0h"]
 [ext_resource type="Resource" uid="uid://b8ntbgmjf6k3r" path="res://assets/resources/handbook_identifier/keep_plant_alive_identifier.tres" id="7_uuf0v"]
-[ext_resource type="Script" uid="uid://f1w74xqxt3n3" path="res://entites/shared/custom_resources/situation_step/show_handbook_entry_step.gd" id="8_6642t"]
+[ext_resource type="Script" uid="uid://f1w74xqxt3n3" path="res://entities/shared/custom_resources/situation_step/show_handbook_entry_step.gd" id="8_6642t"]
 
 [sub_resource type="Resource" id="Resource_lfjt5"]
 script = ExtResource("4_7oa0h")

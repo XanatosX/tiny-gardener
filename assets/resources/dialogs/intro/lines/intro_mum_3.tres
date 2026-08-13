@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://bne7vnslm8mea" path="res://assets/resources/characters/mum_character.tres" id="1_a33u1"]
 [ext_resource type="Resource" uid="uid://c1rxep2gddy5d" path="res://assets/resources/translations/dialogs/intro/mother_intro_message_3.tres" id="1_rvgjp"]
-[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entites/shared/custom_resources/situations/spoken_message.gd" id="1_rw3qd"]
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entities/shared/custom_resources/situations/spoken_message.gd" id="1_rw3qd"]
 
 [resource]
 script = ExtResource("1_rw3qd")

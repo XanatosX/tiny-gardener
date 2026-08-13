@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://en45j4cukh52"]
+
+[ext_resource type="Script" uid="uid://6b16gle68js4" path="res://entities/game/ui_shop/scripts/upgrades_ui.gd" id="1_78mgk"]
+[ext_resource type="Script" uid="uid://cqq5pfu3uyqer" path="res://entities/game/ui_shop/scripts/upgrade_item_container.gd" id="2_co47p"]
+
+[node name="Upgrades" type="MarginContainer" unique_id=2091526081]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_78mgk")
+metadata/_custom_type_script = "uid://6b16gle68js4"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=323289645]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1121637417 node_paths=PackedStringArray("template")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_co47p")
+template = NodePath("ShopUpgradeTemplate")
+metadata/_custom_type_script = "uid://cqq5pfu3uyqer"
+
+[node name="ShopUpgradeTemplate" parent="ScrollContainer/VBoxContainer" unique_id=1486262418 instance_placeholder="res://entities/game/ui_shop/scenes/shop_upgrade_template.tscn"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="active" from="." to="ScrollContainer/VBoxContainer" method="active"]
+[connection signal="add_items" from="." to="ScrollContainer/VBoxContainer" method="add_items"]
+[connection signal="clear_items" from="." to="ScrollContainer/VBoxContainer" method="clear_entries"]
+[connection signal="item_clicked" from="ScrollContainer/VBoxContainer" to="." method="item_clicked"]

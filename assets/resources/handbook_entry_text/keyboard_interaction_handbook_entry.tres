@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ImageTableText" format=3 uid="uid://drxpljsfsh605"]
 
-[ext_resource type="Script" uid="uid://b3ffhlckbatm8" path="res://entites/shared/custom_resources/handbook/text_types/help_resources/cell_data.gd" id="1_e72wf"]
+[ext_resource type="Script" uid="uid://b3ffhlckbatm8" path="res://entities/shared/custom_resources/handbook/text_types/help_resources/cell_data.gd" id="1_e72wf"]
 [ext_resource type="Texture2D" uid="uid://cqem1e5yrfk22" path="res://assets/atlas/input/keyboard/interact.tres" id="2_u0fnc"]
-[ext_resource type="Script" uid="uid://c1ddhu7kp1r78" path="res://entites/shared/custom_resources/handbook/text_types/image_table_text.gd" id="3_bma4j"]
+[ext_resource type="Script" uid="uid://c1ddhu7kp1r78" path="res://entities/shared/custom_resources/handbook/text_types/image_table_text.gd" id="3_bma4j"]
 
 [sub_resource type="Resource" id="Resource_yjt5x"]
 script = ExtResource("1_e72wf")

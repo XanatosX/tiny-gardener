@@ -9,11 +9,11 @@
 [ext_resource type="Resource" uid="uid://bn7ei43f0pbpg" path="res://assets/resources/translations/plants/corn_description.tres" id="7_gu2k8"]
 [ext_resource type="Resource" uid="uid://v66ufqtl7rup" path="res://assets/resources/translations/plants/corn_name.tres" id="8_k1tpu"]
 [ext_resource type="Texture2D" uid="uid://xb46smqbvrwq" path="res://assets/atlas/corn_item.tres" id="9_5jsia"]
-[ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entites/shared/custom_resources/plant/plant_drop_configuration.gd" id="10_jjwn1"]
+[ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entities/shared/custom_resources/plant/plant_drop_configuration.gd" id="10_jjwn1"]
 [ext_resource type="Resource" uid="uid://cicnk40vhb7s0" path="res://assets/resources/items/yield_configurations/corn_drop_configuration.tres" id="11_nwh05"]
 [ext_resource type="Resource" uid="uid://bg7gwqe86iw7h" path="res://assets/resources/items/yield_configurations/ladybug_drop_configuration.tres" id="12_i6acw"]
 [ext_resource type="Curve" uid="uid://ciyqrjxkjtt8g" path="res://assets/resources/quality_curves/default_quality_curve.tres" id="13_0upxo"]
-[ext_resource type="Script" uid="uid://bsevesu0cw5ru" path="res://entites/shared/custom_resources/plant/plant_resource.gd" id="14_sx5ni"]
+[ext_resource type="Script" uid="uid://bsevesu0cw5ru" path="res://entities/shared/custom_resources/plant/plant_resource.gd" id="14_sx5ni"]
 [ext_resource type="Texture2D" uid="uid://btcjy5ijlkscm" path="res://assets/atlas/corn_plant.tres" id="15_qdpr3"]
 
 [resource]

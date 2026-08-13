@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://wr4btg81hwgd"]
+
+[ext_resource type="Script" uid="uid://xyp4edfo3p61" path="res://entities/game/ui_controls_help/scripts/ui_control_help.gd" id="1_07pfj"]
+[ext_resource type="Texture2D" uid="uid://cbxs5mp5ypuom" path="res://assets/atlas/input/keyboard/forward.tres" id="1_mmhkp"]
+[ext_resource type="Texture2D" uid="uid://c8evqsvkt036h" path="res://assets/atlas/input/keyboard/left.tres" id="3_4uv88"]
+[ext_resource type="Texture2D" uid="uid://c3trim1lvffx0" path="res://assets/atlas/input/keyboard/backward.tres" id="3_ng3j7"]
+[ext_resource type="Texture2D" uid="uid://d3ld12dn76rtk" path="res://assets/atlas/input/keyboard/right.tres" id="4_mmhkp"]
+[ext_resource type="Texture2D" uid="uid://d2ppulaxd8x38" path="res://assets/textures/kenney_nl/keyboard-&-mouse_sheet_default.png" id="4_rhhwo"]
+[ext_resource type="Texture2D" uid="uid://bvlsl7soolk00" path="res://assets/atlas/input/keyboard/camera_left.tres" id="5_rhhwo"]
+[ext_resource type="Texture2D" uid="uid://h5q7o2kcqecp" path="res://assets/atlas/input/keyboard/scroll_wheel.tres" id="6_rhhwo"]
+[ext_resource type="Texture2D" uid="uid://bufeovogsrrif" path="res://assets/atlas/input/keyboard/camera_right.tres" id="7_bbvp4"]
+[ext_resource type="Texture2D" uid="uid://gjvpwoooiqxq" path="res://assets/atlas/input/keyboard/select_left.tres" id="8_lufng"]
+[ext_resource type="Texture2D" uid="uid://p6cgt2ore6hj" path="res://assets/atlas/input/keyboard/select_right.tres" id="9_07pfj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crh21"]
+atlas = ExtResource("4_rhhwo")
+region = Rect2(64, 576, 64, 64)
+
+[node name="UiControlHelp" type="PanelContainer" unique_id=904119687]
+custom_minimum_size = Vector2(250, 0)
+offset_right = 250.0
+offset_bottom = 627.0
+script = ExtResource("1_07pfj")
+metadata/_custom_type_script = "uid://xyp4edfo3p61"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2128085311]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TitleBar" type="HBoxContainer" parent="VBoxContainer" unique_id=2101042427]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+
+[node name="Close" type="Button" parent="VBoxContainer/TitleBar" unique_id=160199799]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "X"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1434426057]
+layout_mode = 2
+
+[node name="Movement" type="Label" parent="VBoxContainer" unique_id=196275631]
+layout_mode = 2
+text = "MOVEMENT"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1293789178]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 3
+
+[node name="Empty" type="TextureRect" parent="VBoxContainer/GridContainer" unique_id=1778667090]
+layout_mode = 2
+
+[node name="Forward" type="TextureRect" parent="VBoxContainer/GridContainer" unique_id=1263729390]
+layout_mode = 2
+texture = ExtResource("1_mmhkp")
+
+[node name="Empty2" type="TextureRect" parent="VBoxContainer/GridContainer" unique_id=2056221432]
+layout_mode = 2
+
+[node name="Left" type="TextureRect" parent="VBoxContainer/GridContainer" unique_id=891088019]
+layout_mode = 2
+texture = ExtResource("3_4uv88")
+
+[node name="Backward" type="TextureRect" parent="VBoxContainer/GridContainer" unique_id=1548642504]
+layout_mode = 2
+texture = ExtResource("3_ng3j7")
+
+[node name="Right" type="TextureRect" parent="VBoxContainer/GridContainer" unique_id=879999187]
+layout_mode = 2
+texture = ExtResource("4_mmhkp")
+
+[node name="Camera" type="Label" parent="VBoxContainer" unique_id=1067628805]
+layout_mode = 2
+text = "CAMERA"
+horizontal_alignment = 1
+
+[node name="CameraButtons" type="HBoxContainer" parent="VBoxContainer" unique_id=531520011]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CameraLeft" type="TextureRect" parent="VBoxContainer/CameraButtons" unique_id=725698113]
+layout_mode = 2
+texture = ExtResource("5_rhhwo")
+
+[node name="CameraRight" type="TextureRect" parent="VBoxContainer/CameraButtons" unique_id=1933931044]
+layout_mode = 2
+texture = ExtResource("7_bbvp4")
+
+[node name="Interaction" type="Label" parent="VBoxContainer" unique_id=1128056607]
+layout_mode = 2
+text = "INTERACTION"
+horizontal_alignment = 1
+
+[node name="InteractIcon" type="TextureRect" parent="VBoxContainer" unique_id=1210961210]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_crh21")
+
+[node name="Select" type="Label" parent="VBoxContainer" unique_id=1491054547]
+layout_mode = 2
+text = "SELECT"
+horizontal_alignment = 1
+
+[node name="ScrollWheel" type="TextureRect" parent="VBoxContainer" unique_id=152744507]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_rhhwo")
+
+[node name="Or" type="Label" parent="VBoxContainer" unique_id=1151336428]
+layout_mode = 2
+text = "OR"
+horizontal_alignment = 1
+
+[node name="SelectBuittons" type="HBoxContainer" parent="VBoxContainer" unique_id=1337902461]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SelectLeft" type="TextureRect" parent="VBoxContainer/SelectBuittons" unique_id=515594446]
+layout_mode = 2
+texture = ExtResource("8_lufng")
+
+[node name="SelectRight" type="TextureRect" parent="VBoxContainer/SelectBuittons" unique_id=1541656551]
+layout_mode = 2
+texture = ExtResource("9_07pfj")
+
+[connection signal="pressed" from="VBoxContainer/TitleBar/Close" to="." method="hide"]

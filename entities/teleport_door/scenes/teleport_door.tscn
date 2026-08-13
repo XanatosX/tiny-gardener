@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://d332r5anhh7q3"]
+
+[ext_resource type="Script" uid="uid://bavqt2gw8gfc8" path="res://entities/teleport_door/scripts/teleport_door.gd" id="1_o56ni"]
+[ext_resource type="PackedScene" uid="uid://dtux8ewqhs2ct" path="res://entities/game/home_inside/scenes/door.tscn" id="1_u0buf"]
+[ext_resource type="Script" uid="uid://dkpt3k8dkvmj3" path="res://entities/shared/object_interaction/object_interaction.gd" id="2_01itp"]
+[ext_resource type="Script" uid="uid://b6heusyhdg1l0" path="res://entities/teleport_door/scenes/auto_hide_object.gd" id="3_tidwt"]
+[ext_resource type="Script" uid="uid://dgo34mflxca2j" path="res://entities/shared/object_interaction/action.gd" id="4_0khlq"]
+[ext_resource type="Resource" uid="uid://b4iq7s2a1yamf" path="res://assets/resources/translations/teleport_to_farm_description.tres" id="5_2txjg"]
+[ext_resource type="Resource" uid="uid://b0r7fi7xtr277" path="res://assets/resources/translations/teleport_to_farm.tres" id="5_aol3s"]
+[ext_resource type="Script" uid="uid://cah0jb3r5a706" path="res://entities/shared/object_interaction/actions/signal_trigger_action.gd" id="6_2txjg"]
+[ext_resource type="Texture2D" uid="uid://xb46smqbvrwq" path="res://assets/atlas/corn_item.tres" id="7_2txjg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8rpam"]
+size = Vector3(0.7, 1, 0.6003418)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8rpam"]
+radius = 0.1
+height = 0.5
+
+[sub_resource type="Resource" id="Resource_o56ni"]
+script = ExtResource("6_2txjg")
+action_name = ExtResource("5_aol3s")
+action_description = ExtResource("5_2txjg")
+icon = ExtResource("7_2txjg")
+allows_text_transform = true
+metadata/_custom_type_script = "uid://cah0jb3r5a706"
+
+[node name="TeleportDoor" type="Node3D" unique_id=1735594085]
+script = ExtResource("1_o56ni")
+metadata/_custom_type_script = "uid://bavqt2gw8gfc8"
+
+[node name="Door" parent="." unique_id=1998837348 instance=ExtResource("1_u0buf")]
+
+[node name="SearchArea" type="Area3D" parent="." unique_id=1745111061]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SearchArea" unique_id=1620909742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, -0.0020751953)
+shape = SubResource("BoxShape3D_8rpam")
+
+[node name="Exit" type="Node3D" parent="." unique_id=817189600]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36005348, 0.05929494, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Exit" unique_id=386514576]
+mesh = SubResource("CapsuleMesh_8rpam")
+script = ExtResource("3_tidwt")
+
+[node name="ObjectInteraction" type="Node" parent="." unique_id=1471940490 node_paths=PackedStringArray("controlled_entity", "interaction_area")]
+script = ExtResource("2_01itp")
+controlled_entity = NodePath("..")
+interaction_area = NodePath("../SearchArea")
+deep_copy_actions = true
+actions = Array[ExtResource("4_0khlq")]([SubResource("Resource_o56ni")])
+metadata/_custom_type_script = "uid://dkpt3k8dkvmj3"
+
+[connection signal="set_transform_description_method" from="." to="ObjectInteraction" method="update_actions_description_transform_methods"]
+[connection signal="set_transform_name_method" from="." to="ObjectInteraction" method="update_actions_name_transform_methods"]
+[connection signal="set_update_action_icon_method" from="." to="ObjectInteraction" method="update_action_icons"]

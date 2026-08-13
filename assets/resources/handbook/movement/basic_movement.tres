@@ -2,9 +2,9 @@
 
 [ext_resource type="Resource" uid="uid://dw5hjrgyhkves" path="res://assets/resources/translations/handbook/basic_movement.tres" id="1_bk5os"]
 [ext_resource type="Resource" uid="uid://ddeyq782xkx6d" path="res://assets/resources/translations/handbook/basic_movement_description.tres" id="1_e0xwq"]
-[ext_resource type="Script" uid="uid://dtab4ex7bechl" path="res://entites/shared/custom_resources/handbook/text_handbook_entry.gd" id="1_l3ibo"]
-[ext_resource type="Script" uid="uid://b6hgi2m53g1k6" path="res://entites/shared/custom_resources/handbook/text_types/handbook_text_type.gd" id="2_8n2pd"]
-[ext_resource type="PackedScene" uid="uid://dmnhjrcyx0dga" path="res://entites/game/ui_handbook/scenes/ui_handbook_text.tscn" id="2_indey"]
+[ext_resource type="Script" uid="uid://dtab4ex7bechl" path="res://entities/shared/custom_resources/handbook/text_handbook_entry.gd" id="1_l3ibo"]
+[ext_resource type="Script" uid="uid://b6hgi2m53g1k6" path="res://entities/shared/custom_resources/handbook/text_types/handbook_text_type.gd" id="2_8n2pd"]
+[ext_resource type="PackedScene" uid="uid://dmnhjrcyx0dga" path="res://entities/game/ui_handbook/scenes/ui_handbook_text.tscn" id="2_indey"]
 [ext_resource type="Resource" uid="uid://ddu2np56fcpng" path="res://assets/resources/handbook_entry_text/basic_movement_entry_handbook_entry.tres" id="4_0cnsb"]
 [ext_resource type="Resource" uid="uid://46bc8v1gkcm6" path="res://assets/resources/handbook_entry_text/basic_movement_handbook_entry.tres" id="5_e0xwq"]
 [ext_resource type="Resource" uid="uid://c8pyybtxdewld" path="res://assets/resources/handbook_entry_text/keyboard_movement_keys_handbook_entry.tres" id="6_0cnsb"]

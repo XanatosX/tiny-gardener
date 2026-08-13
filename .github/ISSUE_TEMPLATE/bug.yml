@@ -1,0 +1,67 @@
+name: Bug
+description: Report a bug in the game
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "# Bug Report"
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: "🐛 Bug Description"
+      description: "What is the problem? Describe it briefly and precisely."
+      placeholder: "The player falls through the world when walking on the stairs..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: "📍 Steps to Reproduce"
+      description: "How can the bug be reproduced?"
+      placeholder: "1. Start the game\n2. Go to the stairs\n3. Enter the stairs\n4. Observe: Player falls through"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: expected
+    attributes:
+      label: "✅ Expected Behavior"
+      description: "How should it behave?"
+      placeholder: "The player should be able to climb the stairs normally"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: actual
+    attributes:
+      label: "❌ Actual Behavior"
+      description: "What happens instead?"
+      placeholder: "The player falls through the floor"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "📸 Screenshots / Videos"
+      description: "If possible, add screenshots or video links"
+      placeholder: "https://imgur.com/... or description"
+  
+  - type: textarea
+    id: environment
+    attributes:
+      label: "🖥️ Environment"
+      description: "Godot version, OS, hardware, monitor resolution"
+      placeholder: "Godot 4.x\nWindows 11\n1920x1080"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: additional
+    attributes:
+      label: "📝 Additional Information"
+      description: "Anything that might help understand the bug?"
+      placeholder: "Only occurs at low FPS, or only with certain graphics settings..."

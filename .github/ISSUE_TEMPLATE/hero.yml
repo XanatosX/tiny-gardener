@@ -1,0 +1,42 @@
+name: Hero (Epic)
+description: A large development goal with subtasks - describes how a comprehensive feature is built
+title: "[Hero] "
+labels: ["hero"]
+body:
+  - type: markdown
+    attributes:
+      value: "# Hero Issue - A Large Development Goal"
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: "🎯 Goal / Vision"
+      description: "What is the large goal of this hero? Why is it important?"
+      placeholder: "e.g., Implement a complete farming system with plants, growth, harvesting..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: scope
+    attributes:
+      label: "📋 Scope"
+      description: "What belongs to this hero? What doesn't?"
+      placeholder: "Included: Planting seeds, watering, fertilizing\nNot included: Selling products"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "✅ Acceptance Criteria"
+      description: "How do we know when this hero is complete?"
+      placeholder: "- Player can plant seeds\n- Plants grow over time\n- Player can harvest plants"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: notes
+    attributes:
+      label: "📝 Notes"
+      description: "Additional information, designs, links, dependencies?"
+      placeholder: "Design Doc: https://...\nDepends on: #123"

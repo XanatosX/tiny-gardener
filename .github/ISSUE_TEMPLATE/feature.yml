@@ -1,0 +1,58 @@
+name: Feature
+description: Implement a new feature (code, art, audio, etc.)
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: "# Feature Request"
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: "✨ Feature Description"
+      description: "What should be implemented?"
+      placeholder: "Players can water plants with a watering can..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "🎯 Why?"
+      description: "Why is this feature important? What problem does it solve?"
+      placeholder: "Plants need water to grow. This gives the player an important mechanic."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: requirements
+    attributes:
+      label: "📋 Requirements"
+      description: "Technical and functional requirements"
+      placeholder: "- Water level system\n- Watering animation\n- Water sound effects"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: implementation
+    attributes:
+      label: "🔨 Implementation Notes"
+      description: "How could this be implemented? Code structure, classes, etc.?"
+      placeholder: "- New WateringCan class\n- Extension to PlantSystem\n- Animator for watering animation"
+  
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "✅ Acceptance Criteria"
+      description: "How do we know when this feature is complete?"
+      placeholder: "- Player can pick up watering can\n- Plant water level changes\n- Animation plays"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: notes
+    attributes:
+      label: "📝 Notes"
+      description: "Design documents, links, assets, dependencies?"
+      placeholder: "Art assets: https://...\nDepends on: #123"

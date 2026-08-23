@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Dialog" format=3 uid="uid://bp8jqkh3f2tk"]
+
+[ext_resource type="Script" uid="uid://n5nufi2bfu5d" path="res://entities/shared/custom_resources/dialog/dialog.gd" id="1_6yb8a"]
+[ext_resource type="Script" uid="uid://clje66ucp3w4q" path="res://entities/shared/custom_resources/situations/spoken_message.gd" id="2_owil2"]
+[ext_resource type="Resource" uid="uid://dt7ipaxsmhqds" path="res://assets/resources/dialogs/game_end/lines/game_end_player_1_message.tres" id="3_ceqlw"]
+[ext_resource type="Resource" uid="uid://c7a635rq5ixg7" path="res://assets/resources/dialogs/game_end/lines/game_end_mother_1_message.tres" id="4_g8jb7"]
+[ext_resource type="Resource" uid="uid://wd45v7h5sn65" path="res://assets/resources/dialogs/game_end/lines/game_end_player_2_message.tres" id="5_fssb6"]
+[ext_resource type="Resource" uid="uid://bsop8soqxjrqx" path="res://assets/resources/dialogs/game_end/lines/game_end_mother_2_message.tres" id="6_g8jb7"]
+[ext_resource type="Resource" uid="uid://ci1tyh6fhjqnq" path="res://assets/resources/dialogs/game_end/lines/game_end_mother_3_message.tres" id="7_fssb6"]
+[ext_resource type="Resource" uid="uid://iiple5a3x7tl" path="res://assets/resources/dialogs/game_end/lines/game_end_player_3_message.tres" id="8_6q8xj"]
+
+[resource]
+script = ExtResource("1_6yb8a")
+spoken_messages = Array[ExtResource("2_owil2")]([ExtResource("3_ceqlw"), ExtResource("4_g8jb7"), ExtResource("5_fssb6"), ExtResource("6_g8jb7"), ExtResource("8_6q8xj"), ExtResource("7_fssb6")])
+metadata/_custom_type_script = "uid://n5nufi2bfu5d"

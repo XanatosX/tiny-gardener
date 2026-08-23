@@ -40,80 +40,80 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
 
-#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
-msgid "PLANT_DATA"
-msgstr "Plant Data"
+#: assets/resources/translations/handbook/basic_movement.tres
+msgid "BASIC_MOVEMENT"
+msgstr "Basic Movement"
 
-#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
-msgid "NAME"
-msgstr "Name:"
-
-#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
-msgid "PLANT NAME"
-msgstr "Plant Name"
-
-#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
-msgid "WATER_STATUS_DESCRIPTION"
-msgstr "The watering state of the pot"
-
-#: entites/game/ui_plant_health/scenes/ui_plant_health.tscn
-msgid "NUTRITION_STATUS_DESCRIPTION"
-msgstr "The nutrition state of the pot"
-
-#: entites/game/ui_game/scenes/game_ui.tscn
-msgid "MONEY_DESCRIPTION"
-msgstr "This is your current money, you will need it to buy new stuff"
-
-#: entites/game/ui_game/scenes/game_ui.tscn
-msgid "0.00"
-msgstr ""
-
-#: entites/game/ui_shop/scenes/shop_ui.tscn
-#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+#: entities/game/ui_controls_help/scenes/ui_control_help.tscn
+#: entities/game/ui_shop/scenes/shop_ui.tscn
 msgid "X"
 msgstr "X"
 
-#: entites/game/ui_shop/scenes/shop_ui.tscn
-msgid "SHOP"
-msgstr "Shop"
-
-#: entites/game/ui_shop/scenes/shop_ui.tscn
-msgid "BuyPage"
-msgstr "Buy"
-
-#: entites/game/ui_shop/scenes/shop_ui.tscn
-msgid "SellPage"
-msgstr "Sel"
-
-#: entites/game/ui_shop/scenes/shop_ui.tscn
-msgid "Upgrades"
-msgstr ""
-
-#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+#: entities/game/ui_controls_help/scenes/ui_control_help.tscn
 #: assets/resources/translations/handbook/movement.tres
 msgid "MOVEMENT"
 msgstr "Movement"
 
-#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+#: entities/game/ui_controls_help/scenes/ui_control_help.tscn
 msgid "CAMERA"
 msgstr "Camera"
 
-#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+#: entities/game/ui_controls_help/scenes/ui_control_help.tscn
 msgid "INTERACTION"
 msgstr "Interact"
 
-#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+#: entities/game/ui_controls_help/scenes/ui_control_help.tscn
 msgid "SELECT"
 msgstr "Select"
 
-#: entites/game/ui_controls_help/scenes/ui_control_help.tscn
+#: entities/game/ui_controls_help/scenes/ui_control_help.tscn
 #: assets/resources/translations/or.tres
 msgid "OR"
 msgstr "Or"
 
-#: assets/resources/translations/handbook/basic_movement.tres
-msgid "BASIC_MOVEMENT"
-msgstr "Basic Movement"
+#: entities/game/ui_game/scenes/game_ui.tscn
+msgid "MONEY_DESCRIPTION"
+msgstr "This is your current money, you will need it to buy new stuff"
+
+#: entities/game/ui_game/scenes/game_ui.tscn
+msgid "0.00"
+msgstr ""
+
+#: entities/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "PLANT_DATA"
+msgstr "Plant Data"
+
+#: entities/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "NAME"
+msgstr "Name:"
+
+#: entities/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "PLANT NAME"
+msgstr "Plant Name"
+
+#: entities/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "WATER_STATUS_DESCRIPTION"
+msgstr "The watering state of the pot"
+
+#: entities/game/ui_plant_health/scenes/ui_plant_health.tscn
+msgid "NUTRITION_STATUS_DESCRIPTION"
+msgstr "The nutrition state of the pot"
+
+#: entities/game/ui_shop/scenes/shop_ui.tscn
+msgid "SHOP"
+msgstr "Shop"
+
+#: entities/game/ui_shop/scenes/shop_ui.tscn
+msgid "BuyPage"
+msgstr "Buy"
+
+#: entities/game/ui_shop/scenes/shop_ui.tscn
+msgid "SellPage"
+msgstr "Sel"
+
+#: entities/game/ui_shop/scenes/shop_ui.tscn
+msgid "Upgrades"
+msgstr ""
 
 msgid "tiny-gardener"
 msgstr ""
@@ -259,6 +259,32 @@ msgid "ADD_WATER_CAN_PLAYER_1"
 msgstr ""
 "Ohh nice, I was right there is my old water can. I can put that to good use. "
 "Hmm seems to be empty, I should fill it up first"
+
+#: assets/resources/translations/dialogs/end_game/game_end_mother_message_1.tres
+msgid "GAME_END_MOTHER_MESSAGE_1"
+msgstr "What did you do? Is everything alright?"
+
+#: assets/resources/translations/dialogs/end_game/game_end_mother_message_2.tres
+msgid "GAME_END_MOTHER_MESSAGE_2"
+msgstr "Which ticket?"
+
+#: assets/resources/translations/dialogs/end_game/game_end_mother_message_3.tres
+msgid "GAME_END_MOTHER_MESSAGE_3"
+msgstr ""
+"Really? Oh honey I'm so happy right now. So you finally reached that goal of "
+"yours!"
+
+#: assets/resources/translations/dialogs/end_game/game_end_player_message_1.tres
+msgid "GAME_END_PLAYER_MESSAGE_1"
+msgstr "Mum, I think I did it! I finally did it."
+
+#: assets/resources/translations/dialogs/end_game/game_end_player_message_2.tres
+msgid "GAME_END_PLAYER_MESSAGE_2"
+msgstr "I earned enough money to get the ticket! I finally did it!"
+
+#: assets/resources/translations/dialogs/end_game/game_end_player_message_3.tres
+msgid "GAME_END_PLAYER_MESSAGE_3"
+msgstr "The ticket to finally travel the world. I will see the world!"
 
 #: assets/resources/translations/dialogs/explain_plant_pot/player_explain_plant_pot_1.tres
 msgid "PLAYER_EXPLAIN_PLANT_POT_1"
@@ -559,3 +585,19 @@ msgstr ""
 #: assets/resources/translations/plants/rose_plant_name.tres
 msgid "ROSE_PLANT_NAME"
 msgstr "Rose flower"
+
+#: assets/resources/translations/upgrades/end_game_upgrade_description.tres
+msgid "END_GAME_UPGRADE_DESCRIPTION"
+msgstr ""
+"A ticket to visit the world, it will stop in all the important cities. I "
+"just need enough money for it ..."
+
+#: assets/resources/translations/upgrades/end_game_upgrade_description_long.tres
+msgid "END_GAME_UPGRADE_LONG_DESCRIPTION"
+msgstr ""
+"This is the final goal, a ticket to see the world. I need that ticket, I "
+"will use the yield created to get enough money."
+
+#: assets/resources/translations/upgrades/end_game_upgrade_name.tres
+msgid "END_GAME_UPGRADE_NAME"
+msgstr "World Tour Ticket"

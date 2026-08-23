@@ -42,8 +42,12 @@
 [ext_resource type="Resource" uid="uid://4rb5u6rjk7ld" path="res://assets/resources/situations/add_water_can_situation.tres" id="37_lfjt5"]
 [ext_resource type="PackedScene" uid="uid://cn1lp2skygk21" path="res://assets/objects/well/scenes/well.tscn" id="38_fseqt"]
 [ext_resource type="Resource" uid="uid://c0tmxnn2msk8p" path="res://assets/resources/items/upgrades/initial_pot_upgrade.tres" id="38_rx2cq"]
+[ext_resource type="Script" uid="uid://d2rrpegk5lyxu" path="res://entities/game/situation_trigger/scripts/situation_container.gd" id="39_5157w"]
 [ext_resource type="Script" uid="uid://btx3f3hgnwkrg" path="res://entities/game/situation_trigger/scripts/validation/situation_has_item_validation.gd" id="39_ww47l"]
 [ext_resource type="PackedScene" uid="uid://bat42k2pv6cja" path="res://entities/game/ui_handbook/scenes/ui_handbook.tscn" id="40_fseqt"]
+[ext_resource type="Resource" uid="uid://d2rnjqv0r7a5w" path="res://assets/resources/situations/game_end_situation.tres" id="40_ykw26"]
+[ext_resource type="Script" uid="uid://rw5rypltirio" path="res://entities/game/situation_trigger/scripts/inventory_updated_trigger.gd" id="41_f4ptc"]
+[ext_resource type="Resource" uid="uid://c1f4vr4ctor3u" path="res://assets/resources/items/upgrades/end_game_upgrade.tres" id="42_s20tn"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8rpam"]
 
@@ -716,6 +720,16 @@ validation = SubResource("Resource_kkwdg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1130767, 0.3936246, -8.436729)
 situation = ExtResource("37_lfjt5")
 
+[node name="GameEndSituation" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Situations" unique_id=1078299071]
+script = ExtResource("39_5157w")
+situation = ExtResource("40_ykw26")
+metadata/_custom_type_script = "uid://d2rrpegk5lyxu"
+
+[node name="InventoryUpdatedTrigger" type="Node" parent="PixellatedLevelContainer/SubViewport/World/Situations/GameEndSituation" unique_id=82581155]
+script = ExtResource("41_f4ptc")
+specific_watched_item = ExtResource("42_s20tn")
+metadata/_custom_type_script = "uid://rw5rypltirio"
+
 [node name="Well" parent="PixellatedLevelContainer/SubViewport/World" unique_id=1081629262 instance=ExtResource("38_fseqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1131024, 0, -8.377876)
 
@@ -771,6 +785,7 @@ metadata/_custom_type_script = "uid://cmvgl4aykqqgr"
 [connection signal="dialog_started" from="Systems/DialogSystem" to="Menus/ShopUi" method="silent_close"]
 [connection signal="open_handbook_page" from="Systems/HandbookSystem" to="Menus/UiHandbook" method="open_specific_handbook_entry"]
 [connection signal="triggered" from="PixellatedLevelContainer/SubViewport/World/HomeInside/ShopTrigger" to="Menus/ShopUi" method="animate_in"]
+[connection signal="trigger" from="PixellatedLevelContainer/SubViewport/World/Situations/GameEndSituation/InventoryUpdatedTrigger" to="PixellatedLevelContainer/SubViewport/World/Situations/GameEndSituation" method="trigger_situation"]
 [connection signal="trigger_action" from="UI/GameUi" to="Systems/InteractionSystem" method="trigger_interaction"]
 [connection signal="close_ui" from="Menus/ShopUi" to="PixellatedLevelContainer/SubViewport/World/Player" method="enable_movement"]
 [connection signal="show_ui" from="Menus/ShopUi" to="PixellatedLevelContainer/SubViewport/World/Player" method="disable_movement"]

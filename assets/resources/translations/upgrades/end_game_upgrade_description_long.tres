@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://d0cxx47vn7l8m"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_r4geb"]
+
+[resource]
+script = ExtResource("1_r4geb")
+key = "END_GAME_UPGRADE_LONG_DESCRIPTION"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

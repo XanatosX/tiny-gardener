@@ -22,11 +22,11 @@ func add_items(items: Array[Item]) -> void:
 	var active_set: bool = false
 	for item: Item in items:
 		if item is UpgradeItem:
-			template = _get_template()
-			template.setup(item, false, item.maximal_buyable_amount)
+			var template_instance: ShopEntryTemplate = _get_template()
+			template_instance.setup(item, false, item.maximal_buyable_amount)
 			if _active and not active_set:
 				active_set = true
-				template.select()
+				template_instance.select()
 
 func _get_template() -> ShopEntryTemplate:
 	var entry: ShopEntryTemplate = null

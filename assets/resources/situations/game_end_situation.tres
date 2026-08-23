@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Situation" format=3 uid="uid://d2rnjqv0r7a5w"]
+
+[ext_resource type="Script" uid="uid://cf0kw8sdb3t6h" path="res://entities/shared/custom_resources/situations/situation.gd" id="1_0adx5"]
+[ext_resource type="Script" uid="uid://b2r5o8g18wx6g" path="res://entities/shared/custom_resources/situation_step/situation_step.gd" id="2_ew5pt"]
+[ext_resource type="Script" uid="uid://bhjycglythlp8" path="res://entities/shared/custom_resources/situation_step/toggle_player_step.gd" id="3_73aga"]
+[ext_resource type="Script" uid="uid://dsw520b6o1p1k" path="res://entities/shared/custom_resources/situation_step/wait_around.gd" id="4_f0tcc"]
+[ext_resource type="Resource" uid="uid://bp8jqkh3f2tk" path="res://assets/resources/dialogs/game_end/game_end_dialog.tres" id="5_1jcue"]
+[ext_resource type="Script" uid="uid://wljs35rlfnc8" path="res://entities/shared/custom_resources/situation_step/show_dialog_step.gd" id="6_1fdsv"]
+
+[sub_resource type="Resource" id="Resource_ew5pt"]
+script = ExtResource("3_73aga")
+disable_player = true
+metadata/_custom_type_script = "uid://bhjycglythlp8"
+
+[sub_resource type="Resource" id="Resource_0adx5"]
+script = ExtResource("4_f0tcc")
+wait_time_seconds = 0.5
+metadata/_custom_type_script = "uid://dsw520b6o1p1k"
+
+[sub_resource type="Resource" id="Resource_v3imq"]
+script = ExtResource("6_1fdsv")
+dialog = ExtResource("5_1jcue")
+metadata/_custom_type_script = "uid://wljs35rlfnc8"
+
+[sub_resource type="Resource" id="Resource_bof6k"]
+script = ExtResource("3_73aga")
+metadata/_custom_type_script = "uid://bhjycglythlp8"
+
+[resource]
+script = ExtResource("1_0adx5")
+situation_steps = Array[ExtResource("2_ew5pt")]([SubResource("Resource_ew5pt"), SubResource("Resource_0adx5"), SubResource("Resource_v3imq"), SubResource("Resource_bof6k")])
+metadata/_custom_type_script = "uid://cf0kw8sdb3t6h"

@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_b46ss"]
 [ext_resource type="Resource" uid="uid://kgi4vcpjgsky" path="res://assets/resources/translations/initial_pot_amount_description.tres" id="7_84pq6"]
 [ext_resource type="Resource" uid="uid://dqdgr3yul40jd" path="res://assets/resources/translations/initial_pot_amount_name.tres" id="8_84pq6"]
-[ext_resource type="Texture2D" uid="uid://ctl8cremu7l7n" path="res://assets/atlas/rose_item.tres" id="9_klcco"]
+[ext_resource type="Texture2D" uid="uid://cb0plha0wjsg0" path="res://assets/atlas/plant_pot_icon.tres" id="9_84pq6"]
 [ext_resource type="Script" uid="uid://dw8uv3t0dtref" path="res://entities/shared/custom_resources/item/upgrade_item.gd" id="10_4r4r8"]
 [ext_resource type="Script" uid="uid://bskh2rbl5p38q" path="res://entities/shared/custom_resources/upgrades/upgrade_requirements.gd" id="10_84pq6"]
 [ext_resource type="Script" uid="uid://xquftf5j0j35" path="res://entities/shared/custom_resources/upgrades/unlock_pot.gd" id="11_b53ya"]
@@ -23,5 +23,5 @@ upgrade_action = SubResource("Resource_co47p")
 has_max_amount = true
 display_name = ExtResource("8_84pq6")
 description = ExtResource("7_84pq6")
-icon = ExtResource("9_klcco")
+icon = ExtResource("9_84pq6")
 metadata/_custom_type_script = "uid://dw8uv3t0dtref"

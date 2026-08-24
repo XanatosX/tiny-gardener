@@ -30,7 +30,7 @@ func _register_commands() -> void:
 									)
 									.documentation()
 									.with_description("Add money to bank account")
-									.finish())
+									.finalize())
 
 func _unregister_commands() -> void:
 	Console.remove_command("give_money")

@@ -798,7 +798,6 @@ metadata/_custom_type_script = "uid://cmvgl4aykqqgr"
 [connection signal="trigger_action" from="UI/GameUi" to="Systems/InteractionSystem" method="trigger_interaction"]
 [connection signal="close_ui" from="Menus/ShopUi" to="PixellatedLevelContainer/SubViewport/World/Player" method="enable_movement"]
 [connection signal="show_ui" from="Menus/ShopUi" to="PixellatedLevelContainer/SubViewport/World/Player" method="disable_movement"]
-[connection signal="data_has_changed" from="Menus/UiHandbook" to="Menus/UiHandbook/HandbookContainer/Content/Split/HandbookEntries" method="data_has_changed"]
 [connection signal="dialog_started" from="Menus/UiSpeakBubble" to="PixellatedLevelContainer/SubViewport/World/Player" method="disable_movement"]
 
 [editable path="PixellatedLevelContainer/SubViewport/World/HomeInside"]

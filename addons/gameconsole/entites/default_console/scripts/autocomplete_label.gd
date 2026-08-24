@@ -67,18 +67,18 @@ func _reset_parameter_complete_mode() -> void:
 	
 
 func _display_autocomplete(data: StrippedCommand) -> void:
-	var completion: String = data.command
+	var completion: String = data.get_name()
 	visible = true
 	var arguments: String= ""
 	var argument_counter: int = 0
-	for argument: CommandArgument in data.arguments:
+	for argument: CommandArgument in data.get_arguments():
 		var display_name: String = argument.get_display_name()
 		var color: Color = _console.console_settings.autocomplete_argument_color_odd
 		if argument_counter % 2 == 0:
 			color = _console.console_settings.autocomplete_argument_color_even
 		if _selected_predefined_value >= 0 and argument_counter == _selected_predefined_value:
 			color = _console.console_settings.autocomplete_argument_selected_predefined
-			var values: Array = argument.get_predefined_arguments()
+			var values: Array[Variant] = argument.get_predefined_arguments()
 			_current_autocomplete_value = ""
 			if values.size() > 0:
 				display_name = "%s {%s}" % [display_name, str(values[_current_selected_predefined_option])]
@@ -94,7 +94,8 @@ func _display_autocomplete(data: StrippedCommand) -> void:
 	interaction.from_raw("enter", completion)
 	text = "[color=%s][url=%s]%s[/url][/color] %s" % [_console.console_settings.autocomplete_command_color, interaction.get_as_string(), completion, arguments]
 	_found_complete = true
-	await get_tree().physics_frame
+	if is_inside_tree():
+		await get_tree().physics_frame
 	_found_complete = false
 
 func _input(event: InputEvent) -> void:
@@ -175,7 +176,7 @@ func _set_correct_argument_index(text: String) -> void:
 func _completion_accepted() -> void:
 	if _completion_index < 0 or _completion_index > _allowed_commands.size():
 		return
-	var selected_command: String = _allowed_commands[_completion_index].command
+	var selected_command: String = _allowed_commands[_completion_index].get_name()
 	autocomplete_accepted.emit(selected_command)
 
 func _increase_completion_index() -> void:

@@ -3,13 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://d1p34goi12gks" path="res://entities/game/ui_shop/scenes/shop_page_ui.tscn" id="1_bsa3r"]
 [ext_resource type="Script" uid="uid://60xqcwchbvhd" path="res://entities/game/ui_shop/scripts/shop_ui.gd" id="1_fmqln"]
 [ext_resource type="PackedScene" uid="uid://dofrtp3cvws3a" path="res://entities/game/ui_shop/scenes/product_information_ui.tscn" id="2_1oqwr"]
+[ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="2_55tms"]
 [ext_resource type="Shortcut" uid="uid://ovus7gnb525j" path="res://assets/button_shortcuts/close_shortkey.tres" id="2_kygrh"]
+[ext_resource type="Script" uid="uid://bngqval8eaups" path="res://entities/shared/special_objects/frosted_glass_control_panel/frosted_glass_control_panel.gd" id="2_nyo55"]
 [ext_resource type="Script" uid="uid://dcjipn22p53fj" path="res://entities/game/ui_shop/scripts/shop_tab_group.gd" id="3_dmeos"]
 [ext_resource type="PackedScene" uid="uid://en45j4cukh52" path="res://entities/game/ui_shop/scenes/shop_upgrades_ui.tscn" id="4_k81lr"]
 [ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="4_vpq06"]
 [ext_resource type="Resource" uid="uid://giwqejrecxdw" path="res://assets/resources/translations/shop_buy_tab.tres" id="5_nojsx"]
 [ext_resource type="Resource" uid="uid://c4sqcvhhaqgb8" path="res://assets/resources/translations/shop_sell_tab.tres" id="6_ryb3i"]
 [ext_resource type="Resource" uid="uid://e2gwsn56ww4v" path="res://assets/resources/translations/shop_upgrade_tab.tres" id="7_oj6xn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6k3wu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_fmqln"]
 color = Color(0.5449743, 0.54497427, 0.54497427, 1)
@@ -29,8 +34,11 @@ theme_override_constants/margin_bottom = 100
 script = ExtResource("1_fmqln")
 metadata/_custom_type_script = "uid://60xqcwchbvhd"
 
-[node name="ShopUiContainer" type="PanelContainer" parent="." unique_id=331912074]
+[node name="ShopUiContainer" type="PanelContainer" parent="." unique_id=543022933]
+material = ExtResource("2_55tms")
 layout_mode = 2
+script = ExtResource("2_nyo55")
+metadata/_custom_type_script = "uid://bngqval8eaups"
 
 [node name="MarginContainer" type="MarginContainer" parent="ShopUiContainer" unique_id=1211820350]
 layout_mode = 2
@@ -62,6 +70,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_6k3wu")
 tab_alignment = 1
 current_tab = 0
 tab_0/title = "BUY"

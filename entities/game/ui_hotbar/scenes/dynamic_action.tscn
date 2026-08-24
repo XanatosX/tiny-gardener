@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c1a0871cxg5y1" path="res://entities/game/ui_hotbar/scripts/ui_dynamic_action_template.gd" id="1_txgc6"]
 [ext_resource type="Texture2D" uid="uid://n0x6a2oo1rah" path="res://assets/atlas/dead_plant.tres" id="2_txgc6"]
+[ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="3_ts7qr"]
+[ext_resource type="Script" uid="uid://bngqval8eaups" path="res://entities/shared/special_objects/frosted_glass_control_panel/frosted_glass_control_panel.gd" id="4_t6y2g"]
 
 [node name="DynamicPlantAction" type="TextureRect" unique_id=1632773265 node_paths=PackedStringArray("template")]
 custom_minimum_size = Vector2(64, 64)
@@ -50,20 +52,23 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "ACTION"
 
-[node name="Container" type="PanelContainer" parent="." unique_id=876298462]
+[node name="Container" type="PanelContainer" parent="." unique_id=31939987]
+material = ExtResource("3_ts7qr")
 custom_minimum_size = Vector2(0, 64)
 custom_maximum_size = Vector2(-1, 80)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 64.0
+offset_left = -42.0
+offset_right = 42.0
+offset_bottom = 80.0
 grow_horizontal = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, -80)
 mouse_filter = 2
+script = ExtResource("4_t6y2g")
+metadata/_custom_type_script = "uid://bngqval8eaups"
 
 [node name="MarginContainer" type="MarginContainer" parent="Container" unique_id=769891237]
 layout_mode = 2

@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cmcsu5ndq1g6i" path="res://entities/game/ui_plant_health/scenes/data_progress.tscn" id="1_6dsmq"]
 [ext_resource type="Script" uid="uid://dm7o3dftydnxr" path="res://entities/game/ui_plant_health/scripts/ui_plant_health.gd" id="1_0880d"]
 [ext_resource type="Resource" uid="uid://54q23q72qwiu" path="res://assets/resources/translations/missing_plant.tres" id="2_go10l"]
+[ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="3_axpie"]
+[ext_resource type="Script" uid="uid://bngqval8eaups" path="res://entities/shared/special_objects/frosted_glass_control_panel/frosted_glass_control_panel.gd" id="4_50pyw"]
 [ext_resource type="Texture2D" uid="uid://bg2ubgonp2gq2" path="res://assets/atlas/water_icon.tres" id="4_esdcw"]
 [ext_resource type="Texture2D" uid="uid://cw07gr7nk1h8l" path="res://assets/atlas/nutrition_icon.tres" id="5_esdcw"]
 
@@ -18,13 +20,16 @@ script = ExtResource("1_0880d")
 no_plant_name = ExtResource("2_go10l")
 metadata/_custom_type_script = "uid://dm7o3dftydnxr"
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1913062029]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=110416102]
+material = ExtResource("3_axpie")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("4_50pyw")
+metadata/_custom_type_script = "uid://bngqval8eaups"
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1918657428]
 layout_mode = 2

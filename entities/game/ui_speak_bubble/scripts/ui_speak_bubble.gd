@@ -1,4 +1,5 @@
-class_name UiSpeakBubble extends PanelContainer
+@tool
+class_name UiSpeakBubble extends FrostedGlassControlPanel
 
 signal clear_message()
 signal update_icon(texture: Texture2D)

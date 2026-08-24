@@ -26,6 +26,5 @@ display_name = ExtResource("8_0tn4j")
 description = ExtResource("7_6k3wu")
 long_description = ExtResource("10_k2svm")
 icon = ExtResource("7_ubopj")
-can_sell = false
 price = 2500.0
 metadata/_custom_type_script = "uid://dw8uv3t0dtref"

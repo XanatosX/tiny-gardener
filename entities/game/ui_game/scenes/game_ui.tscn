@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://d0wf8jyrnoehb" path="res://entities/game/ui_game/ui_game.gd" id="1_fnsaa"]
 [ext_resource type="PackedScene" uid="uid://bsyoqcxl8wjqm" path="res://entities/game/ui_plant_health/scenes/ui_plant_health.tscn" id="1_tnwl8"]
 [ext_resource type="Texture2D" uid="uid://dq33eu2ghwx0m" path="res://assets/atlas/coin_icon.tres" id="2_2ukhv"]
+[ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="2_p0uwn"]
 [ext_resource type="Script" uid="uid://cmvtgf7fboxaq" path="res://entities/shared/special_objects/animated_labels/animated_label.gd" id="2_qpt2f"]
 [ext_resource type="PackedScene" uid="uid://c7r2yjdkr748a" path="res://entities/game/ui_hotbar/scenes/ui_hotbar.tscn" id="3_mis41"]
+[ext_resource type="Script" uid="uid://bngqval8eaups" path="res://entities/shared/special_objects/frosted_glass_control_panel/frosted_glass_control_panel.gd" id="3_y14kn"]
 [ext_resource type="Resource" uid="uid://mdg6cle4gacg" path="res://assets/resources/items/plants/standard_corn_plant.tres" id="4_puw5e"]
 [ext_resource type="Script" uid="uid://drdqdfvcv2ju2" path="res://entities/shared/special_objects/animated_labels/timed_label.gd" id="4_vbbgl"]
 [ext_resource type="Script" uid="uid://dwpjf1e1lbxah" path="res://entities/shared/special_objects/debug_elements/version_string.gd" id="5_kqyrl"]
@@ -27,8 +29,11 @@ layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 128.0
 
-[node name="TopBar" type="PanelContainer" parent="TopPanel" unique_id=1715716399]
+[node name="TopBar" type="PanelContainer" parent="TopPanel" unique_id=354272984]
+material = ExtResource("2_p0uwn")
 layout_mode = 2
+script = ExtResource("3_y14kn")
+metadata/_custom_type_script = "uid://bngqval8eaups"
 
 [node name="MarginContainer" type="MarginContainer" parent="TopPanel/TopBar" unique_id=1298705861]
 layout_mode = 2

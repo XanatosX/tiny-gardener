@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://dmdtw3kn5ap7q" path="res://entities/game/ui_handbook/scripts/handbook.gd" id="1_lpl6t"]
 [ext_resource type="Script" uid="uid://c6ud20j1ifcr" path="res://entities/game/ui_handbook/scripts/dynamic_entry_provider/dynamic_handbook_entry.gd" id="2_fjis5"]
 [ext_resource type="Shortcut" uid="uid://ovus7gnb525j" path="res://assets/button_shortcuts/close_shortkey.tres" id="2_i0umm"]
+[ext_resource type="Script" uid="uid://bngqval8eaups" path="res://entities/shared/special_objects/frosted_glass_control_panel/frosted_glass_control_panel.gd" id="2_n33kq"]
 [ext_resource type="Resource" uid="uid://cgty7bqxn8fkr" path="res://assets/resources/translations/handbook/handbook.tres" id="2_pbgr7"]
+[ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="2_q3mej"]
 [ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="2_r6tv0"]
 [ext_resource type="Resource" uid="uid://4yy4h6becgpk" path="res://assets/resources/translations/handbook/movement.tres" id="3_lavt0"]
 [ext_resource type="Resource" uid="uid://0dx1e2on2pkj" path="res://assets/resources/translations/handbook/upgrades_group.tres" id="4_l6xx0"]
@@ -37,24 +39,27 @@ theme_override_constants/margin_bottom = 100
 script = ExtResource("1_lpl6t")
 metadata/_custom_type_script = "uid://dmdtw3kn5ap7q"
 
-[node name="MarginContainer" type="PanelContainer" parent="." unique_id=604271330]
+[node name="HandbookContainer" type="PanelContainer" parent="." unique_id=1200421407]
+material = ExtResource("2_q3mej")
+layout_mode = 2
+script = ExtResource("2_n33kq")
+metadata/_custom_type_script = "uid://bngqval8eaups"
+
+[node name="Content" type="VBoxContainer" parent="HandbookContainer" unique_id=275766854]
 layout_mode = 2
 
-[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=275766854]
-layout_mode = 2
-
-[node name="Close" type="Button" parent="MarginContainer/Content" unique_id=2014650940]
+[node name="Close" type="Button" parent="HandbookContainer/Content" unique_id=2014650940]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 8
 shortcut = ExtResource("2_i0umm")
 text = "X"
 
-[node name="Split" type="HBoxContainer" parent="MarginContainer/Content" unique_id=1569751107]
+[node name="Split" type="HBoxContainer" parent="HandbookContainer/Content" unique_id=1569751107]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HandbookEntries" type="Tree" parent="MarginContainer/Content/Split" unique_id=2069725701]
+[node name="HandbookEntries" type="Tree" parent="HandbookContainer/Content/Split" unique_id=2069725701]
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 column_titles_visible = true
@@ -79,13 +84,13 @@ group_icons = Dictionary[int, Texture2D]({
 })
 metadata/_custom_type_script = "uid://b6u7hfrnrjuxw"
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/Content/Split" unique_id=927261916]
+[node name="VSeparator" type="VSeparator" parent="HandbookContainer/Content/Split" unique_id=927261916]
 layout_mode = 2
 
-[node name="Target" type="MarginContainer" parent="MarginContainer/Content/Split" unique_id=148038663]
+[node name="Target" type="MarginContainer" parent="HandbookContainer/Content/Split" unique_id=148038663]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[connection signal="open_entry" from="." to="MarginContainer/Content/Split/HandbookEntries" method="select_specific_entry_by_key"]
-[connection signal="pressed" from="MarginContainer/Content/Close" to="." method="hide"]
+[connection signal="open_entry" from="." to="HandbookContainer/Content/Split/HandbookEntries" method="select_specific_entry_by_key"]
+[connection signal="pressed" from="HandbookContainer/Content/Close" to="." method="hide"]

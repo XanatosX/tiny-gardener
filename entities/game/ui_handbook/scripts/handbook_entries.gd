@@ -2,15 +2,21 @@ class_name HandbookEntries extends Tree
 
 const base_path: String = "res://assets/resources/handbook"
 
+@export var handbook_ui: UiHandbook
+
+@export_group("Scanning")
 @export var scan_depth: int = 2
 @export var max_entry_icon_size: int = 32
 
+@export_group("Dynamic Providers")
 @export var dynamic_entry_provider: Array[DynamicHandbookEntry]
 
+@export_group("Visual and Translation")
 @export var handbook_translation: TextTranslation
 @export var translations: Dictionary[HandbookEntry.Group, TextTranslation] = {}
 @export var group_icons: Dictionary[HandbookEntry.Group, Texture2D] = {}
 
+@export_group("Ordering")
 @export var ordered_groups: Array[HandbookEntry.Group] = [
 	HandbookEntry.Group.GAME_MECHANICS,
 	HandbookEntry.Group.MOVEMENT,
@@ -37,8 +43,9 @@ var _selection_lookup: Dictionary[String, TreeItem] = {}
 var _validate_handbook_required: bool = false
 	
 func _ready() -> void:
-	visibility_changed.connect(_visibility_has_changed)
 	assert(target != null, "Missing target node!")
+	assert(handbook_ui != null, "Missing handbook ui!")
+	visibility_changed.connect(_visibility_has_changed)
 	item_selected.connect(_entry_selected)
 
 	_tree_root = create_item()
@@ -123,6 +130,9 @@ func _load_dynamic_entries() -> Dictionary[HandbookEntry.Group, Array]:
 	for dynamic_entry: DynamicHandbookEntry in dynamic_entry_provider:
 		return_entries.merge(dynamic_entry.get_dynamic_entries())
 
+	for group_key: HandbookEntry.Group in return_entries.keys():
+		for entry: HandbookEntry in return_entries.get(group_key):
+			entry.set_unlock_bridge(handbook_ui.get_unlock_bridge())
 	return return_entries
 
 func _load_entries(root: String, level: int = 0) -> Dictionary[HandbookEntry.Group, Array]:
@@ -138,6 +148,7 @@ func _load_entries(root: String, level: int = 0) -> Dictionary[HandbookEntry.Gro
 		
 		var data: Resource = load(path)
 		if data is HandbookEntry:
+			data.set_unlock_bridge(handbook_ui.get_unlock_bridge())
 			if return_data.has(data.get_group()):
 				return_data[data.get_group()].append(data)
 				continue

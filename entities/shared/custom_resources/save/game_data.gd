@@ -3,13 +3,27 @@ class_name GameData extends Resource
 
 @export var money: float = 0
 @export var items: Dictionary[Item, int] = {}
+@export var known_items: Array[Item]
 
 func add_item(new_item: Item, amount: int) -> void:
 	assert(new_item != null, "Item should never be null")
-		
+	_add_new_known_item(new_item)
 	if _increase_item_amount(new_item, amount):
 		return
 	items.set(new_item, amount)
+
+func _add_new_known_item(new_item: Item) -> void:
+	if item_is_known(new_item):
+		return
+	known_items.append(new_item)
+
+func item_is_known(item_in_question: Item) -> bool:
+	var result: bool = false
+	for item: Item in known_items:
+		if item.is_identically(item_in_question):
+			result = true
+			break
+	return result
 
 func _increase_item_amount(new_item: Item, amount: int) -> bool:
 	for item: Item in items.keys():
@@ -98,3 +112,10 @@ func change_money(amount: float) -> bool:
 func get_money() -> float:
 	return money
 	
+func rebuild_known_database() -> void:
+	for item: Item in get_items():
+		_add_new_known_item(item)
+	
+	print("##### Listing!")
+	for item: Item in known_items:
+		print(item.get_display_name())

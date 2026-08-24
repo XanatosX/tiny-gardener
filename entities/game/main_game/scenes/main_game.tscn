@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d17tvhhp1oyco"]
 
 [ext_resource type="Script" uid="uid://d2pm2qx07ew5b" path="res://entities/game/systems/scripts/systems.gd" id="1_bqrir"]
+[ext_resource type="Script" uid="uid://drkg0pqjo5xrc" path="res://entities/game/ui_handbook/scripts/unlock_bridge.gd" id="1_ykw26"]
 [ext_resource type="PackedScene" uid="uid://d200fnos8du" path="res://entities/game/plant_pot/scenes/plant_pot.tscn" id="2_hpenl"]
 [ext_resource type="Script" uid="uid://dfiwemnvyw2oq" path="res://entities/game/systems/scripts/tick_system.gd" id="2_sld4w"]
 [ext_resource type="Script" uid="uid://dpyvv5m8bos23" path="res://entities/shared/custom_resources/item/item.gd" id="3_27u0r"]
@@ -86,6 +87,10 @@ item = ExtResource("38_rx2cq")
 metadata/_custom_type_script = "uid://btx3f3hgnwkrg"
 
 [node name="MainGame" type="Node3D" unique_id=226479066]
+
+[node name="UnlockBridge" type="Node" parent="." unique_id=2030699831]
+script = ExtResource("1_ykw26")
+metadata/_custom_type_script = "uid://drkg0pqjo5xrc"
 
 [node name="Systems" type="Node" parent="." unique_id=1418285697]
 unique_name_in_owner = true
@@ -749,8 +754,9 @@ offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="UiHandbook" parent="Menus" unique_id=420934734 instance=ExtResource("40_fseqt")]
+[node name="UiHandbook" parent="Menus" unique_id=420934734 node_paths=PackedStringArray("unlock_bridge") instance=ExtResource("40_fseqt")]
 visible = false
+unlock_bridge = NodePath("../../UnlockBridge")
 
 [node name="UiSpeakBubble" parent="Menus" unique_id=617009652 instance=ExtResource("35_m01cm")]
 visible = false
@@ -766,6 +772,7 @@ metadata/_custom_type_script = "uid://cmvgl4aykqqgr"
 
 [connection signal="pots_initialized" from="Systems/PotManagerSystem" to="Systems/GameReadySystem" method="pots_spawned"]
 [connection signal="item_amount_changed" from="Systems/GameDataSystem" to="UI/GameUi" method="show_item"]
+[connection signal="items_updated" from="Systems/GameDataSystem" to="Menus/UiHandbook" method="data_changed"]
 [connection signal="money_changed" from="Systems/GameDataSystem" to="UI/GameUi" method="update_money"]
 [connection signal="money_delta_change" from="Systems/GameDataSystem" to="UI/GameUi" method="money_delta_change"]
 [connection signal="hide_pot_information_ui" from="Systems/InteractionSystem" to="UI/GameUi" method="hide_pot_data"]
@@ -791,6 +798,7 @@ metadata/_custom_type_script = "uid://cmvgl4aykqqgr"
 [connection signal="trigger_action" from="UI/GameUi" to="Systems/InteractionSystem" method="trigger_interaction"]
 [connection signal="close_ui" from="Menus/ShopUi" to="PixellatedLevelContainer/SubViewport/World/Player" method="enable_movement"]
 [connection signal="show_ui" from="Menus/ShopUi" to="PixellatedLevelContainer/SubViewport/World/Player" method="disable_movement"]
+[connection signal="data_has_changed" from="Menus/UiHandbook" to="Menus/UiHandbook/HandbookContainer/Content/Split/HandbookEntries" method="data_has_changed"]
 [connection signal="dialog_started" from="Menus/UiSpeakBubble" to="PixellatedLevelContainer/SubViewport/World/Player" method="disable_movement"]
 
 [editable path="PixellatedLevelContainer/SubViewport/World/HomeInside"]

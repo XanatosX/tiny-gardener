@@ -59,13 +59,14 @@ text = "X"
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HandbookEntries" type="Tree" parent="HandbookContainer/Content/Split" unique_id=2069725701]
+[node name="HandbookEntries" type="Tree" parent="HandbookContainer/Content/Split" unique_id=2069725701 node_paths=PackedStringArray("handbook_ui")]
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 column_titles_visible = true
 scroll_horizontal_enabled = false
 scroll_vertical_enabled = false
 script = ExtResource("1_15jmf")
+handbook_ui = NodePath("../../../..")
 dynamic_entry_provider = Array[ExtResource("2_fjis5")]([SubResource("Resource_bsf2r")])
 handbook_translation = ExtResource("2_pbgr7")
 translations = Dictionary[int, ExtResource("2_r6tv0")]({
@@ -92,5 +93,6 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
+[connection signal="data_has_changed" from="." to="HandbookContainer/Content/Split/HandbookEntries" method="data_has_changed"]
 [connection signal="open_entry" from="." to="HandbookContainer/Content/Split/HandbookEntries" method="select_specific_entry_by_key"]
 [connection signal="pressed" from="HandbookContainer/Content/Close" to="." method="hide"]

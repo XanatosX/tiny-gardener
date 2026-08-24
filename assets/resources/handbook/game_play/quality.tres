@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://dmnhjrcyx0dga" path="res://entities/game/ui_handbook/scenes/ui_handbook_text.tscn" id="6_uqoky"]
 [ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="8_2h3bv"]
 [ext_resource type="Script" uid="uid://c1ddhu7kp1r78" path="res://entities/shared/custom_resources/handbook/text_types/image_table_text.gd" id="9_0sfp0"]
+[ext_resource type="Script" uid="uid://dv4ncw5yxqhil" path="res://entities/shared/custom_resources/handbook/unlock_conditions/unlock_condition.gd" id="13_2h3bv"]
+[ext_resource type="Resource" uid="uid://c0tmxnn2msk8p" path="res://assets/resources/items/upgrades/initial_pot_upgrade.tres" id="14_0sfp0"]
+[ext_resource type="Script" uid="uid://dnjl6ma4qitci" path="res://entities/shared/custom_resources/handbook/unlock_conditions/upgrade_bought_unlock_condition.gd" id="15_28nv6"]
 
 [sub_resource type="Resource" id="Resource_d2dh5"]
 script = ExtResource("5_rewpa")
@@ -25,9 +28,15 @@ center = true
 rows = Array[ExtResource("5_rewpa")]([SubResource("Resource_d2dh5")])
 metadata/_custom_type_script = "uid://c1ddhu7kp1r78"
 
+[sub_resource type="Resource" id="Resource_gesuv"]
+script = ExtResource("15_28nv6")
+item = ExtResource("14_0sfp0")
+metadata/_custom_type_script = "uid://dnjl6ma4qitci"
+
 [resource]
 script = ExtResource("2_cogpi")
 handbook_parts = Array[ExtResource("1_m1xwd")]([ExtResource("4_8fg7w"), SubResource("Resource_4ch8w")])
+unlock_conditions = Array[ExtResource("13_2h3bv")]([SubResource("Resource_gesuv")])
 identifier = ExtResource("2_0hduj")
 icon = ExtResource("4_8r6qi")
 group = 1

@@ -1,5 +1,7 @@
 class_name GameDataSystem extends System
 
+signal items_updated()
+
 signal item_amount_changed(item: Item, amount: int)
 signal money_changed(amount: float)
 signal money_delta_change(amount: float)
@@ -42,6 +44,7 @@ func _console_add_money(amount: float) -> void:
 	change_money(amount)
 
 func add_item(type: Item, amount: int) -> void:
+	items_updated.emit()
 	game_data.add_item(type, amount)
 	item_amount_changed.emit(type, amount)
 
@@ -102,11 +105,15 @@ func change_money(change_amount: float) -> bool:
 
 func game_loaded(save: SaveGame) -> void:
 	game_data = save.game_data
+	game_data.rebuild_known_database()
 	for item: Item in game_data.get_items():
 		if item is UpgradeItem:
 			item.init(_systems)
 			_run_upgrade_on_load(item)
 	money_changed.emit(game_data.money)
+
+func item_is_known(item: Item) -> bool:
+	return game_data.item_is_known(item)
 
 func _run_upgrade_on_load(upgrade: UpgradeItem) -> void:
 	if not upgrade.execute_on_load:

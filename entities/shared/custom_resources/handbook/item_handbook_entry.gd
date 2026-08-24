@@ -8,3 +8,6 @@ func get_entry_data() -> HandbookTemplate:
 		return null
 	instance.set_data(self)
 	return instance
+
+func is_unlocked() -> bool:
+	return super() and _unlock_bridge.item_is_known(item_reference.get_ref())

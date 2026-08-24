@@ -8,10 +8,19 @@
 [ext_resource type="Script" uid="uid://dtab4ex7bechl" path="res://entities/shared/custom_resources/handbook/text_handbook_entry.gd" id="2_iqfjs"]
 [ext_resource type="Resource" uid="uid://dns870fboo2fr" path="res://assets/resources/handbook_entry_text/fertilizer_entry.tres" id="4_u1and"]
 [ext_resource type="PackedScene" uid="uid://dmnhjrcyx0dga" path="res://entities/game/ui_handbook/scenes/ui_handbook_text.tscn" id="6_2j72u"]
+[ext_resource type="Script" uid="uid://dv4ncw5yxqhil" path="res://entities/shared/custom_resources/handbook/unlock_conditions/unlock_condition.gd" id="9_lbwet"]
+[ext_resource type="Resource" uid="uid://c0tmxnn2msk8p" path="res://assets/resources/items/upgrades/initial_pot_upgrade.tres" id="10_3iqfw"]
+[ext_resource type="Script" uid="uid://dnjl6ma4qitci" path="res://entities/shared/custom_resources/handbook/unlock_conditions/upgrade_bought_unlock_condition.gd" id="11_lrr5w"]
+
+[sub_resource type="Resource" id="Resource_8rpam"]
+script = ExtResource("11_lrr5w")
+item = ExtResource("10_3iqfw")
+metadata/_custom_type_script = "uid://dnjl6ma4qitci"
 
 [resource]
 script = ExtResource("2_iqfjs")
 handbook_parts = Array[ExtResource("1_cvo7u")]([ExtResource("4_u1and")])
+unlock_conditions = Array[ExtResource("9_lbwet")]([SubResource("Resource_8rpam")])
 identifier = ExtResource("2_27nil")
 icon = ExtResource("2_1ppkg")
 group = 1

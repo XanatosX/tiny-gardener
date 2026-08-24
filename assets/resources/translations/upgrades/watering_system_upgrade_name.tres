@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://6bsh3xdl2rdq"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_x70s5"]
+
+[resource]
+script = ExtResource("1_x70s5")
+key = "WATERING_SYSTEM_UPGRADE_NAME"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

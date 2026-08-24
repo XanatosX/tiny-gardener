@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="UpgradeItem" format=3 uid="uid://c5n1q84gkpqga"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_ar5o6"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_2kh38"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="3_hkx7g"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_vk6wa"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="5_if8v4"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_4e7pu"]
+[ext_resource type="Script" uid="uid://bskh2rbl5p38q" path="res://entities/shared/custom_resources/upgrades/upgrade_requirements.gd" id="7_hxvj3"]
+[ext_resource type="Resource" uid="uid://uarnc6ib7tt" path="res://assets/resources/translations/upgrades/auto_pot_care_upgrade_description.tres" id="7_ifot4"]
+[ext_resource type="Resource" uid="uid://c0tmxnn2msk8p" path="res://assets/resources/items/upgrades/initial_pot_upgrade.tres" id="8_2kh38"]
+[ext_resource type="Script" uid="uid://dw8uv3t0dtref" path="res://entities/shared/custom_resources/item/upgrade_item.gd" id="8_4el0d"]
+[ext_resource type="Resource" uid="uid://dcko0jya1rkjx" path="res://assets/resources/translations/upgrades/auto_pot_care_upgrade_name.tres" id="8_jf4se"]
+[ext_resource type="Texture2D" uid="uid://eto2xo3yp72o" path="res://assets/atlas/auto_pot_care_robot_icon.tres" id="9_ifot4"]
+[ext_resource type="Script" uid="uid://ddbwayxgyxmvv" path="res://entities/shared/custom_resources/upgrades/upgrade_action.gd" id="9_lvrbo"]
+[ext_resource type="Resource" uid="uid://dcs1urs64t5l5" path="res://assets/resources/items/upgrades/watering_system_upgrade.tres" id="9_vk6wa"]
+[ext_resource type="Resource" uid="uid://ugt0qc8rj0me" path="res://assets/resources/translations/upgrades/auto_pot_care_upgrade_long_description.tres" id="10_dtfjj"]
+[ext_resource type="Resource" uid="uid://ctauo632388rq" path="res://assets/resources/items/upgrades/rich_soil_upgrade.tres" id="10_if8v4"]
+[ext_resource type="Script" uid="uid://dm7e7eubg10o2" path="res://entities/shared/custom_resources/upgrades/nutrition_system.gd" id="13_4e7pu"]
+[ext_resource type="Script" uid="uid://djnoqw8df4xg4" path="res://entities/shared/custom_resources/upgrades/watering_system.gd" id="14_hxvj3"]
+
+[sub_resource type="Resource" id="Resource_ifot4"]
+script = ExtResource("7_hxvj3")
+upgrade = ExtResource("8_2kh38")
+amount = 1
+metadata/_custom_type_script = "uid://bskh2rbl5p38q"
+
+[sub_resource type="Resource" id="Resource_hkx7g"]
+script = ExtResource("7_hxvj3")
+upgrade = ExtResource("9_vk6wa")
+amount = 5
+metadata/_custom_type_script = "uid://bskh2rbl5p38q"
+
+[sub_resource type="Resource" id="Resource_vk6wa"]
+script = ExtResource("7_hxvj3")
+upgrade = ExtResource("10_if8v4")
+amount = 5
+metadata/_custom_type_script = "uid://bskh2rbl5p38q"
+
+[sub_resource type="Resource" id="Resource_4e7pu"]
+script = ExtResource("13_4e7pu")
+is_auto_nutrition = true
+metadata/_custom_type_script = "uid://dm7e7eubg10o2"
+
+[sub_resource type="Resource" id="Resource_hxvj3"]
+script = ExtResource("14_hxvj3")
+watering_amount = 0.1
+metadata/_custom_type_script = "uid://djnoqw8df4xg4"
+
+[resource]
+script = ExtResource("8_4el0d")
+requirements = Array[ExtResource("7_hxvj3")]([SubResource("Resource_ifot4"), SubResource("Resource_hkx7g"), SubResource("Resource_vk6wa")])
+upgrade_actions = Array[ExtResource("9_lvrbo")]([SubResource("Resource_4e7pu"), SubResource("Resource_hxvj3")])
+price_modifier_per_level = 0.2
+has_max_amount = true
+maximal_buyable_amount = 10
+display_name = ExtResource("8_jf4se")
+description = ExtResource("7_ifot4")
+long_description = ExtResource("10_dtfjj")
+icon = ExtResource("9_ifot4")
+can_buy = false
+price = 100.0
+metadata/_custom_type_script = "uid://dw8uv3t0dtref"

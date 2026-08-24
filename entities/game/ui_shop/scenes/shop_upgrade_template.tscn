@@ -12,7 +12,6 @@ anchor_right = 1.0
 offset_bottom = 64.0
 grow_horizontal = 2
 script = ExtResource("1_auyjc")
-show_quality_level = false
 metadata/_custom_type_script = "uid://dyfi4lq6bccw8"
 
 [node name="Trigger" type="Button" parent="." unique_id=381321058]

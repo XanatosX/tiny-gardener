@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://bskh2rbl5p38q" path="res://entities/shared/custom_resources/upgrades/upgrade_requirements.gd" id="10_jdb0f"]
 [ext_resource type="Resource" uid="uid://c0tmxnn2msk8p" path="res://assets/resources/items/upgrades/initial_pot_upgrade.tres" id="11_862aq"]
 [ext_resource type="Script" uid="uid://xquftf5j0j35" path="res://entities/shared/custom_resources/upgrades/unlock_pot.gd" id="11_ilv87"]
+[ext_resource type="Script" uid="uid://ddbwayxgyxmvv" path="res://entities/shared/custom_resources/upgrades/upgrade_action.gd" id="14_862aq"]
 
 [sub_resource type="Resource" id="Resource_ued1p"]
 script = ExtResource("10_jdb0f")
@@ -20,14 +21,15 @@ upgrade = ExtResource("11_862aq")
 amount = 1
 metadata/_custom_type_script = "uid://bskh2rbl5p38q"
 
-[sub_resource type="Resource" id="Resource_co47p"]
+[sub_resource type="Resource" id="Resource_y61wf"]
 script = ExtResource("11_ilv87")
 metadata/_custom_type_script = "uid://xquftf5j0j35"
 
 [resource]
 script = ExtResource("7_jdb0f")
 requirements = Array[ExtResource("10_jdb0f")]([SubResource("Resource_ued1p")])
-upgrade_action = SubResource("Resource_co47p")
+no_actions_wanted = true
+upgrade_actions = Array[ExtResource("14_862aq")]([SubResource("Resource_y61wf")])
 price_modifier_per_level = 1.2
 has_max_amount = true
 maximal_buyable_amount = 249

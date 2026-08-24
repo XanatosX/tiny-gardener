@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="UpgradeItem" format=3 uid="uid://ctauo632388rq"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_myc6b"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_6h4bo"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="3_hxu47"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_juekv"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="5_gqbpb"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_ibaqg"]
+[ext_resource type="Resource" uid="uid://kgxrnmc4qqwv" path="res://assets/resources/translations/upgrades/rich_soil_upgrade_description.tres" id="7_bwkfr"]
+[ext_resource type="Resource" uid="uid://bw1ethn6hrgtg" path="res://assets/resources/translations/upgrades/rich_soil_upgrade_name.tres" id="8_u3mpe"]
+[ext_resource type="Texture2D" uid="uid://d2dufwqc0056g" path="res://assets/atlas/fertilizer_icon.tres" id="9_328xd"]
+[ext_resource type="Resource" uid="uid://cnv2opyb3cy7s" path="res://assets/resources/translations/upgrades/rich_soil_upgrade_long_description.tres" id="10_7ap4b"]
+[ext_resource type="Script" uid="uid://bskh2rbl5p38q" path="res://entities/shared/custom_resources/upgrades/upgrade_requirements.gd" id="11_y3xy7"]
+[ext_resource type="Resource" uid="uid://c0tmxnn2msk8p" path="res://assets/resources/items/upgrades/initial_pot_upgrade.tres" id="12_u6b1u"]
+[ext_resource type="Script" uid="uid://dw8uv3t0dtref" path="res://entities/shared/custom_resources/item/upgrade_item.gd" id="13_jbn3o"]
+[ext_resource type="Script" uid="uid://ddbwayxgyxmvv" path="res://entities/shared/custom_resources/upgrades/upgrade_action.gd" id="14_icqwg"]
+[ext_resource type="Script" uid="uid://dm7e7eubg10o2" path="res://entities/shared/custom_resources/upgrades/nutrition_system.gd" id="15_h6jq8"]
+
+[sub_resource type="Resource" id="Resource_4bog4"]
+script = ExtResource("11_y3xy7")
+upgrade = ExtResource("12_u6b1u")
+amount = 1
+metadata/_custom_type_script = "uid://bskh2rbl5p38q"
+
+[sub_resource type="Resource" id="Resource_slt2r"]
+script = ExtResource("15_h6jq8")
+
+[resource]
+script = ExtResource("13_jbn3o")
+requirements = Array[ExtResource("11_y3xy7")]([SubResource("Resource_4bog4")])
+execute_on_load = true
+upgrade_actions = Array[ExtResource("14_icqwg")]([SubResource("Resource_slt2r")])
+price_modifier_per_level = 0.25
+has_max_amount = true
+maximal_buyable_amount = 25
+display_name = ExtResource("8_u3mpe")
+description = ExtResource("7_bwkfr")
+long_description = ExtResource("10_7ap4b")
+icon = ExtResource("9_328xd")
+can_sell = false
+price = 25.0
+show_quality_in_name = false
+metadata/_custom_type_script = "uid://dw8uv3t0dtref"

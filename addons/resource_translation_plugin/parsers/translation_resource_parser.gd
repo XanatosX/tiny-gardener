@@ -12,7 +12,6 @@ func get_extension() -> PackedStringArray:
 	return["tres"]
 
 func register_or_change_translations(strings: Array[PackedStringArray]):
-	print(strings)
 	for file: String in _get_all_resources():
 		if file.get_extension() in get_extension():
 			print("Add for translation: \"%s\"" % file)

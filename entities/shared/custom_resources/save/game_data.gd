@@ -115,7 +115,3 @@ func get_money() -> float:
 func rebuild_known_database() -> void:
 	for item: Item in get_items():
 		_add_new_known_item(item)
-	
-	print("##### Listing!")
-	for item: Item in known_items:
-		print(item.get_display_name())

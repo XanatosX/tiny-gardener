@@ -26,7 +26,6 @@ func apply(text: String) -> String:
 			var absolute_path: String = _get_real_path(path)
 			if absolute_path == "":
 				continue
-			print(match.get_string(0))
 			text = text.replace(match.get_string(1), absolute_path)
 	return text
 

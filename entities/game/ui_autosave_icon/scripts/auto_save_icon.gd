@@ -40,7 +40,6 @@ func show_icon() -> void:
 
 func _reset_loop(_step_count: int) -> void:
 	offset_transform_rotation = fmod(offset_transform_rotation, TAU)
-	print("round")
 
 func hide_icon() -> void:
 	_save_complete = true

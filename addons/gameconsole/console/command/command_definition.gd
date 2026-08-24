@@ -1,4 +1,4 @@
-class_name CommandDefinition extends Resource
+class_name CommandDefinition extends RefCounted
 
 var command: String
 var arguments: PackedStringArray = []
@@ -24,7 +24,7 @@ func _tokenize_command(text: String) -> PackedStringArray:
 	var current: String = ""
 	var in_quotes: bool = false
 	
-	for char in text:
+	for char: String in text:
 		if char == "\"":
 			in_quotes = !in_quotes
 			if not current == "" and not in_quotes:

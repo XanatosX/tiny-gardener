@@ -14,6 +14,9 @@
 [ext_resource type="Resource" uid="uid://brqkydn5xum3g" path="res://assets/resources/handbook_entry_text/keep_plant_alive_explain_icons.tres" id="10_64w7l"]
 [ext_resource type="Script" uid="uid://c1ddhu7kp1r78" path="res://entities/shared/custom_resources/handbook/text_types/image_table_text.gd" id="10_nsreb"]
 [ext_resource type="Resource" uid="uid://b8ntbgmjf6k3r" path="res://assets/resources/handbook_identifier/keep_plant_alive_identifier.tres" id="12_nsreb"]
+[ext_resource type="Script" uid="uid://dv4ncw5yxqhil" path="res://entities/shared/custom_resources/handbook/unlock_conditions/unlock_condition.gd" id="15_q8gv4"]
+[ext_resource type="Resource" uid="uid://c0tmxnn2msk8p" path="res://assets/resources/items/upgrades/initial_pot_upgrade.tres" id="16_um3ua"]
+[ext_resource type="Script" uid="uid://dnjl6ma4qitci" path="res://entities/shared/custom_resources/handbook/unlock_conditions/upgrade_bought_unlock_condition.gd" id="17_k548y"]
 
 [sub_resource type="Resource" id="Resource_iovfh"]
 script = ExtResource("6_iovfh")
@@ -27,9 +30,15 @@ center = true
 rows = Array[ExtResource("6_iovfh")]([SubResource("Resource_iovfh")])
 metadata/_custom_type_script = "uid://c1ddhu7kp1r78"
 
+[sub_resource type="Resource" id="Resource_0oqqk"]
+script = ExtResource("17_k548y")
+item = ExtResource("16_um3ua")
+metadata/_custom_type_script = "uid://dnjl6ma4qitci"
+
 [resource]
 script = ExtResource("2_2u2v4")
 handbook_parts = Array[ExtResource("1_v2o3b")]([ExtResource("4_iovfh"), SubResource("Resource_mwmy6"), ExtResource("10_64w7l")])
+unlock_conditions = Array[ExtResource("15_q8gv4")]([SubResource("Resource_0oqqk")])
 identifier = ExtResource("12_nsreb")
 icon = ExtResource("2_nn8e7")
 group = 1

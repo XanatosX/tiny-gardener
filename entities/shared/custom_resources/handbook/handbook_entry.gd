@@ -20,6 +20,8 @@ enum Group
 @export var scene_template: PackedScene
 @export var order_number: int = 0
 
+var _unlock_bridge: UnlockBridge = null
+
 var _template: HandbookTemplate = null:
 	get():
 		if _template == null:
@@ -62,13 +64,18 @@ func get_description() -> String:
 	return description.get_text()
 
 func is_unlocked() -> bool:
-	return scene_template != null and true
+	return scene_template != null
 
 func _get_template_instance() -> HandbookTemplate:
 	return _template
 
 @abstract
 func get_entry_data() -> HandbookTemplate
+
+func set_unlock_bridge(bridge: UnlockBridge) -> void:
+	if _unlock_bridge != null:
+		return
+	_unlock_bridge = bridge
 
 func cleanup() -> void:
 	if _template != null:

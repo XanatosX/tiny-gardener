@@ -8,6 +8,7 @@ enum QUALITY
 	PREMIUM
 }
 
+
 @export_group("Common")
 @export var display_name: TextTranslation
 @export var description: TextTranslation
@@ -23,6 +24,9 @@ enum QUALITY
 @export var price: float = 0.0
 ## The amount to multiply with to get the sell price
 @export var sell_modifier: float = 1.0
+
+@export_group("Display Settings")
+@export var show_quality_in_name: bool = true
 
 @export_group("Quality items")
 @export var _poor_quality_icon: Texture = preload("res://assets/atlas/poor_quality_icon.tres")
@@ -41,6 +45,8 @@ func get_price() -> float:
 
 func get_display_name() -> String:
 	if quality == QUALITY.NONE:
+		return display_name.get_text()
+	if not show_quality_in_name:
 		return display_name.get_text()
 	return "%s (%s)" % [display_name.get_text(), get_quality_name()]
 

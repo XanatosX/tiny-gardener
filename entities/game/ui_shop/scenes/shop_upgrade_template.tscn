@@ -12,36 +12,61 @@ anchor_right = 1.0
 offset_bottom = 64.0
 grow_horizontal = 2
 script = ExtResource("1_auyjc")
+show_quality_level = false
 metadata/_custom_type_script = "uid://dyfi4lq6bccw8"
 
 [node name="Trigger" type="Button" parent="." unique_id=381321058]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Trigger" unique_id=722476685]
+[node name="MarginContainer" type="MarginContainer" parent="Trigger" unique_id=644403206]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 2
 
-[node name="UpgradeIcon" type="TextureRect" parent="Trigger/HBoxContainer" unique_id=1618680581]
+[node name="HBoxContainer" type="HBoxContainer" parent="Trigger/MarginContainer" unique_id=722476685]
+layout_mode = 2
+
+[node name="UpgradeIcon" type="TextureRect" parent="Trigger/MarginContainer/HBoxContainer" unique_id=1618680581]
 custom_minimum_size = Vector2(64, 64)
 custom_maximum_size = Vector2(64, 64)
 layout_mode = 2
 texture = ExtResource("1_ayvfb")
 
-[node name="UpgradeName" type="Label" parent="Trigger/HBoxContainer" unique_id=272084139]
+[node name="Quality" type="TextureRect" parent="Trigger/MarginContainer/HBoxContainer/UpgradeIcon" unique_id=1737221709]
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="UpgradeName" type="Label" parent="Trigger/MarginContainer/HBoxContainer" unique_id=272084139]
 layout_mode = 2
 text = "UPGRADE_NAME"
 
-[node name="VBoxContainer" type="HBoxContainer" parent="Trigger/HBoxContainer" unique_id=1387871762]
+[node name="VBoxContainer" type="HBoxContainer" parent="Trigger/MarginContainer/HBoxContainer" unique_id=1387871762]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
 
-[node name="TextureRect" type="TextureRect" parent="Trigger/HBoxContainer/VBoxContainer" unique_id=1370182017]
+[node name="Price" type="Label" parent="Trigger/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1681777045]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Trigger/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1370182017]
 custom_minimum_size = Vector2(32, 32)
 custom_maximum_size = Vector2(32, 32)
 layout_mode = 2
@@ -49,9 +74,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 texture = ExtResource("3_arrph")
 
-[node name="Price" type="Label" parent="Trigger/HBoxContainer/VBoxContainer" unique_id=1681777045]
-layout_mode = 2
-
-[connection signal="name_changed" from="." to="Trigger/HBoxContainer/UpgradeName" method="set_text"]
-[connection signal="price_changed" from="." to="Trigger/HBoxContainer/VBoxContainer/Price" method="set_text"]
-[connection signal="texture_changed" from="." to="Trigger/HBoxContainer/UpgradeIcon" method="set_texture"]
+[connection signal="name_changed" from="." to="Trigger/MarginContainer/HBoxContainer/UpgradeName" method="set_text"]
+[connection signal="price_changed" from="." to="Trigger/MarginContainer/HBoxContainer/VBoxContainer/Price" method="set_text"]
+[connection signal="quality_changed" from="." to="Trigger/MarginContainer/HBoxContainer/UpgradeIcon/Quality" method="set_texture"]
+[connection signal="texture_changed" from="." to="Trigger/MarginContainer/HBoxContainer/UpgradeIcon" method="set_texture"]

@@ -12,15 +12,11 @@
 [ext_resource type="Resource" uid="uid://dtnj1q750cvl5" path="res://assets/resources/translations/upgrades/end_game_upgrade_name.tres" id="8_0tn4j"]
 [ext_resource type="Script" uid="uid://dw8uv3t0dtref" path="res://entities/shared/custom_resources/item/upgrade_item.gd" id="8_k2svm"]
 [ext_resource type="Resource" uid="uid://d0cxx47vn7l8m" path="res://assets/resources/translations/upgrades/end_game_upgrade_description_long.tres" id="10_k2svm"]
-[ext_resource type="Script" uid="uid://cn7yhchcul403" path="res://entities/shared/custom_resources/upgrades/end_game_action.gd" id="13_qq04b"]
-
-[sub_resource type="Resource" id="Resource_6iga8"]
-script = ExtResource("13_qq04b")
-metadata/_custom_type_script = "uid://cn7yhchcul403"
+[ext_resource type="Script" uid="uid://ddbwayxgyxmvv" path="res://entities/shared/custom_resources/upgrades/upgrade_action.gd" id="14_0tn4j"]
 
 [resource]
 script = ExtResource("8_k2svm")
-upgrade_action = SubResource("Resource_6iga8")
+no_actions_wanted = true
 has_max_amount = true
 display_name = ExtResource("8_0tn4j")
 description = ExtResource("7_6k3wu")

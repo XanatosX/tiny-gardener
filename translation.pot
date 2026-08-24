@@ -469,6 +469,18 @@ msgstr ""
 msgid "ROSE_PLANT_NAME"
 msgstr ""
 
+#: assets/resources/translations/upgrades/auto_pot_care_upgrade_description.tres
+msgid "AUTO_POT_CARE_UPGRADE_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/upgrades/auto_pot_care_upgrade_long_description.tres
+msgid "AUTO_POT_CARE_UPGRADE_LONG_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/upgrades/auto_pot_care_upgrade_name.tres
+msgid "AUTO_POT_CARE_UPGRADE_NAME"
+msgstr ""
+
 #: assets/resources/translations/upgrades/end_game_upgrade_description.tres
 msgid "END_GAME_UPGRADE_DESCRIPTION"
 msgstr ""
@@ -479,4 +491,28 @@ msgstr ""
 
 #: assets/resources/translations/upgrades/end_game_upgrade_name.tres
 msgid "END_GAME_UPGRADE_NAME"
+msgstr ""
+
+#: assets/resources/translations/upgrades/rich_soil_upgrade_description.tres
+msgid "RICH_SOIL_UPGRADE_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/upgrades/rich_soil_upgrade_long_description.tres
+msgid "RICH_SOIL_UPGRADE_LONG_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/upgrades/rich_soil_upgrade_name.tres
+msgid "RICH_SOIL_UPGRADE_NAME"
+msgstr ""
+
+#: assets/resources/translations/upgrades/watering_system_upgrade_description.tres
+msgid "WATERING_SYSTEM_UPGRADE_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/upgrades/watering_system_upgrade_long_description.tres
+msgid "WATERING_SYSTEM_UPGRADE_LONG_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/upgrades/watering_system_upgrade_name.tres
+msgid "WATERING_SYSTEM_UPGRADE_NAME"
 msgstr ""

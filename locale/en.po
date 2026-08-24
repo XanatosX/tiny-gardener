@@ -586,6 +586,23 @@ msgstr ""
 msgid "ROSE_PLANT_NAME"
 msgstr "Rose flower"
 
+#: assets/resources/translations/upgrades/auto_pot_care_upgrade_description.tres
+msgid "AUTO_POT_CARE_UPGRADE_DESCRIPTION"
+msgstr "Automatically add some nutrition and water to the pots over time"
+
+#: assets/resources/translations/upgrades/auto_pot_care_upgrade_long_description.tres
+msgid "AUTO_POT_CARE_UPGRADE_LONG_DESCRIPTION"
+msgstr ""
+"This upgrade is a combination of the [url={\"entry\":"
+"\"WATERING_SYSTEM_UPGRADE_NAME_NONE\"}]watering[/url] and [url={\"entry\":"
+"\"RICH_SOIL_UPGRADE_NAME_NONE\"}]rich soil[/url] upgrade.\n"
+"The nutrition will also be added if there is a plant in the pot, making this "
+"upgrade somewhat stronger."
+
+#: assets/resources/translations/upgrades/auto_pot_care_upgrade_name.tres
+msgid "AUTO_POT_CARE_UPGRADE_NAME"
+msgstr "Automatic Pot Care"
+
 #: assets/resources/translations/upgrades/end_game_upgrade_description.tres
 msgid "END_GAME_UPGRADE_DESCRIPTION"
 msgstr ""
@@ -601,3 +618,36 @@ msgstr ""
 #: assets/resources/translations/upgrades/end_game_upgrade_name.tres
 msgid "END_GAME_UPGRADE_NAME"
 msgstr "World Tour Ticket"
+
+#: assets/resources/translations/upgrades/rich_soil_upgrade_description.tres
+msgid "RICH_SOIL_UPGRADE_DESCRIPTION"
+msgstr ""
+"Increase the soil quality on each pot, this will increase the nutrition gain "
+"if no plant is in the pot."
+
+#: assets/resources/translations/upgrades/rich_soil_upgrade_long_description.tres
+msgid "RICH_SOIL_UPGRADE_LONG_DESCRIPTION"
+msgstr ""
+"This upgrade will increase the passive nutrition gain for each pot. A pot "
+"does get nutrition automatically if there is no plant in the pot. \n"
+"This upgrade will increase the rate of that value."
+
+#: assets/resources/translations/upgrades/rich_soil_upgrade_name.tres
+msgid "RICH_SOIL_UPGRADE_NAME"
+msgstr "Rich Soil"
+
+#: assets/resources/translations/upgrades/watering_system_upgrade_description.tres
+msgid "WATERING_SYSTEM_UPGRADE_DESCRIPTION"
+msgstr "Add a auto watering system to your pots"
+
+#: assets/resources/translations/upgrades/watering_system_upgrade_long_description.tres
+msgid "WATERING_SYSTEM_UPGRADE_LONG_DESCRIPTION"
+msgstr ""
+"This upgrade will increase the water each pot generates passively. Without "
+"this update there is always some water to evaporate, the first time you buy "
+"this upgrade\n"
+"That evaporation will ne nullified, after that you will get water passively."
+
+#: assets/resources/translations/upgrades/watering_system_upgrade_name.tres
+msgid "WATERING_SYSTEM_UPGRADE_NAME"
+msgstr "Watering System"

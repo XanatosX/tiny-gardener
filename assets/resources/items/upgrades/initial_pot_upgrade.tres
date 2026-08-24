@@ -12,14 +12,15 @@
 [ext_resource type="Script" uid="uid://dw8uv3t0dtref" path="res://entities/shared/custom_resources/item/upgrade_item.gd" id="10_4r4r8"]
 [ext_resource type="Script" uid="uid://bskh2rbl5p38q" path="res://entities/shared/custom_resources/upgrades/upgrade_requirements.gd" id="10_84pq6"]
 [ext_resource type="Script" uid="uid://xquftf5j0j35" path="res://entities/shared/custom_resources/upgrades/unlock_pot.gd" id="11_b53ya"]
+[ext_resource type="Script" uid="uid://ddbwayxgyxmvv" path="res://entities/shared/custom_resources/upgrades/upgrade_action.gd" id="13_w67dj"]
 
-[sub_resource type="Resource" id="Resource_co47p"]
+[sub_resource type="Resource" id="Resource_k2svm"]
 script = ExtResource("11_b53ya")
 metadata/_custom_type_script = "uid://xquftf5j0j35"
 
 [resource]
 script = ExtResource("10_4r4r8")
-upgrade_action = SubResource("Resource_co47p")
+upgrade_actions = Array[ExtResource("13_w67dj")]([SubResource("Resource_k2svm")])
 has_max_amount = true
 display_name = ExtResource("8_84pq6")
 description = ExtResource("7_84pq6")

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://cnv2opyb3cy7s"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_tk6xd"]
+
+[resource]
+script = ExtResource("1_tk6xd")
+key = "RICH_SOIL_UPGRADE_LONG_DESCRIPTION"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

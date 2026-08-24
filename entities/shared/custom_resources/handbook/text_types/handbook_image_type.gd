@@ -9,5 +9,4 @@ func get_text() -> String:
 	if centered:
 		return_data = "[center]%s[/center]" % return_data
 
-	print(return_data)
 	return return_data

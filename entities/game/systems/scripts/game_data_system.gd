@@ -37,8 +37,7 @@ func _unregister_commands() -> void:
 
 func add_multiple_items(data: Dictionary[Item, int]) -> void:
 	for item: Item in data:
-		item_amount_changed.emit(item, data.get(item))
-		game_data.add_item(item, data.get(item))
+		add_item(item, data.get(item))
 
 func _console_add_money(amount: float) -> void:
 	change_money(amount)

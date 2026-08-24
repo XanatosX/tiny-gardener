@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://kwmwaahv82da"]
+
+[ext_resource type="Shader" uid="uid://de8d2jwk4itk5" path="res://assets/shaders/ui/panel_glass_shader.gdshader" id="1_2qkhk"]
+
+[resource]
+shader = ExtResource("1_2qkhk")
+shader_parameter/blur_amount = 2.56800012198
+shader_parameter/glass_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
+shader_parameter/glass_mix_strength = 0.61200002907

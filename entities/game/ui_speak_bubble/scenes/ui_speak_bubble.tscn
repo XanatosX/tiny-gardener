@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dax5l65muilsb"]
 
 [ext_resource type="Script" uid="uid://baictj1u3wqq8" path="res://entities/game/ui_speak_bubble/scripts/ui_speak_bubble.gd" id="1_nerx6"]
-[ext_resource type="Resource" uid="uid://ij14rx80sfbc" path="res://assets/resources/situations/intro_situation.tres" id="2_2626j"]
+[ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="1_pcrkj"]
 [ext_resource type="Texture2D" uid="uid://co5e4fuo66w6b" path="res://assets/atlas/next_dialog_icon.tres" id="2_jkpad"]
 [ext_resource type="Script" uid="uid://co43o2rawaspf" path="res://entities/game/ui_speak_bubble/scripts/text_display.gd" id="3_ree4k"]
 [ext_resource type="Resource" uid="uid://d3r1v0lw4jno5" path="res://assets/resources/voices/default_male.tres" id="4_xsexf"]
@@ -12,6 +12,7 @@
 events = [ExtResource("5_ooyem")]
 
 [node name="UiSpeakBubble" type="PanelContainer" unique_id=1742584054]
+material = ExtResource("1_pcrkj")
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -25,7 +26,6 @@ grow_vertical = 0
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 170)
 script = ExtResource("1_nerx6")
-debug_situation = ExtResource("2_2626j")
 metadata/_custom_type_script = "uid://baictj1u3wqq8"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=845653515]

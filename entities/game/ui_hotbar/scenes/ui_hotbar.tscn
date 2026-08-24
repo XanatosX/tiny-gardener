@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c7r2yjdkr748a"]
 
 [ext_resource type="Script" uid="uid://csbqjjv4fyf8g" path="res://entities/game/ui_hotbar/scripts/ui_hotbar.gd" id="1_2sn7k"]
+[ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="2_pg408"]
+[ext_resource type="Script" uid="uid://bngqval8eaups" path="res://entities/shared/special_objects/frosted_glass_control_panel/frosted_glass_control_panel.gd" id="3_6iiuq"]
 
 [node name="UiHotbar" type="Control" unique_id=459944699 node_paths=PackedStringArray("actions_node", "simple_action_template", "dynamic_action_template")]
 layout_mode = 3
@@ -31,9 +33,12 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_bottom = 35
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=303169156]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=463917559]
+material = ExtResource("2_pg408")
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
+script = ExtResource("3_6iiuq")
+metadata/_custom_type_script = "uid://bngqval8eaups"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer" unique_id=1875427741]
 layout_mode = 2

@@ -750,8 +750,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="UiHandbook" parent="Menus" unique_id=420934734 instance=ExtResource("40_fseqt")]
+visible = false
 
 [node name="UiSpeakBubble" parent="Menus" unique_id=617009652 instance=ExtResource("35_m01cm")]
+visible = false
 
 [node name="TeleportTransitionUi" parent="Menus" unique_id=338172450 instance=ExtResource("25_04il6")]
 visible = false

@@ -45,13 +45,13 @@ func _register_commands() -> void:
 									.documentation()
 									.with_description("Save the game")
 									.with_long_description("This command will save the game")
-									.finish()
+									.finalize()
 							)
 	Console.register_command(Command.create("delete_save")
 									.calling_method(clear_save)
 									.documentation()
 									.with_description("Clear the save file")
-									.finish()
+									.finalize()
 							)
 
 func _unregister_commands() -> void:

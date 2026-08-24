@@ -46,7 +46,7 @@ func _ready() -> void:
 									.documentation()
 									.with_description("Add n amount of pots to the grid")
 									.with_long_description("Command will unlock n pots to be used as planting pots")
-									.finish()
+									.finalize()
 							)
 	pots_initialized.emit()
 

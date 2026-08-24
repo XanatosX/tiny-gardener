@@ -20,8 +20,9 @@ func _ready() -> void:
 func setup(item: Item, sell_mode: bool, available_amount: int) -> void:
 	_item = item
 	texture_changed.emit(_item.icon)
-	name_changed.emit(_item.get_display_name())	
-	
+	var display_name: String = _item.get_display_name()
+	name_changed.emit(display_name)	
+
 	quality_changed.emit(_item.get_quality_icon())
 	quality_text_changed.emit(_item.get_quality_name())
 

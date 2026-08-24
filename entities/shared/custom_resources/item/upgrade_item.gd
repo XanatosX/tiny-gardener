@@ -18,6 +18,7 @@ func _init() -> void:
 	can_buy = false
 	can_sell = false
 	quality = Item.QUALITY.NONE
+	show_quality_in_name = false
 
 func init(systems: Systems) -> void:
 	if _initialized:

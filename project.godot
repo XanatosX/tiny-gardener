@@ -28,6 +28,7 @@ Console="*uid://pcxyxcfyr2o2"
 ItemService="*uid://bso3u8ovg1f4r"
 AudioService="*uid://c2ou44428u13o"
 SettingsService="*uid://b2i8s8cxxcg7t"
+GraphicService="*uid://qv3ln5vc1wed"
 
 [debug]
 
@@ -40,7 +41,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
 window/stretch/mode="canvas_items"
-window/vsync/vsync_mode=2
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 
@@ -122,7 +123,7 @@ help={
 [internationalization]
 
 locale/translations=PackedStringArray("res://locale/en.po")
-locale/translations_pot_files=PackedStringArray("res://assets/resources/translations/handbook/basic_movement.tres", "res://entities/game/ui_controls_help/scenes/ui_control_help.tscn", "res://entities/game/ui_game/scenes/game_ui.tscn", "res://entities/game/ui_plant_health/scenes/ui_plant_health.tscn", "res://entities/game/ui_shop/scenes/shop_ui.tscn")
+locale/translations_pot_files=PackedStringArray("res://assets/resources/translations/handbook/basic_movement.tres", "res://entities/game/ui_controls_help/scenes/ui_control_help.tscn", "res://entities/game/ui_game/scenes/game_ui.tscn", "res://entities/game/ui_plant_health/scenes/ui_plant_health.tscn", "res://entities/game/ui_shop/scenes/shop_ui.tscn", "res://entities/game/ui_debug/scenes/debug_ui.tscn")
 
 [physics]
 

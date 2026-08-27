@@ -4,6 +4,7 @@
 # res://entities/game/ui_game/scenes/game_ui.tscn
 # res://entities/game/ui_plant_health/scenes/ui_plant_health.tscn
 # res://entities/game/ui_shop/scenes/shop_ui.tscn
+# res://entities/game/ui_debug/scenes/debug_ui.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -88,6 +89,22 @@ msgstr ""
 
 #: entities/game/ui_shop/scenes/shop_ui.tscn
 msgid "Upgrades"
+msgstr ""
+
+#: entities/game/ui_debug/scenes/debug_ui.tscn
+msgid "GAME_VERSION"
+msgstr ""
+
+#: entities/game/ui_debug/scenes/debug_ui.tscn
+msgid "FPS"
+msgstr ""
+
+#: entities/game/ui_debug/scenes/debug_ui.tscn
+msgid "9999"
+msgstr ""
+
+#: entities/game/ui_debug/scenes/debug_ui.tscn
+msgid "V_SYNC_LABEL"
 msgstr ""
 
 msgid "tiny-gardener"
@@ -467,6 +484,22 @@ msgstr ""
 
 #: assets/resources/translations/plants/rose_plant_name.tres
 msgid "ROSE_PLANT_NAME"
+msgstr ""
+
+#: assets/resources/translations/settings/vsync/vsync_adaptive.tres
+msgid "V_SYNC_ADAPTIVE_NAME"
+msgstr ""
+
+#: assets/resources/translations/settings/vsync/vsync_disabled.tres
+msgid "V_SYNC_DISABLED_NAME"
+msgstr ""
+
+#: assets/resources/translations/settings/vsync/vsync_enabled.tres
+msgid "V_SYNC_ENABLED_NAME"
+msgstr ""
+
+#: assets/resources/translations/settings/vsync/vsync_mailbox.tres
+msgid "V_SYNC_MAILBOX_NAME"
 msgstr ""
 
 #: assets/resources/translations/upgrades/auto_pot_care_upgrade_description.tres

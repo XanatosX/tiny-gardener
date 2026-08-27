@@ -18,14 +18,14 @@ jobs:
     strategy:
       matrix:
         platform:
-        #- name: linux
-        #  preset: linux
-        #  os: linux
-        #  file: tiny_gardener
-        #- name: windows
-        #  preset: windows
-        #  os: windows
-        #  file: tiny_gardener.exe        
+        - name: linux
+          preset: Linux
+          os: linux
+          file: tiny_gardener
+        - name: windows
+          preset: Windows
+          os: windows
+          file: tiny_gardener.exe        
         - name: web
           preset: Web
           os: web
@@ -62,8 +62,8 @@ jobs:
     strategy:
       matrix:
         platform:
-        #- name: linux
-        #- name: windows
+        - name: linux
+        - name: windows
         - name: web
     steps:      
       - uses: actions/checkout@v3
@@ -98,10 +98,10 @@ jobs:
     strategy:
       matrix:
         platform:
-        #- name: linux
-        #  channel: linux
-        #- name: windows
-        #  channel: windows
+        - name: linux
+          channel: linux
+        - name: windows
+          channel: windows
         - name: web
           channel: web
     steps:  

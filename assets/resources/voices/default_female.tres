@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_2h3dl")
-voice_frequency = 10
+voice_frequency = 15
 voice_audio = ExtResource("2_m1vnf")
 min_pitch = 0.9
 max_pitch = 1.4

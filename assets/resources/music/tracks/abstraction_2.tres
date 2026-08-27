@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MusicTrack" format=3 uid="uid://blbg3yng7vbra"]
+
+[ext_resource type="Resource" uid="uid://clhu375qmhihj" path="res://assets/resources/music/artists/abstraction.tres" id="1_egtqd"]
+[ext_resource type="Script" uid="uid://714qtupdah1r" path="res://entities/shared/custom_resources/music_track/music_track.gd" id="2_fla2u"]
+[ext_resource type="AudioStream" uid="uid://cqywwfvh3a613" path="res://assets/audio/music/Sketchbook 2024-04-24_03.ogg" id="3_fla2u"]
+
+[resource]
+script = ExtResource("2_fla2u")
+name = "Abstraction Track 2"
+artist = ExtResource("1_egtqd")
+track = ExtResource("3_fla2u")
+metadata/_custom_type_script = "uid://714qtupdah1r"

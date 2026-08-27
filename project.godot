@@ -29,6 +29,7 @@ ItemService="*uid://bso3u8ovg1f4r"
 AudioService="*uid://c2ou44428u13o"
 SettingsService="*uid://b2i8s8cxxcg7t"
 GraphicService="*uid://qv3ln5vc1wed"
+MusicPlayer="*uid://e7nbaujqqsjg"
 
 [debug]
 

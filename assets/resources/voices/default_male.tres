@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_xj1b3")
-voice_frequency = 12
+voice_frequency = 15
 voice_audio = ExtResource("2_ditnu")
 metadata/_custom_type_script = "uid://cprt8cxu3h3an"

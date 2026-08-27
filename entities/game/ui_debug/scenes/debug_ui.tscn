@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://ceg0fmyoy8swb"]
+
+[ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="1_siopn"]
+[ext_resource type="Script" uid="uid://ddu1h2ncvirsg" path="res://entities/game/ui_debug/scripts/debug_ui.gd" id="2_fhtqd"]
+[ext_resource type="Script" uid="uid://cwv52up0u17w3" path="res://entities/game/ui_debug/scripts/fps_counter.gd" id="3_fhtqd"]
+[ext_resource type="Script" uid="uid://c4oxlcqq3us7p" path="res://entities/shared/custom_resources/ui_display_rules/ui_display_rule.gd" id="3_shmja"]
+[ext_resource type="Script" uid="uid://ta41qt4hspex" path="res://entities/shared/custom_resources/ui_display_rules/debug_visible.gd" id="4_xa0q6"]
+[ext_resource type="Script" uid="uid://bnja1q463g5i5" path="res://entities/shared/custom_resources/ui_display_rules/multi_display_rule.gd" id="5_xa0q6"]
+[ext_resource type="Script" uid="uid://b70htbf6swcf3" path="res://entities/game/ui_debug/scripts/vsync_mode.gd" id="6_2a7ca"]
+[ext_resource type="Script" uid="uid://ey8pc1lillmi" path="res://entities/game/ui_debug/scripts/game_version.gd" id="6_xfhlk"]
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="7_bkrl2"]
+[ext_resource type="Resource" uid="uid://y2vefgqgog1o" path="res://assets/resources/translations/settings/vsync/vsync_disabled.tres" id="8_ohi07"]
+[ext_resource type="Resource" uid="uid://5qgx4qc2bd6p" path="res://assets/resources/translations/settings/vsync/vsync_enabled.tres" id="9_pofym"]
+[ext_resource type="Resource" uid="uid://713u10oe48jp" path="res://assets/resources/translations/settings/vsync/vsync_adaptive.tres" id="10_4o6qr"]
+[ext_resource type="Resource" uid="uid://babopdqordlja" path="res://assets/resources/translations/settings/vsync/vsync_mailbox.tres" id="11_i7rf7"]
+
+[sub_resource type="Resource" id="Resource_xfhlk"]
+script = ExtResource("4_xa0q6")
+visible_at = 1
+remove = true
+metadata/_custom_type_script = "uid://ta41qt4hspex"
+
+[sub_resource type="Resource" id="Resource_8rpam"]
+script = ExtResource("5_xa0q6")
+rules = Array[ExtResource("3_shmja")]([SubResource("Resource_xfhlk")])
+metadata/_custom_type_script = "uid://bnja1q463g5i5"
+
+[node name="DebugUi" type="PanelContainer" unique_id=850097891]
+material = ExtResource("1_siopn")
+offset_right = 69.0
+offset_bottom = 23.0
+script = ExtResource("2_fhtqd")
+display_rule = SubResource("Resource_8rpam")
+metadata/_custom_type_script = "uid://ddu1h2ncvirsg"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1772814034]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=111629904]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+columns = 2
+
+[node name="GameVersionLabel" type="Label" parent="MarginContainer/GridContainer" unique_id=1306271111]
+layout_mode = 2
+text = "GAME_VERSION"
+
+[node name="GameVersion" type="Label" parent="MarginContainer/GridContainer" unique_id=1908978124]
+layout_mode = 2
+text = "GAME_VERSION_NUMBER"
+script = ExtResource("6_xfhlk")
+metadata/_custom_type_script = "uid://ey8pc1lillmi"
+
+[node name="FPSLabel" type="Label" parent="MarginContainer/GridContainer" unique_id=158045539]
+layout_mode = 2
+text = "FPS"
+
+[node name="FPSValue" type="Label" parent="MarginContainer/GridContainer" unique_id=78920450]
+layout_mode = 2
+text = "9999"
+script = ExtResource("3_fhtqd")
+metadata/_custom_type_script = "uid://cwv52up0u17w3"
+
+[node name="VSyncLabel" type="Label" parent="MarginContainer/GridContainer" unique_id=457216836]
+layout_mode = 2
+text = "V_SYNC_LABEL"
+
+[node name="VSyncMode" type="Label" parent="MarginContainer/GridContainer" unique_id=8740794]
+layout_mode = 2
+text = "VSYNC_MODE"
+script = ExtResource("6_2a7ca")
+translations = Dictionary[int, ExtResource("7_bkrl2")]({
+0: ExtResource("8_ohi07"),
+1: ExtResource("9_pofym"),
+2: ExtResource("10_4o6qr"),
+3: ExtResource("11_i7rf7")
+})
+metadata/_custom_type_script = "uid://b70htbf6swcf3"

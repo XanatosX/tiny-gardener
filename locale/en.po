@@ -115,6 +115,22 @@ msgstr "Sel"
 msgid "Upgrades"
 msgstr ""
 
+#: entities/game/ui_debug/scenes/debug_ui.tscn
+msgid "GAME_VERSION"
+msgstr "Version:"
+
+#: entities/game/ui_debug/scenes/debug_ui.tscn
+msgid "FPS"
+msgstr "FPS:"
+
+#: entities/game/ui_debug/scenes/debug_ui.tscn
+msgid "9999"
+msgstr ""
+
+#: entities/game/ui_debug/scenes/debug_ui.tscn
+msgid "V_SYNC_LABEL"
+msgstr "VSync Mode:"
+
 msgid "tiny-gardener"
 msgstr ""
 
@@ -585,6 +601,22 @@ msgstr ""
 #: assets/resources/translations/plants/rose_plant_name.tres
 msgid "ROSE_PLANT_NAME"
 msgstr "Rose flower"
+
+#: assets/resources/translations/settings/vsync/vsync_adaptive.tres
+msgid "V_SYNC_ADAPTIVE_NAME"
+msgstr "Adaptive"
+
+#: assets/resources/translations/settings/vsync/vsync_disabled.tres
+msgid "V_SYNC_DISABLED_NAME"
+msgstr "Disabled"
+
+#: assets/resources/translations/settings/vsync/vsync_enabled.tres
+msgid "V_SYNC_ENABLED_NAME"
+msgstr "Enabled"
+
+#: assets/resources/translations/settings/vsync/vsync_mailbox.tres
+msgid "V_SYNC_MAILBOX_NAME"
+msgstr "Mailbox"
 
 #: assets/resources/translations/upgrades/auto_pot_care_upgrade_description.tres
 msgid "AUTO_POT_CARE_UPGRADE_DESCRIPTION"

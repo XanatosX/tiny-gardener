@@ -49,6 +49,7 @@
 [ext_resource type="Resource" uid="uid://d2rnjqv0r7a5w" path="res://assets/resources/situations/game_end_situation.tres" id="40_ykw26"]
 [ext_resource type="Script" uid="uid://rw5rypltirio" path="res://entities/game/situation_trigger/scripts/inventory_updated_trigger.gd" id="41_f4ptc"]
 [ext_resource type="Resource" uid="uid://c1f4vr4ctor3u" path="res://assets/resources/items/upgrades/end_game_upgrade.tres" id="42_s20tn"]
+[ext_resource type="PackedScene" uid="uid://ceg0fmyoy8swb" path="res://entities/game/ui_debug/scenes/debug_ui.tscn" id="50_f4ptc"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8rpam"]
 
@@ -765,6 +766,17 @@ visible = false
 visible = false
 
 [node name="Debug" type="CanvasLayer" parent="." unique_id=31093797]
+
+[node name="DebugUi" parent="Debug" unique_id=829370873 instance=ExtResource("50_f4ptc")]
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
 
 [node name="GameReadySystem" type="Node" parent="." unique_id=316189514]
 script = ExtResource("17_b4qme")

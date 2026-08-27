@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MusicArtist" format=3 uid="uid://clhu375qmhihj"]
+
+[ext_resource type="Script" uid="uid://bboae5pk0mrej" path="res://entities/shared/custom_resources/music_track/music_artist.gd" id="1_btmkv"]
+
+[resource]
+script = ExtResource("1_btmkv")
+name = "Abstraction"
+artist_url = "www.abstractionmusic.com"
+metadata/_custom_type_script = "uid://bboae5pk0mrej"

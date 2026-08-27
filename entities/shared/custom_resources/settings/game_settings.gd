@@ -5,6 +5,7 @@ class_name GameSettings extends Resource
 @export var game_version: String = ""
 
 @export var graphic_settings: GraphicSettings
+@export var audio_settings: AudioSettings
 
 @export var auto_save_interval_minutes: float = 5
 @export var auto_save_active: bool = true
@@ -12,4 +13,5 @@ class_name GameSettings extends Resource
 func _init() -> void:
 	creation_date = Time.get_unix_time_from_system()
 	graphic_settings = GraphicSettings.new()
+	audio_settings = AudioSettings.new()
 	last_modified_date = creation_date

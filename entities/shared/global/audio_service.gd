@@ -1,6 +1,30 @@
 extends Node
 
+const MASTER_BUS: String = "Master"
+const EFFECT_BUS: String = "sfx"
+const MUSIC_BUS: String = "music"
+
 var _global_audio_players: Array[AudioStreamPlayer] = []
+
+func _ready() -> void:
+	if not SettingsService.is_node_ready():
+		await SettingsService.ready
+	SettingsService.settings_changed.connect(_settings_changed)
+	_settings_changed(SettingsService.get_settings())
+
+func _settings_changed(game_settings: GameSettings) -> void:
+	set_audio_channels(game_settings.audio_settings)
+
+func set_audio_channels(audio_settings: AudioSettings) -> void:
+	_set_bus_volume(MASTER_BUS, audio_settings.master_volume)
+	_set_bus_volume(EFFECT_BUS, audio_settings.effect_volume)
+	_set_bus_volume(MUSIC_BUS, audio_settings.music_volume)
+
+func _set_bus_volume(bus_name: String, volume_db: float) -> void:
+	var id: int = AudioServer.get_bus_index(bus_name)
+	if id == -1:
+		return
+	AudioServer.set_bus_volume_db(id, volume_db)
 
 func play_global_audio_effect(effect: AudioStream, pitch: float = 0, volume: float = 0) -> void:
 	if effect == null:

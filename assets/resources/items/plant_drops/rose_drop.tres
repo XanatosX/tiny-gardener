@@ -17,5 +17,5 @@ display_name = ExtResource("5_wny3r")
 description = ExtResource("4_7axg1")
 icon = ExtResource("6_wny3r")
 can_buy = false
-price = 12.0
+price = 22.0
 metadata/_custom_type_script = "uid://kqg1s7cii32o"

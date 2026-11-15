@@ -56,6 +56,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rpam"]
 albedo_texture = ExtResource("10_me13u")
 uv1_scale = Vector3(150, 150, 150)
+texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8rpam"]
 size = Vector3(25, 1, 25)

@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://rt7cy5pojcua" path="res://assets/atlas/house_icon.tres" id="28_s3rff"]
 [ext_resource type="PackedScene" uid="uid://cc0v2qp0gqmxj" path="res://entities/game/situation_trigger/scenes/area_situation_trigger.tscn" id="33_t6gop"]
 [ext_resource type="Resource" uid="uid://npim2ekidbye" path="res://assets/resources/situations/explain_plant_pot.tres" id="34_6o3hq"]
+[ext_resource type="PackedScene" uid="uid://j08ygksey722" path="res://entities/game/farm_house/scenes/house.tscn" id="34_s20tn"]
 [ext_resource type="PackedScene" uid="uid://dax5l65muilsb" path="res://entities/game/ui_speak_bubble/scenes/ui_speak_bubble.tscn" id="35_m01cm"]
 [ext_resource type="Resource" uid="uid://4rb5u6rjk7ld" path="res://assets/resources/situations/add_water_can_situation.tres" id="37_lfjt5"]
 [ext_resource type="PackedScene" uid="uid://cn1lp2skygk21" path="res://assets/objects/well/scenes/well.tscn" id="38_fseqt"]
@@ -74,14 +75,6 @@ item/0/navigation_layers = 1
 item/0/preview = ExtResource("10_me13u")
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_crh21"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_crh21"]
-size = Vector3(3.3475342, 1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_8rpam"]
-size = Vector3(3.3604126, 1.4423828, 2.4594727)
-
-[sub_resource type="PrismMesh" id="PrismMesh_crh21"]
 
 [sub_resource type="Resource" id="Resource_kkwdg"]
 script = ExtResource("39_ww47l")
@@ -631,8 +624,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2592134, 0, 9)
 [node name="blockbench_export67" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=1662005133 instance=ExtResource("11_me13u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88421345, 0, 9)
 
+[node name="blockbench_export68" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=805793483 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.509, 0, 9)
+
 [node name="blockbench_export77" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=817129152 instance=ExtResource("11_me13u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8660867, 0, 9)
+
+[node name="blockbench_export95" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=226883831 instance=ExtResource("11_me13u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.522287, 0, 9)
 
 [node name="blockbench_export78" parent="PixellatedLevelContainer/SubViewport/World/Fence/Bottom" unique_id=807954703 instance=ExtResource("11_me13u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2411869, 0, 9)
@@ -691,27 +690,17 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.5
 [node name="House" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World" unique_id=174299827]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.523195)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="PixellatedLevelContainer/SubViewport/World/House" unique_id=808564110]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PixellatedLevelContainer/SubViewport/World/House/StaticBody3D" unique_id=174078614]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.159729, 0, 0.011296272)
-shape = SubResource("BoxShape3D_crh21")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PixellatedLevelContainer/SubViewport/World/House" unique_id=2020609279]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14981079, 0.2211914, -0.7297363)
-mesh = SubResource("BoxMesh_8rpam")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="PixellatedLevelContainer/SubViewport/World/House" unique_id=1998689350]
-transform = Transform3D(3.9289484, 0, 0, 0, 1.0524048, 0, 0, 0, 2.7732756, 0, 1.442, -0.578)
-mesh = SubResource("PrismMesh_crh21")
-
 [node name="TeleportDoor" parent="PixellatedLevelContainer/SubViewport/World/House" unique_id=1735594085 instance=ExtResource("21_04il6")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0.5673847)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.07910615, 0, 0.31195164)
+hide_on_game_start = true
 location = 2
 target = 1
 target_name = ExtResource("24_o2wdg")
 location_name = ExtResource("23_tt2c0")
 go_to_icon_overwrite = ExtResource("28_s3rff")
+
+[node name="House" parent="PixellatedLevelContainer/SubViewport/World/House" unique_id=1922901317 instance=ExtResource("34_s20tn")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.27965814, 0, -0.07947922)
 
 [node name="HomeInside" parent="PixellatedLevelContainer/SubViewport/World" unique_id=1571608070 instance=ExtResource("21_7fim8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -200)
@@ -806,6 +795,7 @@ metadata/_custom_type_script = "uid://cmvgl4aykqqgr"
 [connection signal="dialog_started" from="Systems/DialogSystem" to="UI/GameUi" method="dialog_started"]
 [connection signal="dialog_started" from="Systems/DialogSystem" to="Menus/ShopUi" method="silent_close"]
 [connection signal="open_handbook_page" from="Systems/HandbookSystem" to="Menus/UiHandbook" method="open_specific_handbook_entry"]
+[connection signal="movement_state_changed" from="PixellatedLevelContainer/SubViewport/World/Player" to="PixellatedLevelContainer/SubViewport/World/Player/CameraPivot/CameraStick/Camera3D" method="movement_state_changed"]
 [connection signal="triggered" from="PixellatedLevelContainer/SubViewport/World/HomeInside/ShopTrigger" to="Menus/ShopUi" method="animate_in"]
 [connection signal="trigger" from="PixellatedLevelContainer/SubViewport/World/Situations/GameEndSituation/InventoryUpdatedTrigger" to="PixellatedLevelContainer/SubViewport/World/Situations/GameEndSituation" method="trigger_situation"]
 [connection signal="trigger_action" from="UI/GameUi" to="Systems/InteractionSystem" method="trigger_interaction"]

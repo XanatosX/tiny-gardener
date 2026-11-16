@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bsn832bctv7eu" path="res://assets/objects/nightstand/scenes/nightstand.tscn" id="3_4key6"]
 [ext_resource type="PackedScene" uid="uid://ctoifvq747g4y" path="res://assets/objects/bed/bed.gltf" id="3_gkfgb"]
 [ext_resource type="PackedScene" uid="uid://cswt5jtfknkh" path="res://assets/objects/room_devider/scenes/high_devider.tscn" id="4_s671j"]
-[ext_resource type="Script" uid="uid://koykwrgjwx1i" path="res://entities/shared/special_objects/nodes/day_time_controlled_omni_light.gd" id="6_bifp6"]
+[ext_resource type="Script" uid="uid://koykwrgjwx1i" path="res://entities/shared/special_objects/nodes/condition_controlled_omni_light.gd" id="6_bifp6"]
 [ext_resource type="Resource" uid="uid://qd15q45qhxpn" path="res://assets/resources/translations/door_farm.tres" id="7_fqa7a"]
+[ext_resource type="Script" uid="uid://ob5aetmt0jsf" path="res://entities/shared/special_objects/light_conditions/day_night_condition.gd" id="7_wjk0s"]
 [ext_resource type="Resource" uid="uid://b066oswljguvn" path="res://assets/resources/translations/door_house.tres" id="8_eoy26"]
 [ext_resource type="Texture2D" uid="uid://bvyt3hvfhxvcn" path="res://assets/atlas/farm_icon.tres" id="9_eoy26"]
 [ext_resource type="PackedScene" uid="uid://di70prv3onnf2" path="res://assets/objects/desk/scenes/large_desk.tscn" id="10_kfafr"]
@@ -24,6 +25,16 @@
 [ext_resource type="Script" uid="uid://rw5rypltirio" path="res://entities/game/situation_trigger/scripts/inventory_updated_trigger.gd" id="22_ayj7f"]
 [ext_resource type="Script" uid="uid://c4gn5psacn0d3" path="res://entities/shared/custom_resources/waypoints/waypoint.gd" id="22_jg6ut"]
 [ext_resource type="PackedScene" uid="uid://dxijk61rta836" path="res://entities/game/home_inside/scenes/kitchen.tscn" id="23_tmvc2"]
+
+[sub_resource type="Resource" id="Resource_8rpam"]
+script = ExtResource("7_wjk0s")
+active_day_times = 12
+metadata/_custom_type_script = "uid://ob5aetmt0jsf"
+
+[sub_resource type="Resource" id="Resource_kpq1g"]
+script = ExtResource("7_wjk0s")
+active_day_times = 12
+metadata/_custom_type_script = "uid://ob5aetmt0jsf"
 
 [sub_resource type="BoxMesh" id="BoxMesh_8rpam"]
 size = Vector3(0.2, 0.4, 3)
@@ -132,12 +143,12 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.2
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Interior/Lights" unique_id=1738002493]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7003322, 0.5749348, -0.13400269)
-light_color = Color(0.702874, 0.55627537, 0.13905394, 1)
+light_color = Color(0.7019608, 0.5568628, 0.13725491, 1)
 light_energy = 1.814
 shadow_enabled = true
 omni_range = 2.8819711
 script = ExtResource("6_bifp6")
-active_day_times = 12
+light_condition = SubResource("Resource_8rpam")
 metadata/_custom_type_script = "uid://koykwrgjwx1i"
 
 [node name="NightLight" type="OmniLight3D" parent="Interior/Lights" unique_id=223571010]
@@ -147,7 +158,7 @@ light_energy = 0.322
 shadow_enabled = true
 omni_range = 0.53010595
 script = ExtResource("6_bifp6")
-active_day_times = 12
+light_condition = SubResource("Resource_kpq1g")
 metadata/_custom_type_script = "uid://koykwrgjwx1i"
 
 [node name="Light" type="Node3D" parent="." unique_id=1922628520]

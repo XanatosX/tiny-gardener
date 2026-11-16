@@ -16,6 +16,8 @@ signal set_transform_description_method(method: Callable)
 ## Callable will get a "Action.Type" and must return a Texture2D, if null is returned the action icon is used instead
 signal set_update_action_icon_method(method: Callable)
 
+@export var hide_on_game_start: bool = false
+
 ## This is the type of target this door is
 @export var location: Target
 ## The teleported target type to teleport to
@@ -43,6 +45,9 @@ func _ready() -> void:
 	assert(_exit != null, "Missing exit point")
 	assert(target_name != null, "Missing location translation")
 	assert(location_name != null, "Missing target translation")
+
+	if hide_on_game_start:
+		visible = false
 
 	if not _teleport_system.ready:
 		await  _teleport_system.ready

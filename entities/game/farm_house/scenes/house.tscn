@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://j08ygksey722"]
+
+[ext_resource type="PackedScene" uid="uid://v7fxsjugagva" path="res://assets/objects/simple_farm_house/simple_farm_house.gltf" id="1_eqjm4"]
+[ext_resource type="Script" uid="uid://ckaqcyj8scgrl" path="res://entities/shared/special_objects/nodes/condition_controlled_area_light.gd" id="1_tjwpt"]
+[ext_resource type="Material" uid="uid://b0wamu0lf5qoy" path="res://assets/objects/simple_farm_house/material_0_reflective.tres" id="2_4h12r"]
+[ext_resource type="Script" uid="uid://8636433qp20w" path="res://entities/shared/special_objects/device_state.gd" id="2_qmwuk"]
+[ext_resource type="Script" uid="uid://ob5aetmt0jsf" path="res://entities/shared/special_objects/light_conditions/day_night_condition.gd" id="2_ujx62"]
+[ext_resource type="Script" uid="uid://dyfcg0hydxsh7" path="res://entities/shared/special_objects/state_watcher/area_state_watcher.gd" id="3_4h12r"]
+
+[sub_resource type="Resource" id="Resource_8rpam"]
+script = ExtResource("2_ujx62")
+active_day_times = 12
+metadata/_custom_type_script = "uid://ob5aetmt0jsf"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8rpam"]
+radius = 0.6908748
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4h12r"]
+animation = &"door_close"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rxi0t"]
+animation = &"door_open"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qmwuk"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4h12r"]
+advance_mode = 2
+advance_expression = "!open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rxi0t"]
+advance_mode = 2
+advance_expression = "open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tjwpt"]
+reset = false
+advance_mode = 2
+advance_expression = "open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ujx62"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_crh21"]
+states/Start/position = Vector2(200, 205)
+states/door_close/node = SubResource("AnimationNodeAnimation_4h12r")
+states/door_close/position = Vector2(704, 296)
+states/door_open/node = SubResource("AnimationNodeAnimation_rxi0t")
+states/door_open/position = Vector2(704, 139)
+states/idle/node = SubResource("AnimationNodeAnimation_qmwuk")
+states/idle/position = Vector2(442, 205)
+transitions = ["door_open", "door_close", SubResource("AnimationNodeStateMachineTransition_4h12r"), "door_close", "door_open", SubResource("AnimationNodeStateMachineTransition_rxi0t"), "idle", "door_open", SubResource("AnimationNodeStateMachineTransition_tjwpt"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_ujx62")]
+
+[node name="House" type="Node3D" unique_id=142571236]
+
+[node name="Lights" type="Node3D" parent="." unique_id=742170575]
+
+[node name="FrontLeft" type="AreaLight3D" parent="Lights" unique_id=1970160782]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0306078, 0.26531225, -0.46235037)
+light_color = Color(0.813882, 0.49069172, 1.92523e-07, 1)
+light_energy = 1.442
+light_volumetric_fog_energy = 1.591
+area_size = Vector2(0.24680758, 0.21796954)
+script = ExtResource("1_tjwpt")
+light_condition = SubResource("Resource_8rpam")
+metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
+
+[node name="FrontRight" type="AreaLight3D" parent="Lights" unique_id=1839932592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28148663, 0.26531225, -0.46235037)
+light_color = Color(0.813882, 0.49069172, 1.92523e-07, 1)
+light_energy = 1.442
+light_volumetric_fog_energy = 1.591
+area_size = Vector2(0.24680758, 0.21796954)
+script = ExtResource("1_tjwpt")
+light_condition = SubResource("Resource_8rpam")
+metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
+
+[node name="FrontUp" type="AreaLight3D" parent="Lights" unique_id=1602871402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34266192, 1.0468271, -0.46235037)
+light_color = Color(0.813882, 0.49069172, 1.92523e-07, 1)
+light_energy = 1.442
+light_volumetric_fog_energy = 1.591
+area_size = Vector2(0.24680758, 0.15218925)
+script = ExtResource("1_tjwpt")
+light_condition = SubResource("Resource_8rpam")
+metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
+
+[node name="LeftSide1" type="AreaLight3D" parent="Lights" unique_id=2019808576]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.8980603, 0.26531225, 0.123031914)
+light_color = Color(0.813882, 0.49069172, 1.92523e-07, 1)
+light_energy = 1.442
+light_volumetric_fog_energy = 1.591
+area_size = Vector2(0.24680758, 0.21796954)
+script = ExtResource("1_tjwpt")
+light_condition = SubResource("Resource_8rpam")
+metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
+
+[node name="LeftSide2" type="AreaLight3D" parent="Lights" unique_id=748143129]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.8980603, 0.26531225, 1.0631449)
+light_color = Color(0.813882, 0.49069172, 1.92523e-07, 1)
+light_energy = 1.442
+light_volumetric_fog_energy = 1.591
+area_size = Vector2(0.24680758, 0.21796954)
+script = ExtResource("1_tjwpt")
+light_condition = SubResource("Resource_8rpam")
+metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
+
+[node name="RightSide1" type="AreaLight3D" parent="Lights" unique_id=1860132886]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.2696307, 0.26531225, 0.12592512)
+light_color = Color(0.813882, 0.49069172, 1.92523e-07, 1)
+light_energy = 1.442
+light_volumetric_fog_energy = 1.591
+area_size = Vector2(0.24680758, 0.21796954)
+script = ExtResource("1_tjwpt")
+light_condition = SubResource("Resource_8rpam")
+metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
+
+[node name="RightSide2" type="AreaLight3D" parent="Lights" unique_id=1757807383]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.2696307, 0.26531225, 1.0660381)
+light_color = Color(0.813882, 0.49069172, 1.92523e-07, 1)
+light_energy = 1.442
+light_volumetric_fog_energy = 1.591
+area_size = Vector2(0.24680758, 0.21796954)
+script = ExtResource("1_tjwpt")
+light_condition = SubResource("Resource_8rpam")
+metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
+
+[node name="house_asset" parent="." unique_id=1423029766 instance=ExtResource("1_eqjm4")]
+
+[node name="glass" parent="house_asset/root/windows/window1/inside" parent_id_path=PackedInt32Array(1423029766, 1771085121) index="0" unique_id=524433758]
+surface_material_override/0 = ExtResource("2_4h12r")
+
+[node name="glass2" parent="house_asset/root/windows/window2/inside2" parent_id_path=PackedInt32Array(1423029766, 1360096921) index="0" unique_id=1653660457]
+surface_material_override/0 = ExtResource("2_4h12r")
+
+[node name="glass3" parent="house_asset/root/windows/window3/inside3" parent_id_path=PackedInt32Array(1423029766, 212178577) index="0" unique_id=1455587883]
+surface_material_override/0 = ExtResource("2_4h12r")
+
+[node name="glass4" parent="house_asset/root/windows/window4/inside4" parent_id_path=PackedInt32Array(1423029766, 2011872746) index="0" unique_id=651294931]
+surface_material_override/0 = ExtResource("2_4h12r")
+
+[node name="glass5" parent="house_asset/root/windows/window5/inside5" parent_id_path=PackedInt32Array(1423029766, 1198063365) index="0" unique_id=521570599]
+surface_material_override/0 = ExtResource("2_4h12r")
+
+[node name="glass6" parent="house_asset/root/windows/window6/inside6" parent_id_path=PackedInt32Array(1423029766, 783981910) index="0" unique_id=1091919469]
+surface_material_override/0 = ExtResource("2_4h12r")
+
+[node name="glass7" parent="house_asset/root/windows/window7/inside7" parent_id_path=PackedInt32Array(1423029766, 982424664) index="0" unique_id=685002172]
+surface_material_override/0 = ExtResource("2_4h12r")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1498222139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30189437, 0, -0.7222822)
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1512043618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07187408, 0, 0.2786253)
+shape = SubResource("SphereShape3D_8rpam")
+
+[node name="Animation" type="Node" parent="." unique_id=108739256]
+
+[node name="AreaStateWatcher" type="Node" parent="Animation" unique_id=398573101]
+script = ExtResource("3_4h12r")
+metadata/_custom_type_script = "uid://dyfcg0hydxsh7"
+
+[node name="DeviceState" type="Node" parent="Animation" unique_id=945372445]
+unique_name_in_owner = true
+script = ExtResource("2_qmwuk")
+metadata/_custom_type_script = "uid://8636433qp20w"
+
+[node name="AnimationTree" type="AnimationTree" parent="Animation" unique_id=606726670]
+root_node = NodePath("../../house_asset")
+tree_root = SubResource("AnimationNodeStateMachine_crh21")
+advance_expression_base_node = NodePath("../DeviceState")
+anim_player = NodePath("../../house_asset/AnimationPlayer")
+
+[connection signal="body_entered" from="Area3D" to="Animation/AreaStateWatcher" method="body_entered"]
+[connection signal="body_exited" from="Area3D" to="Animation/AreaStateWatcher" method="body_left"]
+[connection signal="child_entered_tree" from="Area3D" to="Animation/AreaStateWatcher" method="body_entered"]
+[connection signal="child_exiting_tree" from="Area3D" to="Animation/AreaStateWatcher" method="body_left"]
+
+[editable path="house_asset"]

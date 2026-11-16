@@ -61,16 +61,14 @@ func _on_tick() -> void:
 		_current_day_tick = 0
 
 func _define_current_state() -> void:
-	if _current_day_tick < _sunrise_tick:
+	if _current_day_tick < _sunrise_tick or _current_day_tick > _midnight_tick:
 		_change_day_time(DayTime.MIDNIGHT)
-	if _current_day_tick > _sunrise_tick and _current_day_tick <= _midday_tick:
-		_change_day_time(DayTime.MIDDAY)
-	if _current_day_tick > _midday_tick and _current_day_tick <= _sunset_tick:
-		_change_day_time(DayTime.SUNSET)
-	if _current_day_tick > _sunset_tick and _current_day_tick <= _midnight_tick:
-		_change_day_time(DayTime.MIDNIGHT)
-	if _current_day_tick >= _sunrise_tick:
+	elif _current_day_tick < _midday_tick:
 		_change_day_time(DayTime.SUNRISE)
+	elif _current_day_tick < _sunset_tick:
+		_change_day_time(DayTime.MIDDAY)
+	else:
+		_change_day_time(DayTime.SUNSET)
 
 func _change_day_time(day_time: DayTime) -> void:
 	if day_time == _current_time_phase:

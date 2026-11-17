@@ -22,6 +22,7 @@ signal day_percentage(percentage: float)
 var _current_time_phase: DayTime = DayTime.NONE
 
 var _current_day_tick: int = 0
+var _loaded_day_tick: int = -1
 var _sunrise_tick: int = 0
 var _midday_tick: int = 0
 var _sunset_tick: int = 0
@@ -32,6 +33,15 @@ func _ready() -> void:
 	var game_ready_system: GameReadySystem = _systems.get_system("GameReadySystem")
 	if not game_ready_system.game_is_ready():
 		await game_ready_system.game_ready
+	_set_initial_time()
+	
+	_on_tick()
+	_current_day_tick -= 1
+
+func _set_initial_time() -> void:
+	if _loaded_day_tick != -1:
+		_current_day_tick = _loaded_day_tick
+		return
 	var parts: int = day_length_ticks / 4
 	_sunrise_tick = parts
 	_midday_tick = parts * 2
@@ -47,9 +57,6 @@ func _ready() -> void:
 			_current_day_tick = _sunset_tick
 		DayTime.MIDNIGHT:
 			_current_day_tick = _midnight_tick
-
-	_on_tick()
-	_current_day_tick -= 1
 		
 func _on_tick() -> void:
 	var percentage: float = float(_current_day_tick) / float(day_length_ticks)
@@ -95,3 +102,4 @@ func game_loaded(save_game: SaveGame) -> void:
 	if save_game.last_save_date_unix_time == 0:
 		return
 	_current_day_tick = save_game.day_time_tick
+	_loaded_day_tick = save_game.day_time_tick

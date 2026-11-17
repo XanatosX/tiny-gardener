@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cfywppt7f3ttk"]
+
+[ext_resource type="PackedScene" uid="uid://bcr07j0nab515" path="res://assets/objects/glass/glass.gltf" id="1_mpt45"]
+
+[node name="GlassStack" type="Node3D" unique_id=659099586]
+
+[node name="BottomGlass" parent="." unique_id=1996289194 instance=ExtResource("1_mpt45")]
+
+[node name="TopGlass" parent="." unique_id=1402397689 instance=ExtResource("1_mpt45")]
+transform = Transform3D(0.977204, 0.031060161, 0.21001813, -0.027303845, 0.9994116, -0.020762278, -0.2105394, 0.014554678, 0.977477, 0, 0.01787493, 0)

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c7l7xyap30phd"]
+
+[ext_resource type="PackedScene" uid="uid://bfqql00v26xjj" path="res://assets/objects/plate/plate.gltf" id="1_bu4jn"]
+[ext_resource type="PackedScene" uid="uid://bcr07j0nab515" path="res://assets/objects/glass/glass.gltf" id="2_rmphg"]
+
+[node name="GlassAndPlate" type="Node3D" unique_id=1276024247]
+
+[node name="Plate" parent="." unique_id=64872643 instance=ExtResource("1_bu4jn")]
+
+[node name="Glass" parent="." unique_id=1996289194 instance=ExtResource("2_rmphg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041689776, 0, -0.04125081)

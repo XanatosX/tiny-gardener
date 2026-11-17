@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://4o20qp4xy3iu"]
+
+[ext_resource type="Script" uid="uid://tyr0r7dbybnw" path="res://entities/game/display_plant_pot/scripts/display_plant_pot.gd" id="1_751vv"]
+[ext_resource type="PackedScene" uid="uid://do2pswcxxun7x" path="res://assets/objects/plant_pot/plant_pot.gltf" id="1_keuaq"]
+
+[node name="DisplayPlantPot" type="Node3D" unique_id=298852348]
+script = ExtResource("1_751vv")
+metadata/_custom_type_script = "uid://tyr0r7dbybnw"
+
+[node name="PlantPot" parent="." unique_id=2016937451 instance=ExtResource("1_keuaq")]
+
+[node name="Plant" type="Sprite3D" parent="." unique_id=224070242]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30416235, 0)
+billboard = 2
+texture_filter = 0

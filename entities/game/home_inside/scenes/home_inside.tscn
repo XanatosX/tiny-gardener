@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://c7l7xyap30phd" path="res://entities/game/table_setting/scenes/glass_and_plate.tscn" id="27_q38k3"]
 [ext_resource type="PackedScene" uid="uid://cfywppt7f3ttk" path="res://entities/game/glass/scenes/glass_stack.tscn" id="27_wix7e"]
 [ext_resource type="Shader" uid="uid://dtlxfe3a6xtqv" path="res://assets/shaders/well_water_shader.gdshader" id="28_108mt"]
-[ext_resource type="PackedScene" uid="uid://d28k7d7wtooie" path="res://assets/objects/octo/octo.gltf" id="31_daap7"]
+[ext_resource type="PackedScene" uid="uid://d28k7d7wtooie" path="res://assets/objects/okto/okto.gltf" id="31_daap7"]
 
 [sub_resource type="Resource" id="Resource_8rpam"]
 script = ExtResource("7_wjk0s")

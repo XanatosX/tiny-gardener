@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nqauu143nc2q"
-path="res://.godot/imported/octo_0.png-4e27f6e984f493a87a38345f71113dbf.ctex"
+uid="uid://blda7u7t0uftb"
+path="res://.godot/imported/okto_0.png-3391f9c76d0fa3cb45e66ec4e199e6c9.ctex"
 metadata={
 "vram_texture": false
 }
@@ -13,8 +13,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/objects/octo/octo_0.png"
-dest_files=["res://.godot/imported/octo_0.png-4e27f6e984f493a87a38345f71113dbf.ctex"]
+source_file="res://assets/objects/okto/okto_0.png"
+dest_files=["res://.godot/imported/okto_0.png-3391f9c76d0fa3cb45e66ec4e199e6c9.ctex"]
 
 [params]
 

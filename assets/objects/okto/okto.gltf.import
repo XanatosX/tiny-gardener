@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d28k7d7wtooie"
-path="res://.godot/imported/octo.gltf-806fdce66142d29862112f3c15ccd977.scn"
+path="res://.godot/imported/okto.gltf-d7635e14520a964f822e29a331f6b6d8.scn"
 
 [deps]
 
-source_file="res://assets/objects/octo/octo.gltf"
-dest_files=["res://.godot/imported/octo.gltf-806fdce66142d29862112f3c15ccd977.scn"]
+source_file="res://assets/objects/okto/okto.gltf"
+dest_files=["res://.godot/imported/okto.gltf-d7635e14520a964f822e29a331f6b6d8.scn"]
 
 [params]
 

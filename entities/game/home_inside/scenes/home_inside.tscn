@@ -378,7 +378,7 @@ transform = Transform3D(-0.71221244, 0.35912442, -0.60314435, 0.4502382, 0.89290
 [node name="Plate2" parent="Kitchen" unique_id=1445202555 instance=ExtResource("11_kfafr")]
 transform = Transform3D(-0.73711, 0.30261433, -0.60422975, 0.38054445, 0.9247621, -0.0010870985, 0.5584397, -0.23073752, -0.79680955, 0.60916674, 0.17236231, 0.10136807)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kitchen" unique_id=1482730863]
+[node name="Water" type="MeshInstance3D" parent="Kitchen" unique_id=1482730863]
 transform = Transform3D(0.06798109, 0, 8.881784e-16, 0, 1, 0, 0, 0, 0.09809839, 0.6305841, 0.17889765, 0.05882895)
 mesh = SubResource("PlaneMesh_crh21")
 surface_material_override/0 = SubResource("ShaderMaterial_c5ng2")

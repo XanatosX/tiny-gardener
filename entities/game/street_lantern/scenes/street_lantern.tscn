@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://drx266d647414"]
+
+[ext_resource type="PackedScene" uid="uid://cwb6h38wlda4p" path="res://assets/objects/streets/street_light/europen_street_light.gltf" id="1_h1u6a"]
+[ext_resource type="Script" uid="uid://bvfx31as3cxbp" path="res://entities/shared/special_objects/nodes/condition_controlled_spot_light.gd" id="2_mpyoo"]
+[ext_resource type="Resource" uid="uid://d3ehj8go1sp6o" path="res://assets/resources/light_conditions/only_night.tres" id="3_1n588"]
+
+[node name="StreetLantern" type="Node3D" unique_id=1696164621]
+
+[node name="Lantern" parent="." unique_id=796015042 instance=ExtResource("1_h1u6a")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lantern" unique_id=104289977]
+transform = Transform3D(1, 0, 0, 0, -0.21729796, 0.97610533, 0, -0.97610533, -0.21729796, 0, 0.8854416, 0.047802538)
+light_color = Color(0.77162385, 0.82454467, 0.99999815, 1)
+light_energy = 1.658
+light_volumetric_fog_energy = 1.584
+distance_fade_enabled = true
+spot_range = 5.5
+script = ExtResource("2_mpyoo")
+light_condition = ExtResource("3_1n588")
+metadata/_custom_type_script = "uid://bvfx31as3cxbp"

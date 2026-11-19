@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://d14kb8oyclh0m" path="res://entities/shared/special_objects/camera_facing_sprite.gd" id="3_wvloa"]
 [ext_resource type="AudioStream" uid="uid://3vani0rvsqw5" path="res://assets/audio/effects/kenney_nl/footstep09.ogg" id="4_b2jui"]
 [ext_resource type="Script" uid="uid://bvfx31as3cxbp" path="res://entities/shared/special_objects/nodes/condition_controlled_spot_light.gd" id="5_qt3jn"]
-[ext_resource type="Script" uid="uid://ob5aetmt0jsf" path="res://entities/shared/special_objects/light_conditions/day_night_condition.gd" id="6_akhoc"]
+[ext_resource type="Resource" uid="uid://d3ehj8go1sp6o" path="res://assets/resources/light_conditions/only_night.tres" id="6_qt3jn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8rpam"]
 size = Vector3(0.15, 0.25, 0.15)
@@ -122,11 +122,6 @@ states/walk/node = SubResource("AnimationNodeAnimation_b2jui")
 states/walk/position = Vector2(366, 190)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_b2jui"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_vl0wi"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_wvloa")]
 
-[sub_resource type="Resource" id="Resource_8rpam"]
-script = ExtResource("6_akhoc")
-active_day_times = 12
-metadata/_custom_type_script = "uid://ob5aetmt0jsf"
-
 [node name="Player" type="CharacterBody3D" unique_id=1490817954]
 script = ExtResource("1_4xtdw")
 metadata/_custom_type_script = "uid://0vajnty1qsi4"
@@ -171,7 +166,7 @@ light_specular = 1.0
 shadow_bias = 0.1
 spot_angle = 17.371983
 script = ExtResource("5_qt3jn")
-light_condition = SubResource("Resource_8rpam")
+light_condition = ExtResource("6_qt3jn")
 metadata/_custom_type_script = "uid://bvfx31as3cxbp"
 
 [node name="CameraStick" type="Node3D" parent="CameraPivot" unique_id=763818205]

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://btvwb20g08py5"]
+
+[ext_resource type="PackedScene" uid="uid://drx266d647414" path="res://entities/game/street_lantern/scenes/street_lantern.tscn" id="1_mow34"]
+
+[node name="StreetDouble" type="Node3D" unique_id=1717250551]
+
+[node name="RightStreetLight" parent="." unique_id=1696164621 instance=ExtResource("1_mow34")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.3695107, 0, 0.0002629757)
+
+[node name="LeftStreetLight" parent="." unique_id=603232170 instance=ExtResource("1_mow34")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.3677568, 0, 0.00026226044)

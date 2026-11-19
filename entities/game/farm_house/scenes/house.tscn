@@ -4,13 +4,8 @@
 [ext_resource type="Script" uid="uid://ckaqcyj8scgrl" path="res://entities/shared/special_objects/nodes/condition_controlled_area_light.gd" id="1_tjwpt"]
 [ext_resource type="Material" uid="uid://b0wamu0lf5qoy" path="res://assets/objects/simple_farm_house/material_0_reflective.tres" id="2_4h12r"]
 [ext_resource type="Script" uid="uid://8636433qp20w" path="res://entities/shared/special_objects/device_state.gd" id="2_qmwuk"]
-[ext_resource type="Script" uid="uid://ob5aetmt0jsf" path="res://entities/shared/special_objects/light_conditions/day_night_condition.gd" id="2_ujx62"]
+[ext_resource type="Resource" uid="uid://d3ehj8go1sp6o" path="res://assets/resources/light_conditions/only_night.tres" id="2_tjwpt"]
 [ext_resource type="Script" uid="uid://dyfcg0hydxsh7" path="res://entities/shared/special_objects/state_watcher/area_state_watcher.gd" id="3_4h12r"]
-
-[sub_resource type="Resource" id="Resource_8rpam"]
-script = ExtResource("2_ujx62")
-active_day_times = 12
-metadata/_custom_type_script = "uid://ob5aetmt0jsf"
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8rpam"]
 radius = 0.6908748
@@ -61,7 +56,7 @@ light_energy = 1.442
 light_volumetric_fog_energy = 1.591
 area_size = Vector2(0.24680758, 0.21796954)
 script = ExtResource("1_tjwpt")
-light_condition = SubResource("Resource_8rpam")
+light_condition = ExtResource("2_tjwpt")
 metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
 
 [node name="FrontRight" type="AreaLight3D" parent="Lights" unique_id=1839932592]
@@ -71,7 +66,7 @@ light_energy = 1.442
 light_volumetric_fog_energy = 1.591
 area_size = Vector2(0.24680758, 0.21796954)
 script = ExtResource("1_tjwpt")
-light_condition = SubResource("Resource_8rpam")
+light_condition = ExtResource("2_tjwpt")
 metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
 
 [node name="FrontUp" type="AreaLight3D" parent="Lights" unique_id=1602871402]
@@ -81,7 +76,7 @@ light_energy = 1.442
 light_volumetric_fog_energy = 1.591
 area_size = Vector2(0.24680758, 0.15218925)
 script = ExtResource("1_tjwpt")
-light_condition = SubResource("Resource_8rpam")
+light_condition = ExtResource("2_tjwpt")
 metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
 
 [node name="LeftSide1" type="AreaLight3D" parent="Lights" unique_id=2019808576]
@@ -91,7 +86,7 @@ light_energy = 1.442
 light_volumetric_fog_energy = 1.591
 area_size = Vector2(0.24680758, 0.21796954)
 script = ExtResource("1_tjwpt")
-light_condition = SubResource("Resource_8rpam")
+light_condition = ExtResource("2_tjwpt")
 metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
 
 [node name="LeftSide2" type="AreaLight3D" parent="Lights" unique_id=748143129]
@@ -101,7 +96,7 @@ light_energy = 1.442
 light_volumetric_fog_energy = 1.591
 area_size = Vector2(0.24680758, 0.21796954)
 script = ExtResource("1_tjwpt")
-light_condition = SubResource("Resource_8rpam")
+light_condition = ExtResource("2_tjwpt")
 metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
 
 [node name="RightSide1" type="AreaLight3D" parent="Lights" unique_id=1860132886]
@@ -111,7 +106,7 @@ light_energy = 1.442
 light_volumetric_fog_energy = 1.591
 area_size = Vector2(0.24680758, 0.21796954)
 script = ExtResource("1_tjwpt")
-light_condition = SubResource("Resource_8rpam")
+light_condition = ExtResource("2_tjwpt")
 metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
 
 [node name="RightSide2" type="AreaLight3D" parent="Lights" unique_id=1757807383]
@@ -121,30 +116,30 @@ light_energy = 1.442
 light_volumetric_fog_energy = 1.591
 area_size = Vector2(0.24680758, 0.21796954)
 script = ExtResource("1_tjwpt")
-light_condition = SubResource("Resource_8rpam")
+light_condition = ExtResource("2_tjwpt")
 metadata/_custom_type_script = "uid://ckaqcyj8scgrl"
 
 [node name="house_asset" parent="." unique_id=1423029766 instance=ExtResource("1_eqjm4")]
 
-[node name="glass" parent="house_asset/root/windows/window1/inside" parent_id_path=PackedInt32Array(1423029766, 1771085121) index="0" unique_id=524433758]
+[node name="glass" parent="house_asset/root/windows/window1/inside" parent_id_path=PackedInt32Array(1423029766, 2068189618) index="0" unique_id=669448478]
 surface_material_override/0 = ExtResource("2_4h12r")
 
-[node name="glass2" parent="house_asset/root/windows/window2/inside2" parent_id_path=PackedInt32Array(1423029766, 1360096921) index="0" unique_id=1653660457]
+[node name="glass2" parent="house_asset/root/windows/window2/inside2" parent_id_path=PackedInt32Array(1423029766, 2130743914) index="0" unique_id=976598982]
 surface_material_override/0 = ExtResource("2_4h12r")
 
-[node name="glass3" parent="house_asset/root/windows/window3/inside3" parent_id_path=PackedInt32Array(1423029766, 212178577) index="0" unique_id=1455587883]
+[node name="glass3" parent="house_asset/root/windows/window3/inside3" parent_id_path=PackedInt32Array(1423029766, 805144974) index="0" unique_id=1408555385]
 surface_material_override/0 = ExtResource("2_4h12r")
 
-[node name="glass4" parent="house_asset/root/windows/window4/inside4" parent_id_path=PackedInt32Array(1423029766, 2011872746) index="0" unique_id=651294931]
+[node name="glass4" parent="house_asset/root/windows/window4/inside4" parent_id_path=PackedInt32Array(1423029766, 1235694738) index="0" unique_id=721320836]
 surface_material_override/0 = ExtResource("2_4h12r")
 
-[node name="glass5" parent="house_asset/root/windows/window5/inside5" parent_id_path=PackedInt32Array(1423029766, 1198063365) index="0" unique_id=521570599]
+[node name="glass5" parent="house_asset/root/windows/window5/inside5" parent_id_path=PackedInt32Array(1423029766, 1000188215) index="0" unique_id=713210843]
 surface_material_override/0 = ExtResource("2_4h12r")
 
-[node name="glass6" parent="house_asset/root/windows/window6/inside6" parent_id_path=PackedInt32Array(1423029766, 783981910) index="0" unique_id=1091919469]
+[node name="glass6" parent="house_asset/root/windows/window6/inside6" parent_id_path=PackedInt32Array(1423029766, 1656840407) index="0" unique_id=1234454454]
 surface_material_override/0 = ExtResource("2_4h12r")
 
-[node name="glass7" parent="house_asset/root/windows/window7/inside7" parent_id_path=PackedInt32Array(1423029766, 982424664) index="0" unique_id=685002172]
+[node name="glass7" parent="house_asset/root/windows/window7/inside7" parent_id_path=PackedInt32Array(1423029766, 1167020572) index="0" unique_id=2031578434]
 surface_material_override/0 = ExtResource("2_4h12r")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1498222139]

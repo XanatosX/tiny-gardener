@@ -52,8 +52,8 @@ func play_situation(situation: Situation, situation_objects: Array[SituationObje
 	for requirement: Situation in situation.requirements:
 		if not _game_sequences.situation_seen(requirement):
 			return
-			
-	_game_sequences.add_known_situations(situation)
+	if situation.can_be_completed:
+		_game_sequences.add_known_situations(situation)
 	for step: SituationStep in situation.situation_steps:
 		await step.execute(_situation_finished, _systems, _main_game, situation_objects)
 	

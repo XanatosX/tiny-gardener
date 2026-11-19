@@ -29,6 +29,7 @@ metadata/_custom_type_script = "uid://bhjycglythlp8"
 
 [resource]
 script = ExtResource("1_knrh3")
+can_be_completed = false
 requirements = Array[ExtResource("1_knrh3")]([ExtResource("2_qqe5y")])
 situation_steps = Array[ExtResource("2_3tymc")]([SubResource("Resource_qqe5y"), SubResource("Resource_edyek"), SubResource("Resource_c5ng2"), SubResource("Resource_8sinn")])
 metadata/_custom_type_script = "uid://cf0kw8sdb3t6h"

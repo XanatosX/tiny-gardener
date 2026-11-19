@@ -95,6 +95,9 @@ func _change_day_time(day_time: DayTime) -> void:
 			midnight.emit()
 			day_time_changed.emit(DayTime.MIDNIGHT)
 
+func get_current_day_time() -> DayTime:
+	return _current_time_phase
+
 func game_saving(save_game: SaveGame) -> void:
 	save_game.day_time_tick = _current_day_tick
 

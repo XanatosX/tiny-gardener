@@ -12,7 +12,8 @@ func _ready() -> void:
 
 	light_condition.init(day_time_system)
 	day_time_system.day_time_changed.connect(_day_time_changed)
-	visible = false
+
+	_day_time_changed(day_time_system.get_current_day_time())
 
 func _day_time_changed(day_time: DayNightCycleSystem.DayTime) -> void:
 	if not is_node_ready():

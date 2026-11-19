@@ -39,14 +39,15 @@ func _ready() -> void:
 	_current_day_tick -= 1
 
 func _set_initial_time() -> void:
-	if _loaded_day_tick != -1:
-		_current_day_tick = _loaded_day_tick
-		return
 	var parts: int = day_length_ticks / 4
 	_sunrise_tick = parts
 	_midday_tick = parts * 2
 	_sunset_tick = parts * 3
 	_midnight_tick = parts * 4
+
+	if _loaded_day_tick != -1:
+		_current_day_tick = _loaded_day_tick
+		return
 
 	match time_start:
 		DayTime.SUNRISE: 
@@ -80,6 +81,10 @@ func _define_current_state() -> void:
 func _change_day_time(day_time: DayTime) -> void:
 	if day_time == _current_time_phase:
 		return
+	print(
+        "Tick=", _current_day_tick,
+        "  Phase=", DayTime.keys()[day_time]
+    )
 	_current_time_phase = day_time
 	match day_time:
 		DayTime.SUNRISE: 

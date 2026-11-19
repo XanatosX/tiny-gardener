@@ -795,7 +795,6 @@ metadata/_custom_type_script = "uid://cmvgl4aykqqgr"
 [connection signal="dialog_started" from="Systems/DialogSystem" to="UI/GameUi" method="dialog_started"]
 [connection signal="dialog_started" from="Systems/DialogSystem" to="Menus/ShopUi" method="silent_close"]
 [connection signal="open_handbook_page" from="Systems/HandbookSystem" to="Menus/UiHandbook" method="open_specific_handbook_entry"]
-[connection signal="movement_state_changed" from="PixellatedLevelContainer/SubViewport/World/Player" to="PixellatedLevelContainer/SubViewport/World/Player/CameraPivot/CameraStick/Camera3D" method="movement_state_changed"]
 [connection signal="triggered" from="PixellatedLevelContainer/SubViewport/World/HomeInside/ShopTrigger" to="Menus/ShopUi" method="animate_in"]
 [connection signal="trigger" from="PixellatedLevelContainer/SubViewport/World/Situations/GameEndSituation/InventoryUpdatedTrigger" to="PixellatedLevelContainer/SubViewport/World/Situations/GameEndSituation" method="trigger_situation"]
 [connection signal="trigger_action" from="UI/GameUi" to="Systems/InteractionSystem" method="trigger_interaction"]

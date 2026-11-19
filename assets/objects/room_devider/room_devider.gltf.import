@@ -40,6 +40,13 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={
+"materials": {
+"material_0": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/objects/room_devider/material_0.tres",
+"use_external/path": "uid://v3e5o6fr5mil"
+}
+},
 "nodes": {
 "PATH:devider/row/cube1/down": {
 "generate/physics": true

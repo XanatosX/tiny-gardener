@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://drx266d647414"]
 
 [ext_resource type="PackedScene" uid="uid://cwb6h38wlda4p" path="res://assets/objects/streets/street_light/europen_street_light.gltf" id="1_h1u6a"]
-[ext_resource type="Script" uid="uid://bvfx31as3cxbp" path="res://entities/shared/special_objects/nodes/condition_controlled_spot_light.gd" id="2_mpyoo"]
+[ext_resource type="Script" uid="uid://bvfx31as3cxbp" path="res://entities/shared/special_objects/condition_controlled_lights/condition_controlled_spot_light.gd" id="2_mpyoo"]
 [ext_resource type="Resource" uid="uid://d3ehj8go1sp6o" path="res://assets/resources/light_conditions/only_night.tres" id="3_1n588"]
+[ext_resource type="Script" uid="uid://cgol53fj4gq1j" path="res://entities/shared/custom_resources/light_state_modifier/randomized_on_off_modifier.gd" id="4_cdqch"]
+
+[sub_resource type="Resource" id="Resource_1n588"]
+script = ExtResource("4_cdqch")
+min_on_off_state_randomizer = 0.5
+max_on_off_state_randomizer = 2.0
+metadata/_custom_type_script = "uid://cgol53fj4gq1j"
 
 [node name="StreetLantern" type="Node3D" unique_id=1696164621]
 
@@ -17,4 +24,5 @@ distance_fade_enabled = true
 spot_range = 5.5
 script = ExtResource("2_mpyoo")
 light_condition = ExtResource("3_1n588")
+light_modifier = SubResource("Resource_1n588")
 metadata/_custom_type_script = "uid://bvfx31as3cxbp"

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DayNightCondition" format=3 uid="uid://d3ehj8go1sp6o"]
 
-[ext_resource type="Script" uid="uid://ob5aetmt0jsf" path="res://entities/shared/special_objects/light_conditions/day_night_condition.gd" id="1_fx5an"]
+[ext_resource type="Script" uid="uid://ob5aetmt0jsf" path="res://entities/shared/custom_resources/light_conditions/day_night_condition.gd" id="1_fx5an"]
 
 [resource]
 script = ExtResource("1_fx5an")

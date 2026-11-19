@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dqarlxcn5em3h" path="res://entities/game/camera/scripts/moveable_camera.gd" id="3_65c4w"]
 [ext_resource type="Script" uid="uid://d14kb8oyclh0m" path="res://entities/shared/special_objects/camera_facing_sprite.gd" id="3_wvloa"]
 [ext_resource type="AudioStream" uid="uid://3vani0rvsqw5" path="res://assets/audio/effects/kenney_nl/footstep09.ogg" id="4_b2jui"]
-[ext_resource type="Script" uid="uid://bvfx31as3cxbp" path="res://entities/shared/special_objects/nodes/condition_controlled_spot_light.gd" id="5_qt3jn"]
+[ext_resource type="Script" uid="uid://bvfx31as3cxbp" path="res://entities/shared/special_objects/condition_controlled_lights/condition_controlled_spot_light.gd" id="5_qt3jn"]
 [ext_resource type="Resource" uid="uid://d3ehj8go1sp6o" path="res://assets/resources/light_conditions/only_night.tres" id="6_qt3jn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8rpam"]

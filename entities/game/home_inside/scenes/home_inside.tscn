@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cswt5jtfknkh" path="res://assets/objects/room_devider/scenes/high_devider.tscn" id="4_s671j"]
 [ext_resource type="Script" uid="uid://koykwrgjwx1i" path="res://entities/shared/special_objects/nodes/condition_controlled_omni_light.gd" id="6_bifp6"]
 [ext_resource type="Resource" uid="uid://qd15q45qhxpn" path="res://assets/resources/translations/door_farm.tres" id="7_fqa7a"]
-[ext_resource type="Script" uid="uid://ob5aetmt0jsf" path="res://entities/shared/special_objects/light_conditions/day_night_condition.gd" id="7_wjk0s"]
 [ext_resource type="Resource" uid="uid://b066oswljguvn" path="res://assets/resources/translations/door_house.tres" id="8_eoy26"]
+[ext_resource type="Resource" uid="uid://d3ehj8go1sp6o" path="res://assets/resources/light_conditions/only_night.tres" id="8_o7el5"]
 [ext_resource type="PackedScene" uid="uid://4o20qp4xy3iu" path="res://entities/game/display_plant_pot/scenes/display_plant_pot.tscn" id="9_108mt"]
 [ext_resource type="Texture2D" uid="uid://bvyt3hvfhxvcn" path="res://assets/atlas/farm_icon.tres" id="9_eoy26"]
 [ext_resource type="PackedScene" uid="uid://di70prv3onnf2" path="res://assets/objects/desk/scenes/large_desk.tscn" id="10_kfafr"]
@@ -32,16 +32,6 @@
 [ext_resource type="PackedScene" uid="uid://cfywppt7f3ttk" path="res://entities/game/glass/scenes/glass_stack.tscn" id="27_wix7e"]
 [ext_resource type="Shader" uid="uid://dtlxfe3a6xtqv" path="res://assets/shaders/well_water_shader.gdshader" id="28_108mt"]
 [ext_resource type="PackedScene" uid="uid://d28k7d7wtooie" path="res://assets/objects/okto/okto.gltf" id="31_daap7"]
-
-[sub_resource type="Resource" id="Resource_8rpam"]
-script = ExtResource("7_wjk0s")
-active_day_times = 12
-metadata/_custom_type_script = "uid://ob5aetmt0jsf"
-
-[sub_resource type="Resource" id="Resource_kpq1g"]
-script = ExtResource("7_wjk0s")
-active_day_times = 12
-metadata/_custom_type_script = "uid://ob5aetmt0jsf"
 
 [sub_resource type="BoxMesh" id="BoxMesh_8rpam"]
 size = Vector3(0.2, 0.4, 3)
@@ -182,7 +172,7 @@ light_energy = 1.814
 shadow_enabled = true
 omni_range = 2.8819711
 script = ExtResource("6_bifp6")
-light_condition = SubResource("Resource_8rpam")
+light_condition = ExtResource("8_o7el5")
 metadata/_custom_type_script = "uid://koykwrgjwx1i"
 
 [node name="NightLight" type="OmniLight3D" parent="Interior/Lights" unique_id=223571010]
@@ -192,7 +182,7 @@ light_energy = 0.322
 shadow_enabled = true
 omni_range = 0.53010595
 script = ExtResource("6_bifp6")
-light_condition = SubResource("Resource_kpq1g")
+light_condition = ExtResource("8_o7el5")
 metadata/_custom_type_script = "uid://koykwrgjwx1i"
 
 [node name="Plants" type="Node3D" parent="Interior" unique_id=52894599]

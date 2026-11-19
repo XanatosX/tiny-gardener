@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ctoifvq747g4y" path="res://assets/objects/bed/bed.gltf" id="3_gkfgb"]
 [ext_resource type="PackedScene" uid="uid://bcr07j0nab515" path="res://assets/objects/glass/glass.gltf" id="3_mlqlh"]
 [ext_resource type="PackedScene" uid="uid://cswt5jtfknkh" path="res://assets/objects/room_devider/scenes/high_devider.tscn" id="4_s671j"]
-[ext_resource type="Script" uid="uid://koykwrgjwx1i" path="res://entities/shared/special_objects/nodes/condition_controlled_omni_light.gd" id="6_bifp6"]
+[ext_resource type="Script" uid="uid://koykwrgjwx1i" path="res://entities/shared/special_objects/condition_controlled_lights/condition_controlled_omni_light.gd" id="6_bifp6"]
 [ext_resource type="Resource" uid="uid://qd15q45qhxpn" path="res://assets/resources/translations/door_farm.tres" id="7_fqa7a"]
 [ext_resource type="Resource" uid="uid://b066oswljguvn" path="res://assets/resources/translations/door_house.tres" id="8_eoy26"]
 [ext_resource type="Resource" uid="uid://d3ehj8go1sp6o" path="res://assets/resources/light_conditions/only_night.tres" id="8_o7el5"]

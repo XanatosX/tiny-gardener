@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://j08ygksey722"]
 
 [ext_resource type="PackedScene" uid="uid://v7fxsjugagva" path="res://assets/objects/simple_farm_house/simple_farm_house.gltf" id="1_eqjm4"]
-[ext_resource type="Script" uid="uid://ckaqcyj8scgrl" path="res://entities/shared/special_objects/nodes/condition_controlled_area_light.gd" id="1_tjwpt"]
+[ext_resource type="Script" uid="uid://ckaqcyj8scgrl" path="res://entities/shared/special_objects/condition_controlled_lights/condition_controlled_area_light.gd" id="1_tjwpt"]
 [ext_resource type="Material" uid="uid://b0wamu0lf5qoy" path="res://assets/objects/simple_farm_house/material_0_reflective.tres" id="2_4h12r"]
 [ext_resource type="Script" uid="uid://8636433qp20w" path="res://entities/shared/special_objects/device_state.gd" id="2_qmwuk"]
 [ext_resource type="Resource" uid="uid://d3ehj8go1sp6o" path="res://assets/resources/light_conditions/only_night.tres" id="2_tjwpt"]

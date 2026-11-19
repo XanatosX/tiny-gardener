@@ -1,8 +1,11 @@
-class_name ConditionControlledSpotLight extends SpotLight3D
+class_name ConditionControlledOmniLight extends OmniLight3D
 
 @export var light_condition: LightCondition = null
+@export var light_modifier: LightStateModifier
 
 @onready var _systems: Systems = $"/root/MainGame/%Systems"
+
+var _logic: ConditionControlledLightLogic = ConditionControlledLightLogic.new()
 
 func _ready() -> void:
 	assert(_systems != null, "Missing system node")
@@ -10,12 +13,13 @@ func _ready() -> void:
 	var day_time_system: DayNightCycleSystem = _systems.get_system("DayNightCycleSystem")
 	assert(day_time_system != null, "Missing day night system")
 
-	light_condition.init(day_time_system)
-	day_time_system.day_time_changed.connect(_day_time_changed)
+	_logic.owner = self
+	_logic.light_condition = light_condition
+	_logic.light_modifier = light_modifier
+	_logic.init(day_time_system)
 
-	_day_time_changed(day_time_system.get_current_day_time())
+func _process(_delta: float) -> void: 
+	_logic._process()
 
 func _day_time_changed(day_time: DayNightCycleSystem.DayTime) -> void:
-	if not is_node_ready():
-		await ready
-	visible = light_condition.is_active(day_time)
+	_logic._day_time_changed(day_time)

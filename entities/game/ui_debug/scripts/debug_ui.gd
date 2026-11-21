@@ -6,6 +6,8 @@ class_name DebugUi extends FrostedGlassControlPanel
 @export var display_rule: UiDisplayRule = null
 
 func _ready() -> void:
+	if Engine.is_editor_hint():
+		return
 	visible = visible_at_start
 	if display_rule != null and not display_rule.should_be_visible():
 		visible = false

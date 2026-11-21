@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://c0tbb8km33sgp" path="res://assets/atlas/move_icon.tres" id="16_fkcc1"]
 [ext_resource type="Texture2D" uid="uid://0bkyfxdm577g" path="res://assets/atlas/planting_icon.tres" id="17_cgicq"]
 [ext_resource type="Texture2D" uid="uid://d2dufwqc0056g" path="res://assets/atlas/fertilizer_icon.tres" id="18_kdse6"]
+[ext_resource type="Resource" uid="uid://qp38gy8hj4v7" path="res://assets/resources/translations/handbook/collectables_group.tres" id="18_oyds2"]
 
 [sub_resource type="Resource" id="Resource_bsf2r"]
 script = ExtResource("4_lpl6t")
@@ -76,7 +77,8 @@ translations = Dictionary[int, ExtResource("2_r6tv0")]({
 3: ExtResource("12_rnxse"),
 4: ExtResource("13_22llt"),
 5: ExtResource("14_wbobc"),
-6: ExtResource("4_l6xx0")
+6: ExtResource("4_l6xx0"),
+7: ExtResource("18_oyds2")
 })
 group_icons = Dictionary[int, Texture2D]({
 0: ExtResource("16_fkcc1"),

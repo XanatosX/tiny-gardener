@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TextTranslation" format=3 uid="uid://b3nksvc0pa6sw"]
+
+[ext_resource type="Script" uid="uid://bfvieosuddh6k" path="res://addons/resource_translation_plugin/resources/translation_resource.gd" id="1_dpd36"]
+
+[resource]
+script = ExtResource("1_dpd36")
+key = "COLLECTABLE_OKTO_NAME"
+metadata/_custom_type_script = "uid://bfvieosuddh6k"

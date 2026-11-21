@@ -2,6 +2,8 @@ class_name HandbookEntries extends Tree
 
 const base_path: String = "res://assets/resources/handbook"
 
+signal entries_validated()
+
 @export var handbook_ui: UiHandbook
 
 @export_group("Scanning")
@@ -164,6 +166,8 @@ func select_specific_entry(entry: HandbookEntryIdentifier) -> void:
 	select_specific_entry_by_key(entry.key)
 
 func select_specific_entry_by_key(key: String) -> void:
+	if _validate_handbook_required:
+		await entries_validated
 	if _selection_lookup.has(key):
 		_collapse_all()
 		var selection: TreeItem = _selection_lookup[key]
@@ -193,6 +197,7 @@ func _visibility_has_changed() -> void:
 		return
 	_validate_handbook_required = false
 	_rebuild_tree()
+	entries_validated.emit()
 
 func _rebuild_tree() -> void:
 	_revalidate_all_entries(_tree_root)

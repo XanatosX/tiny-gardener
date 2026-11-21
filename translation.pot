@@ -96,6 +96,10 @@ msgid "GAME_VERSION"
 msgstr ""
 
 #: entities/game/ui_debug/scenes/debug_ui.tscn
+msgid "GAME_VERSION_NUMBER"
+msgstr ""
+
+#: entities/game/ui_debug/scenes/debug_ui.tscn
 msgid "FPS"
 msgstr ""
 
@@ -105,6 +109,10 @@ msgstr ""
 
 #: entities/game/ui_debug/scenes/debug_ui.tscn
 msgid "V_SYNC_LABEL"
+msgstr ""
+
+#: entities/game/ui_debug/scenes/debug_ui.tscn
+msgid "VSYNC_MODE"
 msgstr ""
 
 msgid "tiny-gardener"
@@ -176,6 +184,14 @@ msgstr ""
 #. TRANSLATORS: Requires a %s placeholder to work correctly
 #: assets/resources/translations/version_string.tres
 msgid "VERSION"
+msgstr ""
+
+#: assets/resources/translations/actions/collect_collectable.tres
+msgid "ACTION_COLLECT_NAME"
+msgstr ""
+
+#: assets/resources/translations/actions/collect_collectable_description.tres
+msgid "ACTION_COLLECT_DESCRIPTION"
 msgstr ""
 
 #: assets/resources/translations/actions/fertilize_action_description.tres
@@ -354,6 +370,10 @@ msgstr ""
 msgid "BASIC_PLANT_EXPLANATION"
 msgstr ""
 
+#: assets/resources/translations/handbook/collectables_group.tres
+msgid "COLLECTABLE"
+msgstr ""
+
 #: assets/resources/translations/handbook/drops_group.tres
 msgid "DROPS_GROUP"
 msgstr ""
@@ -448,6 +468,18 @@ msgstr ""
 
 #: assets/resources/translations/items/fertilizer_name.tres
 msgid "FERTILIZER_NAME"
+msgstr ""
+
+#: assets/resources/translations/items/okto_description.tres
+msgid "COLLECTABLE_OKTO_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/items/okto_long_description.tres
+msgid "COLLECTABLE_OKTO_DESCRIPTION_LONG"
+msgstr ""
+
+#: assets/resources/translations/items/okto_name.tres
+msgid "COLLECTABLE_OKTO_NAME"
 msgstr ""
 
 #: assets/resources/translations/items/old_water_can_description.tres

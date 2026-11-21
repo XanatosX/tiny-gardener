@@ -43,9 +43,9 @@ func _console_add_money(amount: float) -> void:
 	change_money(amount)
 
 func add_item(type: Item, amount: int) -> void:
-	items_updated.emit()
 	game_data.add_item(type, amount)
 	item_amount_changed.emit(type, amount)
+	items_updated.emit()
 
 func use_item(type: Item, amount: int = 1) -> bool:
 	if get_item_count(type) <= 0:

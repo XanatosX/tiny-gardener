@@ -10,6 +10,7 @@ enum Group
 	DROPS,
 	PLANTS,
 	UPGRADES,
+	COLLECTABLE
 }
 
 @export var identifier: HandbookEntryIdentifier

@@ -1,6 +1,5 @@
 class_name UiDynamicActionTemplate extends UIActionTemplate
 
-
 signal sub_mode_active()
 signal sub_mode_inactive()
 

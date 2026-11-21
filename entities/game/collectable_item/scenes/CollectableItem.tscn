@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dg3ibdnvqen2b"]
+
+[ext_resource type="Script" uid="uid://dkpt3k8dkvmj3" path="res://entities/shared/object_interaction/object_interaction.gd" id="1_7cjol"]
+[ext_resource type="Script" uid="uid://bog1jrrd3a4ee" path="res://entities/game/collectable_item/scripts/collectable_item.gd" id="1_xdjmv"]
+[ext_resource type="Script" uid="uid://dgo34mflxca2j" path="res://entities/shared/object_interaction/action.gd" id="3_n5wc6"]
+[ext_resource type="Resource" uid="uid://dhibsg6l2xg8u" path="res://assets/resources/translations/actions/collect_collectable_description.tres" id="4_q4ryi"]
+[ext_resource type="Resource" uid="uid://bl0ax2oxe8ust" path="res://assets/resources/translations/actions/collect_collectable.tres" id="5_t2pep"]
+[ext_resource type="Texture2D" uid="uid://cy1ntxgunxn5n" path="res://assets/atlas/grab_action.tres" id="6_n5wc6"]
+[ext_resource type="Script" uid="uid://dfnnhrd8rwd4a" path="res://entities/shared/object_interaction/actions/collect_collectable_action.gd" id="7_wwixw"]
+
+[sub_resource type="Resource" id="Resource_8rpam"]
+script = ExtResource("7_wwixw")
+action_name = ExtResource("5_t2pep")
+action_description = ExtResource("4_q4ryi")
+icon = ExtResource("6_n5wc6")
+metadata/_custom_type_script = "uid://dfnnhrd8rwd4a"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8rpam"]
+radius = 0.22000968
+
+[node name="CollectableItem" type="Node3D" unique_id=325718297]
+script = ExtResource("1_xdjmv")
+metadata/_custom_type_script = "uid://bog1jrrd3a4ee"
+
+[node name="ObjectInteraction" type="Node" parent="." unique_id=629169941 node_paths=PackedStringArray("controlled_entity", "interaction_area")]
+script = ExtResource("1_7cjol")
+controlled_entity = NodePath("..")
+interaction_area = NodePath("../Area3D")
+deep_copy_actions = true
+actions = Array[ExtResource("3_n5wc6")]([SubResource("Resource_8rpam")])
+metadata/_custom_type_script = "uid://dkpt3k8dkvmj3"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=342593923]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=781985270]
+shape = SubResource("SphereShape3D_8rpam")

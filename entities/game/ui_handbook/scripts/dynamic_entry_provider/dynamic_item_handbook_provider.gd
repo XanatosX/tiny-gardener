@@ -9,7 +9,7 @@ func get_dynamic_entries() -> Dictionary[HandbookEntry.Group, Array]:
 	for item: Item in items:
 		var entry: ItemHandbookEntry = ItemHandbookEntry.new()
 		entry.identifier = HandbookEntryIdentifier.new()
-		entry.identifier.key = "%s_%s" % [item.display_name.key, Item.QUALITY.keys()[item.quality]]
+		entry.identifier.key = item.get_item_handbook_key()
 		entry.set_display_name_overwrite(item.get_display_name())
 		entry.icon = item.icon
 		entry.group = _get_group_of_item(item)
@@ -33,6 +33,8 @@ func _get_group_of_item(item: Item) -> HandbookEntry.Group:
 		return_group = HandbookEntry.Group.DROPS
 	if item is Fertilizer:
 		return_group = HandbookEntry.Group.FERTILIZER
+	if item is CollectableItem:
+		return_group = HandbookEntry.Group.COLLECTABLE
 
 	return return_group
 

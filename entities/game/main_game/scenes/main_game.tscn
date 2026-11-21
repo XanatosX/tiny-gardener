@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://rt7cy5pojcua" path="res://assets/atlas/house_icon.tres" id="28_s3rff"]
 [ext_resource type="Script" uid="uid://2udybjys5ehv" path="res://entities/game/street_lantern/scripts/lantern_generator.gd" id="30_ky8g2"]
 [ext_resource type="PackedScene" uid="uid://btvwb20g08py5" path="res://entities/game/street_lantern/scenes/street_double_lantern.tscn" id="31_lxnwm"]
+[ext_resource type="PackedScene" uid="uid://dctqy6sds8cd5" path="res://assets/objects/streets/city_street_speed_sign/european_speed_sign.gltf" id="32_d0hkx"]
 [ext_resource type="PackedScene" uid="uid://cc0v2qp0gqmxj" path="res://entities/game/situation_trigger/scenes/area_situation_trigger.tscn" id="33_t6gop"]
 [ext_resource type="Resource" uid="uid://npim2ekidbye" path="res://assets/resources/situations/explain_plant_pot.tres" id="34_6o3hq"]
 [ext_resource type="PackedScene" uid="uid://j08ygksey722" path="res://entities/game/farm_house/scenes/house.tscn" id="34_s20tn"]
@@ -56,6 +57,9 @@
 [ext_resource type="Script" uid="uid://rw5rypltirio" path="res://entities/game/situation_trigger/scripts/inventory_updated_trigger.gd" id="41_f4ptc"]
 [ext_resource type="Resource" uid="uid://c1f4vr4ctor3u" path="res://assets/resources/items/upgrades/end_game_upgrade.tres" id="42_s20tn"]
 [ext_resource type="PackedScene" uid="uid://ceg0fmyoy8swb" path="res://entities/game/ui_debug/scenes/debug_ui.tscn" id="50_f4ptc"]
+[ext_resource type="PackedScene" uid="uid://dg3ibdnvqen2b" path="res://entities/game/collectable_item/scenes/CollectableItem.tscn" id="52_df8hl"]
+[ext_resource type="Resource" uid="uid://candq50561oh3" path="res://assets/resources/items/collectibles/Okto.tres" id="53_d0hkx"]
+[ext_resource type="PackedScene" uid="uid://d28k7d7wtooie" path="res://assets/objects/okto/okto.gltf" id="54_df8hl"]
 [ext_resource type="PackedScene" uid="uid://c1a3h45lamfvb" path="res://assets/objects/streets/city_street_europe/city_street_europe.gltf" id="54_q5avt"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8rpam"]
@@ -321,79 +325,151 @@ metadata/_custom_type_script = "uid://2udybjys5ehv"
 [node name="Generated" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool" unique_id=912772247]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -25.335)
 
-[node name="@Node3D@24113" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1717250551 instance=ExtResource("31_lxnwm")]
+[node name="@Node3D@24113" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1717250551 instance=ExtResource("31_lxnwm")]
 metadata/generated = true
 
-[node name="@Node3D@24114" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=2029806288 instance=ExtResource("31_lxnwm")]
+[node name="@Node3D@24114" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=2029806288 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 metadata/generated = true
 
-[node name="@Node3D@24115" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=128589515 instance=ExtResource("31_lxnwm")]
+[node name="@Node3D@24115" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=128589515 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 metadata/generated = true
 
-[node name="Generated 3" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1817966766 instance=ExtResource("31_lxnwm")]
+[node name="Generated 3" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1817966766 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
 metadata/generated = true
 
-[node name="Generated 4" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=561742888 instance=ExtResource("31_lxnwm")]
+[node name="Generated 4" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=561742888 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 metadata/generated = true
 
-[node name="@Node3D@24116" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1983890454 instance=ExtResource("31_lxnwm")]
+[node name="@Node3D@24116" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1983890454 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
 metadata/generated = true
 
-[node name="Generated 6" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=366702972 instance=ExtResource("31_lxnwm")]
+[node name="Generated 6" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=366702972 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
 metadata/generated = true
 
-[node name="@Node3D@24117" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=601832205 instance=ExtResource("31_lxnwm")]
+[node name="@Node3D@24117" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=601832205 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21)
 metadata/generated = true
 
-[node name="Generated 8" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=905924348 instance=ExtResource("31_lxnwm")]
+[node name="Generated 8" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=905924348 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24)
 metadata/generated = true
 
-[node name="@Node3D@24118" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1527849777 instance=ExtResource("31_lxnwm")]
+[node name="@Node3D@24118" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1527849777 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
 metadata/generated = true
 
-[node name="Generated 10" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=23622060 instance=ExtResource("31_lxnwm")]
+[node name="Generated 10" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=23622060 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
 metadata/generated = true
 
-[node name="@Node3D@24119" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1012609690 instance=ExtResource("31_lxnwm")]
+[node name="@Node3D@24119" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1012609690 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33)
 metadata/generated = true
 
-[node name="Generated 12" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1113929909 instance=ExtResource("31_lxnwm")]
+[node name="Generated 12" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1113929909 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36)
 metadata/generated = true
 
-[node name="@Node3D@24120" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1321502157 instance=ExtResource("31_lxnwm")]
+[node name="@Node3D@24120" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1321502157 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 39)
 metadata/generated = true
 
-[node name="Generated 14" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=972426928 instance=ExtResource("31_lxnwm")]
+[node name="Generated 14" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=972426928 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 42)
 metadata/generated = true
 
-[node name="@Node3D@24121" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=737262248 instance=ExtResource("31_lxnwm")]
+[node name="@Node3D@24121" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=737262248 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
 metadata/generated = true
 
-[node name="Generated 16" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1141901142 instance=ExtResource("31_lxnwm")]
+[node name="Generated 16" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1141901142 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
 metadata/generated = true
 
-[node name="@Node3D@24122" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=712656716 instance=ExtResource("31_lxnwm")]
+[node name="@Node3D@24122" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=712656716 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 51)
 metadata/generated = true
 
-[node name="Generated 18" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1677011105 instance=ExtResource("31_lxnwm")]
+[node name="Generated 18" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/LanternGeneratorTool/Generated" unique_id=1677011105 instance=ExtResource("31_lxnwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 54)
+metadata/generated = true
+
+[node name="StreetSign" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street" unique_id=808909532]
+
+[node name="StreetSignGenerator1" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign" unique_id=1666880613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9369993, 0.035, 6.332)
+script = ExtResource("30_ky8g2")
+placeholder_template = ExtResource("32_d0hkx")
+amount = 6
+spacing = 10.0
+offset = -32.05
+metadata/_custom_type_script = "uid://2udybjys5ehv"
+
+[node name="Generated" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator1" unique_id=372113504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32.05)
+
+[node name="Generated 0" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator1/Generated" unique_id=932439762 instance=ExtResource("32_d0hkx")]
+metadata/generated = true
+
+[node name="@Node3D@26739" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator1/Generated" unique_id=901178821 instance=ExtResource("32_d0hkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+metadata/generated = true
+
+[node name="@Node3D@26740" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator1/Generated" unique_id=2086256282 instance=ExtResource("32_d0hkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+metadata/generated = true
+
+[node name="Generated 3" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator1/Generated" unique_id=1876644585 instance=ExtResource("32_d0hkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+metadata/generated = true
+
+[node name="@Node3D@26741" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator1/Generated" unique_id=1578053475 instance=ExtResource("32_d0hkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
+metadata/generated = true
+
+[node name="Generated 5" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator1/Generated" unique_id=1103569808 instance=ExtResource("32_d0hkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50)
+metadata/generated = true
+
+[node name="StreetSignGenerator2" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign" unique_id=1493097829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9377575, 0.035, 6.332)
+script = ExtResource("30_ky8g2")
+placeholder_template = ExtResource("32_d0hkx")
+amount = 6
+spacing = 10.0
+offset = -35.715
+metadata/_custom_type_script = "uid://2udybjys5ehv"
+
+[node name="Generated" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator2" unique_id=189100236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.715)
+
+[node name="Generated 0" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator2/Generated" unique_id=564149324 instance=ExtResource("32_d0hkx")]
+metadata/generated = true
+
+[node name="_Node3D_26739" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator2/Generated" unique_id=1723452910 instance=ExtResource("32_d0hkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+metadata/generated = true
+
+[node name="_Node3D_26740" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator2/Generated" unique_id=783530087 instance=ExtResource("32_d0hkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+metadata/generated = true
+
+[node name="Generated 3" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator2/Generated" unique_id=2020596956 instance=ExtResource("32_d0hkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+metadata/generated = true
+
+[node name="_Node3D_26741" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator2/Generated" unique_id=1913440384 instance=ExtResource("32_d0hkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
+metadata/generated = true
+
+[node name="Generated 5" parent="PixellatedLevelContainer/SubViewport/World/Floor/Street/StreetSign/StreetSignGenerator2/Generated" unique_id=1205385303 instance=ExtResource("32_d0hkx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50)
 metadata/generated = true
 
 [node name="Fence" type="Node3D" parent="PixellatedLevelContainer/SubViewport/World" unique_id=953113070]
@@ -924,6 +1000,16 @@ metadata/_custom_type_script = "uid://rw5rypltirio"
 
 [node name="Well" parent="PixellatedLevelContainer/SubViewport/World" unique_id=1081629262 instance=ExtResource("38_fseqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1131024, 0, -8.377876)
+
+[node name="Collectible" type="Node" parent="PixellatedLevelContainer/SubViewport/World" unique_id=546135287]
+
+[node name="CollectableItem" parent="PixellatedLevelContainer/SubViewport/World/Collectible" unique_id=325718297 instance=ExtResource("52_df8hl")]
+transform = Transform3D(-0.87172496, 0, 0.48999554, 0, 1, 0, -0.48999554, 0, -0.87172496, -1.7309058, 0.1873411, -9.369974)
+item_data = ExtResource("53_d0hkx")
+item_representation = ExtResource("54_df8hl")
+
+[node name="@Node3D@22845" parent="PixellatedLevelContainer/SubViewport/World/Collectible/CollectableItem" unique_id=1110508991 instance=ExtResource("54_df8hl")]
+metadata/Generated = true
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1754586139]
 

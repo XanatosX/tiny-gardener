@@ -60,6 +60,20 @@ layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("3_5cbpi")
 
+[node name="Quality" type="TextureRect" parent="Content/ItemData/VBoxContainer/Icon" unique_id=305796681]
+custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 96.0
+offset_top = 109.0
+offset_right = 160.0
+offset_bottom = 173.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(80, 80)
+texture = ExtResource("5_b4p2a")
+
 [node name="HandbookTextTemplateRichText" type="RichTextLabel" parent="Content/ItemData/VBoxContainer" unique_id=1504846697]
 layout_mode = 2
 bbcode_enabled = true
@@ -70,20 +84,10 @@ script = ExtResource("4_b4p2a")
 preprocessors = Array[ExtResource("5_5unn8")]([SubResource("Resource_2bncq")])
 metadata/_custom_type_script = "uid://c2td75vpy2wo0"
 
-[node name="Quality" type="TextureRect" parent="Content/ItemData" unique_id=305796681]
-custom_minimum_size = Vector2(64, 64)
-custom_maximum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-offset_transform_enabled = true
-offset_transform_position = Vector2(80, 80)
-texture = ExtResource("5_b4p2a")
-
 [connection signal="data_changed" from="." to="Content/ItemData" method="set_data"]
 [connection signal="set_icon" from="." to="Content/Header/Icon" method="set_texture"]
 [connection signal="update_headline" from="." to="Content/Header/Headline" method="set_text"]
 [connection signal="set_description" from="Content/ItemData" to="Content/ItemData/VBoxContainer/HandbookTextTemplateRichText" method="set_text"]
 [connection signal="set_icon" from="Content/ItemData" to="Content/ItemData/VBoxContainer/Icon" method="set_texture"]
-[connection signal="set_quality_icon" from="Content/ItemData" to="Content/ItemData/Quality" method="set_texture"]
+[connection signal="set_quality_icon" from="Content/ItemData" to="Content/ItemData/VBoxContainer/Icon/Quality" method="set_texture"]
 [connection signal="open_handbook_entry" from="Content/ItemData/VBoxContainer/HandbookTextTemplateRichText" to="." method="request_handbook_entry"]

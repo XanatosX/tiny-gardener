@@ -96,3 +96,6 @@ func get_quality_name() -> String:
 
 func bought() -> void:
 	pass
+
+func get_item_handbook_key() -> String:
+	return "%s_%s" % [display_name.key, Item.QUALITY.keys()[quality]]

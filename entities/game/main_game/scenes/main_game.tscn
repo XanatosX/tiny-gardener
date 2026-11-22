@@ -35,6 +35,7 @@
 [ext_resource type="Resource" uid="uid://qd15q45qhxpn" path="res://assets/resources/translations/door_farm.tres" id="23_tt2c0"]
 [ext_resource type="Resource" uid="uid://b066oswljguvn" path="res://assets/resources/translations/door_house.tres" id="24_o2wdg"]
 [ext_resource type="PackedScene" uid="uid://6q34li27de3v" path="res://entities/game/teleport_transition_ui/scene/teleport_transition_ui.tscn" id="25_04il6"]
+[ext_resource type="Script" uid="uid://dlu0cqjuvjg3r" path="res://entities/game/pixellated_container/scripts/pixellated_container.gd" id="25_8i55x"]
 [ext_resource type="Script" uid="uid://x3v0qf3nnr33" path="res://entities/game/systems/scripts/upgrade_system.gd" id="26_ued1p"]
 [ext_resource type="PackedScene" uid="uid://bbo7phjy2tcuc" path="res://assets/objects/streets/city_street_europe_flat_walkway/city_street_europe_flat_walkway.gltf" id="28_e73wn"]
 [ext_resource type="Texture2D" uid="uid://rt7cy5pojcua" path="res://assets/atlas/house_icon.tres" id="28_s3rff"]
@@ -172,7 +173,7 @@ metadata/_custom_type_script = "uid://b2m0riohmnsed"
 script = ExtResource("23_p0u3h")
 metadata/_custom_type_script = "uid://d4frpaer68gh1"
 
-[node name="PixellatedLevelContainer" type="SubViewportContainer" parent="." unique_id=1989513399]
+[node name="PixellatedLevelContainer" type="SubViewportContainer" parent="." unique_id=1601396261]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -180,6 +181,8 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 stretch_shrink = 3
+script = ExtResource("25_8i55x")
+metadata/_custom_type_script = "uid://dlu0cqjuvjg3r"
 
 [node name="SubViewport" type="SubViewport" parent="PixellatedLevelContainer" unique_id=390459755]
 handle_input_locally = false

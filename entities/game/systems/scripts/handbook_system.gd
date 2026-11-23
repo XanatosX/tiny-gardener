@@ -1,9 +1,10 @@
 class_name HandbookSystem extends System
 
+signal show_handbook()
 signal open_handbook_page(key: String)
 
 func open_handbook() -> void:
-	Input.action_press("help")
+	show_handbook.emit()
 
 func open_handbook_entry(identifier: HandbookEntryIdentifier) -> void:
 	open_handbook_entry_by_key(identifier.key)

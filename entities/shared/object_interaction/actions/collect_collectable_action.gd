@@ -37,7 +37,6 @@ func execute(controlled_node: Node3D, _item: Item, systems: Systems) -> bool:
 		return false
 
 	inventory_system.add_item(relevant_item, 1)
-	handbook_system.open_handbook()
 	handbook_system.open_handbook_entry_by_key(relevant_item.get_item_handbook_key())
 
 	controlled_node.queue_free()

@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://eiyoe0oh5g5w"]
+
+[ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="1_ia3nb"]
+[ext_resource type="Script" uid="uid://dyxkgh2mcv4qj" path="res://entities/game/ui_3d_object_inspect/scripts/ui_3d_object_inspect_screen.gd" id="1_p1psq"]
+[ext_resource type="Script" uid="uid://bngqval8eaups" path="res://entities/shared/special_objects/frosted_glass_control_panel/frosted_glass_control_panel.gd" id="2_v3wky"]
+[ext_resource type="Shortcut" uid="uid://ovus7gnb525j" path="res://assets/button_shortcuts/close_shortkey.tres" id="5_coeqr"]
+[ext_resource type="Script" uid="uid://daukc5an0cxse" path="res://entities/game/ui_3d_object_inspect/scripts/viewport_container.gd" id="5_fe8im"]
+[ext_resource type="PackedScene" uid="uid://csi04mhwao54f" path="res://entities/game/ui_3d_object_inspect/scenes/3d_inspect_display_world.tscn" id="5_hismr"]
+[ext_resource type="Script" uid="uid://bd2b2w06ptcpr" path="res://entities/game/ui_3d_object_inspect/scripts/open_handbook_entry.gd" id="5_p1psq"]
+
+[sub_resource type="Environment" id="Environment_crh21"]
+background_color = Color(0, 0, 0, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.728822, 0.728822, 0.728822, 1)
+reflected_light_source = 1
+tonemap_mode = 4
+
+[sub_resource type="World3D" id="World3D_8rpam"]
+environment = SubResource("Environment_crh21")
+
+[node name="Ui3dObjectInspectScreen" type="Control" unique_id=17786187]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p1psq")
+metadata/_custom_type_script = "uid://dyxkgh2mcv4qj"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2119853454]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="FrostedGlassControlPanel" type="PanelContainer" parent="MarginContainer" unique_id=837082781]
+material = ExtResource("1_ia3nb")
+layout_mode = 2
+script = ExtResource("2_v3wky")
+metadata/_custom_type_script = "uid://bngqval8eaups"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/FrostedGlassControlPanel" unique_id=1102454143]
+layout_mode = 2
+
+[node name="Title" type="HBoxContainer" parent="MarginContainer/FrostedGlassControlPanel/VBoxContainer" unique_id=1950146642]
+layout_mode = 2
+
+[node name="OpenHandbookEntry" type="Button" parent="MarginContainer/FrostedGlassControlPanel/VBoxContainer/Title" unique_id=1939013765]
+layout_mode = 2
+text = "OPEN_HANDBOOK_ENTRY"
+script = ExtResource("5_p1psq")
+metadata/_custom_type_script = "uid://bd2b2w06ptcpr"
+
+[node name="ResetObject" type="Button" parent="MarginContainer/FrostedGlassControlPanel/VBoxContainer/Title" unique_id=2103740783]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "RESET_OBJECT"
+
+[node name="CloseButton" type="Button" parent="MarginContainer/FrostedGlassControlPanel/VBoxContainer/Title" unique_id=822148614]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+shortcut = ExtResource("5_coeqr")
+shortcut_in_tooltip = false
+text = "X"
+
+[node name="Label" type="Label" parent="MarginContainer/FrostedGlassControlPanel/VBoxContainer" unique_id=802715524]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 30
+text = "ITEM_LABEL"
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/FrostedGlassControlPanel/VBoxContainer" unique_id=1729718634]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 0
+stretch = true
+script = ExtResource("5_fe8im")
+metadata/_custom_type_script = "uid://daukc5an0cxse"
+
+[node name="SubView" type="SubViewport" parent="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer" unique_id=1915762500]
+own_world_3d = true
+world_3d = SubResource("World3D_8rpam")
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1820, 899)
+render_target_update_mode = 4
+
+[node name="DisplayWorld" parent="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView" unique_id=2120032362 instance=ExtResource("5_hismr")]
+
+[connection signal="change_handbook_link" from="." to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/Title/OpenHandbookEntry" method="set_identifier"]
+[connection signal="change_item_name" from="." to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/Label" method="set_text"]
+[connection signal="hidden" from="." to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/ObjectArea" method="disable"]
+[connection signal="hidden" from="." to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer" method="disabled"]
+[connection signal="inspect_item_selected" from="." to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/ObjectArea/ItemScreen" method="show_item"]
+[connection signal="inspect_requested" from="." to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/ObjectArea" method="enable"]
+[connection signal="inspect_requested" from="." to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer" method="enabled"]
+[connection signal="pressed" from="MarginContainer/FrostedGlassControlPanel/VBoxContainer/Title/OpenHandbookEntry" to="." method="hide"]
+[connection signal="pressed" from="MarginContainer/FrostedGlassControlPanel/VBoxContainer/Title/ResetObject" to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/ObjectArea" method="reset_object_rotation"]
+[connection signal="pressed" from="MarginContainer/FrostedGlassControlPanel/VBoxContainer/Title/CloseButton" to="." method="hide"]
+[connection signal="rotation_changed" from="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer" to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/ObjectArea" method="receive_player_rotate"]
+[connection signal="rotate_x" from="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/ObjectArea" to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/CameraPivot" method="rotate_x"]
+[connection signal="rotate_y" from="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/ObjectArea" to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/CameraPivot" method="rotate_y"]
+[connection signal="rotate_z" from="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/ObjectArea" to="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld/CameraPivot" method="rotate_z"]
+
+[editable path="MarginContainer/FrostedGlassControlPanel/VBoxContainer/SubViewportContainer/SubView/DisplayWorld"]

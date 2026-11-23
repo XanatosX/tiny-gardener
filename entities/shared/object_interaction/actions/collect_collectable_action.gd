@@ -1,5 +1,7 @@
 class_name CollectCollectableAction extends Action
 
+func _init() -> void:
+	type = Action.Type.Collect
 
 func controlled_node_has_valid_state(controlled_node: Node3D, systems: Systems) -> bool:
 	var inventory_system: GameDataSystem = systems.get_system("GameDataSystem")

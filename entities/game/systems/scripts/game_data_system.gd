@@ -24,7 +24,7 @@ func _register_commands() -> void:
 	Console.register_command(Command.create("give_money")
 									.calling_method(_console_add_money)
 									.with_argument(CommandArgument.create("amount")
-									                              .of_type(CommandArgument.Type.FLOAT)
+																  .of_type(CommandArgument.Type.FLOAT)
 																  .with_description("The amount of money to add")
 																  .finalize()
 									)

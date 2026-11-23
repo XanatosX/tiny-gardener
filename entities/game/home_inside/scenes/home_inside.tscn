@@ -32,8 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://cfywppt7f3ttk" path="res://entities/game/glass/scenes/glass_stack.tscn" id="27_wix7e"]
 [ext_resource type="Shader" uid="uid://dtlxfe3a6xtqv" path="res://assets/shaders/well_water_shader.gdshader" id="28_108mt"]
 [ext_resource type="PackedScene" uid="uid://d28k7d7wtooie" path="res://assets/objects/okto/okto.gltf" id="31_daap7"]
-[ext_resource type="Script" uid="uid://cldijql0117sm" path="res://entities/game/conditional_3d_object/script/conditional_3d_object.gd" id="32_ogihm"]
-[ext_resource type="Script" uid="uid://b73fg87jtd4bf" path="res://entities/shared/custom_resources/visible_condition/item_is_known.gd" id="33_jsjmd"]
+[ext_resource type="PackedScene" uid="uid://b058fq7gnb4ga" path="res://entities/game/collectable_item/scenes/CollectableDisplay.tscn" id="32_e0wpq"]
 [ext_resource type="Resource" uid="uid://candq50561oh3" path="res://assets/resources/items/collectibles/Okto.tres" id="34_7scxs"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8rpam"]
@@ -99,10 +98,6 @@ shader_parameter/normalmap_b_strength = 0.275
 shader_parameter/movement_direction = Vector2(0.1, 0.1)
 shader_parameter/movement_stength = 0.214000010165
 shader_parameter/uv_scale = 1.0
-
-[sub_resource type="Resource" id="Resource_8rpam"]
-script = ExtResource("33_jsjmd")
-metadata/_custom_type_script = "uid://b73fg87jtd4bf"
 
 [node name="HomeInside" type="Node3D" unique_id=1571608070]
 
@@ -382,15 +377,12 @@ surface_material_override/0 = SubResource("ShaderMaterial_c5ng2")
 
 [node name="Collectables" type="Node3D" parent="." unique_id=693870252]
 
-[node name="Conditional3DObject" type="Node3D" parent="Collectables" unique_id=2103746053]
+[node name="CollectableDisplay" parent="Collectables" unique_id=1005655428 instance=ExtResource("32_e0wpq")]
 transform = Transform3D(0.48215303, 0, 0.876087, 0, 1, 0, -0.876087, 0, 0.48215303, -0.8128459, 0.15504047, 1.3534489)
-script = ExtResource("32_ogihm")
-visibility_condition = SubResource("Resource_8rpam")
 item_data = ExtResource("34_7scxs")
 item_representation = ExtResource("31_daap7")
-metadata/_custom_type_script = "uid://cldijql0117sm"
 
-[node name="@Node3D@35410" type="Node3D" parent="Collectables/Conditional3DObject" unique_id=1110508991 instance=ExtResource("31_daap7")]
+[node name="ItemRepresentation" parent="Collectables/CollectableDisplay" unique_id=1110508991 instance=ExtResource("31_daap7")]
 metadata/Generated = true
 
 [connection signal="trigger" from="Situations/MissingWaterCanAreaEnterSituationTrigger/InventoryUpdatedTrigger" to="Situations/MissingWaterCanAreaEnterSituationTrigger" method="trigger_situation"]

@@ -7,7 +7,9 @@ enum Type
 	Harvest,
 	Water,
 	Fertilize,
-	Trigger
+	Trigger,
+	Collect,
+	Inspect
 }
 
 @export var action_name: TextTranslation

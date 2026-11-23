@@ -13,6 +13,8 @@ func _process(_delta: float) -> void:
 		show()
 
 func open_specific_handbook_entry(key: String) -> void:
+	if not visible:
+		show()
 	open_entry.emit(key)
 
 func data_changed() -> void:

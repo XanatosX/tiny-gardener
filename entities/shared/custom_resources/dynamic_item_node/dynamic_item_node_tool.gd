@@ -25,7 +25,7 @@ func _add_representation() -> void:
 	var tree: SceneTree = get_tree()
 	if tree == null:
 		return
-	if tree.edited_scene_root == null:
+	if Engine.is_editor_hint() and tree.edited_scene_root == null:
 		return
 	if item_representation == null:
 		return
@@ -42,7 +42,8 @@ func _add_representation() -> void:
 	representation.name = "ItemRepresentation"
 	representation.set_meta("Generated", true)
 	add_child(representation)
-	representation.owner = get_tree().edited_scene_root
+	if Engine.is_editor_hint():
+		representation.owner = get_tree().edited_scene_root
 
 ## Use this method to add your custom validation, return true if everything is valid
 func _additional_validation() -> bool:

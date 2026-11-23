@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://csi04mhwao54f"]
+
+[ext_resource type="Script" uid="uid://dk2sn83eg563o" path="res://entities/game/ui_3d_object_inspect/scripts/inspect_3d_object_area.gd" id="1_d0s87"]
+[ext_resource type="Script" uid="uid://bog1jrrd3a4ee" path="res://entities/game/collectable_item/scripts/collectable_item.gd" id="2_tq7mo"]
+[ext_resource type="Resource" uid="uid://candq50561oh3" path="res://assets/resources/items/collectibles/Okto.tres" id="3_j7j6r"]
+[ext_resource type="PackedScene" uid="uid://d28k7d7wtooie" path="res://assets/objects/okto/okto.gltf" id="4_37y0h"]
+
+[node name="DisplayWorld" type="Node3D" unique_id=2120032362]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=338293518]
+transform = Transform3D(1, 0, 0, 0, 0.7443924, 0.66774243, 0, -0.66774243, 0.7443924, 0, 0.765626, 0.93940157)
+light_color = Color(1, 1, 0.5882353, 1)
+
+[node name="ObjectArea" type="Node3D" parent="." unique_id=414388696]
+script = ExtResource("1_d0s87")
+metadata/_custom_type_script = "uid://dk2sn83eg563o"
+
+[node name="ItemScreen" type="Node3D" parent="ObjectArea" unique_id=1746310153]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+script = ExtResource("2_tq7mo")
+make_initial_item_data_check = false
+item_data = ExtResource("3_j7j6r")
+item_representation = ExtResource("4_37y0h")
+metadata/_custom_type_script = "uid://bog1jrrd3a4ee"
+
+[node name="ItemRepresentation" parent="ObjectArea/ItemScreen" unique_id=1110508991 instance=ExtResource("4_37y0h")]
+metadata/Generated = true
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=722619317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020033237, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=160306020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00032506883, 0.10435651)
+current = true
+
+[connection signal="request_rotation" from="ObjectArea" to="CameraPivot" method="set_rotation"]
+[connection signal="rotate_x" from="ObjectArea" to="CameraPivot" method="rotate_x"]
+[connection signal="rotate_y" from="ObjectArea" to="CameraPivot" method="rotate_y"]
+[connection signal="rotate_z" from="ObjectArea" to="CameraPivot" method="rotate_z"]

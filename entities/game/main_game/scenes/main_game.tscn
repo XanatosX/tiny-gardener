@@ -34,6 +34,7 @@
 [ext_resource type="Script" uid="uid://d4frpaer68gh1" path="res://entities/game/systems/scripts/handbook_system.gd" id="23_p0u3h"]
 [ext_resource type="Resource" uid="uid://qd15q45qhxpn" path="res://assets/resources/translations/door_farm.tres" id="23_tt2c0"]
 [ext_resource type="Resource" uid="uid://b066oswljguvn" path="res://assets/resources/translations/door_house.tres" id="24_o2wdg"]
+[ext_resource type="Script" uid="uid://b8t08wgj6s754" path="res://entities/game/systems/scripts/inspect_system.gd" id="25_4crfq"]
 [ext_resource type="PackedScene" uid="uid://6q34li27de3v" path="res://entities/game/teleport_transition_ui/scene/teleport_transition_ui.tscn" id="25_04il6"]
 [ext_resource type="Script" uid="uid://dlu0cqjuvjg3r" path="res://entities/game/pixellated_container/scripts/pixellated_container.gd" id="25_8i55x"]
 [ext_resource type="Script" uid="uid://x3v0qf3nnr33" path="res://entities/game/systems/scripts/upgrade_system.gd" id="26_ued1p"]
@@ -62,6 +63,7 @@
 [ext_resource type="Resource" uid="uid://candq50561oh3" path="res://assets/resources/items/collectibles/Okto.tres" id="53_d0hkx"]
 [ext_resource type="PackedScene" uid="uid://d28k7d7wtooie" path="res://assets/objects/okto/okto.gltf" id="54_df8hl"]
 [ext_resource type="PackedScene" uid="uid://c1a3h45lamfvb" path="res://assets/objects/streets/city_street_europe/city_street_europe.gltf" id="54_q5avt"]
+[ext_resource type="PackedScene" uid="uid://eiyoe0oh5g5w" path="res://entities/game/ui_3d_object_inspect/scenes/UI3DObjectInspectScreen.tscn" id="62_4a1as"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8rpam"]
 size = Vector2(5, 3)
@@ -172,6 +174,10 @@ metadata/_custom_type_script = "uid://b2m0riohmnsed"
 [node name="HandbookSystem" type="Node" parent="Systems" unique_id=438046250]
 script = ExtResource("23_p0u3h")
 metadata/_custom_type_script = "uid://d4frpaer68gh1"
+
+[node name="InspectSystem" type="Node" parent="Systems" unique_id=2058962369]
+script = ExtResource("25_4crfq")
+metadata/_custom_type_script = "uid://b8t08wgj6s754"
 
 [node name="PixellatedLevelContainer" type="SubViewportContainer" parent="." unique_id=1601396261]
 anchors_preset = 15
@@ -1040,6 +1046,9 @@ visible = false
 [node name="TeleportTransitionUi" parent="Menus" unique_id=338172450 instance=ExtResource("25_04il6")]
 visible = false
 
+[node name="Ui3dObjectInspectScreen" parent="Menus" unique_id=17786187 instance=ExtResource("62_4a1as")]
+visible = false
+
 [node name="Debug" type="CanvasLayer" parent="." unique_id=31093797]
 
 [node name="DebugUi" parent="Debug" unique_id=829370873 instance=ExtResource("50_f4ptc")]
@@ -1080,11 +1089,15 @@ metadata/_custom_type_script = "uid://cmvgl4aykqqgr"
 [connection signal="dialog_started" from="Systems/DialogSystem" to="UI/GameUi" method="dialog_started"]
 [connection signal="dialog_started" from="Systems/DialogSystem" to="Menus/ShopUi" method="silent_close"]
 [connection signal="open_handbook_page" from="Systems/HandbookSystem" to="Menus/UiHandbook" method="open_specific_handbook_entry"]
+[connection signal="show_handbook" from="Systems/HandbookSystem" to="Menus/UiHandbook" method="show"]
+[connection signal="request_item_inspect" from="Systems/InspectSystem" to="Menus/Ui3dObjectInspectScreen" method="inspect_object"]
 [connection signal="triggered" from="PixellatedLevelContainer/SubViewport/World/HomeInside/ShopTrigger" to="Menus/ShopUi" method="animate_in"]
 [connection signal="trigger" from="PixellatedLevelContainer/SubViewport/World/Situations/GameEndSituation/InventoryUpdatedTrigger" to="PixellatedLevelContainer/SubViewport/World/Situations/GameEndSituation" method="trigger_situation"]
 [connection signal="trigger_action" from="UI/GameUi" to="Systems/InteractionSystem" method="trigger_interaction"]
 [connection signal="close_ui" from="Menus/ShopUi" to="PixellatedLevelContainer/SubViewport/World/Player" method="enable_movement"]
 [connection signal="show_ui" from="Menus/ShopUi" to="PixellatedLevelContainer/SubViewport/World/Player" method="disable_movement"]
 [connection signal="dialog_started" from="Menus/UiSpeakBubble" to="PixellatedLevelContainer/SubViewport/World/Player" method="disable_movement"]
+[connection signal="hidden" from="Menus/Ui3dObjectInspectScreen" to="PixellatedLevelContainer/SubViewport/World/Player" method="enable_movement"]
+[connection signal="inspect_requested" from="Menus/Ui3dObjectInspectScreen" to="PixellatedLevelContainer/SubViewport/World/Player" method="disable_movement"]
 
 [editable path="PixellatedLevelContainer/SubViewport/World/HomeInside"]

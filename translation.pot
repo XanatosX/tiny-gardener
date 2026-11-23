@@ -5,6 +5,7 @@
 # res://entities/game/ui_plant_health/scenes/ui_plant_health.tscn
 # res://entities/game/ui_shop/scenes/shop_ui.tscn
 # res://entities/game/ui_debug/scenes/debug_ui.tscn
+# res://entities/game/ui_3d_object_inspect/scenes/UI3DObjectInspectScreen.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -22,6 +23,7 @@ msgstr ""
 
 #: entities/game/ui_controls_help/scenes/ui_control_help.tscn
 #: entities/game/ui_shop/scenes/shop_ui.tscn
+#: entities/game/ui_3d_object_inspect/scenes/UI3DObjectInspectScreen.tscn
 msgid "X"
 msgstr ""
 
@@ -113,6 +115,18 @@ msgstr ""
 
 #: entities/game/ui_debug/scenes/debug_ui.tscn
 msgid "VSYNC_MODE"
+msgstr ""
+
+#: entities/game/ui_3d_object_inspect/scenes/UI3DObjectInspectScreen.tscn
+msgid "OPEN_HANDBOOK_ENTRY"
+msgstr ""
+
+#: entities/game/ui_3d_object_inspect/scenes/UI3DObjectInspectScreen.tscn
+msgid "RESET_OBJECT"
+msgstr ""
+
+#: entities/game/ui_3d_object_inspect/scenes/UI3DObjectInspectScreen.tscn
+msgid "ITEM_LABEL"
 msgstr ""
 
 msgid "tiny-gardener"
@@ -216,6 +230,14 @@ msgstr ""
 
 #: assets/resources/translations/actions/harvest_action_name.tres
 msgid "HARVEST_ACTION_NAME"
+msgstr ""
+
+#: assets/resources/translations/actions/inspect_action_description.tres
+msgid "ACTION_INSPECT_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/actions/inspect_action_name.tres
+msgid "ACTION_INSPECT_NAME"
 msgstr ""
 
 #: assets/resources/translations/actions/plant_action_description.tres

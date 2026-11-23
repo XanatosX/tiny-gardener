@@ -46,6 +46,7 @@ msgstr "Basic Movement"
 
 #: entities/game/ui_controls_help/scenes/ui_control_help.tscn
 #: entities/game/ui_shop/scenes/shop_ui.tscn
+#: entities/game/ui_3d_object_inspect/scenes/UI3DObjectInspectScreen.tscn
 msgid "X"
 msgstr "X"
 
@@ -120,8 +121,6 @@ msgid "GAME_VERSION"
 msgstr "Version:"
 
 #: entities/game/ui_debug/scenes/debug_ui.tscn
-#, fuzzy
-#| msgid "GAME_VERSION"
 msgid "GAME_VERSION_NUMBER"
 msgstr "Version:"
 
@@ -138,10 +137,20 @@ msgid "V_SYNC_LABEL"
 msgstr "VSync Mode:"
 
 #: entities/game/ui_debug/scenes/debug_ui.tscn
-#, fuzzy
-#| msgid "V_SYNC_LABEL"
 msgid "VSYNC_MODE"
 msgstr "VSync Mode:"
+
+#: entities/game/ui_3d_object_inspect/scenes/UI3DObjectInspectScreen.tscn
+msgid "OPEN_HANDBOOK_ENTRY"
+msgstr "Open Item in Handbook"
+
+#: entities/game/ui_3d_object_inspect/scenes/UI3DObjectInspectScreen.tscn
+msgid "RESET_OBJECT"
+msgstr "Reset object"
+
+#: entities/game/ui_3d_object_inspect/scenes/UI3DObjectInspectScreen.tscn
+msgid "ITEM_LABEL"
+msgstr ""
 
 msgid "tiny-gardener"
 msgstr ""
@@ -245,6 +254,14 @@ msgstr "Harvest the plant to get the yield, this depends on the plant itself"
 #: assets/resources/translations/actions/harvest_action_name.tres
 msgid "HARVEST_ACTION_NAME"
 msgstr "Harvest"
+
+#: assets/resources/translations/actions/inspect_action_description.tres
+msgid "ACTION_INSPECT_DESCRIPTION"
+msgstr "Inspect the item"
+
+#: assets/resources/translations/actions/inspect_action_name.tres
+msgid "ACTION_INSPECT_NAME"
+msgstr "Inspect"
 
 #: assets/resources/translations/actions/plant_action_description.tres
 msgid "PLANT_ACTION_DESCRIPTION"

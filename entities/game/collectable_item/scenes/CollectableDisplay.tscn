@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b058fq7gnb4ga"]
+
+[ext_resource type="Script" uid="uid://cldijql0117sm" path="res://entities/game/conditional_3d_object/script/conditional_3d_object.gd" id="1_e7blm"]
+[ext_resource type="Script" uid="uid://b73fg87jtd4bf" path="res://entities/shared/custom_resources/visible_condition/item_is_known.gd" id="2_e6htj"]
+[ext_resource type="Script" uid="uid://dkpt3k8dkvmj3" path="res://entities/shared/object_interaction/object_interaction.gd" id="3_w6mqa"]
+[ext_resource type="Script" uid="uid://dgo34mflxca2j" path="res://entities/shared/object_interaction/action.gd" id="4_ickuo"]
+[ext_resource type="Resource" uid="uid://dqfi62nol1i2q" path="res://assets/resources/translations/actions/inspect_action_description.tres" id="5_lklmx"]
+[ext_resource type="Script" uid="uid://c2668wuu6010j" path="res://entities/shared/object_interaction/actions/inspect_collectable_item_action.gd" id="5_mwwhf"]
+[ext_resource type="Resource" uid="uid://c81wev8ij3sku" path="res://assets/resources/translations/actions/inspect_action_name.tres" id="6_ki323"]
+[ext_resource type="Texture2D" uid="uid://c8g1mu2oa1vxd" path="res://assets/atlas/inspect_action_icon.tres" id="7_lklmx"]
+
+[sub_resource type="Resource" id="Resource_8rpam"]
+script = ExtResource("2_e6htj")
+metadata/_custom_type_script = "uid://b73fg87jtd4bf"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8rpam"]
+
+[sub_resource type="Resource" id="Resource_lklmx"]
+script = ExtResource("5_mwwhf")
+action_name = ExtResource("6_ki323")
+action_description = ExtResource("5_lklmx")
+icon = ExtResource("7_lklmx")
+metadata/_custom_type_script = "uid://c2668wuu6010j"
+
+[node name="CollectableDisplay" type="Node3D" unique_id=1005655428]
+script = ExtResource("1_e7blm")
+visibility_condition = SubResource("Resource_8rpam")
+metadata/_custom_type_script = "uid://cldijql0117sm"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1174998999]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1521809093]
+shape = SubResource("SphereShape3D_8rpam")
+
+[node name="ObjectInteraction" type="Node" parent="." unique_id=739006214 node_paths=PackedStringArray("controlled_entity", "interaction_area")]
+script = ExtResource("3_w6mqa")
+controlled_entity = NodePath("..")
+interaction_area = NodePath("../Area3D")
+deep_copy_actions = true
+actions = Array[ExtResource("4_ickuo")]([SubResource("Resource_lklmx")])
+metadata/_custom_type_script = "uid://dkpt3k8dkvmj3"

@@ -46,6 +46,11 @@ _subresources={
 "use_external/fallback_path": "res://assets/objects/simple_farm_house/material_0.tres",
 "use_external/path": "uid://dtx7cglffj3oc"
 }
+},
+"nodes": {
+"PATH:root/cube": {
+"generate/physics": true
+}
 }
 }
 gltf/naming_version=2

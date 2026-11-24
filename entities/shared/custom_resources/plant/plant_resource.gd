@@ -5,6 +5,7 @@ enum Type
 	NONE,
 	CORN,
 	ROSE,
+	PUMPKIN
 }
 
 @export var type: Type = Type.NONE

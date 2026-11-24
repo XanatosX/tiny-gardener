@@ -395,6 +395,14 @@ msgstr "Well it's a lady bug, with some dots on it. I think you should sell it, 
 msgid "LADYBUG_DROP_NAME"
 msgstr "Ladybug"
 
+#: assets/resources/translations/drops/pumpkin_drop_description.tres
+msgid "PUMPKIN_DROP_DESCRIPTION"
+msgstr "This is a edible pumpkin, you can use it to make a tasty soup. \vI heard you can put it into your oven with some oil and eat it as a healthy snack."
+
+#: assets/resources/translations/drops/pumpkin_drop_name.tres
+msgid "PUMPKIN_DROP_NAME"
+msgstr "Pumpkin"
+
 #: assets/resources/translations/drops/rose_drop_description.tres
 msgid "ROSE_DROP_DESCRIPTION"
 msgstr "A rose, what a wonderful flower, isn't it?\vNow sell it, you need the money"
@@ -592,6 +600,14 @@ msgstr "This plant is dead, either there wasn't enough nutrition or water availa
 #: assets/resources/translations/plants/dead_plant_name.tres
 msgid "DEAD_PLANT_NAME"
 msgstr "Dead Plant"
+
+#: assets/resources/translations/plants/pumpkin_description.tres
+msgid "PUMPKIN_PLANT_DESCRIPTION"
+msgstr "A pumpkin plant, they do require a lot of water and nutrients to grow, but there harvest sells well. At least if the quality is right."
+
+#: assets/resources/translations/plants/pumpkin_name.tres
+msgid "PUMPKIN_PLANT_NAME"
+msgstr "Pumpkin plant"
 
 #: assets/resources/translations/plants/rose_plant_description.tres
 msgid "ROSE_PLANT_DESCRIPTION"

@@ -39,7 +39,7 @@
 [ext_resource type="Script" uid="uid://dlu0cqjuvjg3r" path="res://entities/game/pixellated_container/scripts/pixellated_container.gd" id="25_8i55x"]
 [ext_resource type="Script" uid="uid://x3v0qf3nnr33" path="res://entities/game/systems/scripts/upgrade_system.gd" id="26_ued1p"]
 [ext_resource type="PackedScene" uid="uid://bbo7phjy2tcuc" path="res://assets/objects/streets/city_street_europe_flat_walkway/city_street_europe_flat_walkway.gltf" id="28_e73wn"]
-[ext_resource type="Texture2D" uid="uid://rt7cy5pojcua" path="res://assets/atlas/house_icon.tres" id="28_s3rff"]
+[ext_resource type="Texture2D" uid="uid://rt7cy5pojcua" path="res://assets/atlas/actions/house_icon.tres" id="28_s3rff"]
 [ext_resource type="Script" uid="uid://2udybjys5ehv" path="res://entities/game/street_lantern/scripts/lantern_generator.gd" id="30_ky8g2"]
 [ext_resource type="PackedScene" uid="uid://btvwb20g08py5" path="res://entities/game/street_lantern/scenes/street_double_lantern.tscn" id="31_lxnwm"]
 [ext_resource type="PackedScene" uid="uid://dctqy6sds8cd5" path="res://assets/objects/streets/city_street_speed_sign/european_speed_sign.gltf" id="32_d0hkx"]

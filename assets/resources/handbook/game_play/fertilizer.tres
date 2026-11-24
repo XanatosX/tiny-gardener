@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://dlsxuufqnw15j" path="res://assets/resources/translations/handbook/fertilizer_handbook_description.tres" id="1_aiv4i"]
 [ext_resource type="Script" uid="uid://b6hgi2m53g1k6" path="res://entities/shared/custom_resources/handbook/text_types/handbook_text_type.gd" id="1_cvo7u"]
-[ext_resource type="Texture2D" uid="uid://d2dufwqc0056g" path="res://assets/atlas/fertilizer_icon.tres" id="2_1ppkg"]
+[ext_resource type="Texture2D" uid="uid://d2dufwqc0056g" path="res://assets/atlas/icons/fertilizer_icon.tres" id="2_1ppkg"]
 [ext_resource type="Resource" uid="uid://dl4vry4feqqsj" path="res://assets/resources/translations/handbook/fertilizer.tres" id="2_2j72u"]
 [ext_resource type="Resource" uid="uid://dqf67u263ytah" path="res://assets/resources/handbook_identifier/fertilizer_identifier.tres" id="2_27nil"]
 [ext_resource type="Script" uid="uid://dtab4ex7bechl" path="res://entities/shared/custom_resources/handbook/text_handbook_entry.gd" id="2_iqfjs"]

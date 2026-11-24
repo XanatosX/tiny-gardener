@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://ci4e1l5wsnrhx" path="res://assets/resources/translations/actions/shop_trigger_action_description.tres" id="4_vcgc8"]
 [ext_resource type="Script" uid="uid://cah0jb3r5a706" path="res://entities/shared/object_interaction/actions/signal_trigger_action.gd" id="4_xxvnf"]
 [ext_resource type="Resource" uid="uid://clfgr8pcw2dcn" path="res://assets/resources/translations/actions/shop_trigger_action.tres" id="5_5xsir"]
-[ext_resource type="Texture2D" uid="uid://cgtk8u88smcey" path="res://assets/atlas/shop_action.tres" id="6_5xsir"]
+[ext_resource type="Texture2D" uid="uid://cgtk8u88smcey" path="res://assets/atlas/icons/shop_action.tres" id="6_5xsir"]
 [ext_resource type="Script" uid="uid://8636433qp20w" path="res://entities/shared/special_objects/device_state.gd" id="10_dk4av"]
 [ext_resource type="Script" uid="uid://dyfcg0hydxsh7" path="res://entities/shared/special_objects/state_watcher/area_state_watcher.gd" id="11_74wtk"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://cab8rrxn5idq2" path="res://assets/objects/notebook/open_close_tree.tres" id="12_3ch61"]

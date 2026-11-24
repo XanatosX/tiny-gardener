@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://baictj1u3wqq8" path="res://entities/game/ui_speak_bubble/scripts/ui_speak_bubble.gd" id="1_nerx6"]
 [ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="1_pcrkj"]
-[ext_resource type="Texture2D" uid="uid://co5e4fuo66w6b" path="res://assets/atlas/next_dialog_icon.tres" id="2_jkpad"]
+[ext_resource type="Texture2D" uid="uid://co5e4fuo66w6b" path="res://assets/atlas/icons/next_dialog_icon.tres" id="2_jkpad"]
 [ext_resource type="Script" uid="uid://co43o2rawaspf" path="res://entities/game/ui_speak_bubble/scripts/text_display.gd" id="3_ree4k"]
 [ext_resource type="Resource" uid="uid://d3r1v0lw4jno5" path="res://assets/resources/voices/default_male.tres" id="4_xsexf"]
 [ext_resource type="InputEventAction" uid="uid://cib787rcrmrmf" path="res://assets/button_shortcuts/interact.tres" id="5_ooyem"]

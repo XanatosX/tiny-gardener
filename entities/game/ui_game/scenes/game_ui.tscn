@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0wf8jyrnoehb" path="res://entities/game/ui_game/ui_game.gd" id="1_fnsaa"]
 [ext_resource type="PackedScene" uid="uid://bsyoqcxl8wjqm" path="res://entities/game/ui_plant_health/scenes/ui_plant_health.tscn" id="1_tnwl8"]
-[ext_resource type="Texture2D" uid="uid://dq33eu2ghwx0m" path="res://assets/atlas/coin_icon.tres" id="2_2ukhv"]
+[ext_resource type="Texture2D" uid="uid://dq33eu2ghwx0m" path="res://assets/atlas/icons/coin_icon.tres" id="2_2ukhv"]
 [ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="2_p0uwn"]
 [ext_resource type="Script" uid="uid://cmvtgf7fboxaq" path="res://entities/shared/special_objects/animated_labels/animated_label.gd" id="2_qpt2f"]
 [ext_resource type="PackedScene" uid="uid://c7r2yjdkr748a" path="res://entities/game/ui_hotbar/scenes/ui_hotbar.tscn" id="3_mis41"]

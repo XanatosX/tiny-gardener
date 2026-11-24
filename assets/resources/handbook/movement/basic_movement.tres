@@ -13,7 +13,7 @@
 [ext_resource type="Resource" uid="uid://bupn7btn66tvq" path="res://assets/resources/handbook_entry_text/mouse_wheel_handbook_entry.tres" id="12_mg4t5"]
 [ext_resource type="Resource" uid="uid://q7jrys1yi5j6" path="res://assets/resources/handbook_entry_text/camera_movement_handbook_entry.tres" id="12_rifme"]
 [ext_resource type="Resource" uid="uid://w4ercvkh46fx" path="res://assets/resources/handbook_entry_text/keyboard_selection_handbook_entry.tres" id="14_yjt5x"]
-[ext_resource type="Texture2D" uid="uid://c0tbb8km33sgp" path="res://assets/atlas/move_icon.tres" id="15_0tutw"]
+[ext_resource type="Texture2D" uid="uid://c0tbb8km33sgp" path="res://assets/atlas/input/keyboard/move_icon.tres" id="15_0tutw"]
 [ext_resource type="Resource" uid="uid://cf6jbmtc2r8rd" path="res://assets/resources/handbook_entry_text/interaction_handbook_entry.tres" id="15_73xfx"]
 [ext_resource type="Resource" uid="uid://pijfbl8u0nmm" path="res://assets/resources/handbook_identifier/basic_movement_identifier.tres" id="16_0tutw"]
 [ext_resource type="Resource" uid="uid://761fj5ownomd" path="res://assets/resources/handbook_entry_text/basic_selection_handbook_entry.tres" id="17_x66yf"]

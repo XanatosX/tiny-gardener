@@ -12,7 +12,7 @@
 [ext_resource type="Resource" uid="uid://b066oswljguvn" path="res://assets/resources/translations/door_house.tres" id="8_eoy26"]
 [ext_resource type="Resource" uid="uid://d3ehj8go1sp6o" path="res://assets/resources/light_conditions/only_night.tres" id="8_o7el5"]
 [ext_resource type="PackedScene" uid="uid://4o20qp4xy3iu" path="res://entities/game/display_plant_pot/scenes/display_plant_pot.tscn" id="9_108mt"]
-[ext_resource type="Texture2D" uid="uid://bvyt3hvfhxvcn" path="res://assets/atlas/farm_icon.tres" id="9_eoy26"]
+[ext_resource type="Texture2D" uid="uid://bvyt3hvfhxvcn" path="res://assets/atlas/actions/farm_icon.tres" id="9_eoy26"]
 [ext_resource type="PackedScene" uid="uid://di70prv3onnf2" path="res://assets/objects/desk/scenes/large_desk.tscn" id="10_kfafr"]
 [ext_resource type="Resource" uid="uid://byh7k8wqcimfe" path="res://assets/resources/display_plants/rose_display_plant.tres" id="10_q38k3"]
 [ext_resource type="PackedScene" uid="uid://bfqql00v26xjj" path="res://assets/objects/plate/plate.gltf" id="11_kfafr"]

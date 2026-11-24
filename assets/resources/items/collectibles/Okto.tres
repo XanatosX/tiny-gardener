@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="CollectableItem" format=3 uid="uid://candq50561oh3"]
 
-[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_bqs3e"]
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/quality/poor_quality_icon.tres" id="1_bqs3e"]
 [ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_smonp"]
-[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="3_42wr7"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/quality/premium_quality_icon.tres" id="3_42wr7"]
 [ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_kfpv6"]
-[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="5_vmy0l"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/quality/standard_quality_icon.tres" id="5_vmy0l"]
 [ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_yf0jb"]
 [ext_resource type="Script" uid="uid://w26t22jsran3" path="res://entities/shared/custom_resources/item/collectable_item.gd" id="7_nye86"]
 [ext_resource type="Resource" uid="uid://dlp1qsx2lm0ut" path="res://assets/resources/translations/items/okto_description.tres" id="7_vmy0l"]

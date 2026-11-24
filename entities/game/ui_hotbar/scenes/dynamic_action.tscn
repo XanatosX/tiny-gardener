@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drk5yb3gdusbe"]
 
 [ext_resource type="Script" uid="uid://c1a0871cxg5y1" path="res://entities/game/ui_hotbar/scripts/ui_dynamic_action_template.gd" id="1_txgc6"]
-[ext_resource type="Texture2D" uid="uid://n0x6a2oo1rah" path="res://assets/atlas/dead_plant.tres" id="2_txgc6"]
+[ext_resource type="Texture2D" uid="uid://n0x6a2oo1rah" path="res://assets/atlas/plants/dead_plant.tres" id="2_txgc6"]
 [ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="3_ts7qr"]
 [ext_resource type="Script" uid="uid://bngqval8eaups" path="res://entities/shared/special_objects/frosted_glass_control_panel/frosted_glass_control_panel.gd" id="4_t6y2g"]
 

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dgo34mflxca2j" path="res://entities/shared/object_interaction/action.gd" id="3_n5wc6"]
 [ext_resource type="Resource" uid="uid://dhibsg6l2xg8u" path="res://assets/resources/translations/actions/collect_collectable_description.tres" id="4_q4ryi"]
 [ext_resource type="Resource" uid="uid://bl0ax2oxe8ust" path="res://assets/resources/translations/actions/collect_collectable.tres" id="5_t2pep"]
-[ext_resource type="Texture2D" uid="uid://cy1ntxgunxn5n" path="res://assets/atlas/grab_action.tres" id="6_n5wc6"]
+[ext_resource type="Texture2D" uid="uid://cy1ntxgunxn5n" path="res://assets/atlas/actions/grab_action.tres" id="6_n5wc6"]
 [ext_resource type="Script" uid="uid://dfnnhrd8rwd4a" path="res://entities/shared/object_interaction/actions/collect_collectable_action.gd" id="7_wwixw"]
 
 [sub_resource type="Resource" id="Resource_8rpam"]

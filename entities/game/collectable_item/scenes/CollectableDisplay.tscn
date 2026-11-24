@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://dqfi62nol1i2q" path="res://assets/resources/translations/actions/inspect_action_description.tres" id="5_lklmx"]
 [ext_resource type="Script" uid="uid://c2668wuu6010j" path="res://entities/shared/object_interaction/actions/inspect_collectable_item_action.gd" id="5_mwwhf"]
 [ext_resource type="Resource" uid="uid://c81wev8ij3sku" path="res://assets/resources/translations/actions/inspect_action_name.tres" id="6_ki323"]
-[ext_resource type="Texture2D" uid="uid://c8g1mu2oa1vxd" path="res://assets/atlas/inspect_action_icon.tres" id="7_lklmx"]
+[ext_resource type="Texture2D" uid="uid://c8g1mu2oa1vxd" path="res://assets/atlas/actions/inspect_action_icon.tres" id="7_lklmx"]
 
 [sub_resource type="Resource" id="Resource_8rpam"]
 script = ExtResource("2_e6htj")

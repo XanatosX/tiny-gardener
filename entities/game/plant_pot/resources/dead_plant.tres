@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://croenxej2y7k0"]
 
-[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="1_4xanv"]
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/quality/poor_quality_icon.tres" id="1_4xanv"]
 [ext_resource type="Resource" uid="uid://bleb5d2a1dfaa" path="res://assets/resources/translations/plants/dead_plant_description.tres" id="1_ao1sk"]
 [ext_resource type="Script" uid="uid://bsevesu0cw5ru" path="res://entities/shared/custom_resources/plant/plant_resource.gd" id="1_j0xa2"]
 [ext_resource type="Resource" uid="uid://dbwdhud05dvq4" path="res://assets/resources/translations/plants/dead_plant_name.tres" id="2_efml8"]
-[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="2_gi2wr"]
-[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/standard_quality_icon.tres" id="3_eb6d1"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/quality/premium_quality_icon.tres" id="2_gi2wr"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/quality/standard_quality_icon.tres" id="3_eb6d1"]
 [ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entities/shared/custom_resources/plant/plant_drop_configuration.gd" id="3_k5ep5"]
-[ext_resource type="Texture2D" uid="uid://n0x6a2oo1rah" path="res://assets/atlas/dead_plant.tres" id="5_k5ep5"]
+[ext_resource type="Texture2D" uid="uid://n0x6a2oo1rah" path="res://assets/atlas/plants/dead_plant.tres" id="5_k5ep5"]
 
 [resource]
 script = ExtResource("1_j0xa2")

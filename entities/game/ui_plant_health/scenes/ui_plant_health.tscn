@@ -5,8 +5,8 @@
 [ext_resource type="Resource" uid="uid://54q23q72qwiu" path="res://assets/resources/translations/missing_plant.tres" id="2_go10l"]
 [ext_resource type="Material" uid="uid://kwmwaahv82da" path="res://assets/resources/materials/frosted_ui_material.tres" id="3_axpie"]
 [ext_resource type="Script" uid="uid://bngqval8eaups" path="res://entities/shared/special_objects/frosted_glass_control_panel/frosted_glass_control_panel.gd" id="4_50pyw"]
-[ext_resource type="Texture2D" uid="uid://bg2ubgonp2gq2" path="res://assets/atlas/water_icon.tres" id="4_esdcw"]
-[ext_resource type="Texture2D" uid="uid://cw07gr7nk1h8l" path="res://assets/atlas/nutrition_icon.tres" id="5_esdcw"]
+[ext_resource type="Texture2D" uid="uid://bg2ubgonp2gq2" path="res://assets/atlas/icons/water_icon.tres" id="4_esdcw"]
+[ext_resource type="Texture2D" uid="uid://cw07gr7nk1h8l" path="res://assets/atlas/icons/nutrition_icon.tres" id="5_esdcw"]
 
 [node name="UiPlantHealth" type="Control" unique_id=1799959266]
 custom_minimum_size = Vector2(300, 500)

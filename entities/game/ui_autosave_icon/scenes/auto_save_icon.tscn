@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b5fbcgeh267f4"]
 
 [ext_resource type="Script" uid="uid://b44f4ep1osppc" path="res://entities/game/ui_autosave_icon/scripts/auto_save_icon.gd" id="1_7svpo"]
-[ext_resource type="Texture2D" uid="uid://cspm2uci7wlvi" path="res://assets/atlas/save_icon.tres" id="1_cecx7"]
+[ext_resource type="Texture2D" uid="uid://cspm2uci7wlvi" path="res://assets/atlas/icons/save_icon.tres" id="1_cecx7"]
 
 [node name="AutoSaveIcon" type="TextureRect" unique_id=1701326874]
 custom_minimum_size = Vector2(64, 64)

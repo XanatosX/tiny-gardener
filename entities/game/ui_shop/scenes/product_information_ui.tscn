@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dofrtp3cvws3a"]
 
 [ext_resource type="Script" uid="uid://bp5mpj1n37ote" path="res://entities/game/ui_shop/scripts/product_information_ui.gd" id="1_b0mlx"]
-[ext_resource type="Texture2D" uid="uid://dq33eu2ghwx0m" path="res://assets/atlas/coin_icon.tres" id="1_q0guu"]
-[ext_resource type="Texture2D" uid="uid://ctl8cremu7l7n" path="res://assets/atlas/rose_item.tres" id="1_uj04u"]
-[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/poor_quality_icon.tres" id="2_b0mlx"]
+[ext_resource type="Texture2D" uid="uid://dq33eu2ghwx0m" path="res://assets/atlas/icons/coin_icon.tres" id="1_q0guu"]
+[ext_resource type="Texture2D" uid="uid://ctl8cremu7l7n" path="res://assets/atlas/drops/rose_item.tres" id="1_uj04u"]
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/quality/poor_quality_icon.tres" id="2_b0mlx"]
 [ext_resource type="Resource" uid="uid://cy4hunuvwje0t" path="res://assets/resources/translations/buy.tres" id="2_spah8"]
 [ext_resource type="Resource" uid="uid://mxcmhsyrijle" path="res://assets/resources/translations/sell.tres" id="3_3eiof"]
 

@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://b4iq7s2a1yamf" path="res://assets/resources/translations/teleport_to_farm_description.tres" id="5_2txjg"]
 [ext_resource type="Resource" uid="uid://b0r7fi7xtr277" path="res://assets/resources/translations/teleport_to_farm.tres" id="5_aol3s"]
 [ext_resource type="Script" uid="uid://cah0jb3r5a706" path="res://entities/shared/object_interaction/actions/signal_trigger_action.gd" id="6_2txjg"]
-[ext_resource type="Texture2D" uid="uid://xb46smqbvrwq" path="res://assets/atlas/corn_item.tres" id="7_2txjg"]
+[ext_resource type="Texture2D" uid="uid://xb46smqbvrwq" path="res://assets/atlas/drops/corn_item.tres" id="7_2txjg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8rpam"]
 size = Vector3(0.7, 1, 0.6003418)

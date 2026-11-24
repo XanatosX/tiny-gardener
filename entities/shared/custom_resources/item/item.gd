@@ -29,9 +29,9 @@ enum QUALITY
 @export var show_quality_in_name: bool = true
 
 @export_group("Quality items")
-@export var _poor_quality_icon: Texture = preload("res://assets/atlas/poor_quality_icon.tres")
-@export var _standard_quality_icon: Texture = preload("res://assets/atlas/standard_quality_icon.tres")
-@export var _premium_quality_icon: Texture = preload("res://assets/atlas/premium_quality_icon.tres")
+@export var _poor_quality_icon: Texture = preload("res://assets/atlas/quality/poor_quality_icon.tres")
+@export var _standard_quality_icon: Texture = preload("res://assets/atlas/quality/standard_quality_icon.tres")
+@export var _premium_quality_icon: Texture = preload("res://assets/atlas/quality/premium_quality_icon.tres")
 
 @export var _poor_quality_name: TextTranslation = preload("res://assets/resources/translations/poor_quality_name.tres")
 @export var _standard_quality_name: TextTranslation = preload("res://assets/resources/translations/standard_quality_name.tres")

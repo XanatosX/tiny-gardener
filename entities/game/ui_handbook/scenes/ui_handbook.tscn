@@ -17,9 +17,9 @@
 [ext_resource type="Resource" uid="uid://bwnga3w2yn7w4" path="res://assets/resources/translations/handbook/fertilizer_group.tres" id="12_rnxse"]
 [ext_resource type="Resource" uid="uid://dmq75lvwgg67w" path="res://assets/resources/translations/handbook/drops_group.tres" id="13_22llt"]
 [ext_resource type="Resource" uid="uid://1fx8d6i8sy50" path="res://assets/resources/translations/handbook/plants_groups.tres" id="14_wbobc"]
-[ext_resource type="Texture2D" uid="uid://c0tbb8km33sgp" path="res://assets/atlas/move_icon.tres" id="16_fkcc1"]
-[ext_resource type="Texture2D" uid="uid://0bkyfxdm577g" path="res://assets/atlas/planting_icon.tres" id="17_cgicq"]
-[ext_resource type="Texture2D" uid="uid://d2dufwqc0056g" path="res://assets/atlas/fertilizer_icon.tres" id="18_kdse6"]
+[ext_resource type="Texture2D" uid="uid://c0tbb8km33sgp" path="res://assets/atlas/input/keyboard/move_icon.tres" id="16_fkcc1"]
+[ext_resource type="Texture2D" uid="uid://0bkyfxdm577g" path="res://assets/atlas/actions/planting_icon.tres" id="17_cgicq"]
+[ext_resource type="Texture2D" uid="uid://d2dufwqc0056g" path="res://assets/atlas/icons/fertilizer_icon.tres" id="18_kdse6"]
 [ext_resource type="Resource" uid="uid://qp38gy8hj4v7" path="res://assets/resources/translations/handbook/collectables_group.tres" id="18_oyds2"]
 
 [sub_resource type="Resource" id="Resource_bsf2r"]

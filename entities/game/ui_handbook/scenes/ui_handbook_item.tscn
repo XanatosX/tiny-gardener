@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://omscyrlpj45l" path="res://entities/game/ui_handbook/scripts/handbook_template.gd" id="1_vwrke"]
 [ext_resource type="Script" uid="uid://csap4svapkaq8" path="res://entities/game/ui_handbook/scripts/handbook_item_data.gd" id="2_vwrke"]
-[ext_resource type="Texture2D" uid="uid://d2dufwqc0056g" path="res://assets/atlas/fertilizer_icon.tres" id="3_5cbpi"]
+[ext_resource type="Texture2D" uid="uid://d2dufwqc0056g" path="res://assets/atlas/icons/fertilizer_icon.tres" id="3_5cbpi"]
 [ext_resource type="Script" uid="uid://c2td75vpy2wo0" path="res://entities/game/ui_handbook/scripts/handbook_clickable_meta_rich_text.gd" id="4_b4p2a"]
 [ext_resource type="Script" uid="uid://bw6u2m7va6voe" path="res://entities/shared/rich_text_markup/dynamic_rich_text_preprocess.gd" id="5_5unn8"]
-[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/premium_quality_icon.tres" id="5_b4p2a"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/quality/premium_quality_icon.tres" id="5_b4p2a"]
 [ext_resource type="Script" uid="uid://cudo8d6r5pwsk" path="res://entities/shared/rich_text_markup/dynamic_image.gd" id="6_u6v33"]
 
 [sub_resource type="Resource" id="Resource_2bncq"]

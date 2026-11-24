@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantDropConfiguration" format=3 uid="uid://d2rybrv2h8y64"]
+
+[ext_resource type="Resource" uid="uid://dhuokf2tdi6a6" path="res://assets/resources/items/plant_drops/pumpkin_drop.tres" id="1_6dkl6"]
+[ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entities/shared/custom_resources/plant/plant_drop_configuration.gd" id="1_xkxua"]
+
+[resource]
+script = ExtResource("1_xkxua")
+plant_drop = ExtResource("1_6dkl6")
+max_yield = 7
+metadata/_custom_type_script = "uid://fhnh47biatwh"

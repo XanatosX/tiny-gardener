@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://crguifhwylrx1"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/quality/poor_quality_icon.tres" id="1_f15lr"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_f15lr"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/quality/premium_quality_icon.tres" id="3_aymso"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_3ldtw"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/quality/standard_quality_icon.tres" id="5_3ldtw"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_n626j"]
+[ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entities/shared/custom_resources/plant/plant_drop_configuration.gd" id="7_r7xdh"]
+[ext_resource type="Resource" uid="uid://b75u02byl4pex" path="res://assets/resources/translations/plants/pumpkin_description.tres" id="7_thql4"]
+[ext_resource type="Resource" uid="uid://blenlxho8wxg7" path="res://assets/resources/translations/plants/pumpkin_name.tres" id="8_0a6ha"]
+[ext_resource type="Script" uid="uid://bsevesu0cw5ru" path="res://entities/shared/custom_resources/plant/plant_resource.gd" id="8_thql4"]
+[ext_resource type="Texture2D" uid="uid://bvrolhvjoi5ro" path="res://assets/atlas/drops/pumpkin_item.tres" id="9_0lcuo"]
+[ext_resource type="Texture2D" uid="uid://dd3u0tv5o2tw4" path="res://assets/atlas/plants/pumpkin_plant.tres" id="9_jmkcv"]
+[ext_resource type="Resource" uid="uid://bg7gwqe86iw7h" path="res://assets/resources/items/yield_configurations/ladybug_drop_configuration.tres" id="9_n626j"]
+[ext_resource type="Resource" uid="uid://d2rybrv2h8y64" path="res://assets/resources/items/yield_configurations/pumpkin_drop_configuration.tres" id="10_r7xdh"]
+[ext_resource type="Curve" uid="uid://ciyqrjxkjtt8g" path="res://assets/resources/quality_curves/default_quality_curve.tres" id="13_thql4"]
+
+[resource]
+script = ExtResource("8_thql4")
+type = 3
+texture = ExtResource("9_jmkcv")
+plant_yield = Array[ExtResource("7_r7xdh")]([ExtResource("9_n626j"), ExtResource("10_r7xdh")])
+quality_curve = ExtResource("13_thql4")
+grow_stages = 6
+growth_points_per_stage = 19.0
+growing_water_requirement = 1.35
+growing_nutrition_requirement = 0.85
+sustainable_water_requirement = 0.6
+sustainable_nutrition_requirement = 0.15
+display_name = ExtResource("8_0a6ha")
+description = ExtResource("7_thql4")
+icon = ExtResource("9_0lcuo")
+quality = 1
+can_sell = false
+price = 7.0
+metadata/_custom_type_script = "uid://bsevesu0cw5ru"

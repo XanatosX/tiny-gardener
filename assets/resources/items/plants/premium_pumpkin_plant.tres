@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="PlantData" format=3 uid="uid://0xalpgrmymd8"]
+
+[ext_resource type="Texture2D" uid="uid://b7c7w61xinf2p" path="res://assets/atlas/quality/poor_quality_icon.tres" id="1_ljwmv"]
+[ext_resource type="Resource" uid="uid://ig48bf4ppqv1" path="res://assets/resources/translations/poor_quality_name.tres" id="2_te63o"]
+[ext_resource type="Texture2D" uid="uid://0g7l66uffglq" path="res://assets/atlas/quality/premium_quality_icon.tres" id="3_mvlne"]
+[ext_resource type="Resource" uid="uid://bolfj0e2f4jq7" path="res://assets/resources/translations/premium_quality_name.tres" id="4_2yeue"]
+[ext_resource type="Texture2D" uid="uid://belsym78tksjc" path="res://assets/atlas/quality/standard_quality_icon.tres" id="5_5awd3"]
+[ext_resource type="Resource" uid="uid://bfi6nkjxdyjsn" path="res://assets/resources/translations/standard_quality_name.tres" id="6_qipgh"]
+[ext_resource type="Resource" uid="uid://b75u02byl4pex" path="res://assets/resources/translations/plants/pumpkin_description.tres" id="7_1afsk"]
+[ext_resource type="Resource" uid="uid://blenlxho8wxg7" path="res://assets/resources/translations/plants/pumpkin_name.tres" id="8_0q6jb"]
+[ext_resource type="Texture2D" uid="uid://bvrolhvjoi5ro" path="res://assets/atlas/drops/pumpkin_item.tres" id="9_1rr88"]
+[ext_resource type="Script" uid="uid://fhnh47biatwh" path="res://entities/shared/custom_resources/plant/plant_drop_configuration.gd" id="10_u3ilg"]
+[ext_resource type="Resource" uid="uid://bg7gwqe86iw7h" path="res://assets/resources/items/yield_configurations/ladybug_drop_configuration.tres" id="11_dj4gj"]
+[ext_resource type="Resource" uid="uid://d2rybrv2h8y64" path="res://assets/resources/items/yield_configurations/pumpkin_drop_configuration.tres" id="12_ctv3x"]
+[ext_resource type="Curve" uid="uid://c3d4gd506r24r" path="res://assets/resources/quality_curves/lucky_quality_curve.tres" id="13_ljwmv"]
+[ext_resource type="Script" uid="uid://bsevesu0cw5ru" path="res://entities/shared/custom_resources/plant/plant_resource.gd" id="14_dqi8v"]
+[ext_resource type="Texture2D" uid="uid://dd3u0tv5o2tw4" path="res://assets/atlas/plants/pumpkin_plant.tres" id="15_h7f24"]
+
+[resource]
+script = ExtResource("14_dqi8v")
+type = 3
+texture = ExtResource("15_h7f24")
+plant_yield = Array[ExtResource("10_u3ilg")]([ExtResource("11_dj4gj"), ExtResource("12_ctv3x")])
+spin_amount = Dictionary[int, int]({
+1: 1,
+2: 3,
+3: 3
+})
+quality_curve = ExtResource("13_ljwmv")
+grow_stages = 6
+growth_points_per_stage = 16.0
+growing_water_requirement = 1.2
+growing_nutrition_requirement = 0.7
+sustainable_water_requirement = 0.4
+sustainable_nutrition_requirement = 0.1
+display_name = ExtResource("8_0q6jb")
+description = ExtResource("7_1afsk")
+icon = ExtResource("9_1rr88")
+quality = 3
+can_sell = false
+price = 65.0
+metadata/_custom_type_script = "uid://bsevesu0cw5ru"

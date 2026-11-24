@@ -372,6 +372,14 @@ msgstr ""
 msgid "LADYBUG_DROP_NAME"
 msgstr ""
 
+#: assets/resources/translations/drops/pumpkin_drop_description.tres
+msgid "PUMPKIN_DROP_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/drops/pumpkin_drop_name.tres
+msgid "PUMPKIN_DROP_NAME"
+msgstr ""
+
 #: assets/resources/translations/drops/rose_drop_description.tres
 msgid "ROSE_DROP_DESCRIPTION"
 msgstr ""
@@ -530,6 +538,14 @@ msgstr ""
 
 #: assets/resources/translations/plants/dead_plant_name.tres
 msgid "DEAD_PLANT_NAME"
+msgstr ""
+
+#: assets/resources/translations/plants/pumpkin_description.tres
+msgid "PUMPKIN_PLANT_DESCRIPTION"
+msgstr ""
+
+#: assets/resources/translations/plants/pumpkin_name.tres
+msgid "PUMPKIN_PLANT_NAME"
 msgstr ""
 
 #: assets/resources/translations/plants/rose_plant_description.tres
